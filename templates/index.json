@@ -143,7 +143,7 @@
         "serviceName": "Service 1",
         "serviceDescription": "<p>Stainless steel tumbler + laser engraving<\/p>",
         "ctaText": "Order Now",
-        "ctaUrl": "",
+        "ctaUrl": "shopify:\/\/pages\/choose-a-product",
         "serviceImg": "shopify:\/\/shop_images\/200521_KINTO44071_re_2_1_1.jpg",
         "flip": false,
         "anchorID": "section-services"
