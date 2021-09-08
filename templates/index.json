@@ -143,7 +143,7 @@
         "serviceName": "Service 1",
         "serviceDescription": "<p>Stainless steel tumbler + laser engraving<\/p>",
         "ctaText": "Order Now",
-        "ctaUrl": "",
+        "ctaUrl": "shopify:\/\/pages\/choose-a-product",
         "serviceImg": "shopify:\/\/shop_images\/200521_KINTO44071_re_2_1_1.jpg",
         "flip": false,
         "anchorID": "section-services"
@@ -176,7 +176,7 @@
         "serviceName": "Service 2",
         "serviceDescription": "<p>Resin bottle + sticker<\/p>",
         "ctaText": "Order Now",
-        "ctaUrl": "",
+        "ctaUrl": "shopify:\/\/pages\/choose-a-product",
         "serviceImg": "shopify:\/\/shop_images\/markitlab_top_services_01_90d9161a-03e7-4bff-baff-a8ba03452d70.jpg",
         "flip": true,
         "anchorID": ""
@@ -264,7 +264,7 @@
         "sectionHeading": "Products",
         "showButton": false,
         "buttonText": "Choose a product",
-        "buttonUrl": "",
+        "buttonUrl": "shopify:\/\/pages\/choose-a-product",
         "anchorID": "section-products"
       }
     },
@@ -287,8 +287,8 @@
     "1631083243456f3665": {
       "type": "big-button",
       "settings": {
-        "buttonText": "order no",
-        "buttonUrl": "",
+        "buttonText": "order now",
+        "buttonUrl": "shopify:\/\/pages\/choose-a-product",
         "anchorID": ""
       }
     },
