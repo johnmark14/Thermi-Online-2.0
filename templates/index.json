@@ -291,6 +291,18 @@
         "buttonUrl": "",
         "anchorID": ""
       }
+    },
+    "16310833551ae52905": {
+      "type": "image-with-text",
+      "settings": {
+        "sectionHeading": "Visit",
+        "leftBigImg": "shopify:\/\/shop_images\/left.jpg",
+        "rightSmallImg": "shopify:\/\/shop_images\/logo_c04ac5c5-4f8e-47f0-854a-3af3ddf487b3.png",
+        "rightTextDesc": "<p>It is an experience space where you can enjoy MARK IT BY KINTO even more.<\/p><p>You can see the product in your hand.<\/p>",
+        "btnText": "View more",
+        "btnUrl": "",
+        "anchorID": ""
+      }
     }
   },
   "order": [
@@ -301,6 +313,7 @@
     "1631082294d036fef7",
     "1631082372d649c2e4",
     "163108244160b25d61",
-    "1631083243456f3665"
+    "1631083243456f3665",
+    "16310833551ae52905"
   ]
 }
