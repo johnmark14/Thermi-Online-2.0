@@ -1,5 +1,9 @@
 {
   "current": {
+    "social_twitter_link": "\/",
+    "social_facebook_link": "\/",
+    "social_instagram_link": "\/",
+    "social_youtube_link": "\/",
     "colors_solid_button_labels": "#FFFFFF",
     "colors_accent_1": "#121212",
     "colors_accent_2": "#334FB4",
@@ -45,7 +49,8 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "textBottom": "Thermi Theme Built with <3 by John"
+          "textBottom": "Thermi Theme Built with <3 by John",
+          "idFLogo": "shopify:\/\/shop_images\/footer-logo.png"
         }
       }
     },
