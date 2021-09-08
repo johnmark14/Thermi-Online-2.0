@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "choose": {
+      "type": "page-template-choose",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "choose"
+  ]
+}
