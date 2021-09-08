@@ -176,7 +176,7 @@
         "serviceName": "Service 2",
         "serviceDescription": "<p>Resin bottle + sticker<\/p>",
         "ctaText": "Order Now",
-        "ctaUrl": "",
+        "ctaUrl": "shopify:\/\/pages\/choose-a-product",
         "serviceImg": "shopify:\/\/shop_images\/markitlab_top_services_01_90d9161a-03e7-4bff-baff-a8ba03452d70.jpg",
         "flip": true,
         "anchorID": ""
