@@ -4,8 +4,8 @@
     "theme_name": "Thermi Theme",
     "theme_version": "dev_1",
     "theme_author": "John - GitHub@johnmark14",
-    "theme_documentation_url": "https://github.com/Shopify/themekit",
-    "theme_support_url": "https://github.com/Shopify/themekit/issues"
+    "theme_documentation_url": "https:\/\/github.com\/Shopify\/themekit",
+    "theme_support_url": "https:\/\/github.com\/Shopify\/themekit\/issues"
   },
   {
     "name": "Social Accounts",
@@ -59,4 +59,4 @@
       }
     ]
   }
-] 
+]

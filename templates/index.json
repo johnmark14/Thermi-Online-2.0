@@ -1,11 +1,14 @@
 {
-  "name": "Hero Carousel",
   "sections": {
     "hero": {
-      "type": "landing-hero-carousel"
+      "type": "landing-hero-carousel",
+      "settings": {
+      }
     },
     "concept-movie": {
-      "type": "landing-concept-movie"
+      "type": "landing-concept-movie",
+      "settings": {
+      }
     }
   },
   "order": [
