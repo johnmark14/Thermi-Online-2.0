@@ -2,12 +2,69 @@
   "sections": {
     "hero": {
       "type": "landing-hero-carousel",
+      "blocks": {
+        "241b9a0f-dcbb-49f8-b6bf-ae97e70eab35": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image1-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image1-mobile.jpg"
+          }
+        },
+        "cb542f42-89e1-4aac-9bf8-160b23ebc220": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image2-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image2-mobile.jpg"
+          }
+        },
+        "14070d63-0c7d-4fe6-a903-9dd7683a98ed": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image3-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image3-mobile.jpg"
+          }
+        },
+        "63f9f160-08ce-4c9e-9f2d-cd2c161d8c87": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image4-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image4-mobile.jpg"
+          }
+        },
+        "db753d61-f33b-4d25-aefc-cabfd8722ce6": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image5-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image5-mobile.jpg"
+          }
+        },
+        "8adf6294-70f2-4963-9c4d-22f906e992f3": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image6-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image6-mobile.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "241b9a0f-dcbb-49f8-b6bf-ae97e70eab35",
+        "cb542f42-89e1-4aac-9bf8-160b23ebc220",
+        "14070d63-0c7d-4fe6-a903-9dd7683a98ed",
+        "63f9f160-08ce-4c9e-9f2d-cd2c161d8c87",
+        "db753d61-f33b-4d25-aefc-cabfd8722ce6",
+        "8adf6294-70f2-4963-9c4d-22f906e992f3"
+      ],
       "settings": {
+        "ctaText": "Order Now"
       }
     },
     "concept-movie": {
       "type": "landing-concept-movie",
       "settings": {
+        "sectionTitle": "Say Something about your product",
+        "text": "<p>Write your description here<\/p>",
+        "videoId": "",
+        "anchorID": ""
       }
     }
   },
