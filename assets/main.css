@@ -43,8 +43,16 @@ p {
   margin: 0;
 }
 
-a, a:visited, a:hover {
+a, a:visited, a:hover, a:focus, a:active {
   text-decoration: none;
+  color: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: 0;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {

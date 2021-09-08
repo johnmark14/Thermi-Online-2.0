@@ -41,8 +41,13 @@ h1,h2,h3,h4,h5,h6 {
 p {
     margin: 0;
 }
-a, a:visited, a:hover {
+a, a:visited, a:hover, a:focus, a:active {
     text-decoration: none;
+    color: inherit;
+    user-select: none;
+    outline: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 ul {
