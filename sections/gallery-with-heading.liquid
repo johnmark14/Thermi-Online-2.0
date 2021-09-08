@@ -1,0 +1,83 @@
+<section class="section-social section-padding" id="{{ section.settings.anchorID }}">
+    <div class="social-shell">
+        <h2 class="social-title section-title">
+            {{ section.settings.sectionHeading }}
+        </h2>
+        <div class="social-info">
+            <p class="text-1">{{ section.settings.text1 }}</p>
+            <p class="text-1">{{ section.settings.text2 }}</p>
+        </div>
+        {% if section.blocks.size != 0 %}
+            <div class="social-container">
+                <ul class="social-images">
+                    {% for block in section.blocks %}
+                    <li class="social-img"><a href="{{ section.settings.imgUrl }}" class="img"><img
+                                src="{{ block.settings.img | img_url: 'master' }}" alt="{% if block.settings.alt != blank %} {{ block.settings.alt }} {% else %} Picture-{{ forloop.index }} {% endif %}"></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Gallery with Heading",
+    "max_blocks": 6,
+    "settings": [
+        {
+            "type": "text",
+            "id": "sectionHeading",
+            "label": "Section Heading",
+            "default": "@YOURSOCIAL"
+        },
+        {
+            "type": "textarea",
+            "id": "text1",
+            "label": "Sub Heading 1"
+        },
+        {
+            "type": "textarea",
+            "id": "text2",
+            "label": "Sub Heading 2"
+        },
+        {
+            "type": "url",
+            "id": "imgUrl",
+            "label": "Gallery Link",
+            "info": "This is required. This where you want your user to be redirected when they click on the image."
+        },
+        {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Gallery Image"
+                },
+                {
+                    "type": "text",
+                    "id": "alt",
+                    "label": "Gallery Image alt",
+                    "info": "optional"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Gallery with Heading"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,87 @@
+<section class="section-ideas section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}">
+    <div class="ideas-shell shell">
+        <h2 class="ideas-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
+        {% if section.blocks.size != 0%}
+        <div class="ideas-imgs">
+            {% for block in section.blocks %}
+                <div class="img"><img src="{{ block.settings.img | img_url: 'master'}}" alt="{% if block.settings.altText != blank%} {{ block.settings.altText }} {% else %} image-{{ forloop.index }} {% endif %}"></div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% if section.settings.linkText != blank%}
+            <div class="ideas-btn">
+                <a href="{{ section.settings.url }}">{{ section.settings.linkText }}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Gallery",
+    "max_blocks": 4,
+    "settings": [
+        {
+            "type": "text",
+            "id": "sectionTitle",
+            "label": "Section Heading",
+            "default": "Ideas"
+        },
+        {
+            "type": "text",
+            "id": "linkText",
+            "label": "Link Text",
+            "default": "View More"
+        },
+        {
+            "type": "url",
+            "id": "url",
+            "label": "link"
+        },
+        {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "img",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "altText",
+                    "label": "Text Description (alt)",
+                    "info": "Optional"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Gallery",
+            "blocks": [
+                {
+                    "type": "image"
+                },
+                {
+                    "type": "image"
+                },
+                {
+                    "type": "image"
+                },
+                {
+                    "type": "image"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

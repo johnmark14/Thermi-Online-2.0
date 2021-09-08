@@ -1,0 +1,106 @@
+{%- assign social_icons = false -%}
+{%- if settings.social_twitter_link != blank
+    or settings.social_facebook_link != blank
+    or settings.social_instagram_link != blank
+    or settings.social_youtube_link != blank
+    or settings.social_tiktok_link != blank
+    or settings.social_snapchat_link != blank 
+-%}
+    {%- assign social_icons = true -%}
+    <script>
+        console.log(test);
+    </script>
+{%- endif -%}    
+
+<footer id="section-footer">
+    <div class="footer-back">
+        <a href="/" @click.prevent="toTop">Go back to top</a>
+    </div>
+    <div class="footer-shell">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="left-inner">
+                    <a href="/" class="logo"><img src="{{ section.settings.idFLogo | img_url: 'master' }}" alt="logo"></a>
+                    {% if social_icons %}
+                        <ul class="socials">
+                            {% if settings.social_twitter_link != blank %}
+                                <li><a href="{{ settings.social_twitter_link }}"><span><i class="fab fa-twitter"></i></span></a></li>
+                            {% endif %}
+                            {% if settings.social_facebook_link != blank %}
+                                <li><a href="{{ settings.social_facebook_link }}"><span><i class="fab fa-facebook-f"></i></span></a></li>
+                            {% endif %}
+                            {% if settings.social_instagram_link != blank %}
+                                <li><a href="{{ settings.social_instagram_link }}"><span><i class="fab fa-instagram"></i></span></a></li>
+                            {% endif %}
+                            {% if settings.social_youtube_link != blank %}
+                                <li><a href="{{ settings.social_youtube_link }}"><span><i class="fab fa-youtube"></i></span></a></li>
+                            {% endif%}
+                            {% if settings.social_tiktok_link != blank %}
+                                <li><a href="{{ settings.social_tiktok_link }}"><span><i class="fab fa-tiktok"></i></span></a></li>
+                            {% endif%}
+                            {% if settings.social_snapchat_link != blank %}
+                                <li><a href="{{ settings.social_snapchat_link }}"><span><i class="fab fa-snapchat"></i></span></a></li>
+                            {% endif%}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+            {% if linklists.footer.links.size != 0%}
+                <nav class="footer-right">
+                    <div class="right-inner">
+                        <ul>
+                            {% for link in linklists.footer.links %}
+                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </nav>
+            {% endif %}
+        </div>
+        <center class="footer-bottom">
+            <p>
+                {{ section.settings.textBottom }}
+            </p>
+        </center>
+    </div>
+</footer>
+
+<script>
+    const FooterApp = {
+        data() {
+            return {
+                scTimer: 0,
+                scY: 0,
+            }
+        },
+        methods: {
+             toTop() {
+                 window.scrollTo({
+                     top: 0,
+                     behavior: "smooth"
+                 });
+             }
+        },
+    };
+
+    Vue.createApp(FooterApp).mount('#section-footer');
+</script>
+
+{% schema %}
+{
+    "name": "Footer Settings",
+    "settings": [
+        {
+            "type": "text",
+            "id": "textBottom",
+            "label": "Text Bottom",
+            "default": "Thermi Theme Built with <3 by John"
+        },
+        {
+            "type": "image_picker",
+            "id": "idFLogo",
+            "label": "Logo"
+        }
+    ]
+}
+{% endschema %}

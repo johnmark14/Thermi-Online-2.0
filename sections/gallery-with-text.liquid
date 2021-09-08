@@ -1,0 +1,133 @@
+<section class="section-products section-padding" id="{{ section.settings.anchorID }}">
+    <div class="products-shell shell">
+      <h2 class="products-title section-title">{{ section.settings.sectionHeading }}</h2>
+      <div class="products-carousel">
+        <div class="swiper carProducts">
+          {% if section.blocks.size != 0%}
+              <div class="swiper-wrapper">
+                  {% for block in section.blocks %}
+                      <div class="swiper-slide">
+                          <div class="products-image">
+                          <img src="{{ block.settings.productImg | img_url: 'master' }}" alt="Product image-{{ forloop.index }}" />
+                          </div>
+                          <div class="products-description">
+                              <div class="products-title">{{ block.settings.productTitle }}</div>
+                              {{ block.settings.productDescription }}
+                          </div>
+                      </div>
+                  {% endfor %}   
+              </div>
+          {% endif %}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        {% if section.settings.showButton != true  %}
+          <a href="{{ section.settings.buttonUrl }}" class="products-btn  big-btn"><span>{{ section.settings.buttonText }}</span></a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    var swiperProduct = new Swiper(".carProducts", {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      loop: true,
+      centeredSlides: true,
+      breakpoints: {
+        1023: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        639: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        375: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  
+  {% schema %}
+  {
+      "name": "Gallery with Text",
+      "settings": [
+          {
+              "type": "text",
+              "id": "sectionHeading",
+              "label": "Section Heading",
+              "default": "Products"
+          },
+          {
+              "type": "checkbox",
+              "id": "showButton",
+              "label": "Hide Button?",
+              "default": false
+          },
+          {
+              "type": "text",
+              "id": "buttonText",
+              "label": "Button Text"
+          },
+          {
+              "type": "url",
+              "id": "buttonUrl",
+              "label": "Button URL"
+          },
+          {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+      ],
+      "blocks": [
+          {
+              "type": "image",
+              "name": "Products",
+              "settings": [
+                  {
+                      "type": "image_picker",
+                      "id": "productImg",
+                      "label": "Product Image"
+                  },
+                  {
+                      "type": "text",
+                      "id": "productTitle",
+                      "label": "Product Heading"
+                  },
+                  {
+                      "type": "richtext",
+                      "id": "productDescription",
+                      "label": "Product Description",
+                      "default": "<p>Write something about your product.</p>"
+                  }
+              ]
+          }
+      ],
+      "presets": [
+          {
+              "name": "Gallery with Text",
+              "blocks": [
+                  {
+                      "type": "image"
+                  },
+                  {
+                      "type": "image"
+                  },
+                  {
+                      "type": "image"
+                  }
+              ]
+          }
+      ]
+  }
+  {% endschema %}
+  

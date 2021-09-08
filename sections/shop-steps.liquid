@@ -1,0 +1,126 @@
+<section class="section-howto section-padding" id="{{ section.settings.anchorID }}">
+    <div class="howto-shell shell">
+        <h2 class="products-title section-title">
+            {{ section.settings.sectionHeading }}
+        </h2>
+        <div class="howto-tut">
+            <div class="howto-step">
+                <div class="stp-image">
+                    <img src="{{ section.settings.step1 | img_url: 'master'}}" alt="Picture Step 1" class="tut-image">
+                </div>
+                <div class="howto-detail">
+                    <div class="stp-heading">
+                        <p>{{ section.settings.step1Title }}</p>
+                    </div>
+                    <div class="stp-info">
+                        <p>{{ section.settings.step1Desc }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="howto-step">
+                <div class="stp-image">
+                    <img src="{{ section.settings.step2 | img_url: 'master'}}" alt="Picture Step 2" class="tut-image">
+                </div>
+                <div class="howto-detail">
+                    <div class="stp-heading">
+                        <p>{{ section.settings.step2Title }}</p>
+                    </div>
+                    <div class="stp-info">
+                        <p>{{ section.settings.step2Desc }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="howto-step">
+                <div class="stp-image">
+                    <img src="{{ section.settings.step3 | img_url: 'master' }}" alt="Picture step 3" class="tut-image">
+                </div>
+                <div class="howto-detail">
+                    <div class="stp-heading">
+                        <p>{{ section.settings.step3Title }}</p>
+                    </div>
+                    <div class="stp-info">
+                        <p>
+                            {{ section.settings.step3Desc }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Shop Instructions",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sectionHeading",
+            "label": "Section Heading",
+            "default": "How to"
+        },
+        {
+            "type": "image_picker",
+            "id": "step1",
+            "label": "Step 1 Image:"
+        },
+        {
+            "type": "text",
+            "id": "step1Title",
+            "label": "Step 1 Title",
+            "default": "Step 1"
+        },
+        {
+            "type": "textarea",
+            "id": "step1Desc",
+            "label": "Step 1 Description",
+            "placeholder": "Describe step one here"
+        },
+        {
+            "type": "image_picker",
+            "id": "step2",
+            "label": "Step 2 Image:"
+        },
+        {
+            "type": "text",
+            "id": "step2Title",
+            "label": "Step 2 Title",
+            "default": "Step 2"
+        },
+        {
+            "type": "textarea",
+            "id": "step2Desc",
+            "label": "Step 2 Description",
+            "placeholder": "Describe step two here"
+        },
+        {
+            "type": "image_picker",
+            "id": "step3",
+            "label": "Step 3 Image:"
+        },
+        {
+            "type": "text",
+            "id": "step3Title",
+            "label": "Step 3 Title",
+            "default": "Step 3"
+        },
+        {
+            "type": "textarea",
+            "id": "step3Desc",
+            "label": "Step 3 Description",
+            "placeholder": "Describe step three here"
+        },
+        {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Shop Instructions"
+        }
+    ]
+}
+{% endschema %}

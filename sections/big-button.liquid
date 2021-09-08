@@ -1,0 +1,34 @@
+<section class="section-ordernow section-padding" id="{{ section.settings.anchorID }}">
+    <div class="ordernow-shell shell">
+        <a href="{{ section.settings.url }}" class="products-btn  big-btn"><span>{{ section.settings.buttonText }}</span></a>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Big Button",
+    "settings": [
+        {
+            "type": "text",
+            "id": "buttonText",
+            "label": "Button Text"
+        },
+        {
+            "type": "url",
+            "id": "buttonUrl",
+            "label": "Button URL"
+        },
+        {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Big Button"
+        }
+    ]
+}
+{% endschema %}
