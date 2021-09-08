@@ -55,7 +55,8 @@
         "8adf6294-70f2-4963-9c4d-22f906e992f3"
       ],
       "settings": {
-        "ctaText": "Order Now"
+        "ctaText": "Order Now",
+        "ctaUrl": "shopify:\/\/pages\/choose-a-product"
       }
     },
     "concept-movie": {
