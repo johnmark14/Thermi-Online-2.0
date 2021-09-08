@@ -1,0 +1,82 @@
+
+@include breakpoint-down(small) {
+    .section-choose {
+        display: none;
+    }
+}
+
+.page{
+	&-steps {
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 40px;
+        max-width: 900px;
+        margin: 0 auto;
+        list-style: none;
+        list-style-position: outside;
+        user-select: none;
+
+        .step {
+            background-color: $notActive;
+            flex: 1;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 98px;
+            color: $textNotActive;
+            border-left: 2px solid $white;
+            position: relative;
+
+            &:not(:last-child)::before {
+                content: '';
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: 20px solid $white;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                margin-left: 2px;
+                z-index: 1;
+            }
+            &:not(:last-child)::after {
+                content: '';
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: 20px solid $notActive;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                z-index: 2;
+            }
+
+            &.active {
+                color: $activeText;
+                background-color: $active;
+
+                &::after {
+                    border-left-color: $active;
+                }
+            }
+
+            div {
+
+                h4 {
+                    font-size: toRem(20);
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+
+                span {
+                    display: inline-block;
+                    font-size: toRem(14);
+                    letter-spacing: 1px;
+                    font-weight: 300;
+                    padding-top: 5px;
+                }
+            }
+
+        } /* Step */
+    }
+} /* .page */

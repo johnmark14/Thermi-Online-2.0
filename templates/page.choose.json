@@ -1,12 +1,12 @@
 {
   "sections": {
-    "choose": {
+    "main": {
       "type": "page-template-choose",
       "settings": {
       }
     }
   },
   "order": [
-    "choose"
+    "main"
   ]
 }

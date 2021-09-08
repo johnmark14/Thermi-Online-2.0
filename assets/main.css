@@ -1751,3 +1751,102 @@ main {
   font-size: 0.75rem;
   padding-bottom: 10px;
 }
+
+@media (max-width: 39.9375em) {
+  .section-choose {
+    display: none;
+  }
+}
+
+.page-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding-top: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  list-style-position: outside;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /* Step */
+}
+
+.page-steps .step {
+  background-color: #f4f4f4;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 98px;
+  color: #d3d3f3;
+  border-left: 2px solid #FFFFFF;
+  position: relative;
+}
+
+.page-steps .step:not(:last-child)::before {
+  content: '';
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 20px solid #FFFFFF;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: 2px;
+  z-index: 1;
+}
+
+.page-steps .step:not(:last-child)::after {
+  content: '';
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 20px solid #f4f4f4;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.page-steps .step.active {
+  color: #989898;
+  background-color: #d8d8d8;
+}
+
+.page-steps .step.active::after {
+  border-left-color: #d8d8d8;
+}
+
+.page-steps .step div h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.page-steps .step div span {
+  display: inline-block;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+/* .page */
