@@ -224,7 +224,7 @@
         "sectionTitle": "Ideas",
         "linkText": "View More",
         "url": "",
-        "anchorID": ""
+        "anchorID": "section-ideas"
       }
     },
     "1631082372d649c2e4": {
@@ -263,7 +263,7 @@
         "showButton": false,
         "buttonText": "",
         "buttonUrl": "",
-        "anchorID": ""
+        "anchorID": "section-products"
       }
     }
   },
