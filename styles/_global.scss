@@ -151,6 +151,11 @@ main {
     font-weight: 400;
     text-align: center;
     padding: 20px 0 40px 0;
+
+    @include breakpoint-down(small) {
+        font-size: 14px;
+        padding: 20px 0 10px 0;
+    }
 }
 
 // Big Button
