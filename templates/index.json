@@ -263,7 +263,7 @@
       "settings": {
         "sectionHeading": "Products",
         "showButton": false,
-        "buttonText": "",
+        "buttonText": "Choose a product",
         "buttonUrl": "",
         "anchorID": "section-products"
       }
