@@ -1752,12 +1752,6 @@ main {
   padding-bottom: 10px;
 }
 
-@media (max-width: 39.9375em) {
-  .section-choose {
-    display: none;
-  }
-}
-
 .page-steps {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1850,3 +1844,8 @@ main {
 }
 
 /* .page */
+@media (max-width: 39.9375em) {
+  .section-choose {
+    display: none;
+  }
+}
