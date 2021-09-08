@@ -303,6 +303,68 @@
         "btnUrl": "",
         "anchorID": "section-visit"
       }
+    },
+    "1631083388fef06008": {
+      "type": "gallery-with-heading",
+      "blocks": {
+        "73f2cbb9-30a7-4286-ba8e-1c1e37357ce3": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_01_1024x1024_8085833f-b11b-4925-8146-7fb5c50799c0.jpg",
+            "alt": ""
+          }
+        },
+        "46221388-eb2a-42a7-af95-efca1a7c4f5d": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_02_1024x1024_f00bd6af-705b-455a-8000-b1e959f49ddf.jpg",
+            "alt": ""
+          }
+        },
+        "04e74085-67bf-498c-afc0-70dfdb642d4d": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_03_1024x1024_1b88b3d8-41b7-441c-8a4f-7f579159578b.jpg",
+            "alt": ""
+          }
+        },
+        "d3f6ff0a-6320-4b98-a366-64b03aaed1f6": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_04_1024x1024_1376def8-2b7d-4837-9607-bf307b666aeb.jpg",
+            "alt": ""
+          }
+        },
+        "53e95c26-d4b9-4927-9e15-9d826b3b1244": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_05_1024x1024_1269b3ab-e36c-4ce5-9151-f3e48b43594d.jpg",
+            "alt": ""
+          }
+        },
+        "bd12caff-079e-4351-93ff-a75629e84106": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_06_1024x1024_3dccfb00-002f-4877-959d-ddd829517cea.jpg",
+            "alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "73f2cbb9-30a7-4286-ba8e-1c1e37357ce3",
+        "46221388-eb2a-42a7-af95-efca1a7c4f5d",
+        "04e74085-67bf-498c-afc0-70dfdb642d4d",
+        "d3f6ff0a-6320-4b98-a366-64b03aaed1f6",
+        "53e95c26-d4b9-4927-9e15-9d826b3b1244",
+        "bd12caff-079e-4351-93ff-a75629e84106"
+      ],
+      "settings": {
+        "sectionHeading": "@MARKITBYKINTO",
+        "text1": "With MARK IT BY KINTO's Instagram account,",
+        "text2": "Introducing your personalized ideas",
+        "imgUrl": "",
+        "anchorID": ""
+      }
     }
   },
   "order": [
@@ -314,6 +376,7 @@
     "1631082372d649c2e4",
     "163108244160b25d61",
     "1631083243456f3665",
-    "16310833551ae52905"
+    "16310833551ae52905",
+    "1631083388fef06008"
   ]
 }
