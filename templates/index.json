@@ -1,15 +1,382 @@
 {
-  "name": "Hero Carousel",
   "sections": {
     "hero": {
-      "type": "landing-hero-carousel"
+      "type": "landing-hero-carousel",
+      "blocks": {
+        "241b9a0f-dcbb-49f8-b6bf-ae97e70eab35": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image1-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image1-mobile.jpg"
+          }
+        },
+        "cb542f42-89e1-4aac-9bf8-160b23ebc220": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image2-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image2-mobile.jpg"
+          }
+        },
+        "14070d63-0c7d-4fe6-a903-9dd7683a98ed": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image3-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image3-mobile.jpg"
+          }
+        },
+        "63f9f160-08ce-4c9e-9f2d-cd2c161d8c87": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image4-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image4-mobile.jpg"
+          }
+        },
+        "db753d61-f33b-4d25-aefc-cabfd8722ce6": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image5-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image5-mobile.jpg"
+          }
+        },
+        "8adf6294-70f2-4963-9c4d-22f906e992f3": {
+          "type": "image",
+          "settings": {
+            "imageDesktop": "shopify:\/\/shop_images\/image6-desktop.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/image6-mobile.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "241b9a0f-dcbb-49f8-b6bf-ae97e70eab35",
+        "cb542f42-89e1-4aac-9bf8-160b23ebc220",
+        "14070d63-0c7d-4fe6-a903-9dd7683a98ed",
+        "63f9f160-08ce-4c9e-9f2d-cd2c161d8c87",
+        "db753d61-f33b-4d25-aefc-cabfd8722ce6",
+        "8adf6294-70f2-4963-9c4d-22f906e992f3"
+      ],
+      "settings": {
+        "ctaText": "Order Now"
+      }
     },
     "concept-movie": {
-      "type": "landing-concept-movie"
+      "type": "landing-concept-movie",
+      "settings": {
+        "sectionTitle": "Personalize and make your own special",
+        "text": "<p>\"MARK IT BY KINTO\" is a service that allows you to personalize stainless steel tumblers and resin bottles. As a mu tumbler, Please enjoy it as a matching item with your family and friends, as a souvenir or gift.<\/p>",
+        "thumbnail": "shopify:\/\/shop_images\/thumbnail_500x_989d6e7b-29df-4e9d-a5a3-afaa85ffed2a.jpg",
+        "videoId": "VTRS_y1C6xc",
+        "anchorID": "section-movie"
+      }
+    },
+    "1631081559d14f13e2": {
+      "type": "image-with-image",
+      "blocks": {
+        "411755c3-7565-4353-be82-c70475ec502a": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service1.jpg",
+            "altText": ""
+          }
+        },
+        "536027e6-8d0d-4bf8-89b9-d126f47ccec5": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service2.jpg",
+            "altText": ""
+          }
+        },
+        "3f54ef1b-14d8-444f-adc5-7069d1d86927": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service3.jpg",
+            "altText": ""
+          }
+        },
+        "e7d937db-d9dd-49cd-817c-8bb1604714da": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service4.jpg",
+            "altText": ""
+          }
+        },
+        "d0e9c548-03ef-4add-9949-a67349ee06b1": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service5.jpg",
+            "altText": ""
+          }
+        },
+        "1a14a2ef-99d4-43a7-a8b8-c6e7ecd42014": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service6.png",
+            "altText": ""
+          }
+        },
+        "50f9db0c-1558-4bfb-a340-8a616553630c": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service7.jpg",
+            "altText": ""
+          }
+        },
+        "adbf4eac-ca48-4bb1-8946-82a371646b3e": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service8.jpg",
+            "altText": ""
+          }
+        }
+      },
+      "block_order": [
+        "411755c3-7565-4353-be82-c70475ec502a",
+        "536027e6-8d0d-4bf8-89b9-d126f47ccec5",
+        "3f54ef1b-14d8-444f-adc5-7069d1d86927",
+        "e7d937db-d9dd-49cd-817c-8bb1604714da",
+        "d0e9c548-03ef-4add-9949-a67349ee06b1",
+        "1a14a2ef-99d4-43a7-a8b8-c6e7ecd42014",
+        "50f9db0c-1558-4bfb-a340-8a616553630c",
+        "adbf4eac-ca48-4bb1-8946-82a371646b3e"
+      ],
+      "settings": {
+        "sectionTitle": "Services",
+        "serviceName": "Service 1",
+        "serviceDescription": "<p>Stainless steel tumbler + laser engraving<\/p>",
+        "ctaText": "Order Now",
+        "ctaUrl": "",
+        "serviceImg": "shopify:\/\/shop_images\/200521_KINTO44071_re_2_1_1.jpg",
+        "flip": false,
+        "anchorID": "section-services"
+      }
+    },
+    "163108209993bc2011": {
+      "type": "image-with-image",
+      "blocks": {
+        "3655629f-4c41-4e86-92ad-b1de4240df1b": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service1.png",
+            "altText": ""
+          }
+        },
+        "5b50e01b-7301-4b9d-b800-ca54a3b31821": {
+          "type": "image",
+          "settings": {
+            "iconImg": "shopify:\/\/shop_images\/service11.jpg",
+            "altText": ""
+          }
+        }
+      },
+      "block_order": [
+        "3655629f-4c41-4e86-92ad-b1de4240df1b",
+        "5b50e01b-7301-4b9d-b800-ca54a3b31821"
+      ],
+      "settings": {
+        "sectionTitle": "",
+        "serviceName": "Service 2",
+        "serviceDescription": "<p>Resin bottle + sticker<\/p>",
+        "ctaText": "Order Now",
+        "ctaUrl": "",
+        "serviceImg": "shopify:\/\/shop_images\/markitlab_top_services_01_90d9161a-03e7-4bff-baff-a8ba03452d70.jpg",
+        "flip": true,
+        "anchorID": ""
+      }
+    },
+    "1631082294d036fef7": {
+      "type": "products-gallery",
+      "blocks": {
+        "1631082294d036fef7-0": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image1.jpg",
+            "altText": ""
+          }
+        },
+        "1631082294d036fef7-1": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image2.jpg",
+            "altText": ""
+          }
+        },
+        "1631082294d036fef7-2": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image3.jpg",
+            "altText": ""
+          }
+        },
+        "1631082294d036fef7-3": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image4.jpg",
+            "altText": ""
+          }
+        }
+      },
+      "block_order": [
+        "1631082294d036fef7-0",
+        "1631082294d036fef7-1",
+        "1631082294d036fef7-2",
+        "1631082294d036fef7-3"
+      ],
+      "settings": {
+        "sectionTitle": "Ideas",
+        "linkText": "View More",
+        "url": "",
+        "anchorID": "section-ideas"
+      }
+    },
+    "1631082372d649c2e4": {
+      "type": "gallery-with-text",
+      "blocks": {
+        "1631082372d649c2e4-0": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/workout-bottle.jpg",
+            "productTitle": "Workout bottle",
+            "productDescription": "<p>WORK OUT BOTTLE that supports an active and personal sports life. Since the spout can be removed, it is designed to be easy to put in ice and easy to wash. Since it has a scale, it is easy to make sports drinks, etc., and you can grasp the intake amount.<\/p>"
+          }
+        },
+        "1631082372d649c2e4-1": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/active-tumbler.jpg",
+            "productTitle": "Active Tumbler",
+            "productDescription": "<p>ACTIVE TUMBLER for a sports life where you can move your body in the sun. The spout-type mouthpiece, which is easy to open and close, is comfortable to drink. It is easy to put ice and drinks, and the vacuum double structure keeps it cold for a long time. With an elastomer on the bottom, it softens the impact and noise when placed on the floor or ground of the studio.<\/p>"
+          }
+        },
+        "1631082372d649c2e4-2": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/active_tumbler.jpg",
+            "productTitle": "PLAY TUMBLER",
+            "productDescription": "<p>PLAY TUMBLER for kids who are crazy about playing under the blue sky. It is a straw type that is easy to drink even for small children, and it has a pleasant taste and you can also remove the straw inside and drink. The vacuum double structure makes it difficult for ice to melt and keeps it cold for a long time. With a handle, it is a design that is easy to hold event with small hand.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1631082372d649c2e4-0",
+        "1631082372d649c2e4-1",
+        "1631082372d649c2e4-2"
+      ],
+      "settings": {
+        "sectionHeading": "Products",
+        "showButton": false,
+        "buttonText": "Choose a product",
+        "buttonUrl": "",
+        "anchorID": "section-products"
+      }
+    },
+    "163108244160b25d61": {
+      "type": "shop-steps",
+      "settings": {
+        "sectionHeading": "How to",
+        "step1": "shopify:\/\/shop_images\/step_1.png",
+        "step1Title": "Choose",
+        "step1Desc": "Choose a product",
+        "step2": "shopify:\/\/shop_images\/step_2.png",
+        "step2Title": "Mark it",
+        "step2Desc": "Choose a color design",
+        "step3": "shopify:\/\/shop_images\/step_3.png",
+        "step3Title": "order",
+        "step3Desc": "After the order is complete, a stainless tumbler: 6 business days - resin bottle: 3 business days - delivered in",
+        "anchorID": "section-howto"
+      }
+    },
+    "1631083243456f3665": {
+      "type": "big-button",
+      "settings": {
+        "buttonText": "order no",
+        "buttonUrl": "",
+        "anchorID": ""
+      }
+    },
+    "16310833551ae52905": {
+      "type": "image-with-text",
+      "settings": {
+        "sectionHeading": "Visit",
+        "leftBigImg": "shopify:\/\/shop_images\/left.jpg",
+        "rightSmallImg": "shopify:\/\/shop_images\/logo_c04ac5c5-4f8e-47f0-854a-3af3ddf487b3.png",
+        "rightTextDesc": "<p>It is an experience space where you can enjoy MARK IT BY KINTO even more.<\/p><p>You can see the product in your hand.<\/p>",
+        "btnText": "View more",
+        "btnUrl": "",
+        "anchorID": "section-visit"
+      }
+    },
+    "1631083388fef06008": {
+      "type": "gallery-with-heading",
+      "blocks": {
+        "73f2cbb9-30a7-4286-ba8e-1c1e37357ce3": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_01_1024x1024_8085833f-b11b-4925-8146-7fb5c50799c0.jpg",
+            "alt": ""
+          }
+        },
+        "46221388-eb2a-42a7-af95-efca1a7c4f5d": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_02_1024x1024_f00bd6af-705b-455a-8000-b1e959f49ddf.jpg",
+            "alt": ""
+          }
+        },
+        "04e74085-67bf-498c-afc0-70dfdb642d4d": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_03_1024x1024_1b88b3d8-41b7-441c-8a4f-7f579159578b.jpg",
+            "alt": ""
+          }
+        },
+        "d3f6ff0a-6320-4b98-a366-64b03aaed1f6": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_04_1024x1024_1376def8-2b7d-4837-9607-bf307b666aeb.jpg",
+            "alt": ""
+          }
+        },
+        "53e95c26-d4b9-4927-9e15-9d826b3b1244": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_05_1024x1024_1269b3ab-e36c-4ce5-9151-f3e48b43594d.jpg",
+            "alt": ""
+          }
+        },
+        "bd12caff-079e-4351-93ff-a75629e84106": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/insta_06_1024x1024_3dccfb00-002f-4877-959d-ddd829517cea.jpg",
+            "alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "73f2cbb9-30a7-4286-ba8e-1c1e37357ce3",
+        "46221388-eb2a-42a7-af95-efca1a7c4f5d",
+        "04e74085-67bf-498c-afc0-70dfdb642d4d",
+        "d3f6ff0a-6320-4b98-a366-64b03aaed1f6",
+        "53e95c26-d4b9-4927-9e15-9d826b3b1244",
+        "bd12caff-079e-4351-93ff-a75629e84106"
+      ],
+      "settings": {
+        "sectionHeading": "@MARKITBYKINTO",
+        "text1": "With MARK IT BY KINTO's Instagram account,",
+        "text2": "Introducing your personalized ideas",
+        "imgUrl": "",
+        "anchorID": ""
+      }
     }
   },
   "order": [
     "hero",
-    "concept-movie"
+    "concept-movie",
+    "1631081559d14f13e2",
+    "163108209993bc2011",
+    "1631082294d036fef7",
+    "1631082372d649c2e4",
+    "163108244160b25d61",
+    "1631083243456f3665",
+    "16310833551ae52905",
+    "1631083388fef06008"
   ]
 }
