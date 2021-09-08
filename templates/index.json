@@ -264,7 +264,7 @@
         "sectionHeading": "Products",
         "showButton": false,
         "buttonText": "Choose a product",
-        "buttonUrl": "",
+        "buttonUrl": "shopify:\/\/pages\/choose-a-product",
         "anchorID": "section-products"
       }
     },
