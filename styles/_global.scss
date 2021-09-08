@@ -144,6 +144,15 @@ main {
     }
 }
 
+// Page Title
+.page-title {
+    font-size: toRem(24);
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0 40px 0;
+}
+
 // Big Button
 
 .big-btn {

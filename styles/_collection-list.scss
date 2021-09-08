@@ -1,0 +1,103 @@
+.page {
+
+    &-products {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 1035px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+
+
+        .product{
+            
+            &-item {
+                max-width: 30%;
+                flex: 0 0 30%;
+                padding: 0 12.5px 25px 12.5px;
+                position: relative;
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            &__inner {
+                width: 100%;
+                text-align: center;
+                background: $white;
+                border-radius: 5px;
+                padding: 0 15px 15px 15px;
+                color: $activeText;
+                box-shadow: 0 18px 30px 0 rgba(50, 50, 50, .1);
+            }
+
+            &__image {
+                padding: 0 20px;
+                display: block;
+
+                img {
+                    height: auto;
+                    display: inline-block;
+                    vertical-align: middle;
+                    max-width: 100%;
+                }
+            }
+
+            &__wrapper {
+                position: relative;
+                flex: 1;
+                display: flex;
+                flex-flow: column wrap;
+
+                .page-link {
+                    width: 100%;
+                    position: absolute;
+                    height: 100%;
+                }
+
+                .product {
+                    &__title {
+                        font-size: toRem(18);
+                        font-weight: 400;
+                    }
+
+                    &__desc {
+                        font-size: toRem(14);
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        margin-top: 20px;
+                    }
+
+                    &__variants {
+                        flex: 1;
+
+                        .list-variants {
+                            list-style: none;
+                            list-style-position: outside;
+                            margin: 20px 0 30px 0;
+                            padding: 0;
+                            font-size: 0;
+                            text-align: center;
+                            display: inline-block;
+
+                            li {
+                                display: inline-block;
+                                vertical-align: middle;
+
+                                span {
+                                    display: inline-block;
+                                    width: 14px;
+                                    height: 14px;
+                                    border-radius: 50%;
+                                    background-color: red;
+                                }
+
+                                &:not(:last-child) {
+                                    margin-right: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} /* Page */

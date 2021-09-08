@@ -4,9 +4,16 @@
       "type": "page-template-choose",
       "settings": {
       }
+    },
+    "collection": {
+      "type": "page-template-collection",
+      "settings": {
+
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection"
   ]
 }
