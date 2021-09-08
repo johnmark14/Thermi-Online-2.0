@@ -1,0 +1,45 @@
+.social {
+
+    &-info {
+        margin-top: -40px;
+        text-align: center;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 1px;
+    }
+
+    &-container {
+        padding-top: 60px;
+
+        .social {
+            &-images {
+                display: flex;
+                justify-content: center;
+            }
+
+            &-img {
+                flex-grow: 1;
+    
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        @include breakpoint-down(medium) {
+            .social {
+                &-images {
+                    flex-wrap: wrap;
+                }
+
+                &-img {
+                    flex-grow: unset;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

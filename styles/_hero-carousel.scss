@@ -1,0 +1,128 @@
+.intro { 
+
+    &-slider {
+        position: relative;
+        height: 90vh;
+
+        @include breakpoint-down(medium) {
+            height: 60vh;
+        }
+        @include breakpoint-down(small) {
+            height: 52vh;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .small-img {
+                display: none;
+            }
+
+            @include breakpoint-down(small) {
+                .small-img {
+                    display: block;
+                }
+
+                .bg-img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-actions {
+        position: absolute;
+        bottom: -120px;
+        right: -10px;
+        z-index: 99;
+
+        @include breakpoint-down(medium) {
+            bottom: -85px;
+            right: 2px;
+        }
+        @include breakpoint-down(small) {
+            bottom: -70px;
+            right: 10px;
+        }
+
+        .btn-oval {
+            box-sizing: border-box;
+            width: 250px;
+            height: 250px;
+            background-color: $darkGray;
+            border-radius: 50%;
+            color: #fff;
+            font-weight: 500;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: toRem(26);
+            line-height: 1.4;
+            text-transform: uppercase;
+            flex-flow: row wrap;
+            box-align: center;
+            letter-spacing: .22em;
+            padding: 0 45px 0 69px;
+            transition: background-color 0.3s;
+
+            @include breakpoint-down(medium) {
+                width: 180px;
+                height: 180px;
+                font-size: 20px;
+                padding: 0 40px;
+            }
+            @include breakpoint-down(small) {
+                width: 140px;
+                height: 140px;
+                font-size: 1rem;
+                padding: 0 27px;
+            }
+
+            &:hover {
+                background-color: $darkGray1;
+            }
+
+            span {
+                color: #fff;
+                text-align: left;
+                &::after {
+                    content: '';
+                    background: url(https://cdn.shopify.com/s/files/1/0076/8747/1170/t/97/assets/ico-arrow-right@2x.png?v=2691161101697521585) no-repeat 0 0;
+                    background-size: 100% 100%;
+                    width: 32px;
+                    height: 12px;
+                    display: inline-block;
+
+                    @include breakpoint-down(medium) {
+                        width: 28px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+<section id="{{ section.settings.anchorID }}" class="section-services section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}">
+    <div class="services-shell shell">
+        <h2 class="services-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
+        <div class="services-card">
+            <div class="services-img {% if section.settings.flip %} move-right {% endif %}">
+                <img src="{{ section.settings.serviceImg | img_url: 'master' }}" alt="">
+            </div>
+            <div class="services {% if section.settings.flip %} move-left {% endif %}">
+                <div class="services-label">
+                    <p class="services-number">{{ section.settings.serviceName }}</p>
+                    <p class="services-description">{{ section.settings.serviceDescription }}</p>
+                </div> 
+                {% if section.blocks.size != 0 %}
+                <div class="services-options">
+                    <ul class="option">
+                        {% for block in section.blocks %}
+                        <li><img src="{{ block.settings.iconImg | img_url: 'master' }}"
+                                alt="{% if block.settings.altText != blank %} {{ block.setting.altText }} {% else %} icon-{{ forloop.index }} {% endif %}">
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                <div class="services-cta">
+                    <a href="{{ section.settings.ctaUrl }}">{{ section.settings.ctaText }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Image with Image",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sectionTitle",
+            "label": "Section Heading",
+            "default": "Services"
+        },
+        {
+            "type": "text",
+            "id": "serviceName",
+            "label": "Service Name",
+            "default": "Service 1"
+        },
+        {
+            "type": "richtext",
+            "id": "serviceDescription",
+            "label": "Service Description",
+            "default": "<p>Write something for your services offered.</p>"
+        },
+        {
+            "type": "text",
+            "id": "ctaText",
+            "label": "CTA Text",
+            "default": "Order Now"
+        },
+        {
+            "type": "url",
+            "id": "ctaUrl",
+            "label": "CTA Page"
+        },
+        {
+            "type": "image_picker",
+            "id": "serviceImg",
+            "label": "Service Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "flip",
+            "label": "Flip?",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+    ],
+    "blocks": [
+            {
+                "type": "image",
+                "name": "Service Icon",
+                "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "iconImg",
+                    "label": "Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "altText",
+                    "label": "Text Description (alt)",
+                    "info": "Optional"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Image with Image"
+        }
+    ]
+}
+{% endschema %}

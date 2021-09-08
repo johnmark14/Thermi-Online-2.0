@@ -1,0 +1,92 @@
+.section-howto {
+    background-color: $lighterGray;
+
+    .howto-tut {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @include breakpoint-down(small) {
+            grid-template-columns: 1fr;
+            grid-gap: 70px;
+        }
+
+        .howto-step {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+
+            @include breakpoint-down(small) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 10px;
+                align-items: start;
+            }
+
+            // The step image
+            .stp-image {
+                width: 220px;
+                @include breakpoint-down(small) {
+                    width: 120px;
+                    justify-self: center;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .howto-detail {
+                text-align: center;
+            // The step title
+                .stp-heading {
+                    margin: 40px 10px 20px 10px;
+
+                    @include breakpoint-down(small) {
+                        margin-top: 0;
+                    }
+                    p {
+                        font-size: toRem(21);
+                        font-weight: 100;
+                        text-transform: uppercase;
+                    }
+                }
+
+                // The step add info
+                .stp-info {
+                    text-align: center;
+                    font-size: toRem(14);
+                    line-height: 20px;
+                }
+            }
+            
+            // Arrow
+            &:not(:last-child) {
+                &::after {
+                    content: '';
+                    background: url(https://cdn.shopify.com/s/files/1/0076/8747/1170/t/97/assets/ico-right-arrow-gray@2x.png?v=8650931991117177746) no-repeat 0 0;
+                    background-size: 100% 100%;
+                    width: 45px;
+                    height: 16px;
+                    margin-left: 20px;
+                    display: inline-block;
+
+                    position: absolute;
+                    right: 0;
+                    top: 120px;
+            
+                    @include breakpoint-down(small) {
+                        transform: rotate(90deg);
+                        left: 115px;
+                        width: 35px;
+                        top: 160px;
+                    
+                    }
+                }
+            }
+        }
+
+    } /* howto-tut */
+}

@@ -1,0 +1,129 @@
+<section class="section-plaintext section-padding" id="{{ section.settings.anchorID }}">
+    <div id="conceptMovie" class="plaintext-shell shell">
+        <h4 class="plaintext-title">{{ section.settings.sectionTitle }}</h4>
+        <div class="plaintext-container grid grid-temp-col-2">
+            <div class="plaintext-description">
+                {{ section.settings.text }}
+            </div>
+            <div class="plaintext-demo">
+                <a href="/"
+                    class="thumbnail" @click.prevent="{% if section.settings.videoId != blank %} toggleModal {% endif %}" >
+                    {% if section.settings.thumbnail %}
+                        <img src="{{ section.settings.thumbnail | img_url: 'master' }}" alt="Video Thumbnail">
+                    {% else %}
+                        {% render "small-image-placeholder" %}
+                    {% endif %}
+                </a>
+                <div class="modal" :class="{showOverlay: modalOpen}" @click="toggleModal(); stopModalVideo();"
+                    @wheel.prevent @touchmove.prevent @scroll.prevent>
+                    <div class="modal-video">
+                        <a href="/" class="modal-closebtn"
+                            @click.stop.prevent="toggleModal(); stopModalVideo();">
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div id="modaliframe"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+const conceptMovie = {
+    data() {
+        return {
+            modalOpen: false,
+        }
+    },
+    methods: {
+        toggleModal() {
+            this.modalOpen = !this.modalOpen
+        },
+        stopModalVideo() {
+            player.stopVideo()
+        },
+    }
+}
+
+Vue.createApp(conceptMovie).mount('#conceptMovie');
+
+// YOUTUBE iFRAME
+
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('modaliframe', {
+        videoId: '{{- section.settings.videoId -}}',
+        playerVars: {
+            'playsinline': 1,
+            'disablekb': 1,
+            'rel': 0
+        }
+    });
+}
+//Video ID = 2XuXBxcXO_Q
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 6000);
+        done = true;
+    }
+}
+
+function stopVideo() {
+    player.stopVideo();
+}
+</script>
+
+{% schema %}
+{
+    "name": "Concept Movie",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sectionTitle",
+            "label": "Section Title",
+            "default": "Say Something about your product"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Description",
+            "default": "<p>Write your description here</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "thumbnail",
+            "label": "Thumbnail"
+        },
+        {
+            "type": "text",
+            "id": "videoId",
+            "label": "YouTube Video ID"
+        },
+        {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+    ]
+}
+{% endschema %}

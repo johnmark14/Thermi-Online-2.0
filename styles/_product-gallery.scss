@@ -1,0 +1,47 @@
+.section-ideas.remove-extra {
+    margin-top: -90px;
+}
+
+.ideas {
+
+    &-shell.shell {
+        
+        @include breakpoint-down(small) {
+            padding: 0;
+        }
+    }
+
+    &-imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+
+        @include breakpoint-down(small) {
+            grid-template-columns: 1fr;
+        }
+
+        .img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-btn {
+        padding: 70px 70px 0 70px;
+        text-align: center;
+        >a {
+            font-size: toRem(18);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: $lightGray;
+            transition: color .3s ease;
+
+            &:hover {
+                color: $darkGray;
+            }
+        }
+    }
+}
