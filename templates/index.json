@@ -226,6 +226,45 @@
         "url": "",
         "anchorID": ""
       }
+    },
+    "1631082372d649c2e4": {
+      "type": "gallery-with-text",
+      "blocks": {
+        "1631082372d649c2e4-0": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/workout-bottle.jpg",
+            "productTitle": "Workout bottle",
+            "productDescription": "<p>WORK OUT BOTTLE that supports an active and personal sports life. Since the spout can be removed, it is designed to be easy to put in ice and easy to wash. Since it has a scale, it is easy to make sports drinks, etc., and you can grasp the intake amount.<\/p>"
+          }
+        },
+        "1631082372d649c2e4-1": {
+          "type": "image",
+          "settings": {
+            "productTitle": "",
+            "productDescription": "<p>Write something about your product.<\/p>"
+          }
+        },
+        "1631082372d649c2e4-2": {
+          "type": "image",
+          "settings": {
+            "productTitle": "",
+            "productDescription": "<p>Write something about your product.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1631082372d649c2e4-0",
+        "1631082372d649c2e4-1",
+        "1631082372d649c2e4-2"
+      ],
+      "settings": {
+        "sectionHeading": "Products",
+        "showButton": false,
+        "buttonText": "",
+        "buttonUrl": "",
+        "anchorID": ""
+      }
     }
   },
   "order": [
@@ -233,6 +272,7 @@
     "concept-movie",
     "1631081559d14f13e2",
     "163108209993bc2011",
-    "1631082294d036fef7"
+    "1631082294d036fef7",
+    "1631082372d649c2e4"
   ]
 }
