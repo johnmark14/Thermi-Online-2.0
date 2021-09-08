@@ -33,7 +33,7 @@
                 </div>  
             {% endif %}
             <div class="intro-actions">
-                <a href="/" class="btn-oval">
+                <a href="{{ section.settings.ctaUrl }}" class="btn-oval">
                     <span>
                         {{ section.settings.ctaText }}
                     </span>
@@ -71,7 +71,12 @@
             "id": "ctaText",
             "label": "CTA Text",
             "default": "Order Now"
-        }
+        },
+		{
+			"type": "url",
+			"id": "ctaUrl",
+			"label": "CTA Page"
+		}
     ],
     "blocks": [
         {
