@@ -7,6 +7,10 @@
         margin: 0 auto;
         padding-bottom: 50px;
 
+        @include breakpoint-down(small) {
+            display: block;
+            padding-top: 22px;
+        }
 
         .product{
             
@@ -17,6 +21,13 @@
                 position: relative;
                 display: flex;
                 flex-flow: row wrap;
+
+                @include breakpoint-down(small) {
+                    max-width: none;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-bottom: 1px;
+                }
             }
 
             &__inner {
@@ -27,11 +38,26 @@
                 padding: 0 15px 15px 15px;
                 color: $activeText;
                 box-shadow: 0 18px 30px 0 rgba(50, 50, 50, .1);
+
+                @include breakpoint-down(small) {
+                    max-width: none;
+                    display: flex;
+                    flex-flow: row wrap;
+                    margin: 0 0 4px 0;
+                    padding: 5px 16px 5px 0;
+                    text-align: left;
+                }
             }
 
             &__image {
                 padding: 0 20px;
                 display: block;
+
+                @include breakpoint-down(small) {
+                    padding: 0;
+                    width: 140px;
+                    padding-top: 10px;
+                }
 
                 img {
                     height: auto;
@@ -47,6 +73,11 @@
                 display: flex;
                 flex-flow: column wrap;
 
+                @include breakpoint-down(small) {
+                    height: auto;
+                    margin: auto;
+                }
+
                 .page-link {
                     width: 100%;
                     position: absolute;
@@ -57,6 +88,11 @@
                     &__title {
                         font-size: toRem(18);
                         font-weight: 400;
+
+                        @include breakpoint-down(small) {
+                            font-size: toRem(13);
+                            margin-bottom: 13px;
+                        }
                     }
 
                     &__desc {
@@ -64,6 +100,12 @@
                         font-weight: 300;
                         letter-spacing: 1px;
                         margin-top: 20px;
+
+                        @include breakpoint-down(small) {
+                            line-height: 1.5;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                        }
                     }
 
                     &__variants {
@@ -77,6 +119,10 @@
                             font-size: 0;
                             text-align: center;
                             display: inline-block;
+
+                            @include breakpoint-down(small) {
+                                margin-bottom: 15px;
+                            }
 
                             li {
                                 display: inline-block;
@@ -92,7 +138,11 @@
 
                                 &:not(:last-child) {
                                     margin-right: 6px;
-                                }
+
+                                    @include breakpoint-down(small) {
+                                        margin-right: 3px;
+                                    }
+                                } 
                             }
                         }
                     }
