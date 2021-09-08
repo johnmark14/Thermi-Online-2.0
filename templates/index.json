@@ -61,10 +61,11 @@
     "concept-movie": {
       "type": "landing-concept-movie",
       "settings": {
-        "sectionTitle": "Say Something about your product",
-        "text": "<p>Write your description here<\/p>",
-        "videoId": "",
-        "anchorID": ""
+        "sectionTitle": "Personalize and make your own special",
+        "text": "<p>\"MARK IT BY KINTO\" is a service that allows you to personalize stainless steel tumblers and resin bottles. As a mu tumbler, Please enjoy it as a matching item with your family and friends, as a souvenir or gift.<\/p>",
+        "thumbnail": "shopify:\/\/shop_images\/thumbnail_500x_989d6e7b-29df-4e9d-a5a3-afaa85ffed2a.jpg",
+        "videoId": "VTRS_y1C6xc",
+        "anchorID": "section-movie"
       }
     }
   },
