@@ -288,7 +288,7 @@
       "type": "big-button",
       "settings": {
         "buttonText": "order now",
-        "buttonUrl": "",
+        "buttonUrl": "shopify:\/\/pages\/choose-a-product",
         "anchorID": ""
       }
     },
