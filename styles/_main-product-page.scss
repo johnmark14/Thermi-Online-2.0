@@ -1,0 +1,204 @@
+.section-product {
+    .product {
+        &-back {
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-wrapper {
+            margin-top: 40px;
+            display: flex;
+            .product {
+
+                &-preview {
+                    width: 50%;
+                    img {
+                        width: 100%;
+                    }
+
+                    .product-disclaimer {
+                        padding: 10px;
+                        p {
+                            font-size: toRem(14);
+                            line-height: 1.8;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+
+                &-options {
+                    width: 50%;
+
+                    .product {
+
+                        &-info {
+                            padding-bottom: 20px;
+                            
+
+                            .product-title {
+                                font-size: 24px;
+                                font-weight: 500;
+                                letter-spacing: 1px;
+                            }
+
+                            .product-desc {
+                                margin-top: 10px;
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .product-form {
+        padding-bottom: 60px;
+        border-bottom: 2px solid $lightGray1;
+        
+        .custom-option {
+            display: flex;
+            align-items: center;
+        }
+        .option {
+            &-label {
+                font-size: 26px;
+                font-weight: 200;
+                margin-right: 30px;
+                // border: 1px solid black;
+            }
+
+            &-swatch {
+                position: relative;
+                display: flex;
+
+                
+                .swatch-wrapper {
+
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+
+                    .slash {
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 2px;
+                            right: -23px;
+                            transform: rotate(45deg);
+                            z-index: 2;
+                            display: block;
+                            width: 4px;
+                            background-color: $darkGray;
+                            border-left: 1px solid $white;
+                            border-right: 1px solid $white;
+                            height: 35px;
+                        }
+                    }
+
+                    input {
+                        visibility: hidden;
+                        width: 0;
+                        position: absolute;
+
+                        &:checked + label .color {
+                            border-color: $darkGray;
+                        }
+                        &:checked + label .desc {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    label {
+                        display: block;
+                        position: relative;
+                        cursor: pointer;
+
+                        .color {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 100%;
+                            border: 3px solid $white;
+                            padding: 2px;
+                            margin: auto;
+                            transition: border-color .3s ease;
+
+                            span {
+                                height: 100%;
+                                width: 100%;
+                                border-radius: 100%;
+                                display: block;
+                            }
+                        }
+
+                        .desc {
+                            position: absolute;
+                            left: -75%;
+                            width: 100px;
+                            margin-top: 5px;
+                            opacity: 0;
+                            visibility: hidden;
+                            text-align: center;
+                            transition: opacity .3s ease-in;
+                            span {
+                                display: block;
+
+                                &:first-child {
+                                    font-weight: 800;
+                                    color: $darkGray;
+                                }
+
+                                &:last-child{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .product-button {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 40px;
+
+        button {
+            height: 90px;
+            width: 60%;
+            border: none;
+            background-color: $darkGray1;
+            color: $white;
+            cursor: pointer;
+            transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                        .5s ease-in-out,opacity .5s ease-in-out;
+
+            &:hover {
+                background-color: $black;
+            }
+
+            span {
+                display: block;
+                text-transform: uppercase;
+
+                &:first-child {
+                    font-size: 30px;
+                    letter-spacing: 1px;
+                }
+
+                &:last-child {
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}

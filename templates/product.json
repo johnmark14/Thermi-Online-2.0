@@ -1,18 +1,16 @@
 {
   "sections": {
-    "hero": {
-      "type": "landing-hero-carousel",
+    "main": {
+      "type": "page-template-choose",
       "settings": {
       }
     },
-    "concept-movie": {
-      "type": "landing-concept-movie",
-      "settings": {
-      }
+    "product": {
+      "type": "main-product"
     }
   },
   "order": [
-    "hero",
-    "concept-movie"
+    "main",
+    "product"
   ]
 }
