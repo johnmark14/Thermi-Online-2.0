@@ -7,14 +7,23 @@
                 text-decoration: underline;
             }
         }
-
         &-wrapper {
             margin-top: 40px;
             display: flex;
+
+            @include breakpoint-down(small) {
+                flex-direction: column;
+            }
+
             .product {
 
                 &-preview {
                     width: 50%;
+
+                    @include breakpoint-down(small) {
+                        width: 100%;
+                    }
+
                     img {
                         width: 100%;
                     }
@@ -25,6 +34,11 @@
                             font-size: toRem(14);
                             line-height: 1.8;
                             letter-spacing: 1px;
+
+                            @include breakpoint-down(small) {
+                                font-size: toRem(12);
+                                line-height: 1.4;
+                            }
                         }
                     }
                 }
@@ -32,14 +46,23 @@
                 &-options {
                     width: 50%;
 
+                    @include breakpoint-down(small) {
+                        width: 100%;
+                    }
+
+                    @include breakpoint-up(medium) {
+                        &.small {
+                            display: none;
+                        }
+                    }
+
                     .product {
 
                         &-info {
                             padding-bottom: 20px;
                             
-
                             .product-title {
-                                font-size: 24px;
+                                font-size: toRem(24);
                                 font-weight: 500;
                                 letter-spacing: 1px;
                             }
@@ -48,6 +71,23 @@
                                 margin-top: 10px;
                                 font-size: 14px;
                                 letter-spacing: 1px;
+                            }
+                            
+                            @include breakpoint-down(small) {
+                                
+                                .product-title {
+                                    font-size: toRem(20);
+                                }
+                                .product-desc {
+                                    margin-top: 5px;
+                                    font-size: toRem(12);
+                                }
+                                
+                                text-align: center;
+
+                                &.wide {
+                                    display: none;
+                                }
                             }
                         }
                     }
@@ -63,20 +103,31 @@
         .custom-option {
             display: flex;
             align-items: center;
+
+            @include breakpoint-down(small) {
+                flex-direction: column;
+                align-items:flex-start;
+            }
         }
         .option {
             &-label {
-                font-size: 26px;
+                font-size: toRem(26);
                 font-weight: 200;
                 margin-right: 30px;
-                // border: 1px solid black;
+
+                @include breakpoint-down(small) {
+                    font-size: toRem(18);
+                }
             }
 
             &-swatch {
                 position: relative;
                 display: flex;
-
                 
+                @include breakpoint-down(small) {
+                    align-self: center;
+                }
+
                 .swatch-wrapper {
 
                     &:not(:last-child) {
@@ -99,6 +150,13 @@
                             border-left: 1px solid $white;
                             border-right: 1px solid $white;
                             height: 35px;
+
+                            @include breakpoint-down(small) {
+                                top: 3px;
+                                right: -22px;
+                                width: 3px;
+                                height: 32px;
+                            }
                         }
                     }
 
@@ -135,6 +193,11 @@
                                 border-radius: 100%;
                                 display: block;
                             }
+
+                            @include breakpoint-down(small) {
+                                width: 28px;
+                                height: 28px;
+                            }
                         }
 
                         .desc {
@@ -156,6 +219,13 @@
 
                                 &:last-child{
                                     font-size: 12px;
+                                }
+
+                                @include breakpoint-down(small) {
+                                    &:first-child {
+                                        font-weight: 700;
+                                        font-size: toRem(14);
+                                    }
                                 }
                             }
                         }
@@ -189,14 +259,28 @@
                 text-transform: uppercase;
 
                 &:first-child {
-                    font-size: 30px;
+                    font-size: toRem(30);
                     letter-spacing: 1px;
                 }
 
                 &:last-child {
-                    font-size: 12px;
+                    font-size: toRem(12);
                     letter-spacing: 2px;
                     padding-top: 5px;
+                }
+            }
+
+            @include breakpoint-down(small) {
+                width: 85%;
+                span {
+
+                    &:first-child {
+                        font-size: toRem(25);
+                    }
+    
+                    &:last-child{
+                        font-size: toRem(10);
+                    }
                 }
             }
         }
