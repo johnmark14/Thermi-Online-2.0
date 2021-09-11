@@ -1775,6 +1775,11 @@ main {
   padding-bottom: 10px;
 }
 
+.page-back {
+  font-size: 0.875rem;
+  display: none;
+}
+
 .page-steps {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1868,8 +1873,14 @@ main {
 
 /* .page */
 @media (max-width: 39.9375em) {
-  .section-choose {
+  .page-steps {
     display: none;
+  }
+  .page-back {
+    display: inline-block;
+  }
+  .section-choose.section-padding {
+    padding-bottom: 0;
   }
 }
 
@@ -2073,3 +2084,101 @@ main {
 }
 
 /* Page */
+.section-viewmore {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section-viewmore .banner-wrapper {
+  width: 90%;
+  max-width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  border: 1px solid #5E5E5E;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-viewmore .banner-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5px;
+  }
+}
+
+.section-viewmore .banner-image {
+  width: 50%;
+}
+
+.section-viewmore .banner-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+  -o-object-position: 0 61%;
+     object-position: 0 61%;
+  margin-bottom: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .section-viewmore .banner-image {
+    width: 100%;
+  }
+}
+
+.section-viewmore .banner-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-viewmore .banner-info .banner-text {
+  line-height: 1.8;
+}
+
+.section-viewmore .banner-info .banner-link {
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #989898;
+}
+
+.section-viewmore .banner-info .banner-link a {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 39.9375em) {
+  .section-viewmore .banner-info {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .section-viewmore .banner-info .banner-text {
+    font-size: 0.875rem;
+  }
+  .section-viewmore .banner-info .banner-link {
+    padding-bottom: 2px;
+  }
+  .section-viewmore .banner-info .banner-link a {
+    font-size: 0.75rem;
+  }
+}

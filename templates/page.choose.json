@@ -9,10 +9,17 @@
       "type": "page-template-collection",
       "settings": {
       }
+    },
+    "view-more": {
+      "type": "page-view-more",
+      "setting": {
+
+      }
     }
   },
   "order": [
     "main",
-    "collection"
+    "collection",
+    "view-more"
   ]
 }

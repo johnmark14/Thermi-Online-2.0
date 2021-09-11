@@ -1,4 +1,9 @@
 .page{
+    &-back {
+        font-size: toRem(14);
+        display: none;
+    }
+
 	&-steps {
         display: flex;
         flex-flow: row wrap;
@@ -76,7 +81,15 @@
 
 // Hide this on Mobile
 @include breakpoint-down(small) {
-    .section-choose {
+    .page-steps {
         display: none;
+    }
+
+    .page-back {
+        display: inline-block;
+    }
+
+    .section-choose.section-padding {
+        padding-bottom: 0;
     }
 }
