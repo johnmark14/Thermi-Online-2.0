@@ -1,12 +1,16 @@
 {
   "sections": {
     "main": {
-      "type": "page-check",
+      "type": "page-template-check",
       "settings": {
       }
+    },
+    "choose": {
+      "type": "page-template-choose"
     }
   },
   "order": [
+    "choose",
     "main"
   ]
 }

@@ -57,7 +57,8 @@ button, button:visited, button:hover, button:focus, button:active {
     color: inherit;
     user-select: none;
     outline: 0;
-    background-color: transparent;
+    border: none;
+    // background-color: transparent;
     -webkit-tap-highlight-color: transparent;
 }
 input, input:visited, input:hover, input:focus, input:active {
@@ -65,7 +66,8 @@ input, input:visited, input:hover, input:focus, input:active {
     color: inherit;
     user-select: none;
     outline: 0;
-    background-color: transparent;
+    
+    // background-color: transparent;
     -webkit-tap-highlight-color: transparent;
 }
 

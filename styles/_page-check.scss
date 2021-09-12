@@ -1,0 +1,195 @@
+.section-check {
+
+    .check {
+        &-wrapper {
+            display: flex;
+
+            @include breakpoint-down(small) {
+                flex-direction: column;
+            }
+        }
+
+        &-preview {
+            width: 60%;
+
+            @include breakpoint-down(small) {
+                width: 100%;
+            }
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &-side {
+            width: 40%;
+            padding-top: 20px;
+
+            @include breakpoint-down(small) {
+                width: 100%;
+            }
+        }
+
+        &-info {
+            
+            @include breakpoint-down(small) {
+                text-align: center;
+            }
+            .check {
+                &-title {
+                    font-size: toRem(28);
+                    font-weight: 400;
+                    padding-bottom: 5px;
+                    @include breakpoint-down(small) {
+                        font-size: toRem(20);
+                    }
+                }
+                
+                &-desc {
+                    
+                    padding-bottom: 30px;
+                    &__variant {
+                        font-size: toRem(15);
+                        font-weight: 500;
+                        padding-bottom: 20px;
+                        
+                        @include breakpoint-down(small) {
+                            padding-bottom: 10px;
+                            font-size: toRem(14);
+                        }
+                    }
+                    
+                    &__price {
+                        font-size: toRem(28);
+                        font-weight: 400;
+                        padding-bottom: 5px;
+
+                        &-desc {
+                            font-size: toRem(15);
+                            font-weight: 500;
+                        }
+                        @include breakpoint-down(small) {
+                            font-size: toRem(20);
+                            &-desc {
+                                font-size: toRem(14);
+                            }
+                        }
+                    }
+                }
+
+                &-list {
+                    text-align: left;
+
+                    &__title {
+                        font-size: toRem(21);
+                        font-weight: 400;
+                        margin-bottom: 10px;
+                        @include breakpoint-down(small) {
+                            font-size: toRem(18);
+                            margin-bottom: 5px;
+                            
+                        }
+                    }
+                    &__content {
+                        height: 300px;
+                        padding: 10px;
+                        overflow-y: scroll;
+                        border: 1px solid $lightGray1;
+
+                        p {
+                            font-size: toRem(14);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-agree {
+            margin-top: 20px;
+            font-size: toRem(14);
+            letter-spacing: 1px;
+            font-weight: 500;
+            
+            @include breakpoint-down(small) {
+                letter-spacing: 0;
+                font-weight: 400;
+            }
+        }
+
+        &-add {
+            text-align: center;
+            margin-top: 60px;
+            button {
+                display: inline-flex;
+                width: 60%;
+                height: 90px;
+                background-color: $darkGray1;
+                color: white;
+                outline: none;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center;
+                transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                        .5s ease-in-out,opacity .5s ease-in-out;
+                border-radius: 4px;
+
+                @include breakpoint-down(small) {
+                    width: 85%;
+                    height: 80px;
+                }
+
+                span {
+                    text-transform: uppercase;
+                    font-size: toRem(22);
+                    font-weight: 400;
+
+                    &:first-child {
+                        width: 24px;
+                        margin-right: 10px;
+                         svg {
+                            fill: $white;
+                         }
+                    }
+                    
+                    @include breakpoint-down(small) {
+                        font-size: toRem(20);
+                        &:first-child {
+                            width: 24px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+
+        &-back {
+            display: block;
+            margin-top: 20px;
+            font-size: toRem(14);
+            letter-spacing: 1px;
+            font-weight: 400;
+            display: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            @include breakpoint-down(small) {
+                &.mobile {
+                    display: inline-block;
+                }
+            }
+
+            @include breakpoint-up(medium) {
+                &.wide {
+                    display: inline-block;
+                }
+            }
+
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 <!-- Start Section Main Product Page -->
 <section class="section-product section-padding">
-    <div class="product-shell shell">
+    <div id="mainProduct" class="product-shell shell">
         <a href="/pages/choose-a-product" class="product-back">< Product Selection</a>
         <div class="product-wrapper">
             <div class="product-options small">
@@ -27,7 +27,7 @@
                     {% render "product-options" %}
                 </div>
                 <div class="product-button">
-                    <button>
+                    <button @click.prevent="openPage">
                         <span>CHECK</span>
                         <span>Checking the content</span>
                     </button>
@@ -36,3 +36,20 @@
         </div>
     </div>
 </section>
+
+<script>
+    const MainProduct = {
+        data() {
+            return {
+            counter: 0
+            }
+        },
+        methods: {
+            openPage() {
+                window.location.href = "/pages/check"
+            }
+        },
+    }
+
+    Vue.createApp(MainProduct).mount('#mainProduct')
+</script>
