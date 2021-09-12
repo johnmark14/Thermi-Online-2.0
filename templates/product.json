@@ -7,10 +7,14 @@
     },
     "product": {
       "type": "main-product"
+    },
+    "accordion": {
+      "type": "accordion"
     }
   },
   "order": [
     "main",
-    "product"
+    "product",
+    "accordion"
   ]
 }

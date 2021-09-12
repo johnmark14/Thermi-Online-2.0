@@ -2531,3 +2531,98 @@ main {
     font-size: 0.625rem;
   }
 }
+
+.section-accordion .accord-wrapper {
+  position: relative;
+}
+
+.section-accordion .accord-wrapper input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.section-accordion .accord-wrapper input:checked + label span svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.section-accordion .accord-wrapper input:checked ~ .accord-body {
+  max-height: 100vh;
+  padding-top: 10px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordion .accord-wrapper input:checked ~ .accord-body {
+    padding-top: 5px;
+  }
+}
+
+.section-accordion .accord-wrapper label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.section-accordion .accord-wrapper label p {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordion .accord-wrapper label p {
+    font-size: 1rem;
+  }
+}
+
+.section-accordion .accord-wrapper label span {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.section-accordion .accord-wrapper label span svg {
+  width: 34px;
+  fill: #989898;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordion .accord-wrapper label span {
+    padding-left: 5px;
+  }
+  .section-accordion .accord-wrapper label span svg {
+    width: 32px;
+  }
+}
+
+.section-accordion .accord-body {
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.section-accordion .accord-body p {
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordion .accord-body p {
+    font-size: 0.8125rem;
+  }
+  .section-accordion .accord-body p:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
