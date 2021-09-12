@@ -6,19 +6,67 @@
       }
     },
     "product": {
-      "type": "main-product"
+      "type": "main-product",
+      "settings": {
+      }
     },
     "accordion": {
-      "type": "accordion"
+      "type": "accordion",
+      "settings": {
+      }
     },
     "accordion-header": {
-      "type": "accordion-with-header"
+      "type": "accordion-with-header",
+      "settings": {
+      }
+    },
+    "1631429520a7b2f359": {
+      "type": "gallery-with-text",
+      "blocks": {
+        "1631429520a7b2f359-1": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/travel_w_pd_002_800x_c8014c34-c35e-40af-963a-df3626dad376.jpg",
+            "productTitle": "Stress-free drinking comfort",
+            "productDescription": "<p>Aiming for a natural drinking feel like a glass or mug, we designed it so that it feels good and can be drunk from anywhere in 360 degrees by eliminating protrusions such as screws. With structure that catches ice and prevents drinks from rushing out, you can drink comfortably until the end.<\/p>"
+          }
+        },
+        "1631429520a7b2f359-2": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/travel_w_pd_003_800x_90ccb05c-ed98-4eaf-a4ed-f43d4646a5eb.jpg",
+            "productTitle": "Excellent heat and cold insulation effect",
+            "productDescription": "<p>The bottle body has a double structure of stainless steel. By creating a vacuum between the outer bottle and the inner bottle, heat dissipation due to convection is prevented, and a high heat and cold insulation effect is exhibited. Keeping the temperature above 65 ℃ and below 8 ℃ for 6 hours, you can refresh at a delicious temperature at any time. In addition, it is designed to prevent dust from entering even when the lid is removed, so there is no need to open and close the lid each time you drink, and it does not interfere with your work.<\/p>"
+          }
+        },
+        "1631429520a7b2f359-0": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/travel_w_pd_001_800x_3601838e-1d31-48d6-a9a6-05dbaa8e6e5a.jpg",
+            "productTitle": "Get delicious even outdoors",
+            "productDescription": "<p>TRAVEL TUMBLER, which has a double vacuum structure, is a tool for people who have a flexible lifestyle while being particular about it. You can enjoy the original flavor of drinks such as single-origin coffee, tea, and mineral water for a long time.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1631429520a7b2f359-1",
+        "1631429520a7b2f359-2",
+        "1631429520a7b2f359-0"
+      ],
+      "settings": {
+        "sectionHeading": "Products details",
+        "showButton": true,
+        "buttonText": "",
+        "buttonUrl": "",
+        "anchorID": ""
+      }
     }
   },
   "order": [
     "main",
     "product",
     "accordion",
-    "accordion-header"
+    "accordion-header",
+    "1631429520a7b2f359"
   ]
 }
