@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-check",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
