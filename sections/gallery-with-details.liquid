@@ -1,0 +1,109 @@
+<section class="section-gallery section-padding" id="{{ section.settings.anchorID }}">
+    <div class="products-shell shell">
+      <h2 class="products-title section-title">{{ section.settings.sectionHeading }}</h2>
+      <div class="products-body">
+          <ul class="products-list">
+              <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/files/travel_w_pd_001_800x.jpg?v=1594693583" alt="">
+                  <h4>Get Delicious even outdoors</h4>
+                  <p>TRAVEL TUMBLER, which has a double vacuum structure, is a tool for people who have a flexible lifestyle while being particular about it.</p>
+                  <p>You can enjoy the original flavor of drinks such as single-origin coffee, tea, and mineral water for a long time.</p>
+              </li>
+              <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/files/travel_w_pd_001_800x.jpg?v=1594693583" alt="">
+                  <h4>Get Delicious even outdoors</h4>
+                  <p>TRAVEL TUMBLER, which has a double vacuum structure, is a tool for people who have a flexible lifestyle while being particular about it.</p>
+                  <p>You can enjoy the original flavor of drinks such as single-origin coffee, tea, and mineral water for a long time.</p>
+              </li>
+              <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/files/travel_w_pd_001_800x.jpg?v=1594693583" alt="">
+                  <h4>Get Delicious even outdoors</h4>
+                  <p>TRAVEL TUMBLER, which has a double vacuum structure, is a tool for people who have a flexible lifestyle while being particular about it.</p>
+                  <p>You can enjoy the original flavor of drinks such as single-origin coffee, tea, and mineral water for a long time.</p>
+              </li>
+              <li>
+                  <img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/files/travel_w_pd_001_800x.jpg?v=1594693583" alt="">
+                  <h4>Get Delicious even outdoors</h4>
+                  <p>TRAVEL TUMBLER, which has a double vacuum structure, is a tool for people who have a flexible lifestyle while being particular about it.</p>
+                  <p>You can enjoy the original flavor of drinks such as single-origin coffee, tea, and mineral water for a long time.</p>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </section>
+  {% schema %}
+  {
+      "name": "Gallery with Details",
+      "settings": [
+          {
+              "type": "text",
+              "id": "sectionHeading",
+              "label": "Section Heading",
+              "default": "Products"
+          },
+          {
+              "type": "checkbox",
+              "id": "showButton",
+              "label": "Hide Button?",
+              "default": false
+          },
+          {
+              "type": "text",
+              "id": "buttonText",
+              "label": "Button Text"
+          },
+          {
+              "type": "url",
+              "id": "buttonUrl",
+              "label": "Button URL"
+          },
+          {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        }
+      ],
+      "blocks": [
+          {
+              "type": "image",
+              "name": "Products",
+              "settings": [
+                  {
+                      "type": "image_picker",
+                      "id": "productImg",
+                      "label": "Product Image"
+                  },
+                  {
+                      "type": "text",
+                      "id": "productTitle",
+                      "label": "Product Heading"
+                  },
+                  {
+                      "type": "richtext",
+                      "id": "productDescription",
+                      "label": "Product Description",
+                      "default": "<p>Write something about your product.</p>"
+                  }
+              ]
+          }
+      ],
+      "presets": [
+          {
+              "name": "Gallery with Details",
+              "blocks": [
+                  {
+                      "type": "image"
+                  },
+                  {
+                      "type": "image"
+                  },
+                  {
+                      "type": "image"
+                  }
+              ]
+          }
+      ]
+  }
+  {% endschema %}
+  
