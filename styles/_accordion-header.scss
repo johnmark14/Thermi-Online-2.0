@@ -1,0 +1,98 @@
+.override-padding {
+    padding-bottom: 20px;
+}
+.section-accordheader {
+    .accord {
+        &-header {
+            font-size: toRem(24);
+            font-weight: 300;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $lightGray1;
+
+            @include breakpoint-down(small) {
+                font-size: toRem(20);
+            }
+        }
+
+        &-wrapper {
+            position: relative;
+            
+            &:not(:last-child) {
+                margin-top: 20px;
+            }
+            input {
+                position: absolute;
+                visibility: hidden;
+
+                &:checked + label {
+                    span svg {
+                        transform: rotate(180deg);
+                    }
+                }
+                &:checked ~ .accord-body {
+                    max-height: 1500vh;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+
+                    @include breakpoint-down(small) {
+                        padding-top: 5px;
+                    }
+                }
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                user-select: none;
+                p {
+                    font-size: toRem(20);
+                    font-weight: 200;
+                    text-transform: uppercase;
+
+                    @include breakpoint-down(small) {
+                        font-size: toRem(16);
+                    }
+                }
+
+                span {
+                    padding-left: 10px;
+                    padding-top: 5px;
+                    svg {
+                        width: 34px;
+                        fill: $lightGray;
+                        transition: all .35s;
+                    }
+
+                    @include breakpoint-down(small) {
+                        padding-left: 5px;
+
+                        svg {
+                            width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-body {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .35s;
+            p {
+                font-size: toRem(14);
+                letter-spacing: 1px;
+                line-height: 1.8;
+
+                @include breakpoint-down(small) {
+                    font-size: toRem(13);
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,11 +10,15 @@
     },
     "accordion": {
       "type": "accordion"
+    },
+    "accordion-header": {
+      "type": "accordion-with-header"
     }
   },
   "order": [
     "main",
     "product",
-    "accordion"
+    "accordion",
+    "accordion-header"
   ]
 }

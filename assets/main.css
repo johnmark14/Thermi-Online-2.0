@@ -2626,3 +2626,121 @@ main {
     margin-bottom: 5px;
   }
 }
+
+.override-padding {
+  padding-bottom: 20px;
+}
+
+.section-accordheader .accord-header {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordheader .accord-header {
+    font-size: 1.25rem;
+  }
+}
+
+.section-accordheader .accord-wrapper {
+  position: relative;
+}
+
+.section-accordheader .accord-wrapper:not(:last-child) {
+  margin-top: 20px;
+}
+
+.section-accordheader .accord-wrapper input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.section-accordheader .accord-wrapper input:checked + label span svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.section-accordheader .accord-wrapper input:checked ~ .accord-body {
+  max-height: 1500vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordheader .accord-wrapper input:checked ~ .accord-body {
+    padding-top: 5px;
+  }
+}
+
+.section-accordheader .accord-wrapper label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.section-accordheader .accord-wrapper label p {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordheader .accord-wrapper label p {
+    font-size: 1rem;
+  }
+}
+
+.section-accordheader .accord-wrapper label span {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.section-accordheader .accord-wrapper label span svg {
+  width: 34px;
+  fill: #989898;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordheader .accord-wrapper label span {
+    padding-left: 5px;
+  }
+  .section-accordheader .accord-wrapper label span svg {
+    width: 32px;
+  }
+}
+
+.section-accordheader .accord-body {
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.section-accordheader .accord-body p {
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+@media (max-width: 39.9375em) {
+  .section-accordheader .accord-body p {
+    font-size: 0.8125rem;
+  }
+  .section-accordheader .accord-body p:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
