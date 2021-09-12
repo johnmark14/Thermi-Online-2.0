@@ -6,19 +6,65 @@
       }
     },
     "product": {
-      "type": "main-product"
+      "type": "main-product",
+      "settings": {
+      }
     },
     "accordion": {
-      "type": "accordion"
+      "type": "accordion",
+      "settings": {
+      }
     },
     "accordion-header": {
-      "type": "accordion-with-header"
+      "type": "accordion-with-header",
+      "settings": {
+      }
+    },
+    "1631429520a7b2f359": {
+      "type": "gallery-with-text",
+      "blocks": {
+        "1631429520a7b2f359-0": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/travel_w_pd_001_800x_3601838e-1d31-48d6-a9a6-05dbaa8e6e5a.jpg",
+            "productTitle": "Get delicious even outdoors",
+            "productDescription": "<p>TRAVEL TUMBLER, which has a double vacuum structure, is a tool for people who have a flexible lifestyle while being particular about it. You can enjoy the original flavor of drinks such as single-origin coffee, tea, and mineral water for a long time.<\/p>"
+          }
+        },
+        "1631429520a7b2f359-1": {
+          "type": "image",
+          "settings": {
+            "productTitle": "",
+            "productDescription": "<p>Write something about your product.<\/p>"
+          }
+        },
+        "1631429520a7b2f359-2": {
+          "type": "image",
+          "settings": {
+            "productTitle": "",
+            "productDescription": "<p>Write something about your product.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1631429520a7b2f359-0",
+        "1631429520a7b2f359-1",
+        "1631429520a7b2f359-2"
+      ],
+      "settings": {
+        "sectionHeading": "Products details",
+        "showButton": true,
+        "buttonText": "",
+        "buttonUrl": "",
+        "anchorID": ""
+      }
     }
   },
   "order": [
     "main",
     "product",
     "accordion",
-    "accordion-header"
+    "accordion-header",
+    "1631429520a7b2f359"
   ]
 }
