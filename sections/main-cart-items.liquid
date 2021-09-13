@@ -1,0 +1,120 @@
+<section class="section-cart section-padding">
+    <div id="mainCart" class="cart-shell shell">
+        <h2 class="cart-title section-title">SHOPPING CART</h2>
+        <div class="cart-body">
+            <form action="/cart" method="post" id="cart-form">
+                <table class="cart-table">
+                    <thead class="cart-head">
+                        <tr>
+                            <th colspan="2">Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tb-body">
+                        <tr class="tb-body__row">
+                            <td class="td-image">
+                                <a href="/"><img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/products/20942_240x240_crop_center.jpg?v=1618465816" alt=""></a>
+                            </td>
+                            <td class="td-description">
+                                <a href="/">
+                                    Travel Tumbler 500ml
+                                    <span class="td-variant">- White</span>
+                                </a>
+                                <p>Processing fee: $20.00</p>
+                            </td>
+                            <td class="td-price">
+                                <span>$120.00</span>
+                            </td>
+                            <td class="td-quantity">
+                                <div class="body">
+                                    <div class="qb add">
+                                        <!-- <span>+</span> -->
+                                        <a href="/">+</a>
+                                    </div>
+                                    <div class="qb items">
+                                        <span>2</span>
+                                    </div>
+                                    <div class="qb minus">
+                                        <!-- <span>-</span> -->
+                                        <a href="/">-</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="td-total">
+                                <span>$120.00</span>
+                            </td>
+                        </tr>
+                        <tr class="tb-body__row">
+                            <td class="td-image">
+                                <a href="/"><img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/products/20942_240x240_crop_center.jpg?v=1618465816" alt=""></a>
+                            </td>
+                            <td class="td-description">
+                                <a href="/">
+                                    Travel Tumbler 500ml
+                                    <span class="td-variant">- White</span>
+                                </a>
+                                <p>Processing fee: $20.00</p>
+                            </td>
+                            <td class="td-price">
+                                <span>$120.00</span>
+                            </td>
+                            <td class="td-quantity">
+                                <div class="body">
+                                    <div class="qb add">
+                                        <!-- <span>+</span> -->
+                                        <a href="/">+</a>
+                                    </div>
+                                    <div class="qb items">
+                                        <span>2</span>
+                                    </div>
+                                    <div class="qb minus">
+                                        <!-- <span>-</span> -->
+                                        <a href="/">-</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="td-total">
+                                <span>$120.00</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cart-total">
+                    <div class="cart-total__label">
+                        <span>subtotal</span>
+                    </div>
+                    <div class="cart-total__label-total">
+                        <span class="total">$240.00</span>
+                        <span class="pfee">(Processing fee: $40)</span>
+                        <span class="info">Shipping costs will be displayed in the next step</span>
+                    </div>
+                </div>
+                <div class="cart-btns">
+                    <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
+                    <button class="checkout">Check Out</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script>
+const MainCart = {
+    data() {
+        return {
+        counter: 0
+        }
+    },
+    methods: {
+        openCollect() {
+            window.location.href = "/pages/choose"
+        },
+        openCheckout() {
+            // window.location.href = "/pages/check"
+        },
+    },
+}
+
+Vue.createApp(MainCart).mount('#mainCart')
+</script>

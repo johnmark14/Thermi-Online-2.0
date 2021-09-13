@@ -2,7 +2,7 @@
 
 <!-- Start Section Main Product Page -->
 <section class="section-check section-padding">
-  <div class="check-shell shell">
+  <div id="pageCheck" class="check-shell shell">
       <div class="check-wrapper">
           <a href="/products/treat-button" class="check-back mobile">< Return to the Editing Page</a>
           <div class="check-preview">
@@ -63,7 +63,7 @@
                 <p>I agree with the above and add it to my cart.</p>
               </div>
               <div class="check-add">
-                <button>
+                <button @click.prevent="openPage">
                     <span>{% render "shopping-cart" %}</span>
                     <span>Add To Cart</span>
                 </button>
@@ -82,8 +82,18 @@
   }
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
+<script>
+const PageCheck = {
+    data() {
+        return {
+        }
+    },
+    methods: {
+        openPage() {
+            window.location.href = "/cart"
+        }
+    },
+}
 
-{% javascript %}
-{% endjavascript %}
+Vue.createApp(PageCheck).mount('#pageCheck');
+</script>

@@ -1,0 +1,158 @@
+.section-cart {
+
+    .cart {
+
+        // Main body - Outer container
+        &-body {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        &-table {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        &-head {
+            text-align: left;
+
+            th {
+                font-weight: 300;
+                padding: 15px 5px;
+            }
+        }
+
+        // Bottom text for subtotal
+        &-total {
+            display: flex;
+            text-align: right;
+            text-transform: capitalize;
+            &__label {
+                width: 50%;
+            }
+            &__label-total {
+                width: 50%;
+                span {
+                    display: block;
+
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+                
+                .pfee {
+                    font-size: toRem(14);
+                }
+
+                .info {
+                    font-size: toRem(14);
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &-btns {
+            margin-top: 80px;
+            text-align: center;
+            button {
+                height: 60px;
+                width: 240px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                        .5s ease-in-out,opacity .5s ease-in-out;
+
+                &:hover {
+                    color: $white;
+                    background-color: $black;
+                }
+            }
+
+            .continue {
+                border: 1px solid $darkGray1;
+                color: $darkGray1;
+                margin-right: 25px;
+            }
+
+            .checkout {
+                background-color: $darkGray1;
+                color: $white;
+            }
+        }
+    }
+
+    // Table body
+    .tb {
+        &-body {
+            border-bottom: 1px solid #ddd;
+            &__row {
+                border-top: 1px solid #ddd;
+
+                .td-image {
+                    width: 158px;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .td-description {
+                    a {
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                        display: inline-block;
+                        color: $darkGray;
+                    }
+
+                    p {
+                        font-size: toRem(14);
+                    }
+                }
+
+                .td-price {
+                    span {
+                        font-size: toRem(14);
+                    }
+                }
+
+                .td-quantity {
+
+                    .body {
+                        display: flex;
+
+                        .qb {
+                            width: 24px;
+                            border: 1px solid $lightGray1;
+                            text-align: center;
+                            padding: 5px;
+                            font-weight: 700;
+
+                            &:not(:last-child) {
+                                margin-right: 2px;
+                            }
+                        }
+
+                        .add {
+                            cursor: pointer;
+                        }
+
+                        .minus {
+                            cursor: pointer;
+                        }
+
+                        .items {
+                            font-weight: 400;
+                            border: none;
+                        }
+
+                    }
+                }
+
+                .td-total {
+                    span {
+                        font-size: toRem(14);
+                    }
+                }
+            }
+        }
+    }
+}
