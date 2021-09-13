@@ -11,6 +11,10 @@
         &-table {
             width: 100%;
             margin-bottom: 40px;
+
+            @include breakpoint-down(small) {
+                border: 1px solid #ddd;
+            }
         }
 
         &-head {
@@ -19,6 +23,10 @@
             th {
                 font-weight: 300;
                 padding: 15px 5px;
+            }
+
+            @include breakpoint-down(small){
+                display: none;
             }
         }
 
@@ -29,24 +37,43 @@
             text-transform: capitalize;
             &__label {
                 width: 50%;
+                @include breakpoint-down(small) {
+                    width: 20%;
+                    text-align: left;
+                    span {
+                        font-size: toRem(14);
+                    }
+                }
             }
             &__label-total {
                 width: 50%;
                 span {
                     display: block;
-
+                    
                     &:not(:last-child) {
                         margin-bottom: 5px;
                     }
                 }
-                
                 .pfee {
                     font-size: toRem(14);
                 }
-
+                
                 .info {
                     font-size: toRem(14);
                     margin-top: 20px;
+                }
+                @include breakpoint-down(small) {
+                    width: 80%;
+
+                    .total {
+                        font-size: toRem(14);
+                    }
+                    .pfee{
+                        font-size: toRem(12);
+                    }
+                    .info {
+                        font-size: toRem(12);
+                    }
                 }
             }
         }
@@ -66,18 +93,46 @@
                     color: $white;
                     background-color: $black;
                 }
+                &.continue {
+                    border: 1px solid $darkGray1;
+                    color: $darkGray1;
+                    margin-right: 25px;
+                }
+    
+                &.checkout {
+                    background-color: $darkGray1;
+                    color: $white;
+                }
+
+                @include breakpoint-down(small) {
+                    display: block;
+                    width: 100%;
+
+                    &.continue {
+                        margin: 0 auto;
+                    }
+                    &.checkout {
+                        margin: 0 auto;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }   
             }
 
-            .continue {
-                border: 1px solid $darkGray1;
-                color: $darkGray1;
-                margin-right: 25px;
+            @include breakpoint-up(medium) {
+                &.mobile {
+                    display: none;
+                }
             }
 
-            .checkout {
-                background-color: $darkGray1;
-                color: $white;
+            @include breakpoint-down(small) {
+                &.wide {
+                    display: none;
+                }
             }
+
         }
     }
 
@@ -88,10 +143,31 @@
             &__row {
                 border-top: 1px solid #ddd;
 
+                @include breakpoint-down(small) {
+                    td {
+                        display: block;
+                        position: relative;
+
+                        &::before {
+                            content: attr(data-th-title);
+                            width: 100px;
+                            height: 20px;
+                            font-size: toRem(14);
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
                 .td-image {
                     width: 158px;
                     img {
                         width: 100%;
+                    }
+
+                    @include breakpoint-down(small) {
+                        width: 50%;
+                        margin: 0 auto;
+                        display: block;                    
                     }
                 }
 
@@ -106,19 +182,54 @@
                     p {
                         font-size: toRem(14);
                     }
+
+                    @include breakpoint-down(small) {
+                        text-align: center;
+                        vertical-align: middle;
+                        padding-bottom: 10px;
+                        padding-top: 10px;
+                        border-top: 1px solid #ddd;
+                    }
                 }
 
                 .td-price {
                     span {
                         font-size: toRem(14);
                     }
+
+                    @include breakpoint-down(small) {
+                        text-align: center;
+                        padding-bottom: 5px;
+                    }
                 }
 
                 .td-quantity {
 
+                    @include breakpoint-up(medium) {
+                        &.mobile {
+                            display: none;
+                        }
+                    }
+
+                    @include breakpoint-down(small) {
+                        text-align: center;
+                        .items {
+                            display: inline-block;
+                        }
+
+                        &.mobile {
+                            border-top: 1px solid #ddd;
+                            padding: 10px 0 5px 0;
+                        }
+                    }
+
                     .body {
                         display: flex;
-
+                        @include breakpoint-down(small) {
+                            padding-bottom: 15px;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
                         .qb {
                             width: 24px;
                             border: 1px solid $lightGray1;
@@ -128,6 +239,13 @@
 
                             &:not(:last-child) {
                                 margin-right: 2px;
+                            }
+                            
+                            @include breakpoint-down(small) {
+                                width: 100%;
+                                &:not(:last-child) {
+                                    margin-right: 5px;
+                                }
                             }
                         }
 
@@ -142,14 +260,33 @@
                         .items {
                             font-weight: 400;
                             border: none;
+
+                            @include breakpoint-down(small) {
+                                &.wide {
+                                    display: none;
+                                }
+                            }
                         }
 
                     }
                 }
 
                 .td-total {
+                    text-align: center;
                     span {
                         font-size: toRem(14);
+                    }
+
+                    @include breakpoint-down(small) {
+                        &.wide {
+                            display: none;
+                        }
+                        padding-bottom: 10px;
+                    }
+                    @include breakpoint-up(medium) {
+                        &.mobile {
+                            display: none;
+                        }
                     }
                 }
             }
