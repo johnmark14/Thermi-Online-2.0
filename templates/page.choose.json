@@ -3,10 +3,19 @@
     "main": {
       "type": "page-template-choose",
       "settings": {
+        "contextId": "choose"
+      }
+    },
+    "1631630779dfc72d46": {
+      "type": "page-template-collection",
+      "settings": {
+        "colTitle": "Stainless steel tumbler + laser engraving",
+        "colList": "stainless-steel-tumbler"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1631630779dfc72d46"
   ]
 }
