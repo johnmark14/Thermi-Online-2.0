@@ -4,79 +4,29 @@
       <span>Color</span>
     </div>
     <div class="option-swatch">
-        <div class="swatch-wrapper">
-            <input type="radio" id="option1" name="swatch" value="white" checked />  
-            <label cla for="option1">
-                <div class="color">
-                    <span style="background-color: white;"></span>
-                </div>
-                <div class="desc">
-                    <span>White</span>
-                    <span>in stock</span>
-                </div>
-            </label>
-        </div>
-        <div class="swatch-wrapper">
-            <input type="radio" id="option2" name="swatch" value="white" />  
-            <label cla for="option2">
-                <span class="slash"></span>
-                <div class="color">
-                    <span style="background-color: maroon;"></span>
-                </div>
-                <div class="desc">
-                    <span>Red</span>
-                    <span>out stock</span>
-                </div>
-            </label>
-        </div>
-        <div class="swatch-wrapper">
-            <input type="radio" id="option3" name="swatch" value="white" />  
-            <label cla for="option3">
-                <div class="color">
-                    <span style="background-color: gray;"></span>
-                </div>
-                <div class="desc">
-                    <span>Gray</span>
-                    <span>in stock</span>
-                </div>
-            </label>
-        </div>
-        <div class="swatch-wrapper">
-            <input type="radio" id="option4" name="swatch" value="white" />  
-            <label cla for="option4">
-                <div class="color">
-                    <span style="background-color: goldenrod;"></span>
-                </div>
-                <div class="desc">
-                    <span>Cayote</span>
-                    <span>in stock</span>
-                </div>
-            </label>
-        </div>
-        <div class="swatch-wrapper">
-            <input type="radio" id="option5" name="swatch" value="white" />  
-            <label cla for="option5">
-                <div class="color">
-                    <span style="background-color: #09747F;"></span>
-                </div>
-                <div class="desc">
-                    <span>Turquoise</span>
-                    <span>in stock</span>
-                </div>
-            </label>
-        </div>
-        <div class="swatch-wrapper">
-            <input type="radio" id="option6" name="swatch" value="white" />  
-            <label cla for="option6">
-                <div class="color">
-                    <span style="background-color: black;"></span>
-                </div>
-                <div class="desc">
-                    <span>Black</span>
-                    <span>in stock</span>
-                </div>
-            </label>
-        </div>
+        {% for variant in product.variants %}
+            <div class="swatch-wrapper">
+                <input type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if forloop.index == 1%} checked {% endif %}/>  
+                <label cla for="option{{forloop.index}}">
+                    {% if variant.inventory_quantity == 0 %}
+                        <span class="slash"></span>
+                    {% endif %}
+                    <div class="color">
+                        <span style="background-color: {{ variant.metafields.color.value }}"></span>
+                    </div>
+                    <div class="desc">
+                        <span>{{ variant.title }}</span>
+                        <span>
+                            {% if variant.inventory_quantity != 0 %}
+                                in stock
+                            {% else %}
+                                out of stock
+                            {% endif %}
+                        </span>
+                    </div>
+                </label>
+            </div>
+        {% endfor %}
     </div>
   </div>
 </form>

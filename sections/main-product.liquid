@@ -3,24 +3,24 @@
 <!-- Start Section Main Product Page -->
 <section class="section-product section-padding">
     <div id="mainProduct" class="product-shell shell">
-        <a href="/pages/choose-a-product" class="product-back">< Product Selection</a>
+        <a href="javascript:history.back()" class="product-back">< Product Selection</a>
         <div class="product-wrapper">
             <div class="product-options small">
                 <div class="product-info">
-                    <h5 class="product-title">Travel Tumbler 500ml</h5>
-                    <p class="product-desc">Product price $3.80 (tax included) + processing fee</p>
+                    <h5 class="product-title">{{ product.title }}</h5>
+                    <p class="product-desc">{{ product.description }}</p>
                 </div>
             </div>
             <div class="product-preview">
-                <img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/products/20942_1024x1024.jpg?v=1618465816" alt="">
+                <img src="{{ product.images[0].src | img_url: 'master'}}" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
                 <div class="product-disclaimer">
                     <p>(The design and characters displayed on the screen are simulations. The color and position of the engraving may differ from the actual ones.)</p>
                 </div>
             </div>
             <div class="product-options">
                 <div class="product-info wide">
-                    <h5 class="product-title">Travel Tumbler 500ml</h5>
-                    <p class="product-desc">Product price $3.80 (tax included) + processing fee</p>
+                    <h5 class="product-title">{{ product.title }}</h5>
+                    <p class="product-desc">{{ product.description }}</p>
                 </div>
                 <div class="product-form">
                     <!-- To be render -->
