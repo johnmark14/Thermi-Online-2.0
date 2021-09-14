@@ -134,6 +134,7 @@
                                     width: 14px;
                                     height: 14px;
                                     border-radius: 50%;
+                                    border: 1px solid $lightGray1;
                                     // background-color: red;
 
                                     @include breakpoint-down(small) {
