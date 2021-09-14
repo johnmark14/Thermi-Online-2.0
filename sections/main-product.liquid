@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="product-preview">
-                <img src="{{ product.images[0].src | img_url: 'master'}}" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+                <img :src="variantImage" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
                 <div class="product-disclaimer">
                     <p>(The design and characters displayed on the screen are simulations. The color and position of the engraving may differ from the actual ones.)</p>
                 </div>
@@ -39,14 +39,21 @@
 
 <script>
     const MainProduct = {
+        delimiters: ['${', '}'],
         data() {
             return {
-            counter: 0
+                selectedVariant: '',
+                variantImage: "{{ product.images[0].src | img_url: 'master'}}",
+                variantNotAvailable: false
             }
         },
         methods: {
             openPage() {
                 window.location.href = "/pages/check"
+            },
+            onVariantChange(event) {
+                this.selectedVariant = event.target.getAttribute('data-variant')
+                this.variantImage = event.target.getAttribute('data-image-src')
             }
         },
     }

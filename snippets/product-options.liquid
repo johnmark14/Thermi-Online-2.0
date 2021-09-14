@@ -6,8 +6,8 @@
     <div class="option-swatch">
         {% for variant in product.variants %}
             <div class="swatch-wrapper">
-                <input type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if forloop.index == 1%} checked {% endif %}/>  
-                <label cla for="option{{forloop.index}}">
+                <input data-image-src="{{variant.image.src | img_url: 'master'}}" data-variant="{{variant.id}}" @change="onVariantChange($event)" type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if forloop.index == 1%} checked {% endif %}/>  
+                <label for="option{{forloop.index}}">
                     {% if variant.inventory_quantity == 0 %}
                         <span class="slash"></span>
                     {% endif %}
@@ -30,3 +30,5 @@
     </div>
   </div>
 </form>
+
+
