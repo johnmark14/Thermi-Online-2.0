@@ -21,7 +21,7 @@
         "colTitle": "Resin bottle + sticker",
         "colList": "resin-bottle",
         "sectionPadding": false,
-        "navBack": false
+        "navBack": true
       }
     }
   },
