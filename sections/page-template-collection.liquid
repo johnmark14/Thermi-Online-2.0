@@ -1,9 +1,11 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section collection list -->
-<section class="section-collection section-padding">
+<section class="section-collection {% if section.settings.sectionPadding != true %} section-padding {% endif %}">
     <div class="page-shell shell">
-        <a href="/" class="page-back"><span>< Back</span></a>
+        {% if section.settings.navBack != true %}
+            <a href="/" class="page-back"><span>< Back</span></a>
+        {% endif %}
         <div class="page-title">
             <p>{{ section.settings.colTitle }}</p>
         </div>
@@ -28,6 +30,22 @@
             "type": "collection",
             "id": "colList",
             "label": "Collection List"
+        },
+        {
+            "type": "header",
+            "content": "Section Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "sectionPadding",
+            "label": "Remove Section Padding?",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "navBack",
+            "label": "Remove The Mobile Nav Back?",
+            "default": false
         }
     ],
     "presets": [
