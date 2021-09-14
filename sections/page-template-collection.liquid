@@ -5,17 +5,35 @@
     <div class="page-shell shell">
         <a href="/" class="page-back"><span>< Back</span></a>
         <div class="page-title">
-            <p>Stainless steel tumbler + laser engraving</p>
+            <p>{{ section.settings.colTitle }}</p>
         </div>
+        {% assign collections = section.settings.colList %}
         <div class="page-products">
-           {% render "choose-product-card" for collections['stainless-steel-tumbler'].products as product %}
+           {% render "choose-product-card" for collections.products as product %}
         </div>
     </div>
 </section>
 
 {% schema %}
   {
-    "name": "Collection List",
-    "settings": []
+    "name": "Collection Cards",
+    "settings": [
+        {
+            "type": "text",
+            "id": "colTitle",
+            "label": "Collection Title",
+            "default": "Featured Collection"
+        },
+        {
+            "type": "collection",
+            "id": "colList",
+            "label": "Collection List"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Cards"
+        }
+    ]
   }
 {% endschema %}

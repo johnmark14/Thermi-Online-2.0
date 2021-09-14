@@ -16,7 +16,7 @@
                 <ul class="list-variants">
                     {% for variant in product.variants %}
                         {%if variant.metafields.color.value != blank%}
-                            <li><span class="variant-1" style="background-color: {{ variant.metafields.color.value }}"></span></li>
+                            <li><span class="variant-1" data-variant-color="{{ variant.metafields.color.value}}" style="background-color: {{ variant.metafields.color.value }}"></span></li>
                         {% endif %}
                     {% endfor %}
                 </ul>

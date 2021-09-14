@@ -5,14 +5,14 @@
     <div class="page-shell shell">
         <div class="banner-wrapper">
             <div class="banner-image">
-                <img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/files/524.png?v=1611131746" alt="">
+                <img src="{{ section.settings.imgId | img_url: 'master'}}" width="{{image.width}}" height="{{image.height}}" alt="Banner Image" loading="lazy">
             </div>
             <div class="banner-info">
                 <p class="banner-text">
-                    Tumbler / Bottle accessories are also <br> available for purchase.
+                    {{ section.settings.banText }}
                 </p>
                 <p class="banner-link">
-                    <a href="/">View more</a>
+                    <a href="{{ section.settings.linkUrl }}">{{ section.settings.linkText }}</a>
                 </p>
             </div>
         </div>
@@ -22,6 +22,33 @@
 {% schema %}
 {
     "name": "View more card",
-    "settings": []
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "imgId",
+            "label": "Select an Image"
+        },
+        {
+            "type": "textarea",
+            "id": "banText",
+            "label": "View more text",
+            "default": "Describe this card"
+        },
+        {
+            "type": "text",
+            "id": "linkText",
+            "label": "Label text"
+        },
+        {
+            "type": "url",
+            "id": "linkUrl",
+            "label": "Link Page"
+        }
+    ],
+    "presets": [
+        {
+            "name": "View more card"
+        }
+    ]
 }
 {% endschema %}

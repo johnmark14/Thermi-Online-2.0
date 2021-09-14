@@ -4,19 +4,19 @@
 <section class="section-choose section-padding">
   <div class="page-shell shell">
     <ol class="page-steps">
-      <li class="step active">
+      <li class="step {% if section.settings.contextId == "choose" %} active {% endif %}">
         <div>
           <h4>CHOOSE</h4>
           <span>Choose a product</span>
         </div>
       </li>
-      <li class="step">
+      <li class="step {% if section.settings.contextId == "mark" %} active {% endif %}">
         <div>
           <h4>MARK IT</h4>
           <span>Choose a color design</span>
         </div>
       </li>
-      <li class="step">
+      <li class="step {% if section.settings.contextId == "order" %} active {% endif %}">
         <div>
           <h4>ORDER</h4>
           <span>Order</span>
@@ -28,8 +28,29 @@
 
 {% schema %}
   {
-    "name": "Choose a product",
-    "settings": []
+    "name": "Page Context",
+    "settings": [
+      {
+        "type": "radio",
+        "id": "contextId",
+        "label": "Page Context",
+        "options": [
+          {
+            "value": "choose",
+            "label": "Choose"
+          },
+          {
+            "value": "mark",
+            "label": "Mark it"
+          },
+          {
+            "value": "order",
+            "label": "Order"
+          }
+        ],
+        "default": "choose"
+      }
+    ]
   }
 {% endschema %}
 
