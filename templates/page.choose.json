@@ -10,14 +10,18 @@
       "type": "page-template-collection",
       "settings": {
         "colTitle": "Stainless steel tumbler + laser engraving",
-        "colList": "stainless-steel-tumbler"
+        "colList": "stainless-steel-tumbler",
+        "sectionPadding": false,
+        "navBack": false
       }
     },
     "1631630783d24bd907": {
       "type": "page-template-collection",
       "settings": {
         "colTitle": "Resin bottle + sticker",
-        "colList": "resin-bottle"
+        "colList": "resin-bottle",
+        "sectionPadding": false,
+        "navBack": false
       }
     }
   },
