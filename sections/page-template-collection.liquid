@@ -8,34 +8,7 @@
             <p>Stainless steel tumbler + laser engraving</p>
         </div>
         <div class="page-products">
-            <!-- product 1 -->
-            <div class="product-item">
-                <div class="product__inner">
-                    <a href="/products/treat-button" class="product__image">
-                        <img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/products/20932_500x.jpg?v=1618465812" alt="">
-                    </a>
-                    <div class="product__wrapper">
-                        <a href="/products/treat-button" class="page-link"></a>
-                        <h4 class="product__title">
-                            Travel tumbler 350ml
-                        </h4>
-                        <h5 class="product__desc">
-                            Product price $50 (tax included) + processing fee
-                        </h5>
-                        <div class="product__variants">
-                            <ul class="list-variants">
-                                <li><span class="variant-1"></span></li>
-                                <li><span class="variant-2"></span></li>
-                                <li><span class="variant-3"></span></li>
-                                <li><span class="variant-4"></span></li>
-                                <li><span class="variant-5"></span></li>
-                                <li><span class="variant-6"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!--End product 1 -->
+           {% render "choose-product-card" for collections['stainless-steel-tumbler'].products as product %}
         </div>
     </div>
 </section>
