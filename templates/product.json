@@ -3,6 +3,7 @@
     "main": {
       "type": "page-template-choose",
       "settings": {
+        "contextId": "mark"
       }
     },
     "product": {
