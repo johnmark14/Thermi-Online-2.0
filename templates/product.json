@@ -19,7 +19,13 @@
       "settings": {
         "title": "About the finish",
         "bodyText": "<p>\n          -Printing is done with a laser engraving machine. In actual products,\n          the appearance of colors differs depending on the amount of light and\n          the angle.\n        <\/p>\n        <p>\n          ・ We will process it on the front of the main body. The back\n          (opposite side) has the KINTO original logo mark.\n        <\/p>\n        <p>\n          -The size and position of the engraving are determined for each shape\n          of the main body.\n        <\/p>\n        <p>\n          -The color of the engraving is determined for each color of the main\n          body.\n        <\/p>\n        <p>\n          -The design and characters displayed on the screen are simulations.\n          The color and position of the engraving may differ from the actual\n          one.\n        <\/p>\n        <p>\n          -Colors may look different depending on your monitor and browser\n          environment.\n        <\/p>\n        <p>\n          ・ Even if you purchase multiple units of the same color, the finished\n          color of the engraving may differ slightly.\n        <\/p>\n        <p>\n          ・ Since each item is manually processed, some distortion or deviation\n          may be seen.\n        <\/p>\n        <p>\n          ・ This service is available only at the time of purchase and cannot\n          be processed into products that have already been used.\n        <\/p>\n        <p>・ Cancellation after ordering cannot be accepted.<\/p>",
-        "sectionPadding": false
+        "sectionPadding": true
+      }
+    },
+    "1631699319baa4df33": {
+      "type": "accordion-with-header",
+      "settings": {
+        "heading": "Product Information"
       }
     },
     "16314521567a2145fe": {
@@ -62,6 +68,7 @@
     "main",
     "product",
     "1631699188efd3bf53",
+    "1631699319baa4df33",
     "16314521567a2145fe"
   ]
 }
