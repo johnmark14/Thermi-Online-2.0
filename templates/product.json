@@ -24,6 +24,18 @@
     },
     "1631699319baa4df33": {
       "type": "accordion-with-header",
+      "blocks": {
+        "359f98f0-2781-4982-974c-8a8d9b4727f1": {
+          "type": "text",
+          "settings": {
+            "title": "Specifications",
+            "bodyText": "<p>- 74 x H197 mm \/ 500 ml \/ approx. 310 g<\/p>\n        <p>-Height of the main body (without lid and spout) H173 mm<\/p>\n      "
+          }
+        }
+      },
+      "block_order": [
+        "359f98f0-2781-4982-974c-8a8d9b4727f1"
+      ],
       "settings": {
         "heading": "Product Information"
       }
