@@ -9,7 +9,7 @@
     "product": {
       "type": "main-product",
       "settings": {
-        "textBelowImg": "Write something about the image or a disclaimer.",
+        "textBelowImg": "(The design and characters displayed on the screen are simulations. The color and position of the engraving may differ from the actual ones.)",
         "btnText1": "Check",
         "btnText2": "Check the content"
       }
