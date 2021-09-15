@@ -1,43 +1,57 @@
 <section class="section-accordheader section-padding">
   <div class="accordheader-shell shell">
-    <h5 class="accord-header">Product Information</h5>
-    <div class="accord-wrapper">
-      <input type="checkbox" name="accord-header" id="accordH1" />
-      <label for="accordH1">
-        <p>Specifications</p>
-        <span> {% render "chevron-down" %} </span>
-      </label>
-      <div class="accord-body">
-        <p>- 74 x H197 mm / 500 ml / approx. 310 g</p>
-        <p>-Height of the main body (without lid and spout) H173 mm</p>
+    <h5 class="accord-header">{{ section.settings.heading }}</h5>
+    {% for block in section.blocks %}
+      <div class="accord-wrapper">
+        <input type="checkbox" name="accord-header" id="accord-{{-forloop.index-}}" />
+        <label for="accord-{{-forloop.index-}}">
+          <p>{{ block.settings.title }}</p>
+          <span> {% render "chevron-down" %} </span>
+        </label>
+        <div class="accord-body">
+          {{block.settings.bodyText}}
+        </div>
       </div>
-    </div>
-    <div class="accord-wrapper">
-      <input type="checkbox" name="accord-header" id="accordH2" />
-      <label for="accordH2">
-        <p>Care Instructions</p>
-        <span> {% render "chevron-down" %} </span>
-      </label>
-      <div class="accord-body">
-        <p>Product Name: Stainless Steel Portable Thermos / Material: 18-8 Stainless Steel, Polypropylene, 
-            Silicone Rubber / BPA Free / Made in China / Heat Insulation Effect: 69 ℃ or more (6 hours) / 
-            Cold Insulation Effect: 7 ℃ or less (6 hours) * 
-            Insulation Efficacy refers to the temperature of hot water measured 6 hours after pouring hot water 
-            into the product at room temperature of 20 ° C ± 2 ° C and closing the lid when the hot water temperature 
-            reaches 95 ° C ± 1 ° C. * Cold insulation effect refers to the temperature of water measured 6 hours after putting 
-            cold water in the product at room temperature of 20 ° C ± 2 ° C and closing the lid when the water temperature 
-            reaches 4 ° C ± 1 ° C. * Before adding beverages, add a small amount of hot water (cold water) and preheat 
-            (pre-cool) for about 1-2 minutes to increase the heat retention (cold) effect.</p>
-        <p>- This product is a beverage bottle</p>
-        <p>- Cannot be used in microwave ovens, ovens, dishwashers / dryers</p>
-        <p>- Please do not put it near the fire</p>
-        <p>- Please do not boil and wash</p>
-        <p>- Keep out of reach of children</p>
-        <p>- Do not drop or subject it to strong impact as it may cause damage or water leakage.</p>
-        <p>- Do not put dry ice or carbonated drinks in the container as it may expand and cause damage or injury.</p>
-        <p>- Please be careful not to overfill the beverage as it may overflow when closing the spout parts.</p>
-        <p>- If rust-like spots adhere to the inside of the container, add lukewarm water and about 10% citric acid, wash with a soft sponge after 2-3 hours, and rinse thoroughly.</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Accordion with heading",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Product Information"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Specifications"
+        },
+        {
+          "type": "textarea",
+          "id": "bodyText",
+          "label": "Body Text",
+          "default": "Write something about your product.",
+          "info": "You can include HTML format such as <p> for paragraph."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion with heading"
+    }
+  ]
+}
+{% endschema %}

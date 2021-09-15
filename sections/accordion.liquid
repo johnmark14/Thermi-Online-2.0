@@ -1,55 +1,48 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section Accordion -->
-<section class="section-accordion override-padding">
+<section class="section-accordion {% if section.settings.sectionPadding == false %} section-padding {% else %} override-padding {% endif %}">
   <div class="accordion-shell shell">
     <div class="accord-wrapper">
-      <input type="checkbox" id="accord1" />
-      <label for="accord1">
-        <p>About the finish</p>
+      <input type="checkbox" id="accord-{{-section.id-}}" />
+      <label for="accord-{{-section.id-}}">
+        <p>{{ section.settings.title }}</p>
         <span>{% render "chevron-down" %}</span>
       </label>
       <div class="accord-body">
-        <p>
-          -Printing is done with a laser engraving machine. In actual products,
-          the appearance of colors differs depending on the amount of light and
-          the angle.
-        </p>
-        <p>
-          ・ We will process it on the front of the main body. The back
-          (opposite side) has the KINTO original logo mark.
-        </p>
-        <p>
-          -The size and position of the engraving are determined for each shape
-          of the main body.
-        </p>
-        <p>
-          -The color of the engraving is determined for each color of the main
-          body.
-        </p>
-        <p>
-          -The design and characters displayed on the screen are simulations.
-          The color and position of the engraving may differ from the actual
-          one.
-        </p>
-        <p>
-          -Colors may look different depending on your monitor and browser
-          environment.
-        </p>
-        <p>
-          ・ Even if you purchase multiple units of the same color, the finished
-          color of the engraving may differ slightly.
-        </p>
-        <p>
-          ・ Since each item is manually processed, some distortion or deviation
-          may be seen.
-        </p>
-        <p>
-          ・ This service is available only at the time of purchase and cannot
-          be processed into products that have already been used.
-        </p>
-        <p>・ Cancellation after ordering cannot be accepted.</p>
+        {{ section.settings.bodyText }}
       </div>
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Simple Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "About the finish"
+    },
+    {
+      "type": "textarea",
+      "id": "bodyText",
+      "label": "Body Text",
+      "default": "Write something for your product here",
+      "info": "You can include HTML format such as <p> for paragraph.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "sectionPadding",
+      "label": "Add section padding?"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Simple Accordion"
+    }
+  ]
+}
+{% endschema %}

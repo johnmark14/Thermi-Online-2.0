@@ -11,16 +11,6 @@
       "settings": {
       }
     },
-    "accordion": {
-      "type": "accordion",
-      "settings": {
-      }
-    },
-    "accordion-header": {
-      "type": "accordion-with-header",
-      "settings": {
-      }
-    },
     "16314521567a2145fe": {
       "type": "gallery-with-details",
       "blocks": {
@@ -63,8 +53,6 @@
   "order": [
     "main",
     "product",
-    "accordion",
-    "accordion-header",
     "16314521567a2145fe"
   ]
 }

@@ -14,7 +14,7 @@
             <div class="product-preview">
                 <img :src="variantImage" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
                 <div class="product-disclaimer">
-                    <p>(The design and characters displayed on the screen are simulations. The color and position of the engraving may differ from the actual ones.)</p>
+                    <p>{{ section.settings.textBelowImg }}</p>
                 </div>
             </div>
             <div class="product-options">
@@ -28,14 +28,44 @@
                 </div>
                 <div class="product-button">
                     <button @click.prevent="openPage" :class="{disabled: isDisabled}">
-                        <span>CHECK</span>
-                        <span>Checking the content</span>
+                        <span>{{ section.settings.btnText1 }}</span>
+                        <span>{{ section.settings.btnText2 }}</span>
                     </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+{% schema %}
+{
+    "name": "Product Page",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "textBelowImg",
+            "label": "Text Below Product Image",
+            "default": "Write something about the image or a disclaimer."
+        },
+        {
+            "type": "header",
+            "content": "Button Text"
+        },
+        {
+            "type": "text",
+            "id": "btnText1",
+            "label": "Text 1",
+            "default": "Check"
+        },
+        {
+            "type": "text",
+            "id": "btnText2",
+            "label": "Text 2",
+            "default": "Check the content"
+        }
+    ]
+}
+{% endschema %}
 
 <script>
     const MainProduct = {
