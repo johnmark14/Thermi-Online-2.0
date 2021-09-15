@@ -31,10 +31,18 @@
             "title": "Specifications",
             "bodyText": "<p>- 74 x H197 mm \/ 500 ml \/ approx. 310 g<\/p>\n        <p>-Height of the main body (without lid and spout) H173 mm<\/p>\n      "
           }
+        },
+        "77169aba-d99e-4d11-9f78-37567ed42348": {
+          "type": "text",
+          "settings": {
+            "title": "Care Instructions",
+            "bodyText": "<p>Product Name: Stainless Steel Portable Thermos \/ Material: 18-8 Stainless Steel, Polypropylene, \n            Silicone Rubber \/ BPA Free \/ Made in China \/ Heat Insulation Effect: 69 ℃ or more (6 hours) \/ \n            Cold Insulation Effect: 7 ℃ or less (6 hours) * \n            Insulation Efficacy refers to the temperature of hot water measured 6 hours after pouring hot water \n            into the product at room temperature of 20 ° C ± 2 ° C and closing the lid when the hot water temperature \n            reaches 95 ° C ± 1 ° C. * Cold insulation effect refers to the temperature of water measured 6 hours after putting \n            cold water in the product at room temperature of 20 ° C ± 2 ° C and closing the lid when the water temperature \n            reaches 4 ° C ± 1 ° C. * Before adding beverages, add a small amount of hot water (cold water) and preheat \n            (pre-cool) for about 1-2 minutes to increase the heat retention (cold) effect.<\/p>\n        <p>- This product is a beverage bottle<\/p>\n        <p>- Cannot be used in microwave ovens, ovens, dishwashers \/ dryers<\/p>\n        <p>- Please do not put it near the fire<\/p>\n        <p>- Please do not boil and wash<\/p>\n        <p>- Keep out of reach of children<\/p>\n        <p>- Do not drop or subject it to strong impact as it may cause damage or water leakage.<\/p>\n        <p>- Do not put dry ice or carbonated drinks in the container as it may expand and cause damage or injury.<\/p>\n        <p>- Please be careful not to overfill the beverage as it may overflow when closing the spout parts.<\/p>\n        <p>- If rust-like spots adhere to the inside of the container, add lukewarm water and about 10% citric acid, wash with a soft sponge after 2-3 hours, and rinse thoroughly.<\/p>"
+          }
         }
       },
       "block_order": [
-        "359f98f0-2781-4982-974c-8a8d9b4727f1"
+        "359f98f0-2781-4982-974c-8a8d9b4727f1",
+        "77169aba-d99e-4d11-9f78-37567ed42348"
       ],
       "settings": {
         "heading": "Product Information"
