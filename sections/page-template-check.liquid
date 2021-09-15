@@ -6,18 +6,18 @@
       <div class="check-wrapper">
           <a :href="getBackLink" class="check-back mobile">< Return to the Editing Page</a>
           <div class="check-preview">
-              <img :src="variantImage" alt="Product Image" loading="lazy">
+              <img :src="getVariantImage" alt="Product Image" loading="lazy">
           </div>
           <div class="check-side">
               <div class="check-info">
-                  <h5 class="check-title">${productTitle}</h5>
+                  <h5 class="check-title">${getProductTitle}</h5>
                   <div class="check-desc">
-                    <p class="check-desc__variant">Color: <span>${variantTitle}</span></p>
-                    <p class="check-desc__price">${totalPrice} (tax included)</span></p>
-                    <p class="check-desc__price-desc">${productDesc}</span></p>
+                    <p class="check-desc__variant">Color: <span>${getVariantTitle}</span></p>
+                    <p class="check-desc__price">${getTotalPrice} (tax included)</span></p>
+                    <p class="check-desc__price-desc">${getProductDesc}</span></p>
                   </div>
                   <div class="check-list">
-                    <h5 class="check-list__title">Checklist</h5>
+                    <h5 class="check-list__title">{{ section.settings.textId }}</h5>
                     <div class="check-list__content">
                       {{ section.settings.bodyId }}
                     </div>
@@ -83,6 +83,17 @@ const PageCheck = {
     methods: {
         openPage() {
             window.location.href = "/cart"
+        },
+        addToCart() {
+          let data = {
+            id: this.selectedVariantId,
+            quantity: 1,
+          }
+          axios.post('cart/add.js', data).then((response) => {
+            console.log(response)
+          }).catch(error => {
+            console.log(`Error: ${error}`)
+          })
         }
     },
     mounted() {
@@ -100,20 +111,20 @@ const PageCheck = {
       getBackLink() {
         return `/products/${this.productHandle}`
       },
-      variantTitle() {
-        return this.variantImage
+      getVariantTitle() {
+        return this.variantTitle
       },
-      productTitle() {
+      getProductTitle() {
         return this.productTitle
       },
-      productDesc() {
+      getProductDesc() {
         return this.productDesc
       },
-      totalPrice() {
+      getTotalPrice() {
         return this.totalPrice
       },
-      variantImage() {
-        return variantImage
+      getVariantImage() {
+        return this.variantImage
       }
     }
 }
