@@ -4,10 +4,19 @@
       <div class="products-body">
           <ul class="products-list">
               {% for block in section.blocks %}
+                {%-assign productImg = block.settings.productImg-%}
+                {%-assign productTitle = block.settings.productTitle-%}
+                {%-assign productDescription = block.settings.productDescription-%}
                 <li>
-                    <img src="{{ block.settings.productImg | img_url: 'master'}}" width="{{image.width}}" height="{{image.height}}" alt="Product Details Image" loading="lazy">
-                    <h4>{{ block.settings.productTitle }}</h4>
-                    <p>{{ block.settings.productDescription }}</p>
+                    {% if productImg %}
+                        <img src="{{ productImg | img_url: 'master'}}" width="{{image.width}}" height="{{image.height}}" alt="Product Details Image" loading="lazy">
+                    {% endif %}
+                    {% if productTitle != blank %}
+                        <h4>{{ productTitle }}</h4>
+                    {% endif %}
+                    {% if productDescription != blank %}
+                        <p>{{ productDescription }}</p>
+                    {% endif %}
                 </li>
               {% endfor %}
           </ul>
@@ -18,17 +27,22 @@
   {
       "name": "Gallery with Details",
       "settings": [
-          {
-              "type": "text",
-              "id": "sectionHeading",
-              "label": "Section Heading",
-              "default": "Products Details"
-          },
-          {
+        {
+            "type": "header",
+            "content": "Instructions",
+            "info": "Make sure to add the same number of blocks for all products if dynamic. If intend to remove card, leave the fields just blank."
+        },
+        {
             "type": "text",
-            "id": "anchorID",
-            "label": "Anchor ID",
-            "info": "Add an anchor link to create an on page navigation."
+            "id": "sectionHeading",
+            "label": "Section Heading",
+            "default": "Products Details"
+        },
+        {
+        "type": "text",
+        "id": "anchorID",
+        "label": "Anchor ID",
+        "info": "Add an anchor link to create an on page navigation."
         }
       ],
       "blocks": [
@@ -36,24 +50,26 @@
               "type": "image",
               "name": "Products",
               "settings": [
-                  {
-                      "type": "image_picker",
-                      "id": "productImg",
-                      "label": "Product Image"
-                  },
-                  {
-                      "type": "text",
-                      "id": "productTitle",
-                      "label": "Product Heading",
-                      "default": "Product Heading"
-                  },
-                  {
-                      "type": "textarea",
-                      "id": "productDescription",
-                      "label": "Product Description",
-                      "default": "Write something about your product.",
-                      "info": "You can also include HTML format such a <p> for paragraph."
-                  }
+                {
+                    "type": "header",
+                    "content": "Dynamic Content",
+                    "info": "Use this to load dynamic content."
+                },
+                {
+                    "type": "image_picker",
+                    "id": "productImg",
+                    "label": "Product Image"
+                },
+                {
+                    "type": "text",
+                    "id": "productTitle",
+                    "label": "Product Heading"
+                },
+                {
+                    "type": "richtext",
+                    "id": "productDescription",
+                    "label": "Product Description"
+                }
               ]
           }
       ],
