@@ -2652,6 +2652,11 @@ main {
   }
 }
 
+.section-product .product-button button.disabled {
+  background-color: #D6D6D6;
+  cursor: no-drop;
+}
+
 .section-accordion .accord-wrapper {
   position: relative;
 }
