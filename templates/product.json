@@ -47,12 +47,69 @@
       "settings": {
         "heading": "Product Information"
       }
+    },
+    "163171346802390501": {
+      "type": "gallery-with-details",
+      "blocks": {
+        "163171346802390501-0": {
+          "type": "image",
+          "settings": {
+            "productImg": "{{ product.metafields.details_img_1.value.value }}",
+            "productTitle": "{{ product.metafields.details_heading_1.value.value }}",
+            "productDescription": "<p>{{ product.metafields.details_body_1.value | metafield_tag }}<\/p>"
+          }
+        },
+        "163171346802390501-1": {
+          "type": "image",
+          "settings": {
+            "productImg": "{{ product.metafields.details_img_2.value.value }}",
+            "productTitle": "{{ product.metafields.details_heading_2.value.value }}",
+            "productDescription": "<p>{{ product.metafields.details_body_2.value | metafield_tag }}<\/p>"
+          }
+        },
+        "163171346802390501-2": {
+          "type": "image",
+          "settings": {
+            "productImg": "{{ product.metafields.details_img_3.value.value }}",
+            "productTitle": "{{ product.metafields.details_heading_3.value.value }}",
+            "productDescription": "<p>{{ product.metafields.details_body_3.value | metafield_tag }}<\/p>"
+          }
+        },
+        "dd5f4148-1e2a-43af-9582-056dd33e158a": {
+          "type": "image",
+          "settings": {
+            "productImg": "{{ product.metafields.details_img_4.value.value }}",
+            "productTitle": "{{ product.metafields.details_heading_4.value.value }}",
+            "productDescription": "<p>{{ product.metafields.details_body_4.value | metafield_tag }}<\/p>"
+          }
+        },
+        "00f08ab4-2acc-4c24-8562-d8f2290a5ada": {
+          "type": "image",
+          "settings": {
+            "productImg": "{{ product.metafields.details_img_5.value.value }}",
+            "productTitle": "{{ product.metafields.details_heading_5.value.value }}",
+            "productDescription": "<p>{{ product.metafields.details_body_5.value | metafield_tag }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "163171346802390501-0",
+        "163171346802390501-1",
+        "163171346802390501-2",
+        "dd5f4148-1e2a-43af-9582-056dd33e158a",
+        "00f08ab4-2acc-4c24-8562-d8f2290a5ada"
+      ],
+      "settings": {
+        "sectionHeading": "Products Details",
+        "anchorID": ""
+      }
     }
   },
   "order": [
     "main",
     "product",
     "1631699188efd3bf53",
-    "1631699319baa4df33"
+    "1631699319baa4df33",
+    "163171346802390501"
   ]
 }
