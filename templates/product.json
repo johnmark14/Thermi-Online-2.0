@@ -47,49 +47,12 @@
       "settings": {
         "heading": "Product Information"
       }
-    },
-    "16314521567a2145fe": {
-      "type": "gallery-with-details",
-      "blocks": {
-        "16314521567a2145fe-0": {
-          "type": "image",
-          "settings": {
-            "productImg": "{{ product.metafields.details_image_1.value.value }}",
-            "productTitle": "{{ product.metafields.details_heading_1.vallue.value }}",
-            "productDescription": "<p>Write something about your product.<\/p>"
-          }
-        },
-        "16314521567a2145fe-1": {
-          "type": "image",
-          "settings": {
-            "productTitle": "",
-            "productDescription": "<p>Write something about your product.<\/p>"
-          }
-        },
-        "16314521567a2145fe-2": {
-          "type": "image",
-          "settings": {
-            "productTitle": "",
-            "productDescription": "<p>Write something about your product.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "16314521567a2145fe-0",
-        "16314521567a2145fe-1",
-        "16314521567a2145fe-2"
-      ],
-      "settings": {
-        "sectionHeading": "Products details",
-        "anchorID": ""
-      }
     }
   },
   "order": [
     "main",
     "product",
     "1631699188efd3bf53",
-    "1631699319baa4df33",
-    "16314521567a2145fe"
+    "1631699319baa4df33"
   ]
 }
