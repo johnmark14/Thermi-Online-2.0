@@ -29,7 +29,7 @@
           "type": "text",
           "settings": {
             "title": "Specifications",
-            "bodyText": "<p>- 74 x H197 mm \/ 500 ml \/ approx. 310 g<\/p>\n        <p>-Height of the main body (without lid and spout) H173 mm<\/p>\n      "
+            "bodyText": "<p>- 74 x H197 mm \/ 500 ml \/ approx. 310 g<\/p>\n        <p>-Height of the main body (without lid and spout) H173 mm<\/p>"
           }
         },
         "77169aba-d99e-4d11-9f78-37567ed42348": {
@@ -54,7 +54,8 @@
         "16314521567a2145fe-0": {
           "type": "image",
           "settings": {
-            "productTitle": "",
+            "productImg": "{{ product.metafields.details_image_1.value.value }}",
+            "productTitle": "{{ product.metafields.details_heading_1.vallue.value }}",
             "productDescription": "<p>Write something about your product.<\/p>"
           }
         },
