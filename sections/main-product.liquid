@@ -3,7 +3,7 @@
 <!-- Start Section Main Product Page -->
 <section class="section-product section-padding">
     <div id="mainProduct" class="product-shell shell">
-        <a href="javascript:history.back()" class="product-back">< Product Selection</a>
+        <a href="/pages/choose" class="product-back">< Product Selection</a>
         <div class="product-wrapper">
             <div class="product-options small">
                 <div class="product-info">
@@ -72,28 +72,44 @@
         delimiters: ['${', '}'],
         data() {
             return {
-                selectedVariant: '',
+                selectedVariantId: "{{ product.variants[0].id}}",
                 variantImage: "{{ product.images[0].src | img_url: 'master'}}",
                 variantNotAvailable: false,
                 variantInventoryCount: "{{product.variants[0].inventory_quantity}}",
-                isDisabled: false
+                isDisabled: false,
+                totalPrice: "{{product.variants[0].price | money }}",
+                variantTitle: "{{product.variants[0].title}}",
+                productTitle: "{{product.title}}",
+                productDesc: "{{product.description}}"
             }
         },
         methods: {
             openPage() {
                 if(this.variantInventoryCount != 0) {
+                    localStorage.productTitle = this.productTitle
+                    localStorage.productDesc = this.productDesc
+                    localStorage.selectedVariantId = this.selectedVariantId
+                    localStorage.variantImage = this.variantImage
+                    localStorage.variantTitle = this.variantTitle
+                    localStorage.variantImage = this.variantImage
+                    localStorage.totalPrice = this.totalPrice
+
                     window.location.href = "/pages/check"
                 }
             },
             onVariantChange(event) {
-                this.selectedVariant = event.target.getAttribute('data-variant')
+                this.selectedVariantId = event.target.getAttribute('data-variant-id')
                 this.variantImage = event.target.getAttribute('data-image-src')
                 this.variantInventoryCount = event.target.getAttribute('data-inventory-count')
+                this.totalPrice = event.target.getAttribute('data-variant-price')
                 this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
+                this.variantTitle = event.target.getAttribute('data-variant-title')
+                console.log(`Selected variant ID: ${this.selectedVariantId}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
             }
         },
         mounted() {
             this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
+            console.log(`Selected variant ID: ${this.selectedVariantId}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
         }
     }
 
