@@ -27,7 +27,7 @@
                 <p>{{ section.settings.textBelowId }}</p>
               </div>
               <div class="check-add">
-                <button @click.prevent="openPage">
+                <button @click.prevent="addToCart">
                     <span>{% render "shopping-cart" %}</span>
                     <span>Add To Cart</span>
                 </button>
@@ -81,16 +81,13 @@ const PageCheck = {
         }
     },
     methods: {
-        openPage() {
-            window.location.href = "/cart"
-        },
         addToCart() {
           let data = {
             id: this.selectedVariantId,
             quantity: 1,
           }
-          axios.post('cart/add.js', data).then((response) => {
-            console.log(response)
+          axios.post('/cart/add.js', data).then((response) => {
+            console.log(`Response ${response}`)
           }).catch(error => {
             console.log(`Error: ${error}`)
           })
