@@ -1,12 +1,18 @@
 {
   "sections": {
+    "choose": {
+      "type": "page-template-choose",
+      "settings": {
+        "contextId": "order"
+      }
+    },
     "main": {
       "type": "page-template-check",
       "settings": {
+        "textId": "Check list",
+        "bodyId": "Company statement about the products, warranty, policy, process, etc.",
+        "textBelowId": "I agree with the above and add it to my cart."
       }
-    },
-    "choose": {
-      "type": "page-template-choose"
     }
   },
   "order": [
