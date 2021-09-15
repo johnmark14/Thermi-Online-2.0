@@ -80,7 +80,8 @@
                 totalPrice: "{{product.variants[0].price | money }}",
                 variantTitle: "{{product.variants[0].title}}",
                 productTitle: "{{product.title}}",
-                productDesc: "{{product.description}}"
+                productDesc: "{{product.description}}",
+                productHandle: "{{product.handle}}"
             }
         },
         methods: {
@@ -88,6 +89,7 @@
                 if(this.variantInventoryCount != 0) {
                     localStorage.productTitle = this.productTitle
                     localStorage.productDesc = this.productDesc
+                    localStorage.productHandle = this.productHandle
                     localStorage.selectedVariantId = this.selectedVariantId
                     localStorage.variantImage = this.variantImage
                     localStorage.variantTitle = this.variantTitle
@@ -104,12 +106,12 @@
                 this.totalPrice = event.target.getAttribute('data-variant-price')
                 this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
                 this.variantTitle = event.target.getAttribute('data-variant-title')
-                console.log(`Selected variant ID: ${this.selectedVariantId}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
+                console.log(`Selected variant ID: ${this.selectedVariantId}, product handle: ${this.productHandle}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
             }
         },
         mounted() {
             this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
-            console.log(`Selected variant ID: ${this.selectedVariantId}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
+            console.log(`Selected variant ID: ${this.selectedVariantId}, product handle: ${this.productHandle}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
         }
     }
 
