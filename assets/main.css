@@ -452,6 +452,15 @@ main {
   right: -5px;
 }
 
+@media (max-width: 39.9375em) {
+  .header__nav-right a.notification::after {
+    width: 8px;
+    height: 8px;
+    top: -12px;
+    right: -4px;
+  }
+}
+
 .header__nav-right a i {
   font-size: 1.625rem;
 }
