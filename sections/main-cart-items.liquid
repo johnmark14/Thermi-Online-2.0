@@ -68,12 +68,12 @@
                         </div>
                     </div>
                     <div class="cart-btns mobile">
-                        <button class="checkout">Check Out</button>
+                        <button class="checkout" @click.prevent="checkOut">Check Out</button>
                         <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
                     </div>
                     <div class="cart-btns wide">
                         <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
-                        <button class="checkout">Check Out</button>
+                        <button class="checkout" @click.prevent="checkOut">Check Out</button>
                     </div>
                 </form>
             </template>
@@ -91,6 +91,9 @@ const MainCart = {
     methods: {
         openCollect() {
             window.location.href = "/pages/choose"
+        },
+        checkOut() {
+            window.location.href = "/checkout"
         },
         openCheckout() {
             // window.location.href = "/pages/check"
