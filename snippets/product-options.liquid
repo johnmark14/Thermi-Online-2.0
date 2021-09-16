@@ -5,8 +5,9 @@
     </div>
     <div class="option-swatch">
         {% for variant in product.variants %}
+            {%assign index = forloop.index | minus: 1%}
             <div class="swatch-wrapper">
-                <input data-variant-title="{{ variant.title }}" data-variant-price="{{ variant.price | money }}" data-inventory-count="{{ variant.inventory_quantity }}" data-image-src="{{variant.image.src | img_url: 'master'}}" data-variant-id="{{variant.id}}" @change="onVariantChange($event)" type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if forloop.index == 1%} checked {% endif %}/>  
+                <input data-variant-title="{{ variant.title }}" data-variant-price="{{ variant.price | money }}" data-inventory-count="{{ variant.inventory_quantity }}" data-image-src="{{variant.image.src | img_url: 'master'}}" data-variant-id="{{variant.id}}" @change="onVariantChange($event)" type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if product.variants[index].id == product.selected_variant.id or product.variants[index].id == product.first_available_variant.id%} checked {% endif %}/>  
                 <label for="option{{forloop.index}}">
                     {% if variant.inventory_quantity == 0 %}
                         <span class="slash"></span>

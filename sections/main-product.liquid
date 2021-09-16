@@ -72,13 +72,13 @@
         delimiters: ['${', '}'],
         data() {
             return {
-                selectedVariantId: "{{ product.variants[0].id}}",
-                variantImage: "{{ product.images[0].src | img_url: 'master'}}",
+                selectedVariantId: "{{ product.selected_or_first_available_variant.id}}",
+                variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
                 variantNotAvailable: false,
-                variantInventoryCount: "{{product.variants[0].inventory_quantity}}",
+                variantInventoryCount: "{{product.selected_or_first_available_variant.inventory_quantity}}",
                 isDisabled: false,
-                totalPrice: "{{product.variants[0].price | money }}",
-                variantTitle: "{{product.variants[0].title}}",
+                totalPrice: "{{product.selected_or_first_available_variant.price | money }}",
+                variantTitle: "{{product.selected_or_first_available_variant.title}}",
                 productTitle: "{{product.title}}",
                 productDesc: "{{product.description}}",
                 productHandle: "{{product.handle}}"
