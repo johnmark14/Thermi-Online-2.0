@@ -115,7 +115,7 @@
             },
             getCartItem() {
                 axios.get('/cart.js').then(response => {
-                    if(response.data.item_count = 0) {
+                    if(response.data.item_count == 0) {
                         this.isCartItem = false
                     } else {
                         this.isCartItem = true

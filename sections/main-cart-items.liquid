@@ -91,13 +91,9 @@ const MainCart = {
     methods: {
         openCollect() {
             window.location.href = "/pages/choose"
-            
         },
         checkOut() {
             window.location.href = "/checkout"
-        },
-        openCheckout() {
-            // window.location.href = "/pages/check"
         },
         getCart() {
             axios.get('/cart.js').then(response => {
@@ -134,6 +130,7 @@ const MainCart = {
           axios.post('/cart/change.js', data).then(response => {
             this.cartData.unshift(response.data)
             event.target.style.cursor ="pointer"
+            if(response.data.item_count == 0) Header.getCartItem()
           }).catch(error => {
             console.log(`error: ${error}`)
           })

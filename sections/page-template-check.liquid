@@ -90,7 +90,6 @@ const PageCheck = {
             quantity: 1,
           }
           axios.post('/cart/add.js', data).then((response) => {
-            console.log(response)
             this.openPage()
           }).catch(error => {
             console.log(`Error: ${error}`)
