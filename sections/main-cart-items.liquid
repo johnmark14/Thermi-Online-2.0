@@ -2,128 +2,90 @@
     <div id="mainCart" class="cart-shell shell">
         <h2 class="cart-title section-title">SHOPPING CART</h2>
         <div class="cart-body">
-            <form action="/cart" method="post" id="cart-form">
-                <table class="cart-table">
-                    <thead class="cart-head">
-                        <tr>
-                            <th colspan="2">Product</th>
-                            <th >Price</th>
-                            <th >Quantity</th>
-                            <th >Total</th>
-                        </tr>
-                    </thead>
-                    <tbody class="tb-body">
-                        <tr class="tb-body__row">
-                            <td class="td-image">
-                                <a href="/"><img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/products/20942_240x240_crop_center.jpg?v=1618465816" alt=""></a>
-                            </td>
-                            <td class="td-description">
-                                <a href="/">
-                                    Travel Tumbler 500ml
-                                    <span class="td-variant">- White</span>
-                                </a>
-                                <p>Processing fee: $20.00</p>
-                            </td>
-                            <td data-th-title="Price:" class="td-price">
-                                <span>$120.00</span>
-                            </td>
-                            <!-- Used for Mobile -->
-                            <td data-th-title="Total:" class="td-total mobile">
-                                <span>$120.00</span>
-                            </td>
-                            <td data-th-title="Quantity:" class="td-quantity mobile">
-                                <div class="items">
-                                    <span>2</span>
-                                </div>
-                            </td>
-                            <td class="td-quantity">
-                                <div class="body">
-                                    <div class="qb add">
-                                        <a href="/">+</a>
+            <template v-if="cart && cart.items.length > 0">
+                <form action="/cart" method="post" id="cart-form">
+                    <table class="cart-table">
+                        <thead class="cart-head">
+                            <tr>
+                                <th colspan="2">Product</th>
+                                <th >Price</th>
+                                <th >Quantity</th>
+                                <th >Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tb-body">
+                            <tr class="tb-body__row" v-for="item in cart.items">
+                                <td class="td-image" v-if="item.image">
+                                    <a :href="item.url"><img :src="item.featured_image.url" :alt="item.featured_image.alt" loading="lazy"></a>
+                                </td>
+                                <td class="td-description">
+                                    <a :href="item.url">
+                                        ${item.title}
+                                        <!-- <span class="td-variant">- White</span> -->
+                                    </a>
+                                    <p>${item.product_description}</p>
+                                </td>
+                                <td data-th-title="Price:" class="td-price">
+                                    <span>${money(item.price)}</span>
+                                </td>
+                                <!-- Used for Mobile -->
+                                <td data-th-title="Total:" class="td-total mobile">
+                                    <span>${money(item.price)}</span>
+                                </td>
+                                <td data-th-title="Quantity:" class="td-quantity mobile">
+                                    <div class="items">
+                                        <span>${item.quantity}</span>
                                     </div>
-                                    <div class="qb items wide">
-                                        <span>2</span>
+                                </td>
+                                <td class="td-quantity">
+                                    <div class="body">
+                                        <div class="qb add">
+                                            <a href="/" @click.prevent="addQuantity(item, $event)">+</a>
+                                        </div>
+                                        <div class="qb items wide">
+                                            <span>${item.quantity}</span>
+                                        </div>
+                                        <div class="qb minus">
+                                            <a href="/" @click.prevent="removeQuantity(item, $event)">-</a>
+                                        </div>
                                     </div>
-                                    <div class="qb minus">
-                                        <a href="/">-</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <!-- Used for desktop -->
-                            <td class="td-total wide">
-                                <span>$120.00</span>
-                            </td>
-                        </tr>
-                        <tr class="tb-body__row">
-                            <td class="td-image">
-                                <a href="/"><img src="https://cdn.shopify.com/s/files/1/0076/8747/1170/products/20942_240x240_crop_center.jpg?v=1618465816" alt=""></a>
-                            </td>
-                            <td class="td-description">
-                                <a href="/">
-                                    Travel Tumbler 500ml
-                                    <span class="td-variant">- White</span>
-                                </a>
-                                <p>Processing fee: $20.00</p>
-                            </td>
-                            <td data-th-title="Price:" class="td-price">
-                                <span>$120.00</span>
-                            </td>
-                            <!-- Used for Mobile -->
-                            <td data-th-title="Total:" class="td-total mobile">
-                                <span>$120.00</span>
-                            </td>
-                            <td data-th-title="Quantity:" class="td-quantity mobile">
-                                <div class="items">
-                                    <span>2</span>
-                                </div>
-                            </td>
-                            <td class="td-quantity">
-                                <div class="body">
-                                    <div class="qb add">
-                                        <a href="/">+</a>
-                                    </div>
-                                    <div class="qb items wide">
-                                        <span>2</span>
-                                    </div>
-                                    <div class="qb minus">
-                                        <a href="/">-</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <!-- Used for desktop -->
-                            <td class="td-total wide">
-                                <span>$120.00</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="cart-total">
-                    <div class="cart-total__label">
-                        <span>subtotal</span>
+                                </td>
+                                <!-- Used for desktop -->
+                                <td class="td-total wide">
+                                    <span>${money(item.final_price)}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cart-total">    
+                        <div class="cart-total__label">
+                            <span>subtotal</span>
+                        </div>
+                        <div class="cart-total__label-total">
+                            <span class="total">${money(cart.total_price)}</span>
+                            <!-- <span class="pfee">(Processing fee: $40)</span> -->
+                            <span class="info">Shipping costs will be displayed in the next step</span>
+                        </div>
                     </div>
-                    <div class="cart-total__label-total">
-                        <span class="total">$240.00</span>
-                        <span class="pfee">(Processing fee: $40)</span>
-                        <span class="info">Shipping costs will be displayed in the next step</span>
+                    <div class="cart-btns mobile">
+                        <button class="checkout">Check Out</button>
+                        <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
                     </div>
-                </div>
-                <div class="cart-btns mobile">
-                    <button class="checkout">Check Out</button>
-                    <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
-                </div>
-                <div class="cart-btns wide">
-                    <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
-                    <button class="checkout">Check Out</button>
-                </div>
-            </form>
+                    <div class="cart-btns wide">
+                        <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
+                        <button class="checkout">Check Out</button>
+                    </div>
+                </form>
+            </template>
         </div>
     </div>
 </section>
 <script>
 const MainCart = {
+    delimiters: ['${', '}'],
     data() {
         return {
-        counter: 0
+            cartData: []
         }
     },
     methods: {
@@ -133,7 +95,55 @@ const MainCart = {
         openCheckout() {
             // window.location.href = "/pages/check"
         },
+        getCart() {
+            axios.get('/cart.js').then(response => {
+                this.cartData.unshift(response.data)
+            }).catch(error => {
+                console.log(`error: ${error}`)
+            })
+        },
+        money(value) {
+            if(!value)  return 0
+
+            return "$" + (value/100).toFixed(2) 
+        },
+        addQuantity(item, event) {
+          const data = {
+            "id": item.key,
+            "quantity": item.quantity + 1
+          }
+          event.target.style.cursor = "wait"
+
+          axios.post('/cart/change.js', data).then(response => {
+            this.cartData.unshift(response.data)
+            event.target.style.cursor = "pointer"
+          }).catch(error => {
+            console.log(`error: ${error}`)
+          })
+        },
+        removeQuantity(item, event) {
+          const data = {
+            "id": item.key,
+            "quantity": item.quantity - 1
+          }
+          event.target.style.cursor = "wait"
+          axios.post('/cart/change.js', data).then(response => {
+            this.cartData.unshift(response.data)
+            event.target.style.cursor ="pointer"
+          }).catch(error => {
+            console.log(`error: ${error}`)
+          })
+        }
     },
+    computed: {
+        cart() {
+            return this.cartData[0];
+        }
+    },
+    created() {
+        this.getCart()
+    }
+
 }
 
 Vue.createApp(MainCart).mount('#mainCart')

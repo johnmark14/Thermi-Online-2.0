@@ -3198,11 +3198,6 @@ main {
   transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
 }
 
-.section-cart .cart-btns button:hover {
-  color: #FFFFFF;
-  background-color: #000;
-}
-
 .section-cart .cart-btns button.continue {
   border: 1px solid #757171;
   color: #757171;
@@ -3212,6 +3207,11 @@ main {
 .section-cart .cart-btns button.checkout {
   background-color: #757171;
   color: #FFFFFF;
+}
+
+.section-cart .cart-btns button:hover {
+  color: #FFFFFF;
+  background-color: #000;
 }
 
 @media (max-width: 39.9375em) {
@@ -3370,8 +3370,20 @@ main {
   cursor: pointer;
 }
 
+.section-cart .tb-body__row .td-quantity .body .add a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 .section-cart .tb-body__row .td-quantity .body .minus {
   cursor: pointer;
+}
+
+.section-cart .tb-body__row .td-quantity .body .minus a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .section-cart .tb-body__row .td-quantity .body .items {
