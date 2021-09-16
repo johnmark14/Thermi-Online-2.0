@@ -104,6 +104,30 @@ main {
     // margin-top: 75px;
 }
 
+// Container
+.container {
+    position: relative;
+
+    #loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        z-index: 999;
+        opacity: 1;
+        transition: opacity .4s linear;
+
+        img {
+            z-index: 9999;
+        }
+    }
+}
+
 // Flexbox styles
 .flex {
     display: flex;

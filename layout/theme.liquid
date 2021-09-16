@@ -60,11 +60,15 @@
     {{ 'main.min.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'application.js' | asset_url }}"></script>
+
   </head>
 
   <body>
 
     <div class="container">
+      <div id="loading">
+        <img src="{{ 'loadingspinner_small.gif' | asset_url }}" alt="Loader Spinner">
+      </div>
       <!-- {% section 'announcement-bar' %} -->
       {% section 'header' %}
 
