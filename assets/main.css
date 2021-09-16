@@ -138,8 +138,8 @@ main {
   background-color: #FFFFFF;
   z-index: 999;
   opacity: 1;
-  -webkit-transition: opacity .4s linear;
-  transition: opacity .4s linear;
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
 }
 
 .container #loading img {
