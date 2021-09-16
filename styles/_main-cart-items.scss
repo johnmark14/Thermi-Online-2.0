@@ -135,6 +135,53 @@
             }
 
         }
+
+        // This is shown when cart is empty
+        &-empty {
+            width: 100%;
+            border: 1px solid $lightGray;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            
+            @include breakpoint-down(small) {
+                padding-top: 40px;
+            }
+
+            p {
+                font-size: toRem(24);
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                @include breakpoint-down(small) {
+                    font-size: toRem(22);
+                }
+            }
+
+            a {
+                font-size: toRem(12);
+                font-weight: 300;
+                letter-spacing: 1px;
+                margin-top: 40px;
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 15px 0;
+                width: 220px;
+                background-color: $darkGray1;
+                color: $white;
+                text-align: center;
+                box-sizing: border-box;
+                transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                        .5s ease-in-out,opacity .5s ease-in-out;
+
+
+                &:hover {
+                    color: $white;
+                    background-color: $black;
+                }
+            }
+        }
     }
 
     // Table body

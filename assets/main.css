@@ -3258,6 +3258,56 @@ main {
   }
 }
 
+.section-cart .cart-empty {
+  width: 100%;
+  border: 1px solid #989898;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-cart .cart-empty {
+    padding-top: 40px;
+  }
+}
+
+.section-cart .cart-empty p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-cart .cart-empty p {
+    font-size: 1.375rem;
+  }
+}
+
+.section-cart .cart-empty a {
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 15px 0;
+  width: 220px;
+  background-color: #757171;
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+}
+
+.section-cart .cart-empty a:hover {
+  color: #FFFFFF;
+  background-color: #000;
+}
+
 .section-cart .tb-body {
   border-bottom: 1px solid #ddd;
 }
