@@ -56,6 +56,20 @@
         &-right {
             a {
                 color: $lightGray;
+                &.notification {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        background-color: $lightGray;
+                        width: 10px;
+                        height: 10px;
+                        display: block;
+                        position: absolute;
+                        border-radius: 100%;
+                        top: -14px;
+                        right: -5px;
+                    }
+                }
                 
                 i {
                     font-size: toRem(26);

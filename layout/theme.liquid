@@ -8,8 +8,6 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    
-
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
     {%- endif -%}
@@ -33,28 +31,33 @@
 
     {{ content_for_header }}
 
-     <!-- Google Fonts -->
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+    <!-- <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js"></script> -->
+    
+    
+    <!-- Google Fonts -->
     <link
     href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-
+    
     <!-- Material Icon Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
+    
     <!-- Axios JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-
-    <!-- Vue JS 03 -->
-    <script src="https://unpkg.com/vue@next"></script>
-    <!-- <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js"></script> -->
-
+    <script src="{{ 'axios.min.js' | asset_url }}"></script>
+    
     <!-- Swiper JS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- From assets -->
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'swiper.js' | asset_url }}"></script>
+    
+    <!-- Vue JS 03 -->
+    <script src="{{ 'vue.js' | asset_url }}"></script>
+    <script src="{{ 'vuex.js' | asset_url }}"></script>
+    
+    <!-- Custom Code by John - assets -->
     {{ 'main.min.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'application.js' | asset_url }}" async></script>
+
+    <script src="{{ 'application.js' | asset_url }}"></script>
   </head>
 
   <body>

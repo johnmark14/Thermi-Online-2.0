@@ -95,27 +95,40 @@
       <nav class="header__nav-right">
           <!-- Side access -->
           <a href="/"><i class="material-icons-outlined">person_outline</i></a>
-          <a href="/cart"><i class="material-icons-outlined">local_mall</i></a>
+          <a :class="{notification: isCartItem}" href="/cart"><i class="material-icons-outlined">local_mall</i></a>
       </nav>
   </div>
 </header>
 
 <script>
-    if(document.querySelector('#header')) {
-        const Header = Vue.createApp({
-        //   delimiters: ['${', '}'],
+    const Header = Vue.createApp({
+      delimiters: ['${', '}'],
         data() {
             return {
-            isOpen: false
+                isOpen: false,
+                isCartItem: false
             }
         },
         methods: {
             toggleMenu() {
                 this.isOpen = !this.isOpen
             },
+            getCartItem() {
+                axios.get('/cart.js').then(response => {
+                    if(response.data.item_count = 0) {
+                        this.isCartItem = false
+                    } else {
+                        this.isCartItem = true
+                    }
+                }).catch(error => {
+                    console.log(`Error from header axios: ${error}`);
+                })
+            }
         },
-        }).mount('#header');
-    }
+        created() {
+            this.getCartItem()
+        },
+    }).mount('#header')
 </script>
 
 {% schema %}

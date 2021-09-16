@@ -436,6 +436,22 @@ main {
   color: #989898;
 }
 
+.header__nav-right a.notification {
+  position: relative;
+}
+
+.header__nav-right a.notification::after {
+  content: "";
+  background-color: #989898;
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  top: -14px;
+  right: -5px;
+}
+
 .header__nav-right a i {
   font-size: 1.625rem;
 }
