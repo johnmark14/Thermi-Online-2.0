@@ -87,74 +87,71 @@
     </div>
 </section>
 <script>
-window.addEventListener('DOMContentLoaded', (event) => {
-    
-    const MainCart = {
-        delimiters: ['${', '}'],
-        data() {
-            return {
-                cartData: []
-            }
-        },
-        methods: {
-            openCollect() {
-                window.location.href = "/pages/choose"
-            },
-            checkOut() {
-                window.location.href = "/checkout"
-            },
-            getCart() {
-                axios.get('/cart.js').then(response => {
-                    this.cartData.unshift(response.data)
-                }).catch(error => {
-                    console.log(`error: ${error}`)
-                })
-            },
-            money(value) {
-                if(!value)  return 0
-    
-                return "$" + (value/100).toFixed(2) 
-            },
-            addQuantity(item, event) {
-              const data = {
-                "id": item.key,
-                "quantity": item.quantity + 1
-              }
-              event.target.style.cursor = "wait"
-    
-              axios.post('/cart/change.js', data).then(response => {
-                this.cartData.unshift(response.data)
-                event.target.style.cursor = "pointer"
-              }).catch(error => {
-                console.log(`error: ${error}`)
-              })
-            },
-            removeQuantity(item, event) {
-              const data = {
-                "id": item.key,
-                "quantity": item.quantity - 1
-              }
-              event.target.style.cursor = "wait"
-              axios.post('/cart/change.js', data).then(response => {
-                this.cartData.unshift(response.data)
-                event.target.style.cursor ="pointer"
-                if(response.data.item_count == 0) Header.getCartItem()
-              }).catch(error => {
-                console.log(`error: ${error}`)
-              })
-            }
-        },
-        computed: {
-            cart() {
-                return this.cartData[0];
-            }
-        },
-        created() {
-            this.getCart()
+const MainCart = {
+    delimiters: ['${', '}'],
+    data() {
+        return {
+            cartData: []
         }
-    
+    },
+    methods: {
+        openCollect() {
+            window.location.href = "/pages/choose"
+        },
+        checkOut() {
+            window.location.href = "/checkout"
+        },
+        getCart() {
+            axios.get('/cart.js').then(response => {
+                this.cartData.unshift(response.data)
+            }).catch(error => {
+                console.log(`error: ${error}`)
+            })
+        },
+        money(value) {
+            if(!value)  return 0
+
+            return "$" + (value/100).toFixed(2) 
+        },
+        addQuantity(item, event) {
+          const data = {
+            "id": item.key,
+            "quantity": item.quantity + 1
+          }
+          event.target.style.cursor = "wait"
+
+          axios.post('/cart/change.js', data).then(response => {
+            this.cartData.unshift(response.data)
+            event.target.style.cursor = "pointer"
+          }).catch(error => {
+            console.log(`error: ${error}`)
+          })
+        },
+        removeQuantity(item, event) {
+          const data = {
+            "id": item.key,
+            "quantity": item.quantity - 1
+          }
+          event.target.style.cursor = "wait"
+          axios.post('/cart/change.js', data).then(response => {
+            this.cartData.unshift(response.data)
+            event.target.style.cursor ="pointer"
+            if(response.data.item_count == 0) Header.getCartItem()
+          }).catch(error => {
+            console.log(`error: ${error}`)
+          })
+        }
+    },
+    computed: {
+        cart() {
+            return this.cartData[0];
+        }
+    },
+    created() {
+        this.getCart()
     }
-    
-    Vue.createApp(MainCart).mount('#mainCart')
-});   
+
+}
+
+Vue.createApp(MainCart).mount('#mainCart')
 </script>

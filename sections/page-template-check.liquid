@@ -38,8 +38,6 @@
   </div>
 </section>
 <script>
-window.addEventListener('DOMContentLoaded', (event) => {
-   
   const PageCheck = {
       delimiters: ['${', '}'],
       data() {
@@ -105,9 +103,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
   
   Vue.createApp(PageCheck).mount('#pageCheck');
-});
-</script>
-
+  </script>
+  
 {% schema %}
   {
     "name": "Check Page",
