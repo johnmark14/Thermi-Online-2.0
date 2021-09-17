@@ -4,9 +4,11 @@
 
 <!-- Rendered when users navigate to shop/products -->
 <script>
-    function page_redirect() {
-        window.location = "/"
-    }
-
-    page_redirect();
+    window.addEventListener('DOMContentLoaded', (event) => {
+        function page_redirect() {
+            window.location = "/"
+        }
+    
+        page_redirect();
+    });
 </script>

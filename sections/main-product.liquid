@@ -37,37 +37,9 @@
     </div>
 </section>
 
-{% schema %}
-{
-    "name": "Product Page",
-    "settings": [
-        {
-            "type": "textarea",
-            "id": "textBelowImg",
-            "label": "Text Below Product Image",
-            "default": "Write something about the image or a disclaimer."
-        },
-        {
-            "type": "header",
-            "content": "Button Text"
-        },
-        {
-            "type": "text",
-            "id": "btnText1",
-            "label": "Text 1",
-            "default": "Check"
-        },
-        {
-            "type": "text",
-            "id": "btnText2",
-            "label": "Text 2",
-            "default": "Check the content"
-        }
-    ]
-}
-{% endschema %}
-
 <script>
+window.addEventListener('DOMContentLoaded', (event) => {
+    
     const MainProduct = {
         delimiters: ['${', '}'],
         data() {
@@ -114,4 +86,36 @@
     }
 
     Vue.createApp(MainProduct).mount('#mainProduct')
+});
 </script>
+
+{% schema %}
+{
+    "name": "Product Page",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "textBelowImg",
+            "label": "Text Below Product Image",
+            "default": "Write something about the image or a disclaimer."
+        },
+        {
+            "type": "header",
+            "content": "Button Text"
+        },
+        {
+            "type": "text",
+            "id": "btnText1",
+            "label": "Text 1",
+            "default": "Check"
+        },
+        {
+            "type": "text",
+            "id": "btnText2",
+            "label": "Text 2",
+            "default": "Check the content"
+        }
+    ]
+}
+{% endschema %}
+

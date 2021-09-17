@@ -63,7 +63,8 @@
 </footer>
 
 <script>
-    const FooterApp = {
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const FooterApp = {
         data() {
             return {
                 scTimer: 0,
@@ -81,6 +82,7 @@
     };
 
     Vue.createApp(FooterApp).mount('#section-footer');
+    });
 </script>
 
 {% schema %}

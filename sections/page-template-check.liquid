@@ -37,6 +37,77 @@
       </div>
   </div>
 </section>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+   
+  const PageCheck = {
+      delimiters: ['${', '}'],
+      data() {
+          return {
+            productTitle: '',
+            productDesc: '',
+            productHandle: '',
+            selectedVariantId: '',
+            variantImage: '',
+            variantTitle: '',
+            variantImage: '',
+            totalPrice: '',
+            productHandle: ''
+          }
+      },
+      methods: {
+          openPage() {
+              window.location.href = "/cart"
+          },
+          addToCart() {
+            let data = {
+              id: this.selectedVariantId,
+              quantity: 1,
+            }
+            axios.post('/cart/add.js', data).then((response) => {
+              this.openPage()
+            }).catch(error => {
+              console.log(`Error: ${error}`)
+            })
+          }
+      },
+      mounted() {
+        if(localStorage.productTitle) this.productTitle = localStorage.productTitle
+        if(localStorage.productDesc) this.productDesc = localStorage.productDesc
+        if(localStorage.productHandle) this.productHandle = localStorage.productHandle
+        if(localStorage.selectedVariantId) this.selectedVariantId = localStorage.selectedVariantId
+        if(localStorage.variantImage) this.variantImage = localStorage.variantImage
+        if(localStorage.variantTitle) this.variantTitle = localStorage.variantTitle
+        if(localStorage.variantImage) this.variantImage = localStorage.variantImage
+        if(localStorage.totalPrice) this.totalPrice = localStorage.totalPrice
+        if(localStorage.productHandle) this.productHandle = localStorage.productHandle
+      },
+      computed: {
+        getBackLink() {
+          return `/products/${this.productHandle}`
+        },
+        getVariantTitle() {
+          return this.variantTitle
+        },
+        getProductTitle() {
+          return this.productTitle
+        },
+        getProductDesc() {
+          return this.productDesc
+        },
+        getTotalPrice() {
+          return this.totalPrice
+        },
+        getVariantImage() {
+          return this.variantImage
+        }
+      }
+  }
+  
+  Vue.createApp(PageCheck).mount('#pageCheck');
+});
+</script>
+
 {% schema %}
   {
     "name": "Check Page",
@@ -64,70 +135,4 @@
   }
 {% endschema %}
 
-<script>
-const PageCheck = {
-    delimiters: ['${', '}'],
-    data() {
-        return {
-          productTitle: '',
-          productDesc: '',
-          productHandle: '',
-          selectedVariantId: '',
-          variantImage: '',
-          variantTitle: '',
-          variantImage: '',
-          totalPrice: '',
-          productHandle: ''
-        }
-    },
-    methods: {
-        openPage() {
-            window.location.href = "/cart"
-        },
-        addToCart() {
-          let data = {
-            id: this.selectedVariantId,
-            quantity: 1,
-          }
-          axios.post('/cart/add.js', data).then((response) => {
-            this.openPage()
-          }).catch(error => {
-            console.log(`Error: ${error}`)
-          })
-        }
-    },
-    mounted() {
-      if(localStorage.productTitle) this.productTitle = localStorage.productTitle
-      if(localStorage.productDesc) this.productDesc = localStorage.productDesc
-      if(localStorage.productHandle) this.productHandle = localStorage.productHandle
-      if(localStorage.selectedVariantId) this.selectedVariantId = localStorage.selectedVariantId
-      if(localStorage.variantImage) this.variantImage = localStorage.variantImage
-      if(localStorage.variantTitle) this.variantTitle = localStorage.variantTitle
-      if(localStorage.variantImage) this.variantImage = localStorage.variantImage
-      if(localStorage.totalPrice) this.totalPrice = localStorage.totalPrice
-      if(localStorage.productHandle) this.productHandle = localStorage.productHandle
-    },
-    computed: {
-      getBackLink() {
-        return `/products/${this.productHandle}`
-      },
-      getVariantTitle() {
-        return this.variantTitle
-      },
-      getProductTitle() {
-        return this.productTitle
-      },
-      getProductDesc() {
-        return this.productDesc
-      },
-      getTotalPrice() {
-        return this.totalPrice
-      },
-      getVariantImage() {
-        return this.variantImage
-      }
-    }
-}
 
-Vue.createApp(PageCheck).mount('#pageCheck');
-</script>
