@@ -224,7 +224,7 @@
       "settings": {
         "sectionTitle": "Ideas",
         "linkText": "View More",
-        "url": "",
+        "url": "shopify:\/\/pages\/ideas",
         "anchorID": "section-ideas"
       }
     },
