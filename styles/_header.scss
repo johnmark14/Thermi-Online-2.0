@@ -17,6 +17,7 @@
 
         @include breakpoint-down(small) {
             font-size: toRem(12);
+            padding: 12px 0;
         }
     }
 

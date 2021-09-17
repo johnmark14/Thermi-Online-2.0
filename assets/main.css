@@ -419,6 +419,7 @@ main {
 @media (max-width: 39.9375em) {
   .header .announcement-bar {
     font-size: 0.75rem;
+    padding: 12px 0;
   }
 }
 
