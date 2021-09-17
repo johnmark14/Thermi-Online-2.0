@@ -45,18 +45,22 @@
     <!-- Fontawesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     
-    <!-- Axios JS -->
-    <script src="{{ 'axios.min.js' | asset_url }}"></script>
-    
     <!-- Swiper JS -->
     {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'swiper.js' | asset_url }}"></script>
+    
+    <!-- Custom Code by John - assets -->
+    {{ 'main.min.css' | asset_url | stylesheet_tag }}
+
+    <!-- Swiper JS -->
+    <script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+    <!-- Axios JS -->
+    <script src="{{ 'axios.min.js' | asset_url }}"></script>
     
     <!-- Vue JS 03 -->
     <script src="{{ 'vue.js' | asset_url }}"></script>
     
     <!-- Custom Code by John - assets -->
-    {{ 'main.min.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'application.js' | asset_url }}"></script>
 
@@ -74,7 +78,6 @@
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
         {{ content_for_layout }}
       </main>
-      <p>test</p>
       {% section 'footer' %}
     </div>
 
