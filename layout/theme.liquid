@@ -34,7 +34,6 @@
     <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <!-- <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js"></script> -->
     
-    
     <!-- Google Fonts -->
     <link
     href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -46,9 +45,6 @@
     <!-- Fontawesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     
-    <!-- Custom Code by John - assets -->
-    {{ 'main.min.css' | asset_url | stylesheet_tag }}
-
     <!-- Axios JS -->
     <script src="{{ 'axios.min.js' | asset_url }}"></script>
     
@@ -59,7 +55,8 @@
     <!-- Vue JS 03 -->
     <script src="{{ 'vue.js' | asset_url }}"></script>
     
-    
+    <!-- Custom Code by John - assets -->
+    {{ 'main.min.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'application.js' | asset_url }}"></script>
 
@@ -68,9 +65,9 @@
   <body>
 
     <div class="container">
-      <!-- <div id="loading">
+      <div id="loading">
         <img src="{{ 'loadingspinner_small.gif' | asset_url }}" alt="Loader Spinner">
-      </div> -->
+      </div>
       <!-- {% section 'announcement-bar' %} -->
       {% section 'header' %}
 
