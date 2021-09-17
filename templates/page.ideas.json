@@ -146,10 +146,19 @@
         "url": "",
         "anchorID": ""
       }
+    },
+    "163188795609057093": {
+      "type": "big-button",
+      "settings": {
+        "buttonText": "order now",
+        "buttonUrl": "shopify:\/\/pages\/choose",
+        "anchorID": ""
+      }
     }
   },
   "order": [
     "main",
-    "1631886502c1b0154c"
+    "1631886502c1b0154c",
+    "163188795609057093"
   ]
 }
