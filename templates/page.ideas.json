@@ -2,11 +2,58 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "1631886502c1b0154c": {
+      "type": "products-gallery",
+      "blocks": {
+        "1631886502c1b0154c-0": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image5.jpg",
+            "altText": ""
+          }
+        },
+        "1631886502c1b0154c-1": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image6.jpg",
+            "altText": ""
+          }
+        },
+        "1631886502c1b0154c-2": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image7.jpg",
+            "altText": ""
+          }
+        },
+        "1631886502c1b0154c-3": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image8.jpg",
+            "altText": ""
+          }
+        }
+      },
+      "block_order": [
+        "1631886502c1b0154c-0",
+        "1631886502c1b0154c-1",
+        "1631886502c1b0154c-2",
+        "1631886502c1b0154c-3"
+      ],
+      "settings": {
+        "sectionTitle": "Ideas",
+        "linkText": "View More",
+        "url": "",
+        "anchorID": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1631886502c1b0154c"
   ]
 }
