@@ -21,6 +21,9 @@
             <span></span>
         </div>
     </a>
+    <div class="announcement-bar" style="background-color: {{ section.settings.color_bg }};" {% if section.settings.showAnnouncement == false %} style="display: none;" {% endif %}>
+        <a href="{{ section.settings.message_link }}" {% unless section.settings.message_link %} @click.prevent="prevent($event)" {% endunless %} style="color: {{ section.settings.color_text }};"><span>This is an announcement!</span></a>
+    </div>
   <div class="header__inner flex flex-jc-sb">
       <!-- Left Side Nav -->
       <nav class="header__nav-main">
@@ -123,6 +126,9 @@
                 }).catch(error => {
                     console.log(`Error from header axios: ${error}`);
                 })
+            },
+            prevent(event) {
+                console.log(event)
             }
         },
         created() {
@@ -162,7 +168,7 @@
         },
         {
             "type" : "checkbox",
-            "id" : "message",
+            "id" : "showAnnouncement",
             "label" : "Show announcement",
             "default" : false
         },

@@ -10,6 +10,15 @@
     max-width: 1500px;
     margin: 0 auto;
 
+    .announcement-bar {
+        text-align: center;
+        padding: 10px 0;
+        background-color: $darkGray1;
+        color: $white;
+        font-size: toRem(14);
+        letter-spacing: 1px;
+    }
+
     &__inner {
         padding: toRem(18) toRem(45); // Pading for left and right
         @include breakpoint-down(medium) {
