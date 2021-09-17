@@ -3,7 +3,7 @@
         <h2 class="services-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
         <div class="services-card">
             <div class="services-img {% if section.settings.flip %} move-right {% endif %}">
-                <img src="{{ section.settings.serviceImg | img_url: 'master' }}" alt="">
+                <img src="{{ section.settings.serviceImg | img_url: 'master' }}" alt="Service Image" loading="lazy">
             </div>
             <div class="services {% if section.settings.flip %} move-left {% endif %}">
                 <div class="services-label">
@@ -15,7 +15,7 @@
                     <ul class="option">
                         {% for block in section.blocks %}
                         <li><img src="{{ block.settings.iconImg | img_url: 'master' }}"
-                                alt="{% if block.settings.altText != blank %} {{ block.setting.altText }} {% else %} icon-{{ forloop.index }} {% endif %}">
+                                alt="{% if block.settings.altText != blank %} {{ block.setting.altText }} {% else %} icon-{{ forloop.index }} {% endif %}" loading="lazy">
                         </li>
                         {% endfor %}
                     </ul>

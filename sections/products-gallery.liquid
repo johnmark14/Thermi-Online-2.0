@@ -7,7 +7,7 @@
         {% if section.blocks.size != 0%}
         <div class="ideas-imgs">
             {% for block in section.blocks %}
-                <div class="img"><img src="{{ block.settings.img | img_url: 'master'}}" alt="{% if block.settings.altText != blank%} {{ block.settings.altText }} {% else %} image-{{ forloop.index }} {% endif %}"></div>
+                <div class="img"><img src="{{ block.settings.img | img_url: 'master'}}" alt="{% if block.settings.altText != blank%} {{ block.settings.altText }} {% else %} image-{{ forloop.index }} {% endif %}" loading="lazy"></div>
             {% endfor %}
         </div>
         {% endif %}

@@ -8,7 +8,7 @@
                   {% for block in section.blocks %}
                       <div class="swiper-slide">
                           <div class="products-image">
-                          <img src="{{ block.settings.productImg | img_url: 'master' }}" alt="Product image-{{ forloop.index }}" />
+                          <img src="{{ block.settings.productImg | img_url: 'master' }}" alt="Product image-{{ forloop.index }}"  loading="lazy"/>
                           </div>
                           <div class="products-description">
                               <div class="products-title">{{ block.settings.productTitle }}</div>

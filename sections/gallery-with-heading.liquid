@@ -12,7 +12,7 @@
                 <ul class="social-images">
                     {% for block in section.blocks %}
                     <li class="social-img"><a href="{{ section.settings.imgUrl }}" class="img"><img
-                                src="{{ block.settings.img | img_url: 'master' }}" alt="{% if block.settings.alt != blank %} {{ block.settings.alt }} {% else %} Picture-{{ forloop.index }} {% endif %}"></a>
+                                src="{{ block.settings.img | img_url: 'master' }}" alt="{% if block.settings.alt != blank %} {{ block.settings.alt }} {% else %} Picture-{{ forloop.index }} {% endif %}" loading="lazy"></a>
                     </li>
                     {% endfor %}
                 </ul>

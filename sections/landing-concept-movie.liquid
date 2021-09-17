@@ -9,7 +9,7 @@
                 <a href="/"
                     class="thumbnail" @click.prevent="{% if section.settings.videoId != blank %} toggleModal {% endif %}" >
                     {% if section.settings.thumbnail %}
-                        <img src="{{ section.settings.thumbnail | img_url: 'master' }}" alt="Video Thumbnail">
+                        <img src="{{ section.settings.thumbnail | img_url: 'master' }}" alt="Video Thumbnail" loading="lazy">
                     {% else %}
                         {% render "small-image-placeholder" %}
                     {% endif %}
