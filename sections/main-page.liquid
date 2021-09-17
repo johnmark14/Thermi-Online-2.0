@@ -3,10 +3,19 @@
 <!-- Start Section Main for Choose Page -->
 
 <!-- Rendered when users navigate to shop/products -->
-<script>
-  function page_redirect() {
-    window.location = "/";
-  }
+<div class="page-width page-width--narrow">
+  <h1 class="main-page-title page-title h0">
+    {{ page.title | escape }}
+  </h1>
+  <div class="rte">
+    {{ page.content }}
+  </div>
+</div>
 
-  page_redirect();
-</script>
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "spaced-section"
+}
+{% endschema %}
