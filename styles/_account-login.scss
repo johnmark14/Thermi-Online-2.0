@@ -1,0 +1,100 @@
+.section-login {
+    .section-title {
+        padding-top: 40px;
+    }
+  .wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+
+    &-subtitle {
+      font-size: toRem(14);
+      font-weight: 500;
+      text-transform: capitalize;
+      margin-top: -5%;
+      letter-spacing: 1px;
+      color: red;
+
+      &-hide {
+          display: none;
+      }
+    }
+
+    &-inputs {
+      margin-top: 20px;
+
+      input {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: $lightGray1;
+        padding: 10px 5px;
+        font-size: toRem(26);
+        box-sizing: border-box;
+        border-radius: 4px;
+
+        &:not(:first-child) {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    &-button {
+      margin-top: 30px;
+      a {
+        display: block;
+        background-color: $darkGray;
+        color: $white;
+        padding: 20px 0;
+        text-transform: uppercase;
+        border-radius: 4px;
+        transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+          border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+        &:hover {
+          background-color: $black;
+        }
+      }
+    }
+
+    &-infos {
+      margin-top: 10px;
+      text-align: left;
+
+      a {
+        font-size: toRem(14);
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: toRem(14);
+
+        a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &-register {
+        margin-top: 50px;
+        a {
+            font-size: toRem(20);
+            color: $darkGray;
+            font-weight: 400;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+  }
+}

@@ -9,12 +9,12 @@
 //     }, 1300);
 // })
 
-window.addEventListener("load", function(event) {
-    const loader = document.getElementById('loading');
-    setTimeout(function() {
-        loader.style.opacity = '0';
-        setTimeout(function() {
-            loader.remove();
-        }, 500)
-    }, 900);
-  });
+// window.addEventListener("load", function(event) {
+//     const loader = document.getElementById('loading');
+//     setTimeout(function() {
+//         loader.style.opacity = '0';
+//         setTimeout(function() {
+//             loader.remove();
+//         }, 500)
+//     }, 900);
+//   });

@@ -3524,3 +3524,105 @@ main {
     display: none;
   }
 }
+
+.section-login .section-title {
+  padding-top: 40px;
+}
+
+.section-login .wrapper {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section-login .wrapper-subtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: -5%;
+  letter-spacing: 1px;
+  color: red;
+}
+
+.section-login .wrapper-subtitle-hide {
+  display: none;
+}
+
+.section-login .wrapper-inputs {
+  margin-top: 20px;
+}
+
+.section-login .wrapper-inputs input {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #D6D6D6;
+  padding: 10px 5px;
+  font-size: 1.625rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.section-login .wrapper-inputs input:not(:first-child) {
+  margin-top: 15px;
+}
+
+.section-login .wrapper-button {
+  margin-top: 30px;
+}
+
+.section-login .wrapper-button a {
+  display: block;
+  background-color: #5E5E5E;
+  color: #FFFFFF;
+  padding: 20px 0;
+  text-transform: uppercase;
+  border-radius: 4px;
+  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.section-login .wrapper-button a:hover {
+  background-color: #000;
+}
+
+.section-login .wrapper-infos {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.section-login .wrapper-infos a {
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+.section-login .wrapper-infos a:hover {
+  text-decoration: none;
+}
+
+.section-login .wrapper-infos p {
+  margin-top: 10px;
+  font-size: 0.875rem;
+}
+
+.section-login .wrapper-infos p a:hover {
+  text-decoration: none;
+}
+
+.section-login .wrapper-register {
+  margin-top: 50px;
+}
+
+.section-login .wrapper-register a {
+  font-size: 1.25rem;
+  color: #5E5E5E;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.section-login .wrapper-register a:hover {
+  text-decoration: none;
+}
