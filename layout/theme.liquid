@@ -68,7 +68,7 @@
 
   <body>
 
-    <div class="container">
+    <div class="container" style="{% unless settings.showLoading %} display: none; {% endunless %}">
       <div id="loading">
         <img src="{{ 'loadingspinner_small.gif' | asset_url }}" alt="Loader Spinner">
       </div>

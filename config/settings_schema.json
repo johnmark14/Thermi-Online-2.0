@@ -58,5 +58,17 @@
         "info": "Will be scaled down to 32 x 32px"
       }
     ]
+  },
+  {
+    "name": "Loading Screen",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "showLoading",
+        "label": "Show Loading Screen?",
+        "default": true,
+        "info": "Loading screen hides not available content from the customer if its being retrieve from the server."
+      }
+    ]
   }
 ]
