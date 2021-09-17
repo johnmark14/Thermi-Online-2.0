@@ -14,6 +14,10 @@
         color: $white;
         font-size: toRem(14);
         letter-spacing: 1px;
+
+        @include breakpoint-down(small) {
+            font-size: toRem(12);
+        }
     }
 
     &__inner {

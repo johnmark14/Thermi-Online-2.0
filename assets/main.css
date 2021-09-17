@@ -416,6 +416,12 @@ main {
   letter-spacing: 1px;
 }
 
+@media (max-width: 39.9375em) {
+  .header .announcement-bar {
+    font-size: 0.75rem;
+  }
+}
+
 .header__inner {
   max-width: 1500px;
   margin: 0 auto;
