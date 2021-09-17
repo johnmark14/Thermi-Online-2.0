@@ -21,7 +21,7 @@
             <span></span>
         </div>
     </a>
-    <div class="announcement-bar" style="background-color: {{ section.settings.color_bg }};" {% if section.settings.showAnnouncement == false %} style="display: none;" {% endif %}>
+    <div class="announcement-bar"  style=" {% unless section.settings.showAnnouncement %} display: none; {% endunless %} background-color: {{ section.settings.color_bg }};">
         <a href="{{ section.settings.message_link }}" {% unless section.settings.message_link %} @click.prevent="prevent($event)" {% endunless %} style="color: {{ section.settings.color_text }};"><span>This is an announcement!</span></a>
     </div>
   <div class="header__inner flex flex-jc-sb">
