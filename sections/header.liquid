@@ -22,7 +22,7 @@
         </div>
     </a>
     <div class="announcement-bar" style="background-color: {{ section.settings.color_bg }};" {% if section.settings.showAnnouncement == false %} style="display: none;" {% endif %}>
-        <a href="{{ section.settings.message_link }}" {% unless section.settings.message_link %} @click.prevent="prevent($event)" {% endunless %} style="color: {{ section.settings.color_text }};"><span>This is an announcement!</span></a>
+        <a href="{{ section.settings.message_link }}" {% unless section.settings.message_link %} @click.prevent="prevent($event)" {% endunless %} style="color: {{ section.settings.color_text }};"><span>{{ section.settings.message_text }}</span></a>
     </div>
   <div class="header__inner flex flex-jc-sb">
       <!-- Left Side Nav -->
@@ -173,16 +173,10 @@
             "default" : false
         },
         {
-            "type" : "checkbox",
-            "id" : "home_page_only",
-            "label" : "Home page only",
-            "default" : true
-        },
-        {
-            "type": "text",
+            "type": "textarea",
             "id" : "message_text",
             "label" : "Text",
-            "default" : "Announce something here"
+            "default" : "This is an announcement!"
         },
         {
             "type": "url",

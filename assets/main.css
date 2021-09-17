@@ -407,11 +407,6 @@ main {
   background-color: #FFFFFF;
 }
 
-.header {
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
 .header .announcement-bar {
   text-align: center;
   padding: 10px 0;
@@ -422,6 +417,8 @@ main {
 }
 
 .header__inner {
+  max-width: 1500px;
+  margin: 0 auto;
   padding: 1.125rem 2.8125rem;
   -webkit-box-align: center;
       -ms-flex-align: center;

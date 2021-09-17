@@ -7,9 +7,6 @@
 }
 
 .header {
-    max-width: 1500px;
-    margin: 0 auto;
-
     .announcement-bar {
         text-align: center;
         padding: 10px 0;
@@ -20,6 +17,8 @@
     }
 
     &__inner {
+        max-width: 1500px;
+        margin: 0 auto;
         padding: toRem(18) toRem(45); // Pading for left and right
         @include breakpoint-down(medium) {
             padding: toRem(18) toRem(20); // Pading for left and right
