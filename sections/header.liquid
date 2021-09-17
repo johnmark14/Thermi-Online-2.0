@@ -104,39 +104,37 @@
 </header>
 
 <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        const Header = Vue.createApp({
-          delimiters: ['${', '}'],
-            data() {
-                return {
-                    isOpen: false,
-                    isCartItem: false
-                }
+    const Header = Vue.createApp({
+      delimiters: ['${', '}'],
+        data() {
+            return {
+                isOpen: false,
+                isCartItem: false
+            }
+        },
+        methods: {
+            toggleMenu() {
+                this.isOpen = !this.isOpen
             },
-            methods: {
-                toggleMenu() {
-                    this.isOpen = !this.isOpen
-                },
-                getCartItem() {
-                    axios.get('/cart.js').then(response => {
-                        if(response.data.item_count == 0) {
-                            this.isCartItem = false
-                        } else {
-                            this.isCartItem = true
-                        }
-                    }).catch(error => {
-                        console.log(`Error from header axios: ${error}`);
-                    })
-                },
-                prevent(event) {
-                    console.log(event)
-                }
+            getCartItem() {
+                axios.get('/cart.js').then(response => {
+                    if(response.data.item_count == 0) {
+                        this.isCartItem = false
+                    } else {
+                        this.isCartItem = true
+                    }
+                }).catch(error => {
+                    console.log(`Error from header axios: ${error}`);
+                })
             },
-            created() {
-                this.getCartItem()
-            },
-        }).mount('#header')
-    });
+            prevent(event) {
+                console.log(event)
+            }
+        },
+        created() {
+            this.getCartItem()
+        },
+    }).mount('#header')
 </script>
 
 {% schema %}
