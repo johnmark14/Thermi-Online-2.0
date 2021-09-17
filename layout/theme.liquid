@@ -68,8 +68,8 @@
 
   <body>
 
-    <div class="container" style="{% unless settings.showLoading %} display: none; {% endunless %}">
-      <div id="loading">
+    <div class="container">
+      <div id="loading" style="{% unless settings.showLoading %} display: none; {% endunless %}">
         <img src="{{ 'loadingspinner_small.gif' | asset_url }}" alt="Loader Spinner">
       </div>
       <!-- {% section 'announcement-bar' %} -->
