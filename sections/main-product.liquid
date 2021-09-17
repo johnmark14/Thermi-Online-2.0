@@ -106,12 +106,10 @@
                 this.totalPrice = event.target.getAttribute('data-variant-price')
                 this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
                 this.variantTitle = event.target.getAttribute('data-variant-title')
-                console.log(`Selected variant ID: ${this.selectedVariantId}, product handle: ${this.productHandle}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
             }
         },
         mounted() {
             this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
-            console.log(`Selected variant ID: ${this.selectedVariantId}, product handle: ${this.productHandle}, variant title: ${this.variantTitle}, variant image: ${this.variantImage}, product price ${this.totalPrice}`)
         }
     }
 
