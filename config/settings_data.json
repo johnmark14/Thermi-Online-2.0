@@ -51,9 +51,8 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "textLogo": "",
-          "textColor": "#5E5E5E",
-          "idFLogo": "shopify:\/\/shop_images\/footer-logo.png",
+          "textLogo": "LOGO",
+          "textColor": "#989898",
           "textBottom": "Thermi Theme Built with <3 by John"
         }
       }
