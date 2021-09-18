@@ -38,7 +38,7 @@
         "type": "header",
         "settings": {
           "textLogo": "LOGO",
-          "textColor": "#989898",
+          "textColor": "#757171",
           "logo_max_width": 100,
           "top": "top",
           "showAnnouncement": true,
