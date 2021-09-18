@@ -38,6 +38,7 @@
         "type": "header",
         "settings": {
           "textLogo": "LOGO",
+          "textColor": "#989898",
           "logo_max_width": 100,
           "top": "top",
           "showAnnouncement": true,
@@ -50,8 +51,10 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "textBottom": "Thermi Theme Built with <3 by John",
-          "idFLogo": "shopify:\/\/shop_images\/footer-logo.png"
+          "textLogo": "",
+          "textColor": "#5E5E5E",
+          "idFLogo": "shopify:\/\/shop_images\/footer-logo.png",
+          "textBottom": "Thermi Theme Built with <3 by John"
         }
       }
     },
