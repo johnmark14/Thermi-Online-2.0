@@ -37,7 +37,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "textLogo": "THERMI",
+          "textLogo": "LOGO",
           "logo_max_width": 100,
           "top": "top",
           "showAnnouncement": true,
