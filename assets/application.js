@@ -26,8 +26,41 @@ const store = Vue.reactive({
         }).catch(error => {
             console.log(`Error from store ${error}`)
         })
+    },
+    addQuantity(item, event) {
+        const data = {
+            "id": item.key,
+            "quantity": item.quantity + 1
+        }
+
+        event.target.style.cursor = "wait"
+
+        axios.post('cart/change.js', data).then(response => {
+            this.state.cartState.unshift(response.data)
+
+            event.target.style.cursor = "pointer"
+        }).catch(error => {
+            console.log(`Error from add quantity: ${error}`)
+        })
+    },
+    removeQuantity(item, event) {
+        const data = {
+            "id": item.key,
+            "quantity": item.quantity - 1
+        }
+
+        event.target.style.cursor = "wait"
+        axios.post('/cart/change.js', data).then(response => {
+            this.state.cartState.unshift(response.data)
+
+            event.target.style.cursor = "pointer"
+            
+            this.state.isItem = response.data.item_count != 0 ? true : false; 
+        }).catch(error => {
+            console.log(`Error from add quantity: ${error}`)
+        })
     }
-})
+});
 
 // window.addEventListener("load", function(event) {
 //     const loader = document.getElementById('loading');

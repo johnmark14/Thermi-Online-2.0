@@ -40,13 +40,13 @@
                                 <td class="td-quantity">
                                     <div class="body">
                                         <div class="qb add">
-                                            <a href="/" @click.prevent="addQuantity(item, $event)">+</a>
+                                            <a href="/" @click.prevent="cartDateObject.addQuantity(item, $event)">+</a>
                                         </div>
                                         <div class="qb items wide">
                                             <span>${item.quantity}</span>
                                         </div>
                                         <div class="qb minus">
-                                            <a href="/" @click.prevent="removeQuantity(item, $event)">-</a>
+                                            <a href="/" @click.prevent="cartDateObject.removeQuantity(item, $event)">-</a>
                                         </div>
                                     </div>
                                 </td>
@@ -89,9 +89,10 @@
 <script>
 const MainCart = {
     delimiters: ['${', '}'],
+    name: "MainCart",
     data() {
         return {
-            cartData: []
+            cartData: store
         }
     },
     methods: {
@@ -101,54 +102,19 @@ const MainCart = {
         checkOut() {
             window.location.href = "/checkout"
         },
-        getCart() {
-            axios.get('/cart.js').then(response => {
-                this.cartData.unshift(response.data)
-            }).catch(error => {
-                console.log(`error: ${error}`)
-            })
-        },
         money(value) {
             if(!value)  return 0
 
             return "$" + (value/100).toFixed(2) 
-        },
-        addQuantity(item, event) {
-          const data = {
-            "id": item.key,
-            "quantity": item.quantity + 1
-          }
-          event.target.style.cursor = "wait"
-
-          axios.post('/cart/change.js', data).then(response => {
-            this.cartData.unshift(response.data)
-            event.target.style.cursor = "pointer"
-          }).catch(error => {
-            console.log(`error: ${error}`)
-          })
-        },
-        removeQuantity(item, event) {
-          const data = {
-            "id": item.key,
-            "quantity": item.quantity - 1
-          }
-          event.target.style.cursor = "wait"
-          axios.post('/cart/change.js', data).then(response => {
-            this.cartData.unshift(response.data)
-            event.target.style.cursor ="pointer"
-            if(response.data.item_count == 0) Header.getCartItem()
-          }).catch(error => {
-            console.log(`error: ${error}`)
-          })
         }
     },
     computed: {
         cart() {
-            return this.cartData[0];
+            return this.cartData.state.cartState[0];
+        },
+        cartDateObject() {
+            return this.cartData;
         }
-    },
-    created() {
-        this.getCart()
     }
 
 }
