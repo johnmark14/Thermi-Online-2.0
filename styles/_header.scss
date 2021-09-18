@@ -68,7 +68,7 @@
             span {
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
-                font-size: toReM(26);
+                font-size: toRem(26);
                 color: $darkGray1;
 
                 @include breakpoint-down(small) {
@@ -256,6 +256,17 @@
                         text-align: center;
                         a > img {
                             width: toRem(116);
+                        }
+
+                        a > span {
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: 700;
+                            font-size: toRem(26);
+                            color: $darkGray1;
+            
+                            @include breakpoint-down(small) {
+                                font-size: toRem(24);
+                            }
                         }
 
                         .socials {

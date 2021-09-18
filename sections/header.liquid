@@ -56,9 +56,9 @@
                   {% endif %}
                   <div class="footer-brand">
                       {% if section.settings.logo %}
-                        <a href="/" class="logo"><img src="{{ section.settings.logo | img_url: 'medium' }}" alt="logo" loading="lazy"></a>
+                         <a href="/" class="logo"><img src="{{ section.settings.logo | img_url: 'medium' }}" alt="logo" loading="lazy"></a>
                       {% else %}
-                      <a class="header__nav-logo" href="{{ routes.root_url }}">{{ shop.name }}</a>
+                         <a class="footer__nav-logo" href="{{ routes.root_url }}">  <span>  {% if section.settings.textLogo != blank%} {{ section.settings.textLogo }}{% else %} {{ shop.name }}  {% endif %}  <span>  </a>
                       {% endif %}
                       {% if social_icons %}
                         <ul class="socials">

@@ -478,7 +478,7 @@ main {
 .header__nav-logo span {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: toReM(26);
+  font-size: 1.625rem;
   color: #757171;
 }
 
@@ -690,6 +690,19 @@ main {
 
 .header__nav-main .main-content .content-footer .footer-brand a > img {
   width: 7.25rem;
+}
+
+.header__nav-main .main-content .content-footer .footer-brand a > span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  color: #757171;
+}
+
+@media (max-width: 39.9375em) {
+  .header__nav-main .main-content .content-footer .footer-brand a > span {
+    font-size: 1.5rem;
+  }
 }
 
 .header__nav-main .main-content .content-footer .footer-brand .socials {
