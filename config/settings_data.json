@@ -38,7 +38,6 @@
         "type": "header",
         "settings": {
           "textLogo": "LOGO",
-          "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_max_width": 100,
           "top": "top",
           "showAnnouncement": true,
