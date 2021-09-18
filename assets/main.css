@@ -475,6 +475,13 @@ main {
   width: 100%;
 }
 
+.header__nav-logo span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #757171;
+}
+
 .header__nav-right a {
   color: #989898;
 }

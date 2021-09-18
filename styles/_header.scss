@@ -64,6 +64,13 @@
             img {
                 width: 100%;
             }
+
+            span {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 26px;
+                color: $darkGray1;
+            }
         }
         // Right icons user and cart
         &-right {
