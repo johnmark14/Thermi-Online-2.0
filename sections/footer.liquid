@@ -17,7 +17,11 @@
         <div class="footer-content">
             <div class="footer-left">
                 <div class="left-inner">
-                    <a href="/" class="logo"><img src="{{ section.settings.idFLogo | img_url: 'master' }}" alt="logo"></a>
+                    {% if section.settings.idFLogo %}
+                        <a href="/" class="logo"><img src="{{ section.settings.idFLogo | img_url: 'master' }}" alt="logo" loading="lazy"></a>
+                    {% else %}
+                        <a class="logo-text" href="{{ routes.root_url }}">  <span style="color: {{ section.settings.textColor }};">  {% if section.settings.textLogo != blank%} {{ section.settings.textLogo }}{% else %} {{ shop.name }}  {% endif %}  <span>  </a>
+                    {% endif %}
                     {% if social_icons %}
                         <ul class="socials">
                             {% if settings.social_twitter_link != blank %}
@@ -89,15 +93,28 @@
     "settings": [
         {
             "type": "text",
-            "id": "textBottom",
-            "label": "Text Bottom",
-            "default": "Thermi Theme Built with <3 by John"
+            "id": "textLogo",
+            "label": "Text Logo",
+            "info": "Logo image will be prioritize over logo text."
+        },
+        {
+            "type": "color",
+            "id": "textColor",
+            "label": "Logo Text Color",
+            "default": "#5E5E5E"
         },
         {
             "type": "image_picker",
             "id": "idFLogo",
             "label": "Logo"
+        },
+        {
+            "type": "text",
+            "id": "textBottom",
+            "label": "Text Bottom",
+            "default": "Thermi Theme Built with <3 by John"
         }
+        
     ]
 }
 {% endschema %}

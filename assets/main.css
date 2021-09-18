@@ -1892,6 +1892,19 @@ main {
   width: 100%;
 }
 
+.footer-content .footer-left .left-inner .logo-text span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+  color: #757171;
+}
+
+@media (max-width: 39.9375em) {
+  .footer-content .footer-left .left-inner .logo-text span {
+    font-size: 1.5rem;
+  }
+}
+
 .footer-content .footer-left .left-inner .socials {
   display: -webkit-box;
   display: -ms-flexbox;

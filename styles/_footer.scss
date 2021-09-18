@@ -71,8 +71,20 @@
           img {
             width: 100%;
           }
-        }
 
+          &-text {
+            span {
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 700;
+              font-size: toRem(26);
+              color: $darkGray1;
+
+              @include breakpoint-down(small) {
+                  font-size: toRem(24);
+              }
+          }
+          }
+        }
         .socials {
           display: flex;
           padding-top: 15px;
