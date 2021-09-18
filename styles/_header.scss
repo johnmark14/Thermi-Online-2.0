@@ -68,8 +68,12 @@
             span {
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
-                font-size: 26px;
+                font-size: toReM(26);
                 color: $darkGray1;
+
+                @include breakpoint-down(small) {
+                    font-size: toRem(24);
+                }
             }
         }
         // Right icons user and cart
