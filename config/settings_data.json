@@ -37,7 +37,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.png",
+          "textLogo": "THERMI",
           "logo_max_width": 100,
           "top": "top",
           "showAnnouncement": true,
