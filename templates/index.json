@@ -316,6 +316,7 @@
     },
     "16310833551ae52905": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
         "sectionHeading": "Visit",
         "leftBigImg": "shopify:\/\/shop_images\/left.jpg",
@@ -387,7 +388,7 @@
         "text2": "Introducing your personalized ideas",
         "imgUrl": "",
         "anchorID": "",
-        "sectionColor": "#f7f7f7"
+        "sectionColor": "#fff"
       }
     }
   },
