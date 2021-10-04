@@ -1,4 +1,4 @@
-<section id="{{ section.settings.anchorID }}" class="section-services section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
+<section id="{{ section.settings.anchorID }}" class="section-services section-padding {% if section.settings.sectionPadding %} remove-extra  {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="services-shell shell">
         <h2 class="services-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
         <div class="services-card">
@@ -33,6 +33,12 @@
 {
     "name": "Image with Image",
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "sectionPadding",
+            "label": "Remove section padding?",
+            "default": false
+        },
         {
             "type": "text",
             "id": "sectionTitle",

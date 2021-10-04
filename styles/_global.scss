@@ -176,6 +176,11 @@ main {
     }
 }
 
+// Remove extra padding
+.remove-extra {
+    margin-bottom: -40px;
+}
+
 // Extra Padding
 .section-padding.pad-bot {
     padding-bottom: 120px;
@@ -228,7 +233,7 @@ main {
     text-transform: uppercase;
     padding: 50px 0;
     width: 600px;
-    margin: 95px auto 0 auto;
+    margin: 0 auto;
     font-size: toRem(24);
     background-color: $darkGray;
     border-radius: 5px;

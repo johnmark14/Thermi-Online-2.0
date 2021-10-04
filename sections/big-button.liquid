@@ -1,4 +1,4 @@
-<section class="section-ordernow section-padding" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
+<section class="section-ordernow section-padding{% if section.settings.sectionPadding %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="ordernow-shell shell">
         <a href="{{ section.settings.buttonUrl }}" class="products-btn  big-btn"><span>{{ section.settings.buttonText }}</span></a>
     </div>
@@ -8,6 +8,12 @@
 {
     "name": "Big Button",
     "settings": [
+        {
+            "type": "checkbox", 
+            "id": "sectionPadding",
+            "label": "Remove Section Padding?",
+            "default": false
+        },
         {
             "type": "text",
             "id": "buttonText",

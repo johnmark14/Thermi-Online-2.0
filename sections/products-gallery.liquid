@@ -1,7 +1,7 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section Product Gallery -->
-<section class="section-ideas section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
+<section class="section-ideas section-padding{% if section.settings.sectionPadding %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="ideas-shell shell">
         <h2 class="ideas-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
         {% if section.blocks.size != 0%}
@@ -23,6 +23,12 @@
 {
     "name": "Gallery",
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "sectionPadding",
+            "label": "Remove section padding?",
+            "default": false
+        },
         {
             "type": "text",
             "id": "sectionTitle",

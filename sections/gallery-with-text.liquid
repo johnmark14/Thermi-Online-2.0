@@ -1,4 +1,4 @@
-<section class="section-products section-padding" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
+<section class="section-products section-padding {% if section.settings.sectionPadding %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="products-shell shell">
       <h2 class="products-title section-title">{{ section.settings.sectionHeading }}</h2>
       <div class="products-carousel">
@@ -21,9 +21,6 @@
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        {% if section.settings.showButton != true  %}
-          <a href="{{ section.settings.buttonUrl }}" class="products-btn  big-btn"><span>{{ section.settings.buttonText }}</span></a>
-        {% endif %}
       </div>
     </div>
   </section>
@@ -61,27 +58,17 @@
   {
       "name": "Gallery with Text",
       "settings": [
+            {
+              "type": "checkbox", 
+              "id": "sectionPadding",
+              "label": "Remove Section Padding?",
+              "default": false
+          },
           {
               "type": "text",
               "id": "sectionHeading",
               "label": "Section Heading",
               "default": "Products"
-          },
-          {
-              "type": "checkbox",
-              "id": "showButton",
-              "label": "Hide Button?",
-              "default": false
-          },
-          {
-              "type": "text",
-              "id": "buttonText",
-              "label": "Button Text"
-          },
-          {
-              "type": "url",
-              "id": "buttonUrl",
-              "label": "Button URL"
           },
           {
             "type": "text",

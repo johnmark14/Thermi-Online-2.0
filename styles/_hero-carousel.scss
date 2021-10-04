@@ -1,4 +1,9 @@
 .intro { 
+    padding-bottom: 100px;
+
+    @include breakpoint-down(small) {
+        padding-bottom: 0;
+    }
 
     &-slider {
         position: relative;

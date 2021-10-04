@@ -1,7 +1,7 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section for View More -->
-<section class="section-viewmore section-padding" style="background-color: {{ section.settings.sectionColor }};">
+<section class="section-viewmore section-padding{% if section.settings.sectionPadding %} remove-extra {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="page-shell shell">
         <div class="banner-wrapper">
             <div class="banner-image">
@@ -23,6 +23,12 @@
 {
     "name": "View more card",
     "settings": [
+        {
+            "type": "checkbox", 
+            "id": "sectionPadding",
+            "label": "Remove Section Padding?",
+            "default": false
+        },
         {
             "type": "image_picker",
             "id": "imgId",

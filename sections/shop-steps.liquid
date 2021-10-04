@@ -1,7 +1,7 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section Shops Steps-->
-<section class="section-howto section-padding" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
+<section class="section-howto section-padding{% if section.settings.sectionPadding %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="howto-shell shell">
         <h2 class="products-title section-title">
             {{ section.settings.sectionHeading }}
@@ -56,6 +56,12 @@
 {
     "name": "Shop Instructions",
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "sectionPadding",
+            "label": "Remove section padding?",
+            "default": false
+        },
         {
             "type": "text",
             "id": "sectionHeading",

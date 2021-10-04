@@ -202,6 +202,10 @@ main {
   }
 }
 
+.remove-extra {
+  margin-bottom: -40px;
+}
+
 .section-padding.pad-bot {
   padding-bottom: 120px;
 }
@@ -251,7 +255,7 @@ main {
   text-transform: uppercase;
   padding: 50px 0;
   width: 600px;
-  margin: 95px auto 0 auto;
+  margin: 0 auto;
   font-size: 1.5rem;
   background-color: #5E5E5E;
   border-radius: 5px;
@@ -787,6 +791,16 @@ main {
   opacity: .75;
 }
 
+.intro {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 39.9375em) {
+  .intro {
+    padding-bottom: 0;
+  }
+}
+
 .intro-slider {
   position: relative;
   height: 664px;
@@ -967,12 +981,13 @@ main {
   font-weight: 500;
   margin-bottom: 47px;
   text-align: center;
+  padding-top: 40px;
 }
 
 @media (max-width: 39.9375em) {
   .plaintext-title {
     font-size: 1.25rem;
-    padding: 0 30px;
+    padding: 20px 30px 0 30px;
   }
 }
 
@@ -1136,10 +1151,6 @@ main {
 .plaintext-demo .showOverlay {
   visibility: visible;
   opacity: 1;
-}
-
-.section-services.remove-extra {
-  margin-top: -40px;
 }
 
 .section-services {
