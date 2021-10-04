@@ -133,7 +133,7 @@
         "1631082372d649c2e4-2"
       ],
       "settings": {
-        "sectionPadding": true,
+        "sectionPadding": false,
         "sectionHeading": "Products",
         "anchorID": "section-products",
         "sectionColor": "#f7f7f7"
