@@ -1,5 +1,17 @@
 {
   "sections": {
+    "concept-movie": {
+      "type": "landing-concept-movie",
+      "disabled": true,
+      "settings": {
+        "sectionTitle": "Personalize and make your own special",
+        "text": "<p>\"MARK IT BY KINTO\" is a service that allows you to personalize stainless steel tumblers and resin bottles. As a mu tumbler, Please enjoy it as a matching item with your family and friends, as a souvenir or gift.<\/p>",
+        "thumbnail": "shopify:\/\/shop_images\/thumbnail_500x_989d6e7b-29df-4e9d-a5a3-afaa85ffed2a.jpg",
+        "videoId": "VTRS_y1C6xc",
+        "anchorID": "section-movie",
+        "sectionColor": "#f7f7f7"
+      }
+    },
     "hero": {
       "type": "landing-hero-carousel",
       "blocks": {
@@ -59,14 +71,22 @@
         "ctaUrl": "shopify:\/\/pages\/choose"
       }
     },
-    "concept-movie": {
-      "type": "landing-concept-movie",
+    "163108244160b25d61": {
+      "type": "shop-steps",
       "settings": {
-        "sectionTitle": "Personalize and make your own special",
-        "text": "<p>\"MARK IT BY KINTO\" is a service that allows you to personalize stainless steel tumblers and resin bottles. As a mu tumbler, Please enjoy it as a matching item with your family and friends, as a souvenir or gift.<\/p>",
-        "thumbnail": "shopify:\/\/shop_images\/thumbnail_500x_989d6e7b-29df-4e9d-a5a3-afaa85ffed2a.jpg",
-        "videoId": "VTRS_y1C6xc",
-        "anchorID": "section-movie"
+        "sectionPadding": false,
+        "sectionHeading": "How to",
+        "step1": "shopify:\/\/shop_images\/step_1.png",
+        "step1Title": "Choose",
+        "step1Desc": "Choose a product",
+        "step2": "shopify:\/\/shop_images\/step_2.png",
+        "step2Title": "Mark it",
+        "step2Desc": "Choose a color design",
+        "step3": "shopify:\/\/shop_images\/step_3.png",
+        "step3Title": "order",
+        "step3Desc": "After the order is complete, a stainless tumbler: 6 business days - resin bottle: 3 business days - delivered in",
+        "anchorID": "section-howto",
+        "sectionColor": "#fff"
       }
     },
     "1631081559d14f13e2": {
@@ -140,6 +160,7 @@
         "adbf4eac-ca48-4bb1-8946-82a371646b3e"
       ],
       "settings": {
+        "sectionPadding": false,
         "sectionTitle": "Services",
         "serviceName": "Service 1",
         "serviceDescription": "<p>Stainless steel tumbler + laser engraving<\/p>",
@@ -147,7 +168,8 @@
         "ctaUrl": "shopify:\/\/pages\/choose",
         "serviceImg": "shopify:\/\/shop_images\/200521_KINTO44071_re_2_1_1.jpg",
         "flip": false,
-        "anchorID": "section-services"
+        "anchorID": "section-services",
+        "sectionColor": "#f7f7f7"
       }
     },
     "163108209993bc2011": {
@@ -173,6 +195,7 @@
         "5b50e01b-7301-4b9d-b800-ca54a3b31821"
       ],
       "settings": {
+        "sectionPadding": false,
         "sectionTitle": "",
         "serviceName": "Service 2",
         "serviceDescription": "<p>Resin bottle + sticker<\/p>",
@@ -180,7 +203,8 @@
         "ctaUrl": "shopify:\/\/pages\/choose",
         "serviceImg": "shopify:\/\/shop_images\/markitlab_top_services_01_90d9161a-03e7-4bff-baff-a8ba03452d70.jpg",
         "flip": true,
-        "anchorID": ""
+        "anchorID": "",
+        "sectionColor": "#f7f7f7"
       }
     },
     "1631082294d036fef7": {
@@ -222,10 +246,12 @@
         "1631082294d036fef7-3"
       ],
       "settings": {
+        "sectionPadding": false,
         "sectionTitle": "Ideas",
         "linkText": "View More",
         "url": "shopify:\/\/pages\/ideas",
-        "anchorID": "section-ideas"
+        "anchorID": "section-ideas",
+        "sectionColor": "#f7f7f7"
       }
     },
     "1631082372d649c2e4": {
@@ -262,35 +288,20 @@
         "1631082372d649c2e4-2"
       ],
       "settings": {
+        "sectionPadding": false,
         "sectionHeading": "Products",
-        "showButton": false,
-        "buttonText": "Choose a product",
-        "buttonUrl": "shopify:\/\/pages\/choose",
-        "anchorID": "section-products"
-      }
-    },
-    "163108244160b25d61": {
-      "type": "shop-steps",
-      "settings": {
-        "sectionHeading": "How to",
-        "step1": "shopify:\/\/shop_images\/step_1.png",
-        "step1Title": "Choose",
-        "step1Desc": "Choose a product",
-        "step2": "shopify:\/\/shop_images\/step_2.png",
-        "step2Title": "Mark it",
-        "step2Desc": "Choose a color design",
-        "step3": "shopify:\/\/shop_images\/step_3.png",
-        "step3Title": "order",
-        "step3Desc": "After the order is complete, a stainless tumbler: 6 business days - resin bottle: 3 business days - delivered in",
-        "anchorID": "section-howto"
+        "anchorID": "section-products",
+        "sectionColor": "#f7f7f7"
       }
     },
     "1631083243456f3665": {
       "type": "big-button",
       "settings": {
+        "sectionPadding": false,
         "buttonText": "order now",
         "buttonUrl": "shopify:\/\/pages\/choose",
-        "anchorID": ""
+        "anchorID": "",
+        "sectionColor": "#f7f7f7"
       }
     },
     "16310833551ae52905": {
@@ -302,7 +313,8 @@
         "rightTextDesc": "<p>It is an experience space where you can enjoy MARK IT BY KINTO even more.<\/p><p>You can see the product in your hand.<\/p>",
         "btnText": "View more",
         "btnUrl": "",
-        "anchorID": "section-visit"
+        "anchorID": "section-visit",
+        "sectionColor": "#f7f7f7"
       }
     },
     "1631083388fef06008": {
@@ -364,18 +376,19 @@
         "text1": "With MARK IT BY KINTO's Instagram account,",
         "text2": "Introducing your personalized ideas",
         "imgUrl": "",
-        "anchorID": ""
+        "anchorID": "",
+        "sectionColor": "#f7f7f7"
       }
     }
   },
   "order": [
-    "hero",
     "concept-movie",
+    "hero",
+    "163108244160b25d61",
     "1631081559d14f13e2",
     "163108209993bc2011",
     "1631082294d036fef7",
     "1631082372d649c2e4",
-    "163108244160b25d61",
     "1631083243456f3665",
     "16310833551ae52905",
     "1631083388fef06008"
