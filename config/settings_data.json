@@ -51,7 +51,7 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "textLogo": "LOGO",
+          "textLogo": "Thermi",
           "textColor": "#989898",
           "textBottom": "Thermi Theme Built with <3 by John"
         }
