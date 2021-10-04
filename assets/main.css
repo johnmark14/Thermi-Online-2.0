@@ -789,7 +789,7 @@ main {
 
 .intro-slider {
   position: relative;
-  height: 90vh;
+  height: 664px;
 }
 
 @media (max-width: 63.9375em) {
