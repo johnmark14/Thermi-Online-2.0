@@ -220,7 +220,7 @@
         "adbf4eac-ca48-4bb1-8946-82a371646b3e"
       ],
       "settings": {
-        "sectionPadding": false,
+        "sectionPadding": true,
         "sectionTitle": "Services",
         "serviceName": "Service 1",
         "serviceDescription": "<p>Stainless steel tumbler + laser engraving<\/p>",
@@ -229,7 +229,7 @@
         "serviceImg": "shopify:\/\/shop_images\/200521_KINTO44071_re_2_1_1.jpg",
         "flip": false,
         "anchorID": "section-services",
-        "sectionColor": "#f7f7f7"
+        "sectionColor": "#fff"
       }
     },
     "163108209993bc2011": {
@@ -264,7 +264,7 @@
         "serviceImg": "shopify:\/\/shop_images\/markitlab_top_services_01_90d9161a-03e7-4bff-baff-a8ba03452d70.jpg",
         "flip": true,
         "anchorID": "",
-        "sectionColor": "#f7f7f7"
+        "sectionColor": "#fff"
       }
     },
     "1631082294d036fef7": {
