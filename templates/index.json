@@ -144,7 +144,7 @@
       "settings": {
         "sectionPadding": false,
         "buttonText": "view all products",
-        "buttonUrl": "",
+        "buttonUrl": "shopify:\/\/pages\/choose",
         "anchorID": "",
         "sectionColor": "#f7f7f7"
       }
