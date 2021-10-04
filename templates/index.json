@@ -74,7 +74,7 @@
     "163108244160b25d61": {
       "type": "shop-steps",
       "settings": {
-        "sectionPadding": false,
+        "sectionPadding": true,
         "sectionHeading": "How to",
         "step1": "shopify:\/\/shop_images\/step_1.png",
         "step1Title": "Choose",
