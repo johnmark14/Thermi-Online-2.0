@@ -41,7 +41,7 @@
           "textColor": "#757171",
           "logo_max_width": 100,
           "top": "top",
-          "showAnnouncement": true,
+          "showAnnouncement": false,
           "message_text": "🖐 Announce something here 🦊!!!",
           "message_link": "",
           "color_bg": "#3a3a3a",
