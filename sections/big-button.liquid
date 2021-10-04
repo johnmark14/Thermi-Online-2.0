@@ -1,4 +1,4 @@
-<section class="section-ordernow section-padding" id="{{ section.settings.anchorID }}">
+<section class="section-ordernow section-padding" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="ordernow-shell shell">
         <a href="{{ section.settings.buttonUrl }}" class="products-btn  big-btn"><span>{{ section.settings.buttonText }}</span></a>
     </div>
@@ -23,6 +23,12 @@
             "id": "anchorID",
             "label": "Anchor ID",
             "info": "Add an anchor link to create an on page navigation."
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
         }
     ],
     "presets": [

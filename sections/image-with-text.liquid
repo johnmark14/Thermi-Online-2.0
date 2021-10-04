@@ -1,4 +1,4 @@
-<section class="section-visit section-padding"  id="{{ section.settings.anchorID }}">
+<section class="section-visit section-padding"  id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="visit-shell shell">
         <h2 class="visit-title section-title">
             {{ section.settings.sectionHeading }}
@@ -65,6 +65,12 @@
             "id": "anchorID",
             "label": "Anchor ID",
             "info": "Add an anchor link to create an on page navigation."
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
         }
     ],
     "presets": [

@@ -1,7 +1,7 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section Product Gallery -->
-<section class="section-ideas section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}">
+<section class="section-ideas section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="ideas-shell shell">
         <h2 class="ideas-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
         {% if section.blocks.size != 0%}
@@ -45,6 +45,12 @@
             "id": "anchorID",
             "label": "Anchor ID",
             "info": "Add an anchor link to create an on page navigation."
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
         }
     ],
     "blocks": [

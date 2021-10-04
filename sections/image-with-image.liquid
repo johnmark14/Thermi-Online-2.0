@@ -1,4 +1,4 @@
-<section id="{{ section.settings.anchorID }}" class="section-services section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}">
+<section id="{{ section.settings.anchorID }}" class="section-services section-padding {% if section.settings.sectionTitle == blank %} remove-extra {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="services-shell shell">
         <h2 class="services-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
         <div class="services-card">
@@ -78,6 +78,12 @@
             "id": "anchorID",
             "label": "Anchor ID",
             "info": "Add an anchor link to create an on page navigation."
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
         }
     ],
     "blocks": [

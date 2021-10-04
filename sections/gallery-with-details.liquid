@@ -1,4 +1,4 @@
-<section class="section-gallery section-padding" id="{{ section.settings.anchorID }}">
+<section class="section-gallery section-padding" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="products-shell shell">
       <h2 class="products-title section-title">{{ section.settings.sectionHeading }}</h2>
       <div class="products-body">
@@ -38,6 +38,12 @@
         "id": "anchorID",
         "label": "Anchor ID",
         "info": "Add an anchor link to create an on page navigation."
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
         }
       ],
       "blocks": [

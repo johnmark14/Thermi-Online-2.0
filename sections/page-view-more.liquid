@@ -1,7 +1,7 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section for View More -->
-<section class="section-viewmore section-padding">
+<section class="section-viewmore section-padding" style="background-color: {{ section.settings.sectionColor }};">
     <div class="page-shell shell">
         <div class="banner-wrapper">
             <div class="banner-image">
@@ -43,6 +43,12 @@
             "type": "url",
             "id": "linkUrl",
             "label": "Link Page"
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
         }
     ],
     "presets": [
