@@ -34,11 +34,11 @@
           <div class="main-content" :class='{ showLeft: isOpen}'>
               <div class="content-btn">
                   <a href="/pages/choose" class="btn-login">Order</a>
-                  <a href="/account/login" class="btn-order">Login</a>
+                  <a href="/account/login" class="btn-order">My Account</a>
               </div>
               {% if section.settings.top %}
                 <div class="content-nav">
-                    <h4 class="nav-header">{{ section.settings.top.title }}</h4>
+                    <!-- <h4 class="nav-header">{{ section.settings.top.title }}</h4> -->
                     <ul class="nav-links">
                         {% for link in section.settings.top.links %}
                         <li><a href="{{ link.url }}" class="links" @click="toggleMenu">-- {{ link.title }}</a></li>
