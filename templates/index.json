@@ -309,7 +309,7 @@
         "sectionPadding": false,
         "sectionTitle": "Gallery",
         "linkText": "View More",
-        "url": "shopify:\/\/pages\/ideas",
+        "url": "shopify:\/\/pages\/gallery",
         "anchorID": "section-ideas",
         "sectionColor": "#f7f7f7"
       }
