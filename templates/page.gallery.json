@@ -141,18 +141,22 @@
         "0e708709-bd76-4dd9-9ea6-16cd0d13c2d6"
       ],
       "settings": {
-        "sectionTitle": "Ideas",
+        "sectionPadding": false,
+        "sectionTitle": "Gallery",
         "linkText": "",
         "url": "",
-        "anchorID": ""
+        "anchorID": "",
+        "sectionColor": "#f7f7f7"
       }
     },
     "163188795609057093": {
       "type": "big-button",
       "settings": {
+        "sectionPadding": false,
         "buttonText": "order now",
         "buttonUrl": "shopify:\/\/pages\/choose",
-        "anchorID": ""
+        "anchorID": "",
+        "sectionColor": "#f7f7f7"
       }
     }
   },
