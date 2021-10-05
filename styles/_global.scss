@@ -231,8 +231,8 @@ main {
     color: $white;
     text-align: center;
     text-transform: uppercase;
-    padding: 50px 0;
-    width: 600px;
+    padding: 45px 0;
+    width: 595px;
     margin: 0 auto;
     font-size: toRem(24);
     background-color: $darkGray;
@@ -261,6 +261,11 @@ main {
                 width: 28px;
             }
         }
+    }
+
+    @include breakpoint-down(medium) {
+        padding: 40px 0;
+        width: 530px;
     }
 
     @include breakpoint-down(small)  {

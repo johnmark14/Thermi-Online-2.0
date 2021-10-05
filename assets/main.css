@@ -253,8 +253,8 @@ main {
   color: #FFFFFF;
   text-align: center;
   text-transform: uppercase;
-  padding: 50px 0;
-  width: 600px;
+  padding: 45px 0;
+  width: 595px;
   margin: 0 auto;
   font-size: 1.5rem;
   background-color: #5E5E5E;
@@ -286,6 +286,13 @@ main {
   .big-btn span::after {
     margin-left: 15px;
     width: 28px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .big-btn {
+    padding: 40px 0;
+    width: 530px;
   }
 }
 
@@ -1525,7 +1532,7 @@ main {
 }
 
 .section-howto .howto-tut .howto-step .stp-image {
-  width: 220px;
+  width: 190px;
 }
 
 @media (max-width: 39.9375em) {

@@ -27,7 +27,7 @@
 
             // The step image
             .stp-image {
-                width: 220px;
+                width: 190px;
                 @include breakpoint-down(small) {
                     width: 120px;
                     justify-self: center;
