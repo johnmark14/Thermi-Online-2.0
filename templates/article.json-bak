@@ -1,3 +1,4 @@
+
 {
  "sections": {
    "main": {
@@ -17,12 +18,9 @@
        }
      },
      "block_order": [
-       "featured_image",
-       "title",
-       "share",
-       "content"
+      
     ]
    }
  },
- "order": ["main"]
+ "order": []
 }
