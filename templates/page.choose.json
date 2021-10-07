@@ -8,6 +8,7 @@
     },
     "1631630779dfc72d46": {
       "type": "page-template-collection",
+      "disabled": true,
       "settings": {
         "colTitle": "Stainless steel tumbler + laser engraving",
         "colList": "stainless-steel-tumbler",
@@ -17,17 +18,28 @@
     },
     "1631630783d24bd907": {
       "type": "page-template-collection",
+      "disabled": true,
       "settings": {
         "colTitle": "Resin bottle + sticker",
         "colList": "resin-bottle",
         "sectionPadding": false,
         "navBack": true
       }
+    },
+    "16335883276087e912": {
+      "type": "page-template-collection",
+      "settings": {
+        "colTitle": "Drinkwares",
+        "colList": "drinkwares",
+        "sectionPadding": false,
+        "navBack": false
+      }
     }
   },
   "order": [
     "main",
     "1631630779dfc72d46",
-    "1631630783d24bd907"
+    "1631630783d24bd907",
+    "16335883276087e912"
   ]
 }
