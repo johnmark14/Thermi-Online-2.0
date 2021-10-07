@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="product-preview">
-                <img :src="variantImage" width="1000" height="1000" alt="{{ product.images[0].alt }}" loading="lazy">
+                <img :src="variantImage" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
                 <div class="product-disclaimer">
                     <p>{{ section.settings.textBelowImg }}</p>
                 </div>
