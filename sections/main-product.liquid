@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="product-preview">
-                <img :src="variantImage" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+                <img :src="variantImage" width="1000" height="1000" alt="{{ product.images[0].alt }}" loading="lazy">
                 <div class="product-disclaimer">
                     <p>{{ section.settings.textBelowImg }}</p>
                 </div>
@@ -80,7 +80,7 @@
                 totalPrice: "{{product.selected_or_first_available_variant.price | money }}",
                 variantTitle: "{{product.selected_or_first_available_variant.title}}",
                 productTitle: "{{product.title}}",
-                productDesc: "{{product.description}}",
+                productDesc: `{{product.description}}`,
                 productHandle: "{{product.handle}}"
             }
         },
