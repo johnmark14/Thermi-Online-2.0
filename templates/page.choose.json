@@ -18,6 +18,7 @@
     },
     "1631630783d24bd907": {
       "type": "page-template-collection",
+      "disabled": true,
       "settings": {
         "colTitle": "Resin bottle + sticker",
         "colList": "resin-bottle",
@@ -27,7 +28,6 @@
     },
     "16335883276087e912": {
       "type": "page-template-collection",
-      "disabled": true,
       "settings": {
         "colTitle": "Drinkwares",
         "colList": "drinkwares",
