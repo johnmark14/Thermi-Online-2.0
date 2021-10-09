@@ -6,20 +6,20 @@
     <ol class="page-steps">
       <li class="step {% if section.settings.contextId == "choose" %} active {% endif %}">
         <div>
-          <h4>CHOOSE</h4>
-          <span>Choose a product</span>
+          <h4>{{ section.settings.text1 }}</h4>
+          <span>{{ section.settings.subText1 }}</span>
         </div>
       </li>
       <li class="step {% if section.settings.contextId == "mark" %} active {% endif %}">
         <div>
-          <h4>MARK IT</h4>
-          <span>Choose a color design</span>
+          <h4>{{ section.settings.text2 }}</h4>
+          <span>{{ section.settings.subText2 }}</span>
         </div>
       </li>
       <li class="step {% if section.settings.contextId == "order" %} active {% endif %}">
         <div>
-          <h4>ORDER</h4>
-          <span>Order</span>
+          <h4>{{ section.settings.text3 }}</h4>
+          <span>{{ section.settings.subText3 }}</span>
         </div>
       </li>
     </ol>
@@ -53,6 +53,42 @@
       {
         "type": "header",
         "content": "Page Indicator Texts"
+      },
+      {
+        "type": "text",
+        "id": "text1",
+        "label": "Text 1",
+        "default": "Choose"
+      },
+      {
+        "type": "text",
+        "id": "subText1",
+        "label": "Sub-Text 1",
+        "default": "Choose a product"
+      },
+      {
+        "type": "text",
+        "id": "text2",
+        "label": "Text 2",
+        "default": "Personalize"
+      },
+      {
+        "type": "text",
+        "id": "subText2",
+        "label": "Sub-Text 2",
+        "default": "Choose a color design"
+      },
+      {
+        "type": "text",
+        "id": "text3",
+        "label": "Text 3",
+        "default": "Order"
+      },
+      {
+        "type": "text",
+        "id": "subText3",
+        "label": "Sub-Text 3",
+        "default": "Order"
       }
     ]
   }
