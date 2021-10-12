@@ -47,7 +47,7 @@
         "colTitle": "Kinto Tumbler",
         "colList": "stainless-steel-tumbler",
         "sectionPadding": false,
-        "navBack": false
+        "navBack": true
       }
     }
   },
