@@ -946,13 +946,12 @@ main {
 
 .header .outer-overlay .close-button span {
   position: absolute;
-  top: 50px;
-  left: 345px;
   width: 27px;
   height: 2px;
   background-color: #FFFFFF;
   -webkit-transform-origin: 13px 1px;
           transform-origin: 13px 1px;
+  visibility: hidden;
 }
 
 @media (max-width: 63.9375em) {
@@ -979,9 +978,16 @@ main {
           transform: rotate(-45deg);
 }
 
+.header .outer-overlay .close-button.closeMenu span {
+  top: 50px;
+  left: 345px;
+  visibility: visible;
+}
+
 .header .outer-overlay .close-button.closeCart span {
   top: 50px;
-  left: 990px;
+  right: 350px;
+  visibility: visible;
 }
 
 .header .showOverlay {

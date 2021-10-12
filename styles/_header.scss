@@ -460,12 +460,11 @@
 
             span {
                 position: absolute;
-                top: 50px;
-                left: 345px;
                 width: 27px;
                 height: 2px;
                 background-color: $white;
                 transform-origin: 13px 1px;
+                visibility: hidden;
 
                 @include breakpoint-down(medium) {
                     left: 335px;
@@ -488,10 +487,18 @@
                 }
             }
 
+            &.closeMenu {
+                span {
+                    top: 50px;
+                    left: 345px;
+                    visibility: visible;
+                }
+            }
             &.closeCart {
                 span {
                     top: 50px;
-                    left: 990px;
+                    right: 350px;
+                    visibility: visible;
                 }
             }
         }

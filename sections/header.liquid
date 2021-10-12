@@ -16,7 +16,7 @@
 <header class="header" id="header">
   <!-- Outer for Contrast -->
     <a class="outer-overlay" :class="{ showOverlay: isOverlay }" @click.prevent="removeMenu">
-        <div class="close-button" :class="{ closeCart: isCartOpen }">
+        <div class="close-button" :class="[{ closeMenu: isMainOpen },{closeCart: isCartOpen}]">
             <span></span>
             <span></span>
         </div>
