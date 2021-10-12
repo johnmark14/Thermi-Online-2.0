@@ -103,157 +103,39 @@
                 <div class="cart-heading">
                     <h4>YOUR CART</h4>
                 </div>
-                <div class="cart-items">
-                    <div class="cart-item">
-                        <div class="cart-item--img">
-                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
-                        </div>
-                        <div class="cart-item--desc">
-                            <p class="product-name">40oz Bottle</p>
-                            <p class="product-price">$19.95</p>
-                            <div class="item-quantity">
-                                <div class="qt add">
-                                    <a href="/">+</a>
-                                </div>
-                                <div class="qt items">
-                                   <span>5</span>
-                                </div>
-                                <div class="qt minus">
-                                    <a href="/">-</a>
+                <template v-if="cart && cart.items.length > 0">
+                    <div class="cart-items">
+                        <div class="cart-item" v-for="item in cart.items">
+                            <div class="cart-item--img">
+                                <a :href="item.url"><img :src="item.featured_image.url" :alt="item.featured_image.alt" loading="lazy"></a>
+                            </div>
+                            <div class="cart-item--desc">
+                                <a class="product-name" :href="item.url">${item.title}</a>
+                                <p class="product-price">${money(item.price)}</p>
+                                <div class="item-quantity">
+                                    <div class="qt add">
+                                        <a href="/" @click.prevent="cartDataObject.addQuantity(item, $event)">+</a>
+                                    </div>
+                                    <div class="qt items">
+                                    <span>${item.quantity}</span>
+                                    </div>
+                                    <div class="qt minus">
+                                        <a href="/" @click.prevent="cartDataObject.removeQuantity(item, $event)">-</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="cart-item">
-                        <div class="cart-item--img">
-                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                    <div class="cart-footer ">
+                        <div class="cart-desc">
+                            <p>Total</p>
+                            <p>${money(cart.total_price)}</p>
                         </div>
-                        <div class="cart-item--desc">
-                            <p class="product-name">40oz Bottle</p>
-                            <p class="product-price">$19.95</p>
-                            <div class="item-quantity">
-                                <div class="qt add">
-                                    <a href="/">+</a>
-                                </div>
-                                <div class="qt items">
-                                   <span>5</span>
-                                </div>
-                                <div class="qt minus">
-                                    <a href="/">-</a>
-                                </div>
-                            </div>
+                        <div class="cart-btn">
+                            <a href="/cart">Checkout</a>
                         </div>
                     </div>
-                    <div class="cart-item">
-                        <div class="cart-item--img">
-                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
-                        </div>
-                        <div class="cart-item--desc">
-                            <p class="product-name">40oz Bottle</p>
-                            <p class="product-price">$19.95</p>
-                            <div class="item-quantity">
-                                <div class="qt add">
-                                    <a href="/">+</a>
-                                </div>
-                                <div class="qt items">
-                                   <span>5</span>
-                                </div>
-                                <div class="qt minus">
-                                    <a href="/">-</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <div class="cart-item--img">
-                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
-                        </div>
-                        <div class="cart-item--desc">
-                            <p class="product-name">40oz Bottle</p>
-                            <p class="product-price">$19.95</p>
-                            <div class="item-quantity">
-                                <div class="qt add">
-                                    <a href="/">+</a>
-                                </div>
-                                <div class="qt items">
-                                   <span>5</span>
-                                </div>
-                                <div class="qt minus">
-                                    <a href="/">-</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <div class="cart-item--img">
-                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
-                        </div>
-                        <div class="cart-item--desc">
-                            <p class="product-name">40oz Bottle</p>
-                            <p class="product-price">$19.95</p>
-                            <div class="item-quantity">
-                                <div class="qt add">
-                                    <a href="/">+</a>
-                                </div>
-                                <div class="qt items">
-                                   <span>5</span>
-                                </div>
-                                <div class="qt minus">
-                                    <a href="/">-</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <div class="cart-item--img">
-                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
-                        </div>
-                        <div class="cart-item--desc">
-                            <p class="product-name">40oz Bottle</p>
-                            <p class="product-price">$19.95</p>
-                            <div class="item-quantity">
-                                <div class="qt add">
-                                    <a href="/">+</a>
-                                </div>
-                                <div class="qt items">
-                                   <span>5</span>
-                                </div>
-                                <div class="qt minus">
-                                    <a href="/">-</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <div class="cart-item--img">
-                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
-                        </div>
-                        <div class="cart-item--desc">
-                            <p class="product-name">40oz Bottle</p>
-                            <p class="product-price">$19.95</p>
-                            <div class="item-quantity">
-                                <div class="qt add">
-                                    <a href="/">+</a>
-                                </div>
-                                <div class="qt items">
-                                   <span>5</span>
-                                </div>
-                                <div class="qt minus">
-                                    <a href="/">-</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-footer ">
-                    <div class="cart-desc">
-                        <p>Total</p>
-                        <p>$19.95</p>
-                    </div>
-                    <div class="cart-btn">
-                        <a href="/cart">Checkout</a>
-                    </div>
-                </div>
+                </template>
             </div>
         </div>
       </nav>
@@ -289,6 +171,10 @@
                 this.isOverlay = false
                 document.body.style.overflow = "visible"
             },
+            money(value) {
+                if(!value) return 0
+                return "$"+(value/100).toFixed(2)
+            },
             prevent(event) {
                 console.log(event)
             }
@@ -296,6 +182,12 @@
         computed: {
             getCartNumItem() {
                 return this.cartData.state.isItem
+            },
+            cart() {
+                return this.cartData.state.cartState[0]
+            },
+            cartDataObject() {
+                return this.cartData;
             }
         },
         created() {

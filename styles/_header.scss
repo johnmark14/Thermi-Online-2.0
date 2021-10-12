@@ -338,11 +338,16 @@
 
                         &--img {
                             flex-grow: 1;
-                            width: 30px;
-
-                            img {
-                                width: 100%;
+                            a {
+                                display: block;
+                                width: 100px;
+                                height: 100px;
+                                padding: 0;
+                                img {
+                                    width: 100%;
+                                }
                             }
+
                         }
 
                         &--desc {
