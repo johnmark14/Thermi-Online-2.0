@@ -37,7 +37,7 @@
       "settings": {
         "colTitle": "Drinkwares",
         "colList": "drinkwares",
-        "sectionPadding": false,
+        "sectionPadding": true,
         "navBack": false
       }
     },
