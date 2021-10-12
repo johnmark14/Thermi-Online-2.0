@@ -33,7 +33,7 @@ body {
   line-height: 1.3;
   height: 100%;
   z-index: 5;
-  overflow: hidden;
+  overflow: default;
 }
 
 button {
@@ -744,6 +744,15 @@ main {
 .header .main-content--cart {
   top: 0;
   right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all .3s ease .1s;
+  transition: all .3s ease .1s;
+}
+
+.header .main-content--cart.showRight {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .header .main-content--cart .cart-wrapper {
@@ -755,6 +764,8 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .header .main-content--cart .cart-wrapper .cart {
@@ -781,8 +792,7 @@ main {
       -ms-flex-positive: 8;
           flex-grow: 8;
   padding-top: 40px;
-  padding-left: 20px;
-  padding-right: 10px;
+  overflow-y: scroll;
 }
 
 .header .main-content--cart .cart-wrapper .cart-items .cart-item {
@@ -875,6 +885,42 @@ main {
       -ms-flex-positive: 1;
           flex-grow: 1;
   justify-self: flex-end;
+  padding-top: 20px;
+}
+
+.header .main-content--cart .cart-wrapper .cart-footer .cart-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .main-content--cart .cart-wrapper .cart-footer .cart-desc p:last-child {
+  padding-right: 15px;
+}
+
+.header .main-content--cart .cart-wrapper .cart-footer .cart-btn {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+.header .main-content--cart .cart-wrapper .cart-footer .cart-btn a {
+  display: block;
+  padding: 18px 0;
+  background-color: #757171;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+}
+
+.header .main-content--cart .cart-wrapper .cart-footer .cart-btn a:hover {
+  color: #FFFFFF;
+  background-color: #000;
 }
 
 .header .outer-overlay {
@@ -931,6 +977,11 @@ main {
 .header .outer-overlay .close-button span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.header .outer-overlay .close-button.closeCart span {
+  top: 50px;
+  left: 990px;
 }
 
 .header .showOverlay {

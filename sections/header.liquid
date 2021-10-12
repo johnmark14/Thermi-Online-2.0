@@ -15,8 +15,8 @@
 
 <header class="header" id="header">
   <!-- Outer for Contrast -->
-    <a class="outer-overlay" :class="{ showOverlay: isOpen }" @click.prevent="toggleMenu">
-        <div class="close-button">
+    <a class="outer-overlay" :class="{ showOverlay: isOverlay }" @click.prevent="removeMenu">
+        <div class="close-button" :class="{ closeCart: isCartOpen }">
             <span></span>
             <span></span>
         </div>
@@ -31,7 +31,7 @@
               <span></span><span></span><span></span>
           </a>
 
-          <div class="main-content main-content--navigation" :class='{ showLeft: isOpen}'>
+          <div class="main-content main-content--navigation" :class='{ showLeft: isMainOpen}'>
               <div class="content-btn">
                   <a href="/pages/choose" class="btn-login">Order</a>
                   <a href="/account/login" class="btn-order">My Account</a>
@@ -41,7 +41,7 @@
                     <!-- <h4 class="nav-header">{{ section.settings.top.title }}</h4> -->
                     <ul class="nav-links">
                         {% for link in section.settings.top.links %}
-                        <li><a href="{{ link.url }}" class="links" @click="toggleMenu">-- {{ link.title }}</a></li>
+                        <li><a href="{{ link.url }}" class="links" @click="removeMenu">-- {{ link.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -97,8 +97,8 @@
       <nav class="header__nav-right">
         <!-- Side access -->
         <a href="/search"><i class="material-icons-outlined">search</i></a>
-        <a :class="{notification: getCartNumItem}" href="/cart"><i class="material-icons-outlined">local_mall</i></a>
-        <div class="main-content main-content--cart" :class='{ showRight: isOpen}'>
+        <a :class="{notification: getCartNumItem}" href="/"><i class="material-icons-outlined" @click.prevent="toggleCart">local_mall</i></a>
+        <div class="main-content main-content--cart" :class='{ showRight: isCartOpen}'>
             <div class="cart-wrapper">
                 <div class="cart-heading">
                     <h4>YOUR CART</h4>
@@ -144,8 +144,316 @@
                             </div>
                         </div>
                     </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item--img">
+                            <img src="//cdn.shopify.com/s/files/1/0598/6159/8417/products/Nero_Black.jpg?v=1633787161" alt="">
+                        </div>
+                        <div class="cart-item--desc">
+                            <p class="product-name">40oz Bottle</p>
+                            <p class="product-price">$19.95</p>
+                            <div class="item-quantity">
+                                <div class="qt add">
+                                    <a href="/">+</a>
+                                </div>
+                                <div class="qt items">
+                                   <span>5</span>
+                                </div>
+                                <div class="qt minus">
+                                    <a href="/">-</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cart-footer "></div>
+                <div class="cart-footer ">
+                    <div class="cart-desc">
+                        <p>Total</p>
+                        <p>$19.95</p>
+                    </div>
+                    <div class="cart-btn">
+                        <a href="/cart">Checkout</a>
+                    </div>
+                </div>
             </div>
         </div>
       </nav>
@@ -158,13 +466,28 @@
         delimiters: ['${', '}'],
         data() {
             return {
-                isOpen: false,
+                isOverlay: false,
+                isMainOpen: false,
+                isCartOpen: false,
                 cartData: store
             }
         },
         methods: {
             toggleMenu() {
-                this.isOpen = !this.isOpen
+                this.isMainOpen = true
+                this.isOverlay = true
+                document.body.style.overflow = "hidden"
+            },
+            toggleCart() {
+                this.isCartOpen = true
+                this.isOverlay = true
+                document.body.style.overflow = "hidden"
+            },
+            removeMenu() {
+                this.isMainOpen = false
+                this.isCartOpen = false
+                this.isOverlay = false
+                document.body.style.overflow = "visible"
             },
             prevent(event) {
                 console.log(event)

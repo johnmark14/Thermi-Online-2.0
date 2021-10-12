@@ -292,11 +292,19 @@
         &--cart {
             top: 0;
             right: 0;
+            transform: translateX(100%);
+            transition: all .3s ease .1s;
+
+            &.showRight {
+                transform: translateX(0);
+            }
 
             .cart-wrapper {
                 display: flex;
                 flex-direction: column;
                 height: 100vh;
+                padding-left: 20px;
+                padding-right: 10px;
 
                 .cart {
                     border: 1px solid #000;
@@ -316,8 +324,7 @@
                 .cart-items {
                     flex-grow: 8;
                     padding-top: 40px;
-                    padding-left: 20px;
-                    padding-right: 10px;
+                    overflow-y: scroll;
                     .cart-item {
                         display: flex;
                         justify-content: space-evenly;
@@ -396,6 +403,37 @@
                 .cart-footer {
                     flex-grow: 1;
                     justify-self: flex-end;
+                    padding-top: 20px;
+
+                    .cart-desc {
+                        display: flex;
+                        justify-content: space-between;
+
+                        p:last-child {
+                            padding-right: 15px;
+                        }
+                    }
+
+                    .cart-btn {
+                        text-align: center;
+                        padding-top: 40px;
+                        padding-bottom: 25px;
+                        a {
+                            display: block;
+                            padding: 18px 0;
+                            background-color: $darkGray1;
+                            color: $white;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                            .5s ease-in-out,opacity .5s ease-in-out;
+
+                            &:hover {
+                                color: $white;
+                                background-color: $black;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -447,6 +485,13 @@
     
                 &:last-child {
                     transform: rotate(-45deg);
+                }
+            }
+
+            &.closeCart {
+                span {
+                    top: 50px;
+                    left: 990px;
                 }
             }
         }
