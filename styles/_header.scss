@@ -117,7 +117,6 @@
     .main-content {
         position: fixed;
         width: 320px;
-        height: 100vh;
         background-color: $white;
         border-right: 1px solid black;
         z-index: 999;
@@ -125,6 +124,7 @@
         &--navigation {
             top: 0;
             left: 0;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             transform: translateX(-100%);
