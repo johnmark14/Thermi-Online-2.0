@@ -48,9 +48,13 @@ p {
 a, a:visited, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
-    user-select: none;
-    outline: 0;
+    user-select: none !important;
+    outline: none !important;
     background-color: transparent;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+div {
     -webkit-tap-highlight-color: transparent;
 }
 button, button:visited, button:hover, button:focus, button:active {
