@@ -533,7 +533,7 @@ main {
   font-size: 1.625rem;
 }
 
-.header__nav-right a:not(:last-child) {
+.header__nav-right a:first-child {
   padding-right: 18px;
 }
 
@@ -954,12 +954,6 @@ main {
   visibility: hidden;
 }
 
-@media (max-width: 63.9375em) {
-  .header .outer-overlay .close-button span {
-    left: 335px;
-  }
-}
-
 .header .outer-overlay .close-button span:hover {
   cursor: pointer;
 }
@@ -984,10 +978,22 @@ main {
   visibility: visible;
 }
 
+@media (max-width: 63.9375em) {
+  .header .outer-overlay .close-button.closeMenu span {
+    left: 335px;
+  }
+}
+
 .header .outer-overlay .close-button.closeCart span {
   top: 50px;
   right: 350px;
   visibility: visible;
+}
+
+@media (max-width: 63.9375em) {
+  .header .outer-overlay .close-button.closeCart span {
+    right: 335px;
+  }
 }
 
 .header .showOverlay {

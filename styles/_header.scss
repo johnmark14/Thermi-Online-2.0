@@ -106,7 +106,7 @@
                     font-size: toRem(26);
                 }
 
-                &:not(:last-child) {
+                &:first-child {
                     padding-right: 18px;
                 }
             }
@@ -466,10 +466,6 @@
                 transform-origin: 13px 1px;
                 visibility: hidden;
 
-                @include breakpoint-down(medium) {
-                    left: 335px;
-                }
-    
                 &:hover{
                     cursor: pointer;
                 }
@@ -492,6 +488,10 @@
                     top: 50px;
                     left: 345px;
                     visibility: visible;
+
+                    @include breakpoint-down(medium) {
+                        left: 335px;
+                    }
                 }
             }
             &.closeCart {
@@ -499,6 +499,10 @@
                     top: 50px;
                     right: 350px;
                     visibility: visible;
+
+                    @include breakpoint-down(medium) {
+                        right: 335px;
+                    }
                 }
             }
         }
