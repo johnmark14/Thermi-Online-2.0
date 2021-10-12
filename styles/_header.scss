@@ -310,7 +310,8 @@
                     border: 1px solid #000;
                 }
                 .cart-heading {
-                    flex-flow: 0;
+                    // flex-flow: 0;
+                    height: 5vh;
                     text-align: center;
                     padding-top: 20px;
 
@@ -322,7 +323,7 @@
                 }
 
                 .cart-items {
-                    flex-grow: 8;
+                    height: 70vh;
                     padding-top: 40px;
                     overflow-y: scroll;
                     .cart-item {
@@ -403,7 +404,7 @@
                 }
 
                 .cart-footer {
-                    flex-grow: 1;
+                    height: 25vh;
                     justify-self: flex-end;
                     padding-top: 20px;
 

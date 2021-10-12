@@ -777,10 +777,7 @@ main {
 }
 
 .header .main-content--cart .cart-wrapper .cart-heading {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: 0;
-          flex-flow: 0;
+  height: 5vh;
   text-align: center;
   padding-top: 20px;
 }
@@ -792,9 +789,7 @@ main {
 }
 
 .header .main-content--cart .cart-wrapper .cart-items {
-  -webkit-box-flex: 8;
-      -ms-flex-positive: 8;
-          flex-grow: 8;
+  height: 70vh;
   padding-top: 40px;
   overflow-y: scroll;
 }
@@ -887,9 +882,7 @@ main {
 }
 
 .header .main-content--cart .cart-wrapper .cart-footer {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  height: 25vh;
   justify-self: flex-end;
   padding-top: 20px;
 }
