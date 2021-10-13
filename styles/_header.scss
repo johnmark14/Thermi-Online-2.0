@@ -322,9 +322,17 @@
                     }
                 }
 
+                .cart-info {
+                    text-align: center;
+                    font-size: toRem(14);
+                    color: $lightGray;
+                    font-weight: 200;
+                    padding-top: 5px;
+                }
+
                 .cart-items {
                     height: 70vh;
-                    padding-top: 40px;
+                    padding-top: 25px;
                     overflow: hidden;
                     &.scrollY {
                         overflow: visible;
@@ -392,8 +400,8 @@
 
                                 .items {
                                     font-weight: 400;
-                                    margin-right: 5px;
-                                    margin-left: 5px;
+                                    margin-right: 8px;
+                                    margin-left: 8px;
                                     border: none;
                                 }
 

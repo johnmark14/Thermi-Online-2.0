@@ -104,6 +104,9 @@
                     <h4>YOUR CART</h4>
                 </div>
                 <template v-if="cart && cart.items.length > 0" >
+                    <div class="cart-info">
+                        <p>Recently Added Products</p>
+                    </div>
                     <div class="cart-items"  :class="{scrollY: isOverflowing}" ref="cartItems">
                         <div class="cart-item" v-for="item in cart.items">
                             <div class="cart-item--img">
@@ -128,11 +131,10 @@
                     </div>
                     <div class="cart-footer ">
                         <div class="cart-desc">
-                            <p>Total</p>
-                            <p>${money(cart.total_price)}</p>
+                            <p>${cart.items.length} Product/s in Cart</p>
                         </div>
                         <div class="cart-btn">
-                            <a href="/cart">Checkout</a>
+                            <a href="/cart">View my Cart</a>
                         </div>
                     </div>
                 </template>
