@@ -97,14 +97,14 @@
       <nav class="header__nav-right">
         <!-- Side access -->
         <a href="/search"><i class="material-icons-outlined">search</i></a>
-        <a :class="{notification: getCartNumItem}" href="/"><i class="material-icons-outlined" @click.prevent="toggleCart">local_mall</i></a>
+        <a :class="{notification: getCartNumItem}" href="/" @click.prevent="toggleCart"><i class="material-icons-outlined" >local_mall</i></a>
         <div class="main-content main-content--cart" :class='{ showRight: isCartOpen}'>
             <div class="cart-wrapper">
-                <div class="cart-heading">
+                <div class="cart-heading" >
                     <h4>YOUR CART</h4>
                 </div>
-                <template v-if="cart && cart.items.length > 0">
-                    <div class="cart-items">
+                <template v-if="cart && cart.items.length > 0" >
+                    <div class="cart-items"  :class="{scrollY: isOverflowing}" ref="cartItems">
                         <div class="cart-item" v-for="item in cart.items">
                             <div class="cart-item--img">
                                 <a :href="item.url"><img :src="item.featured_image.url" :alt="item.featured_image.alt" loading="lazy"></a>
@@ -151,7 +151,8 @@
                 isOverlay: false,
                 isMainOpen: false,
                 isCartOpen: false,
-                cartData: store
+                isOverflowing: false,
+                cartData: store,
             }
         },
         methods: {
@@ -192,7 +193,18 @@
         },
         created() {
             store.getCart()
-        }
+        },
+        updated() {
+            this.$nextTick(function() {
+                let elmnt = this.$refs.cartItems
+                if(elmnt.offsetHeight < elmnt.scrollHeight) {
+                    this.isOverflowing = true
+                } else {
+                    this.isOverflowing = false
+
+                }
+            })
+        },
     }).mount('#header')
 </script>
 

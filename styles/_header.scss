@@ -325,7 +325,11 @@
                 .cart-items {
                     height: 70vh;
                     padding-top: 40px;
-                    overflow-y: scroll;
+                    overflow: hidden;
+                    &.scrollY {
+                        overflow: visible;
+                        overflow-y: scroll;
+                    }
                     .cart-item {
                         display: flex;
                         justify-content: space-evenly;
