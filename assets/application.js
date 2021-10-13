@@ -12,7 +12,9 @@ console.log("start")
 const store = Vue.reactive({
     state: {
         cartState: [],
-        isItem: false
+        isItem: false,
+        isCartOpen: false,
+        isOverlay: false,
     },
     getCart() {
         axios.get('/cart.js').then(response => {
@@ -35,7 +37,7 @@ const store = Vue.reactive({
 
         event.target.style.cursor = "wait"
 
-        axios.post('cart/change.js', data).then(response => {
+        axios.post('/cart/change.js', data).then(response => {
             this.state.cartState.unshift(response.data)
 
             event.target.style.cursor = "pointer"

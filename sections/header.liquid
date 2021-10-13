@@ -15,8 +15,8 @@
 
 <header class="header" id="header">
   <!-- Outer for Contrast -->
-    <a class="outer-overlay" :class="{ showOverlay: isOverlay }" @click.prevent="removeMenu">
-        <div class="close-button" :class="[{ closeMenu: isMainOpen },{closeCart: isCartOpen}]">
+    <a class="outer-overlay" :class="{ showOverlay: getCartStateOverlay }" @click.prevent="removeMenu">
+        <div class="close-button" :class="[{ closeMenu: isMainOpen },{closeCart: getCartState}]">
             <span></span>
             <span></span>
         </div>
@@ -98,7 +98,7 @@
         <!-- Side access -->
         <a href="/search"><i class="material-icons-outlined">search</i></a>
         <a :class="{notification: getCartNumItem}" href="/" @click.prevent="toggleCart"><i class="material-icons-outlined" >local_mall</i></a>
-        <div class="main-content main-content--cart" :class='{ showRight: isCartOpen}'>
+        <div class="main-content main-content--cart" :class='{ showRight: getCartState}'>
             <div class="cart-wrapper">
                 <div class="cart-heading" >
                     <h4>YOUR CART</h4>
@@ -160,18 +160,18 @@
         methods: {
             toggleMenu() {
                 this.isMainOpen = true
-                this.isOverlay = true
+                this.cartData.state.isOverlay = true
                 document.body.style.overflow = "hidden"
             },
             toggleCart() {
-                this.isCartOpen = true
-                this.isOverlay = true
+                this.cartData.state.isCartOpen = true
+                this.cartData.state.isOverlay = true
                 document.body.style.overflow = "hidden"
             },
             removeMenu() {
                 this.isMainOpen = false
-                this.isCartOpen = false
-                this.isOverlay = false
+                this.cartData.state.isCartOpen = false
+                this.cartData.state.isOverlay = false
                 document.body.style.overflow = "visible"
             },
             money(value) {
@@ -191,6 +191,12 @@
             },
             cartDataObject() {
                 return this.cartData;
+            },
+            getCartState() {
+                return this.cartData.state.isCartOpen
+            },
+            getCartStateOverlay() {
+                return this.cartData.state.isOverlay
             }
         },
         created() {
@@ -199,12 +205,14 @@
         updated() {
             this.$nextTick(function() {
                 let elmnt = this.$refs.cartItems
-                if(elmnt.offsetHeight < elmnt.scrollHeight) {
+                if(elmnt) {
+                    if(elmnt.offsetHeight < elmnt.scrollHeight) {
                     this.isOverflowing = true
-                } else {
-                    this.isOverflowing = false
-
+                    } else {
+                        this.isOverflowing = false
+                    }
                 }
+                
             })
         },
     }).mount('#header')
