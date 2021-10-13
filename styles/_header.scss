@@ -328,11 +328,12 @@
                     color: $lightGray;
                     font-weight: 200;
                     padding-top: 5px;
+                    padding-bottom: 5px;
                 }
 
                 .cart-items {
                     height: 70vh;
-                    padding-top: 25px;
+                    padding-top: 20px;
                     overflow: hidden;
                     &.scrollY {
                         overflow: visible;
