@@ -3,7 +3,13 @@
     "main": {
       "type": "page-template-choose",
       "settings": {
-        "contextId": "choose"
+        "contextId": "choose",
+        "text1": "Choose",
+        "subText1": "Choose a product",
+        "text2": "Personalize",
+        "subText2": "Choose a color design",
+        "text3": "Order",
+        "subText3": "Order"
       }
     },
     "1631630779dfc72d46": {
@@ -31,8 +37,17 @@
       "settings": {
         "colTitle": "Drinkwares",
         "colList": "drinkwares",
-        "sectionPadding": false,
+        "sectionPadding": true,
         "navBack": false
+      }
+    },
+    "16340525627ed2120c": {
+      "type": "page-template-collection",
+      "settings": {
+        "colTitle": "Kinto Tumbler",
+        "colList": "stainless-steel-tumbler",
+        "sectionPadding": false,
+        "navBack": true
       }
     }
   },
@@ -40,6 +55,7 @@
     "main",
     "1631630779dfc72d46",
     "1631630783d24bd907",
-    "16335883276087e912"
+    "16335883276087e912",
+    "16340525627ed2120c"
   ]
 }
