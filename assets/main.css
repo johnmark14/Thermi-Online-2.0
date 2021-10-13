@@ -788,9 +788,17 @@ main {
   letter-spacing: 1px;
 }
 
+.header .main-content--cart .cart-wrapper .cart-info {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #989898;
+  font-weight: 200;
+  padding-top: 5px;
+}
+
 .header .main-content--cart .cart-wrapper .cart-items {
   height: 70vh;
-  padding-top: 40px;
+  padding-top: 25px;
   overflow: hidden;
 }
 
@@ -876,8 +884,8 @@ main {
 
 .header .main-content--cart .cart-wrapper .cart-items .cart-item--desc .item-quantity .items {
   font-weight: 400;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 8px;
+  margin-left: 8px;
   border: none;
 }
 
