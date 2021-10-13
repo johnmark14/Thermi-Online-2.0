@@ -2373,6 +2373,12 @@ main {
           flex-flow: row wrap;
 }
 
+@media (max-width: 63.9375em) {
+  .page-products .product-item {
+    padding: 0 10px 20px 10px;
+  }
+}
+
 @media (max-width: 39.9375em) {
   .page-products .product-item {
     max-width: none;
