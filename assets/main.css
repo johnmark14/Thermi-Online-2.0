@@ -794,11 +794,12 @@ main {
   color: #989898;
   font-weight: 200;
   padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .header .main-content--cart .cart-wrapper .cart-items {
   height: 70vh;
-  padding-top: 25px;
+  padding-top: 20px;
   overflow: hidden;
 }
 
