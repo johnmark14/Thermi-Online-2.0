@@ -27,10 +27,14 @@
                     {% render "product-options" %}
                 </div>
                 <div class="product-button">
-                    <button @click.prevent="openPage" :class="{disabled: isDisabled}">
+                    <button @click.prevent="addToCart" :class="{disabled: isDisabled}">
+                        <span>{% render "shopping-cart" %}</span>
+                        <span>Add To Cart</span>
+                    </button>
+                    <!-- <button @click.prevent="openPage" :class="{disabled: isDisabled}">
                         <span>{{ section.settings.btnText1 }}</span>
                         <span>{{ section.settings.btnText2 }}</span>
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>

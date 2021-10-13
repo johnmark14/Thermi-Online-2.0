@@ -932,6 +932,7 @@ main {
   background-color: #757171;
   color: #FFFFFF;
   text-transform: uppercase;
+  font-weight: 400;
   letter-spacing: 1px;
   -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
   transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
@@ -2836,6 +2837,9 @@ main {
     overflow-x: scroll;
     width: 100%;
     height: 125px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -2936,6 +2940,7 @@ main {
 
 .section-product .product-form .option-swatch .swatch-wrapper label .desc span:first-child {
   font-weight: 800;
+  font-size: 12px;
   color: #5E5E5E;
 }
 
@@ -2952,57 +2957,64 @@ main {
 
 .section-product .product-button {
   text-align: center;
-  margin-top: 20px;
-  padding-top: 40px;
+  margin-top: 60px;
 }
 
 .section-product .product-button button {
-  height: 90px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 60%;
-  border: none;
+  height: 90px;
   background-color: #757171;
-  color: #FFFFFF;
+  color: white;
+  outline: none;
   cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
   transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
   border-radius: 4px;
 }
 
-.section-product .product-button button:hover {
-  background-color: #000;
-}
-
-.section-product .product-button button span {
-  display: block;
-  text-transform: uppercase;
-}
-
-.section-product .product-button button span:first-child {
-  font-size: 1.875rem;
-  letter-spacing: 1px;
-}
-
-.section-product .product-button button span:last-child {
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  padding-top: 5px;
-}
-
 @media (max-width: 39.9375em) {
   .section-product .product-button button {
     width: 85%;
-  }
-  .section-product .product-button button span:first-child {
-    font-size: 1.5625rem;
-  }
-  .section-product .product-button button span:last-child {
-    font-size: 0.625rem;
+    height: 80px;
   }
 }
 
-.section-product .product-button button.disabled {
-  background-color: #D6D6D6;
-  cursor: no-drop;
+.section-product .product-button button span {
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+
+.section-product .product-button button span:first-child {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.section-product .product-button button span:first-child svg {
+  fill: #FFFFFF;
+}
+
+@media (max-width: 39.9375em) {
+  .section-product .product-button button span {
+    font-size: 1.25rem;
+  }
+  .section-product .product-button button span:first-child {
+    width: 24px;
+    margin-right: 5px;
+  }
+}
+
+.section-product .product-button button:hover {
+  background-color: black;
 }
 
 .section-accordion .accord-wrapper {
