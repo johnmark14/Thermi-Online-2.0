@@ -2807,7 +2807,7 @@ main {
           align-items: center;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .section-product .product-form .custom-option {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
