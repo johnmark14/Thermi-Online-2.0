@@ -170,6 +170,7 @@
 
                 @include breakpoint-down(small) {
                     font-size: toRem(18);
+                    display: none;
                 }
             }
 
