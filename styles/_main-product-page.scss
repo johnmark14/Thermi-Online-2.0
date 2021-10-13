@@ -335,6 +335,11 @@
             &:hover {
                 background-color: black;
             }
+
+            &.disabled {
+                background-color: $lightGray1;
+                cursor: no-drop;
+            }
         }
     }
 }

@@ -27,7 +27,7 @@
                     {% render "product-options" %}
                 </div>
                 <div class="product-button">
-                    <button @click.prevent="addToCart" :class="{disabled: isDisabled}">
+                    <button @click.prevent="addToCart($event)" :class="{disabled: isDisabled}">
                         <span>{% render "shopping-cart" %}</span>
                         <span>Add To Cart</span>
                     </button>
@@ -73,9 +73,11 @@
 
 <script>
     const MainProduct = {
+        name: "product Page",
         delimiters: ['${', '}'],
         data() {
             return {
+                cartData: store,
                 selectedVariantId: "{{ product.selected_or_first_available_variant.id}}",
                 variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
                 variantNotAvailable: false,
@@ -89,6 +91,7 @@
             }
         },
         methods: {
+            // This method is used before revision, I keep it still for future references
             openPage() {
                 if(this.variantInventoryCount != 0) {
                     localStorage.productTitle = this.productTitle
@@ -110,6 +113,34 @@
                 this.totalPrice = event.target.getAttribute('data-variant-price')
                 this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
                 this.variantTitle = event.target.getAttribute('data-variant-title')
+            },
+            // This method is used after the revision
+            addToCart(event) {
+                if(!this.isDisabled) {
+                    let data = {
+                        id: this.selectedVariantId,
+                        quantity: 1,
+                    }
+                    document.body.style.cursor = "wait"
+                    event.target.style.cursor = "wait"
+                    event.target.disabled = true
+                    this.isDisabled = true
+                    axios.post('/cart/add.js', data).then((response) => {
+                        store.getCart()
+                        setTimeout(()=> {
+                            event.target.disabled = false
+                            event.target.style.cursor = "pointer"
+                            document.body.style.cursor = "default"
+                            document.body.style.overflow = "hidden"
+                            this.cartData.state.isCartOpen = true
+                            this.cartData.state.isOverlay = true
+                            this.isDisabled = false
+
+                        }, 1000)
+                    }).catch(error => {
+                        console.log(`Error: ${error}`)
+                    })
+                }
             }
         },
         mounted() {
