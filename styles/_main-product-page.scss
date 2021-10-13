@@ -305,6 +305,11 @@
                     .5s ease-in-out,opacity .5s ease-in-out;
             border-radius: 4px;
 
+            @include breakpoint-down(medium) {
+                width: 90%;
+                height: 80px;
+            }
+
             @include breakpoint-down(small) {
                 width: 85%;
                 height: 80px;
@@ -321,6 +326,9 @@
                         svg {
                         fill: $white;
                         }
+                }
+                @include breakpoint-down(medium) {
+                    font-size: toRem(20);
                 }
                 
                 @include breakpoint-down(small) {

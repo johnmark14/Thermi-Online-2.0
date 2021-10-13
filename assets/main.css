@@ -2987,6 +2987,13 @@ main {
   border-radius: 4px;
 }
 
+@media (max-width: 63.9375em) {
+  .section-product .product-button button {
+    width: 90%;
+    height: 80px;
+  }
+}
+
 @media (max-width: 39.9375em) {
   .section-product .product-button button {
     width: 85%;
@@ -3007,6 +3014,12 @@ main {
 
 .section-product .product-button button span:first-child svg {
   fill: #FFFFFF;
+}
+
+@media (max-width: 63.9375em) {
+  .section-product .product-button button span {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 39.9375em) {
