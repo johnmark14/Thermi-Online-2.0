@@ -2798,6 +2798,12 @@ main {
   border-bottom: 2px solid #D6D6D6;
 }
 
+@media (max-width: 39.9375em) {
+  .section-product .product-form {
+    padding-bottom: 0;
+  }
+}
+
 .section-product .product-form .custom-option {
   display: -webkit-box;
   display: -ms-flexbox;

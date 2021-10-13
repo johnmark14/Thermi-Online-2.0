@@ -148,6 +148,10 @@
     .product-form {
         padding-bottom: 60px;
         border-bottom: 2px solid $lightGray1;
+
+        @include breakpoint-down(small) {
+            padding-bottom: 0;
+        }
         
         .custom-option {
             display: flex;
