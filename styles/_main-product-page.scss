@@ -61,6 +61,10 @@
                                     }
                                 }
                             }
+
+                            @include breakpoint-down(small) {
+                                display: none;
+                            }
                         }
                     }
 
@@ -191,7 +195,7 @@
         border-bottom: 2px solid $lightGray1;
 
         @include breakpoint-down(small) {
-            padding-bottom: 0;
+            padding-bottom: 30px;
         }
 
         .custom-option {
@@ -208,6 +212,12 @@
 
                 &.flex-dir-row {
                     flex-direction: row;
+                }
+            }
+
+            @include breakpoint-down(small) {
+                &.remove-flex {
+                    display: block;
                 }
             }
         }
@@ -266,8 +276,7 @@
                 margin-right: 30px;
 
                 @include breakpoint-down(small) {
-                    font-size: toRem(18);
-                    display: none;
+                    font-size: toRem(20);
                 }
             }
 
@@ -278,8 +287,8 @@
                 @include breakpoint-down(small) {
                     overflow-x: scroll;
                     width: 100%;
-                    height: 125px;
-                    justify-content: center;
+                    height: 115px;
+                    padding-left: 40px;
                 }
 
                 .swatch-wrapper {
@@ -396,6 +405,10 @@
             @include breakpoint-down(medium) {
                 margin-top: 40px;
             }
+            
+            @include breakpoint-down(small) {
+                margin-top: 5px;
+            }
 
             .quantity {
                 display: flex;
@@ -438,6 +451,10 @@
     .product-button {
         text-align: center;
         margin-top: 60px;
+
+        @include breakpoint-down(small) {
+            margin-top: 30px;
+        }
         button {
             display: inline-flex;
             width: 60%;
