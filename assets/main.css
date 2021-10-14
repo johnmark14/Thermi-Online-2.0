@@ -2773,6 +2773,11 @@ main {
   letter-spacing: 1px;
 }
 
+.section-product .product-wrapper .product-options .product-info .product-price {
+  margin-top: 10px;
+  font-size: 1.625rem;
+}
+
 @media (max-width: 39.9375em) {
   .section-product .product-wrapper .product-options .product-info {
     text-align: center;
@@ -3054,6 +3059,44 @@ main {
   }
 }
 
+.section-product .product-form .quantity-option {
+  margin-top: 60px;
+}
+
+.section-product .product-form .quantity-option .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-product .product-form .quantity-option .quantity .qty {
+  display: inline-block;
+}
+
+.section-product .product-form .quantity-option .quantity .qty:not(:last-child) {
+  margin-right: 5px;
+}
+
+.section-product .product-form .quantity-option .quantity .qty span {
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.section-product .product-form .quantity-option .quantity .btn a {
+  padding: 5px 10px;
+  border: 1px solid #989898;
+  font-weight: 600;
+  font-size: 1.25rem;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+}
+
+.section-product .product-form .quantity-option .quantity .btn a:hover {
+  background: #000;
+  color: #FFFFFF;
+}
+
 .section-product .product-button {
   text-align: center;
   margin-top: 60px;
@@ -3065,7 +3108,7 @@ main {
   display: inline-flex;
   width: 60%;
   height: 90px;
-  background-color: #757171;
+  background-color: #5E5E5E;
   color: white;
   outline: none;
   cursor: pointer;

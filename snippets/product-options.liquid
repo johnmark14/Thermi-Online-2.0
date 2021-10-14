@@ -1,49 +1,63 @@
-<form>
-    <div class="custom-option">
-        <div class="option-wrapper">
-            <div class="option option-personalize1">
-                <input type="radio" name="customization" id="noCustom" checked>
-                <label for="noCustom">NO CUSTOMIZATION</label>
-            </div>
-            <div class="option option-personalize2">
-                <input type="radio" name="customization" id="withCustom">
-                <label for="withCustom"><span>PERSONALIZE IT +</span> <span>$4.99</span></label>
-            </div>
+<div class="custom-option">
+    <div class="option-wrapper">
+        <div class="option option-personalize1">
+            <input type="radio" name="customization" id="noCustom" checked>
+            <label for="noCustom">NO CUSTOMIZATION</label>
+        </div>
+        <div class="option option-personalize2">
+            <input type="radio" name="customization" id="withCustom">
+            <label for="withCustom"><span>PERSONALIZE IT</span> <span>+ $4.99</span></label>
         </div>
     </div>
-    <div class="custom-option">
-        <div class="option-wrapper">
-            <div class="option-label">
-                <span>Color</span>
+</div>
+<div class="custom-option">
+    <div class="option-wrapper">
+        <div class="option-label">
+            <span>Color</span>
+        </div>
+        <div class="option-swatch">
+            {% for variant in product.variants %}
+                {%assign index = forloop.index | minus: 1%}
+                <div class="swatch-wrapper">
+                    <input data-variant-title="{{ variant.title }}" data-variant-price="{{ variant.price | money }}" data-inventory-count="{{ variant.inventory_quantity }}" data-image-src="{{variant.image.src | img_url: 'master'}}" data-variant-id="{{variant.id}}" @change="onVariantChange($event)" type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if product.variants[index].id == product.selected_variant.id or product.variants[index].id == product.first_available_variant.id%} checked {% endif %}/>  
+                    <label for="option{{forloop.index}}">
+                        {% if variant.inventory_quantity == 0 %}
+                            <span class="slash"></span>
+                        {% endif %}
+                        <div class="color">
+                            <span style="background-color: {{ variant.metafields.color.value }}"></span>
+                        </div>
+                        <div class="desc">
+                            <span>{{ variant.title }}</span>
+                            <span>
+                                {% if variant.inventory_quantity != 0 %}
+                                    in stock
+                                {% else %}
+                                    out of stock
+                                {% endif %}
+                            </span>
+                        </div>
+                    </label>
                 </div>
-            <div class="option-swatch">
-                {% for variant in product.variants %}
-                    {%assign index = forloop.index | minus: 1%}
-                    <div class="swatch-wrapper">
-                        <input data-variant-title="{{ variant.title }}" data-variant-price="{{ variant.price | money }}" data-inventory-count="{{ variant.inventory_quantity }}" data-image-src="{{variant.image.src | img_url: 'master'}}" data-variant-id="{{variant.id}}" @change="onVariantChange($event)" type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if product.variants[index].id == product.selected_variant.id or product.variants[index].id == product.first_available_variant.id%} checked {% endif %}/>  
-                        <label for="option{{forloop.index}}">
-                            {% if variant.inventory_quantity == 0 %}
-                                <span class="slash"></span>
-                            {% endif %}
-                            <div class="color">
-                                <span style="background-color: {{ variant.metafields.color.value }}"></span>
-                            </div>
-                            <div class="desc">
-                                <span>{{ variant.title }}</span>
-                                <span>
-                                    {% if variant.inventory_quantity != 0 %}
-                                        in stock
-                                    {% else %}
-                                        out of stock
-                                    {% endif %}
-                                </span>
-                            </div>
-                        </label>
-                    </div>
-                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="quantity-option">
+    <div class="option-wrapper">
+        <div class="option-label">
+            <span>Quantity</span>
+        </div>
+        <div class="quantity">
+            <div class="qty btn add">
+                <a href="/">+</a>
+            </div>
+            <div class="qty items">
+                <span>1</span>
+            </div>
+            <div class="qty btn minus">
+                <a href="/">-</a>
             </div>
         </div>
     </div>
-</form>
-
-
+</div>

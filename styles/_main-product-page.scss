@@ -108,6 +108,11 @@
                                 font-size: 14px;
                                 letter-spacing: 1px;
                             }
+
+                            .product-price {
+                                margin-top: 10px;
+                                font-size: toRem(26);
+                            }
                             
                             @include breakpoint-down(small) {
                                 
@@ -372,6 +377,47 @@
                 }
             }
         }
+
+        // The product quantity
+        .quantity-option {
+            margin-top: 60px;
+
+            .quantity {
+                display: flex;
+
+                .qty {
+                    display: inline-block;
+                    
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        // background: $lightGray;
+                        // color: $white;
+                        padding: 5px 10px;
+                        font-weight: 600;
+                        font-size: toRem(20);
+                    }
+                }
+
+                .btn {
+                    a {
+                        padding: 5px 10px;
+                        border: 1px solid $lightGray;
+                        font-weight: 600;
+                        font-size: toRem(20);
+                        transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                    .5s ease-in-out,opacity .5s ease-in-out;
+
+                        &:hover {
+                            background: $black;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .product-button {
@@ -381,7 +427,7 @@
             display: inline-flex;
             width: 60%;
             height: 90px;
-            background-color: $darkGray1;
+            background-color: $darkGray;
             color: white;
             outline: none;
             cursor: pointer;
