@@ -24,8 +24,44 @@
                         width: 100%;
                     }
 
-                    img {
-                        width: 100%;
+                    &-wrapper {
+                        
+                        .product-image {
+                            background-size: 127%;
+                            background-repeat: no-repeat;
+                            background-position: 50%;
+                            height: unset;
+                            width: unset;
+                            img {
+                                width: 100%;
+                                opacity: 0;
+                                margin: auto;
+                            }
+                        }
+
+                        .product-variant-wrapper {
+                            margin-top: 35px;
+                            .imgs-row {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                .variant-img {
+                                    height: 60px;
+                                    display: inline-block;
+                                    border: 2px solid $lightGray1;
+                                    border-radius: 5px;
+                                    overflow: hidden;
+
+                                    &:not(:last-child) {
+                                        margin-right: 10px;
+                                    }
+                                    img {
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     .product-disclaimer {

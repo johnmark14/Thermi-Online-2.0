@@ -1,7 +1,7 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section Main Product Page -->
-<section class="section-product section-padding">
+<section class="section-product section-padding remove-extra">
     <div id="mainProduct" class="product-shell shell">
         <a href="/pages/choose" class="product-back">< Product Selection</a>
         <div class="product-wrapper">
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="product-preview">
-                <img :src="variantImage" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+                {% render "product-preview" %}
                 <div class="product-disclaimer">
                     <p>{{ section.settings.textBelowImg }}</p>
                 </div>

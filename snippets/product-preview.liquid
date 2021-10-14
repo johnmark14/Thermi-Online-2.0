@@ -1,1 +1,22 @@
-<img :src="variantImage" width="{{image.width}}" height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+<div class="product-preview-wrapper">
+    <div class="product-image" :style="{backgroundImage: `url(${variantImage})` }">
+        <img :src="variantImage" width="{{image.width}}" 
+    height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+    </div>
+    <div class="product-variant-wrapper">
+        <div class="imgs-row">
+            <a href="/" class="variant-img">
+                <img :src="variantImage" width="{{image.width}}" 
+    height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+            </a>
+            <a href="/" class="variant-img">
+                <img :src="variantImage" width="{{image.width}}" 
+    height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+            </a>
+            <a href="/" class="variant-img">
+                <img :src="variantImage" width="{{image.width}}" 
+    height="{{image.height}}" alt="{{ product.images[0].alt }}" loading="lazy">
+            </a>
+        </div>
+    </div>
+</div>
