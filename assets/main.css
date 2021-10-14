@@ -2920,6 +2920,7 @@ main {
 @media (max-width: 39.9375em) {
   .section-product .product-form .option:not(:last-child) {
     margin-right: 0;
+    margin-bottom: 5px;
     padding: 0;
   }
 }
