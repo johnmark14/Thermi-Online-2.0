@@ -2848,7 +2848,7 @@ main {
   }
 }
 
-.section-product .product-form .custom-option {
+.section-product .product-form .option-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2858,7 +2858,7 @@ main {
 }
 
 @media (max-width: 63.9375em) {
-  .section-product .product-form .custom-option {
+  .section-product .product-form .option-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2867,6 +2867,48 @@ main {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+}
+
+.section-product .product-form .option {
+  position: relative;
+  border: 1px solid #D6D6D6;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+.section-product .product-form .option:not(:last-child) {
+  margin-right: 15px;
+}
+
+.section-product .product-form .option input {
+  visibility: hidden;
+  width: 0;
+  position: absolute;
+}
+
+.section-product .product-form .option input:checked + label {
+  background: #5E5E5E;
+  color: #FFFFFF;
+}
+
+.section-product .product-form .option label {
+  display: block;
+  padding: 25px 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.section-product .product-form .option-personalize2 label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .section-product .product-form .option-label {
