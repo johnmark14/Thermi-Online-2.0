@@ -43,6 +43,7 @@
     },
     "16340525627ed2120c": {
       "type": "page-template-collection",
+      "disabled": true,
       "settings": {
         "colTitle": "Kinto Tumbler",
         "colList": "stainless-steel-tumbler",
