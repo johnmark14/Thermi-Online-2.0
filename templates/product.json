@@ -3,13 +3,19 @@
     "main": {
       "type": "page-template-choose",
       "settings": {
-        "contextId": "mark"
+        "contextId": "mark",
+        "text1": "Choose",
+        "subText1": "Choose a product",
+        "text2": "Personalize",
+        "subText2": "Choose a color design",
+        "text3": "Order",
+        "subText3": "Order"
       }
     },
     "product": {
       "type": "main-product",
       "settings": {
-        "textBelowImg": "(The design and characters displayed on the screen are simulations. The color and position of the engraving may differ from the actual ones.)",
+        "textBelowImg": "",
         "btnText1": "Check",
         "btnText2": "Check the content"
       }
