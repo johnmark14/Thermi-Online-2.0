@@ -225,9 +225,6 @@
         // For Product Customization Selection
         .option {
             position: relative;
-            border: 1px solid $lightGray1;
-            border-radius: 5px;
-            overflow: hidden;
             flex-grow: 1;
             text-align: center;
 
@@ -260,6 +257,8 @@
                 padding: 25px 16px;
                 font-weight: 400;
                 cursor: pointer;
+                border: 1px solid $lightGray1;
+                border-radius: 5px;
             }
 
             &-personalize1 {
