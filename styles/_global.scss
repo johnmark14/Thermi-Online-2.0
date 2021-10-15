@@ -142,7 +142,7 @@ main {
     }
 
     &-jc-c {
-        justify-content: center;
+        justify-content: center !important;
     }
 
     &-ai-c {
@@ -170,6 +170,15 @@ main {
     @include breakpoint-up(large) {
         display: none;
     }
+}
+
+// Margin Global 
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mt-30 {
+    margin-top: 30px;
 }
 
 // Section Padding

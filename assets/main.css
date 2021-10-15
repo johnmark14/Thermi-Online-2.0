@@ -164,9 +164,9 @@ main {
 }
 
 .flex-jc-c {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
 }
 
 .flex-ai-c {
@@ -195,6 +195,14 @@ main {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-30 {
+  margin-top: 30px;
 }
 
 .section-padding {
@@ -2940,6 +2948,7 @@ main {
   cursor: pointer;
   border: 1px solid #D6D6D6;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 63.9375em) {
@@ -3107,10 +3116,6 @@ main {
     font-weight: 700;
     font-size: 0.875rem;
   }
-}
-
-.section-product .product-form .quantity-option {
-  margin-top: 60px;
 }
 
 @media (max-width: 63.9375em) {
