@@ -200,6 +200,17 @@
 
         .custom-option {
             padding-bottom: 10px;
+
+            @include breakpoint-down(medium) {
+                &.mt-60 {
+                    margin-top: 40px;
+                }
+            }
+            @include breakpoint-down(small) {
+                &.mt-60 {
+                    margin-top: 0;
+                }
+            }
         }
         
         .option-wrapper {
@@ -421,11 +432,11 @@
         .quantity-option {
 
             @include breakpoint-down(medium) {
-                margin-top: 40px;
+                margin-top: 20px;
             }
             
             @include breakpoint-down(small) {
-                margin-top: 10px;
+                margin-top: 15px;
             }
 
             .quantity {
