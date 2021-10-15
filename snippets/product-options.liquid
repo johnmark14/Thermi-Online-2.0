@@ -62,13 +62,13 @@
         </div>
         <div class="quantity">
             <div class="qty btn add">
-                <a href="/">+</a>
+                <a href="/" @click.prevent="addQuantity">+</a>
             </div>
             <div class="qty items">
-                <span>1</span>
+                <span>${ variantQuantity }</span>
             </div>
             <div class="qty btn minus">
-                <a href="/">-</a>
+                <a href="/" @click.prevent="minusQuantity">-</a>
             </div>
         </div>
     </div>

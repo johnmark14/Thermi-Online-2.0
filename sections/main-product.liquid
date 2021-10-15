@@ -89,7 +89,8 @@
                 variantTitle: "{{product.selected_or_first_available_variant.title}}",
                 productTitle: "{{product.title}}",
                 productDesc: `{{product.description}}`,
-                productHandle: "{{product.handle}}"
+                productHandle: "{{product.handle}}",
+                variantQuantity: 1
             }
         },
         methods: {
@@ -142,6 +143,14 @@
                     }).catch(error => {
                         console.log(`Error: ${error}`)
                     })
+                }
+            },
+            addQuantity() {
+                this.variantQuantity++
+            },
+            minusQuantity() {
+                if(this.variantQuantity > 1) {
+                    this.variantQuantity--
                 }
             }
         },
