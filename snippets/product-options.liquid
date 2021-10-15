@@ -46,11 +46,11 @@
 <div class="custom-option mt-60">
     <div class="option-wrapper flex-dir-row remove-flex">
         <div class="option option-personalize1">
-            <input type="radio" name="lid" id="wlid" checked>
+            <input type="radio" name="lid" id="wlid" value="Sliding Lid" @change="getLidType" ref="lid" checked>
             <label for="wlid">Sliding Lid</label>
         </div>
         <div class="option option-personalize2">
-            <input type="radio" name="lid" id="wolid">
+            <input type="radio" name="lid" id="wolid" value="Non-Sliding Lid" @change="getLidType">
             <label for="wolid" class="flex-jc-c"><span>Non-Sliding Lid <!--</span> <span>+ $4.99</span>--></label>
         </div>
     </div>

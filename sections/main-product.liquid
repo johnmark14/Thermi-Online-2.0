@@ -90,6 +90,8 @@
                 productDesc: `{{product.description}}`,
                 productHandle: "{{product.handle}}",
                 variantQuantity: 1,
+                variantLidType: '',
+                withPersonalization: false
 
             }
         },
@@ -121,9 +123,19 @@
             addToCart(event) {
                 if(!this.isDisabled) {
                     let data = {
-                        id: this.selectedVariantId,
-                        quantity: 1,
+                        items: [
+                            {
+                                id: this.selectedVariantId,
+                                quantity: this.variantQuantity,
+                                final_price: this.totalPrice,
+                                properties: {
+                                    'personalization': this.withPersonalization,
+                                    'lidType': this.lidType
+                                }
+                            }
+                        ]
                     }
+                    console.log(data)
                     document.body.style.cursor = "wait"
                     event.target.style.cursor = "wait"
                     event.target.disabled = true
@@ -163,6 +175,8 @@
                 let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
 
                 this.totalPrice = newPrice
+
+                this.withPersonalization = true
             },
             noPersonalization(e) {
                 let totalPrice = parseFloat((this.totalPrice/100).toFixed(2))
@@ -170,6 +184,11 @@
                 let newPrice = parseFloat((totalPrice - personalizationPrice).toFixed(2)) * 100
     
                 this.totalPrice = newPrice
+
+                this.withPersonalization = false
+            },
+            getLidType(e) {
+                this.lidType = e.target.value
             }
         },
         computed: {
@@ -179,6 +198,12 @@
         },
         mounted() {
             this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
+
+            if(this.$refs.lid) {
+                this.lidType = this.$refs.lid.value
+            } else {
+                this.lidType = false
+            }
         }
     }
 
