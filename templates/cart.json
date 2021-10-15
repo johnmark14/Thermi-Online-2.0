@@ -1,10 +1,17 @@
 {
   "sections": {
+    "choose": {
+      "type": "page-template-choose",
+      "settings": {
+        "contextId": "order"
+      }
+    },
     "cart-items": {
       "type": "main-cart-items"
     }
   },
   "order": [
+    "choose",
     "cart-items"
   ]
 }
