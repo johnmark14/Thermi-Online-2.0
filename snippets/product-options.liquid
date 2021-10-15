@@ -61,13 +61,13 @@
             <span>Quantity</span>
         </div>
         <div class="quantity">
-            <div class="qty btn add">
+            <div class="qty btn add" :class="{disabled: isDisabled}">
                 <a href="/" @click.prevent="addQuantity">+</a>
             </div>
-            <div class="qty items">
+            <div class="qty items" :class="{disabled: isDisabled}">
                 <span>${ variantQuantity }</span>
             </div>
-            <div class="qty btn minus">
+            <div class="qty btn minus" :class="{disabled: isDisabled}">
                 <a href="/" @click.prevent="minusQuantity">-</a>
             </div>
         </div>

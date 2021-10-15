@@ -3193,6 +3193,17 @@ main {
   font-size: 1.25rem;
 }
 
+.section-product .product-form .quantity-option .quantity .qty.disabled a {
+  border-color: #D6D6D6;
+  color: #D6D6D6;
+  cursor: not-allowed;
+}
+
+.section-product .product-form .quantity-option .quantity .qty.disabled span {
+  color: #D6D6D6;
+  cursor: not-allowed;
+}
+
 .section-product .product-form .quantity-option .quantity .btn a {
   padding: 5px 10px;
   border: 1px solid #989898;
