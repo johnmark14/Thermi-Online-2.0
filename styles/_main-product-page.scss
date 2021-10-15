@@ -232,7 +232,7 @@
                 margin-right: 15px;
                 
                 @include breakpoint-down(medium) {
-                    margin-right: 8px;
+                    margin-right: 2px;
                 }
                 @include breakpoint-down(small) {
                     margin-right: 0;
@@ -259,6 +259,7 @@
                 cursor: pointer;
                 border: 1px solid $lightGray1;
                 border-radius: 5px;
+                font-size: 12px;
             }
 
             &-personalize1 {

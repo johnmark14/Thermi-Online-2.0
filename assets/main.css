@@ -2910,7 +2910,7 @@ main {
 
 @media (max-width: 63.9375em) {
   .section-product .product-form .option:not(:last-child) {
-    margin-right: 8px;
+    margin-right: 2px;
   }
 }
 
@@ -2940,6 +2940,7 @@ main {
   cursor: pointer;
   border: 1px solid #D6D6D6;
   border-radius: 5px;
+  font-size: 12px;
 }
 
 .section-product .product-form .option-personalize2 label {
