@@ -2894,12 +2894,12 @@ main {
 
 @media (max-width: 39.9375em) {
   .section-product .product-form {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 }
 
 .section-product .product-form .custom-option {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 63.9375em) {
@@ -3198,13 +3198,6 @@ main {
   border: 1px solid #989898;
   font-weight: 600;
   font-size: 1.25rem;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-}
-
-.section-product .product-form .quantity-option .quantity .btn a:hover {
-  background: #000;
-  color: #FFFFFF;
 }
 
 .section-product .product-button {

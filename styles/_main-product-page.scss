@@ -195,11 +195,11 @@
         border-bottom: 2px solid $lightGray1;
 
         @include breakpoint-down(small) {
-            padding-bottom: 30px;
+            padding-bottom: 50px;
         }
 
         .custom-option {
-            padding-bottom: 10px;
+            padding-bottom: 20px;
 
             @include breakpoint-down(medium) {
                 &.mt-60 {
@@ -464,13 +464,6 @@
                         border: 1px solid $lightGray;
                         font-weight: 600;
                         font-size: toRem(20);
-                        transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
-                    .5s ease-in-out,opacity .5s ease-in-out;
-
-                        &:hover {
-                            background: $black;
-                            color: $white;
-                        }
                     }
                 }
             }
