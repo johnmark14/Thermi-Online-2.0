@@ -2974,6 +2974,7 @@ main {
 @media (max-width: 39.9375em) {
   .section-product .product-form .option-swatch {
     overflow-x: scroll;
+    overflow-y: hidden;
     width: 100%;
     height: 115px;
     padding-left: 30px;
