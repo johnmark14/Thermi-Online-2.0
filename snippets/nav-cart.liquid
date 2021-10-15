@@ -1,0 +1,40 @@
+<div class="cart-wrapper">
+    <div class="cart-heading" >
+        <h4>YOUR CART</h4>
+    </div>
+    <template v-if="cart && cart.items.length > 0" >
+        <div class="cart-info">
+            <p>Recently Added Products</p>
+        </div>
+        <div class="cart-items"  :class="{scrollY: isOverflowing}" ref="cartItems">
+            <div class="cart-item" v-for="item in cart.items">
+                <div class="cart-item--img">
+                    <a :href="item.url"><img :src="item.featured_image.url" :alt="item.featured_image.alt" loading="lazy"></a>
+                </div>
+                <div class="cart-item--desc">
+                    <a class="product-name" :href="item.url">${item.title}</a>
+                    <p class="product-price">${money(item.price)}</p>
+                    <div class="item-quantity">
+                        <div class="qt add">
+                            <a href="/" @click.prevent="cartDataObject.addQuantity(item, $event)">+</a>
+                        </div>
+                        <div class="qt items">
+                        <span>${item.quantity}</span>
+                        </div>
+                        <div class="qt minus">
+                            <a href="/" @click.prevent="cartDataObject.removeQuantity(item, $event)">-</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer ">
+            <div class="cart-desc">
+                <p>${cart.items.length} Product/s in Cart</p>
+            </div>
+            <div class="cart-btn">
+                <a href="/cart">View my Cart</a>
+            </div>
+        </div>
+    </template>
+</div>
