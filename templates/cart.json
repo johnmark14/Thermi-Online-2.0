@@ -3,11 +3,20 @@
     "choose": {
       "type": "page-template-choose",
       "settings": {
-        "contextId": "order"
+        "contextId": "order",
+        "text1": "Choose",
+        "subText1": "Choose a product",
+        "text2": "Personalize",
+        "subText2": "Choose a color design",
+        "text3": "Order",
+        "subText3": "Order",
+        "sectionPadding": true
       }
     },
     "cart-items": {
-      "type": "main-cart-items"
+      "type": "main-cart-items",
+      "settings": {
+      }
     }
   },
   "order": [
