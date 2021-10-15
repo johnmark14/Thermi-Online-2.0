@@ -1,12 +1,12 @@
 <div class="custom-option">
     <div class="option-wrapper flex-dir-row remove-flex">
         <div class="option option-personalize1">
-            <input type="radio" name="customization" id="noCustom" checked>
+            <input type="radio" name="customization" id="noCustom" value="{{ product.metafields.products.personalization_price }}" @change="noPersonalization" checked>
             <label for="noCustom">NO CUSTOMIZATION</label>
         </div>
         <div class="option option-personalize2">
-            <input type="radio" name="customization" id="withCustom">
-            <label for="withCustom"><span>PERSONALIZE IT</span> <span>+ $4.99</span></label>
+            <input type="radio" name="customization" id="withCustom" value="{{ product.metafields.products.personalization_price }}" @change="addPersonalization">
+            <label for="withCustom"><span>PERSONALIZE IT</span> <span>+ {{product.metafields.products.personalization_price | money}}</span></label>
         </div>
     </div>
 </div>
@@ -19,7 +19,7 @@
             {% for variant in product.variants %}
                 {%assign index = forloop.index | minus: 1%}
                 <div class="swatch-wrapper">
-                    <input data-variant-title="{{ variant.title }}" data-variant-price="{{ variant.price | money }}" data-inventory-count="{{ variant.inventory_quantity }}" data-image-src="{{variant.image.src | img_url: 'master'}}" data-variant-id="{{variant.id}}" @change="onVariantChange($event)" type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if product.variants[index].id == product.selected_variant.id or product.variants[index].id == product.first_available_variant.id%} checked {% endif %}/>  
+                    <input data-variant-title="{{ variant.title }}" data-variant-price="{{ variant.price }}" data-inventory-count="{{ variant.inventory_quantity }}" data-image-src="{{variant.image.src | img_url: 'master'}}" data-variant-id="{{variant.id}}" @change="onVariantChange($event)" type="radio" id="option{{forloop.index}}" name="swatch" value="white" {% if product.variants[index].id == product.selected_variant.id or product.variants[index].id == product.first_available_variant.id%} checked {% endif %}/>  
                     <label for="option{{forloop.index}}">
                         {% if variant.inventory_quantity == 0 %}
                             <span class="slash"></span>

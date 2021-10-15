@@ -9,7 +9,7 @@
                 <div class="product-info">
                     <h5 class="product-title">{{ product.title }}</h5>
                     <p class="product-desc">{{ product.description }}</p>
-                    <p class="product-price">{{ product.price | money }}</p>
+                    <p class="product-price">${ getTotalPrice }</p>
                 </div>
             </div>
             <div class="product-preview">
@@ -22,7 +22,7 @@
                 <div class="product-info wide">
                     <h5 class="product-title">{{ product.title }}</h5>
                     <p class="product-desc">{{ product.description }}</p>
-                    <p class="product-price">{{ product.price | money }}</p>
+                    <p class="product-price">${ getTotalPrice }</p>
                 </div>
                 <div class="product-form">
                     <!-- To be render -->
@@ -82,15 +82,15 @@
                 cartData: store,
                 selectedVariantId: "{{ product.selected_or_first_available_variant.id}}",
                 variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
-                variantNotAvailable: false,
                 variantInventoryCount: "{{product.selected_or_first_available_variant.inventory_quantity}}",
                 isDisabled: false,
-                totalPrice: "{{product.selected_or_first_available_variant.price | money }}",
+                totalPrice: "{{ product.selected_or_first_available_variant.price }}",
                 variantTitle: "{{product.selected_or_first_available_variant.title}}",
                 productTitle: "{{product.title}}",
                 productDesc: `{{product.description}}`,
                 productHandle: "{{product.handle}}",
-                variantQuantity: 1
+                variantQuantity: 1,
+
             }
         },
         methods: {
@@ -145,6 +145,10 @@
                     })
                 }
             },
+            money(value) {
+                if(!value) return 0
+                return "$"+(value/100).toFixed(2)
+            },
             addQuantity() {
                 this.variantQuantity++
             },
@@ -152,6 +156,25 @@
                 if(this.variantQuantity > 1) {
                     this.variantQuantity--
                 }
+            },
+            addPersonalization(e) {
+                let totalPrice = parseFloat((this.totalPrice/100).toFixed(2))
+                let personalizationPrice = parseFloat((e.target.value/100).toFixed(2))
+                let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
+
+                this.totalPrice = newPrice
+            },
+            noPersonalization(e) {
+                let totalPrice = parseFloat((this.totalPrice/100).toFixed(2))
+                let personalizationPrice = parseFloat((e.target.value/100).toFixed(2))
+                let newPrice = parseFloat((totalPrice - personalizationPrice).toFixed(2)) * 100
+    
+                this.totalPrice = newPrice
+            }
+        },
+        computed: {
+            getTotalPrice() {
+                return this.money(this.totalPrice)
             }
         },
         mounted() {
