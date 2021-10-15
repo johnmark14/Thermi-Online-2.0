@@ -1,7 +1,7 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section Main for Choose Page -->
-<section class="section-choose section-padding">
+<section class="section-choose {% if section.settings.sectionPadding != true %} section-padding {% endif %}">
   <div class="page-shell shell">
     <ol class="page-steps">
       <li class="step {% if section.settings.contextId == "choose" %} active {% endif %}">
@@ -89,6 +89,12 @@
         "id": "subText3",
         "label": "Sub-Text 3",
         "default": "Order"
+      },
+      {
+        "type": "checkbox",
+        "id": "sectionPadding",
+        "label": "Remove Section Padding?",
+        "default": false
       }
     ]
   }
