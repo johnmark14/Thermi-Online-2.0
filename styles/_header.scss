@@ -421,6 +421,38 @@
                     }
                 }
 
+                .cart-empty {
+                    margin-top: 100px;
+                    text-align: center;
+
+                    p {
+                        // font-style: italic;
+                        font-size: toRem(14);
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+
+                    a {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-size: toRem(12);
+                        padding: 15px 0;
+                        margin-top: 20px;
+                        background-color: $darkGray1;
+                        color: $white;
+                        width: 200px;
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                        transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                        .5s ease-in-out,opacity .5s ease-in-out;
+
+                        &:hover {
+                            color: $white;
+                            background-color: $black;
+                        }
+                    }
+                }
+
                 .cart-footer {
                     height: 25vh;
                     justify-self: flex-end;
