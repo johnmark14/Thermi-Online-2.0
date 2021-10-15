@@ -2940,7 +2940,21 @@ main {
   cursor: pointer;
   border: 1px solid #D6D6D6;
   border-radius: 5px;
-  font-size: 12px;
+}
+
+@media (max-width: 63.9375em) {
+  .section-product .product-form .option label {
+    font-size: 0.75rem;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .section-product .product-form .option label {
+    font-size: 1rem;
+    padding: 25px 16px;
+  }
 }
 
 .section-product .product-form .option-personalize2 label {

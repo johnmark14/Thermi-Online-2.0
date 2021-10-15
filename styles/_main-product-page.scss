@@ -259,7 +259,18 @@
                 cursor: pointer;
                 border: 1px solid $lightGray1;
                 border-radius: 5px;
-                font-size: 12px;
+                
+
+                @include breakpoint-down(medium) {
+                    font-size: toRem(12);
+                    padding-right: 14px;
+                    padding-left: 14px;
+                }
+
+                @include breakpoint-down(small) {
+                    font-size: toRem(16);
+                    padding: 25px 16px;
+                }
             }
 
             &-personalize1 {
