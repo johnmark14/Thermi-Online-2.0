@@ -91,7 +91,8 @@
                 productHandle: "{{product.handle}}",
                 variantQuantity: 1,
                 variantLidType: '',
-                withPersonalization: false
+                withPersonalization: false,
+                personalize: {}
 
             }
         },
@@ -122,7 +123,7 @@
             // This method is used after the revision
             addToCart(event) {
                 if(!this.isDisabled) {
-                    let data = {
+                    let withoutPersonalization = {
                         items: [
                             {
                                 id: this.selectedVariantId,
@@ -135,6 +136,22 @@
                             }
                         ]
                     }
+                    let withPersonalization = {
+                        items: [
+                            {
+                                id: this.selectedVariantId,
+                                quantity: this.variantQuantity,
+                                final_price: this.totalPrice,
+                                properties: {
+                                    'personalization': this.withPersonalization,
+                                    'lidType': this.lidType
+                                }
+                            }, 
+                            this.personalize
+                        ]
+                    }
+                    let data = this.withPersonalization ? withPersonalization : withoutPersonalization
+
                     console.log(data)
                     document.body.style.cursor = "wait"
                     event.target.style.cursor = "wait"
@@ -195,6 +212,11 @@
             getTotalPrice() {
                 return this.money(this.totalPrice)
             }
+        },
+        updated() {
+            // this.personalize.quantity = this.variantQuantity
+
+            this.personalize = this.withPersonalization ? {id: 40400432300241, quantity: this.variantQuantity} : {}
         },
         mounted() {
             this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
