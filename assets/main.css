@@ -855,13 +855,13 @@ main {
   padding-left: 10px;
 }
 
-.header .main-content--cart .cart-wrapper .cart-items .cart-item--desc p:first-child {
+.header .main-content--cart .cart-wrapper .cart-items .cart-item--desc p.product-price {
   font-weight: 600;
 }
 
-.header .main-content--cart .cart-wrapper .cart-items .cart-item--desc p:nth-child(2) {
-  font-weight: 200;
-  padding-top: 5px;
+.header .main-content--cart .cart-wrapper .cart-items .cart-item--desc p.product-line {
+  font-weight: 400;
+  font-size: 0.8125rem;
 }
 
 .header .main-content--cart .cart-wrapper .cart-items .cart-item--desc .item-quantity {

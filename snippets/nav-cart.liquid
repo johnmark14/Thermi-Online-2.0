@@ -14,7 +14,9 @@
                     </div>
                     <div class="cart-item--desc">
                         <a class="product-name" :href="item.url">${item.title}</a>
-                        <p class="product-price">${money(item.price)}</p>
+                        <!-- <p class="product-price">${money(item.price)}</p> -->
+                        <p class="product-line" v-if="item.properties.personalization">with Personalization</p>
+                        <p class="product-line">${item.properties.lidType}</p>
                         <div class="item-quantity">
                             <div class="qt add">
                                 <a href="/" @click.prevent="cartDataObject.addQuantity(item, $event)">+</a>
@@ -32,7 +34,8 @@
         </div>
         <div class="cart-footer ">
             <div class="cart-desc">
-                <p>${cart.items.length} Product/s in Cart</p>
+                <p v-if="getPersonalizeIfIncluded">${cart.items.length - 1} Product/s in Cart</p>
+                <p v-else>${cart.items.length} Product/s in Cart</p>
             </div>
             <div class="cart-btn">
                 <a href="/cart">View my Cart</a>

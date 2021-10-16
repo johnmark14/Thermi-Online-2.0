@@ -367,12 +367,13 @@
                             flex-grow: 2;
                             padding-left: 10px;
 
-                            p:first-child {
+                            p.product-price {
                                 font-weight: 600;
                             }
-                            p:nth-child(2) {
-                                font-weight: 200;
-                                padding-top: 5px;
+                            p.product-line {
+                                font-weight: 400;
+                                font-size: toRem(13);
+
                             }
 
                             .item-quantity {

@@ -14,47 +14,52 @@
                             </tr>
                         </thead>
                         <tbody class="tb-body">
-                            <tr class="tb-body__row" v-for="item in cart.items">
-                                <td class="td-image" v-if="item.image">
-                                    <a :href="item.url"><img :src="item.featured_image.url" :alt="item.featured_image.alt" loading="lazy"></a>
-                                </td>
-                                <td class="td-description">
-                                    <a :href="item.url">
-                                        ${item.title}
-                                        <!-- <span class="td-variant">- White</span> -->
-                                    </a>
-                                    <p>${item.product_description}</p>
-                                </td>
-                                <td data-th-title="Price:" class="td-price">
-                                    <span>${money(item.price)}</span>
-                                </td>
-                                <!-- Used for Mobile -->
-                                <td data-th-title="Total:" class="td-total mobile">
-                                    <span>${money(item.price)}</span>
-                                </td>
-                                <td data-th-title="Quantity:" class="td-quantity mobile">
-                                    <div class="items">
-                                        <span>${item.quantity}</span>
-                                    </div>
-                                </td>
-                                <td class="td-quantity">
-                                    <div class="body">
-                                        <div class="qb add">
-                                            <a href="/" @click.prevent="cartDateObject.addQuantity(item, $event)">+</a>
-                                        </div>
-                                        <div class="qb items wide">
+                            <template  v-for="item in cart.items">
+                                <tr class="tb-body__row" v-if="item.product_type != 'hidden'">
+                                    <td class="td-image" v-if="item.image">
+                                        <a :href="item.url"><img :src="item.featured_image.url" :alt="item.featured_image.alt" loading="lazy"></a>
+                                    </td>
+                                    <td class="td-description">
+                                        <a :href="item.url">
+                                            ${item.title}
+                                            <!-- <span class="td-variant">- White</span> -->
+                                        </a>
+                                        <p>${item.product_description}</p>
+                                        <p v-if="item.properties.personalization">with Personalization + ${money(getPersonalizationPrice)}</p>
+                                        <p>${item.properties.lidType}</p>
+                                    </td>
+                                    <td data-th-title="Price:" class="td-price">
+                                        <span>${money(item.price)}</span>
+                                    </td>
+                                    <!-- Used for Mobile -->
+                                    <td data-th-title="Total:" class="td-total mobile">
+                                        <span>${money(item.price)}</span>
+                                    </td>
+                                    <td data-th-title="Quantity:" class="td-quantity mobile">
+                                        <div class="items">
                                             <span>${item.quantity}</span>
                                         </div>
-                                        <div class="qb minus">
-                                            <a href="/" @click.prevent="cartDateObject.removeQuantity(item, $event)">-</a>
+                                    </td>
+                                    <td class="td-quantity">
+                                        <div class="body">
+                                            <div class="qb add">
+                                                <a href="/" @click.prevent="cartDateObject.addQuantity(item, $event)">+</a>
+                                            </div>
+                                            <div class="qb items wide">
+                                                <span>${item.quantity}</span>
+                                            </div>
+                                            <div class="qb minus">
+                                                <a href="/" @click.prevent="cartDateObject.removeQuantity(item, $event)">-</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <!-- Used for desktop -->
-                                <td class="td-total wide">
-                                    <span>${money(item.final_price)}</span>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <!-- Used for desktop -->
+                                    <td class="td-total wide">
+                                        <span v-if="item.properties.personalization">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>
+                                        <span v-else>${money(totalPrice(item.price, 0, item.quantity))}</span>
+                                    </td>
+                                </tr>
+                            </template>
                         </tbody>
                     </table>
                     <div class="cart-total">    
@@ -106,6 +111,14 @@ const MainCart = {
             if(!value)  return 0
 
             return "$" + (value/100).toFixed(2) 
+        },
+        totalPrice(price, personalization, quantity) {
+            let productPrice = parseFloat((price/100).toFixed(2))
+            let productPersonalizationPrice = parseFloat((personalization/100).toFixed(2))
+
+            let totalPrice = parseFloat(((productPrice + productPersonalizationPrice) * quantity).toFixed(2)) * 100
+
+            return totalPrice
         }
     },
     computed: {
@@ -114,7 +127,10 @@ const MainCart = {
         },
         cartDateObject() {
             return this.cartData;
-        }
+        },
+        getPersonalizationPrice() {
+                return this.cartData.state.personalizationPrice
+            }
     }
 
 }

@@ -214,6 +214,9 @@
         computed: {
             getTotalPrice() {
                 return this.money(this.totalPrice)
+            },
+            getPersonalizationPrice() {
+                return this.cartData.state.personalizationPrice
             }
         },
         updated() {

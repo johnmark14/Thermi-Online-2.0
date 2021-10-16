@@ -15,12 +15,16 @@ const store = Vue.reactive({
         isItem: false,
         isCartOpen: false,
         isOverlay: false,
-        personalization: '40400432300241'
+        personalization: '40400432300241',
+        personalizationPrice: 0,
+        isPersonalizeIncluded: false
     },
     getCart() {
         axios.get('/cart.js').then(response => {
             this.state.cartState.unshift(response.data)
-            console.log(this.state.cartState)
+
+            this.checkIfPersonalizeIsAdded(response)
+            
             const loader = document.getElementById('loading');
             loader.style.opacity = '0';
             setTimeout(function() {
@@ -31,6 +35,15 @@ const store = Vue.reactive({
             this.state.isItem = response.data.item_count != 0 ? true : false; 
         }).catch(error => {
             console.log(`Error from store ${error}`)
+        })
+    },
+    // This gets the add on personalization price
+    getPersonalizationPrice() {
+        axios.get('/products/personalization.js').then(response => {
+            this.state.personalizationPrice = response.data.price
+            // console.log(this.state.personalizationPrice)
+        }).catch(error => {
+            console.log(`Error from personalization ${error}`)
         })
     },
     addQuantity(item, event) {
@@ -50,6 +63,8 @@ const store = Vue.reactive({
                 }).then(res => {
                     this.state.cartState.unshift(res.data)
 
+                    this.checkIfPersonalizeIsAdded(res)
+
                     event.target.style.cursor = "pointer"
                 }).catch(error => {
                     console.log(`Error from add quantity personalization: ${error}`)
@@ -57,6 +72,8 @@ const store = Vue.reactive({
                 console.log('executed')
             } else {
                 this.state.cartState.unshift(response.data)
+
+                this.checkIfPersonalizeIsAdded(response)
 
                 event.target.style.cursor = "pointer"
             }
@@ -84,6 +101,8 @@ const store = Vue.reactive({
                 }).then((res) => {
                     this.state.cartState.unshift(res.data)
 
+                    this.checkIfPersonalizeIsAdded(res)
+
                     event.target.style.cursor = "pointer"
 
                     // Indicator for bubble notification on header cart icon 
@@ -95,6 +114,8 @@ const store = Vue.reactive({
             } else {
                 this.state.cartState.unshift(response.data)
 
+                this.checkIfPersonalizeIsAdded(response)
+
                 event.target.style.cursor = "pointer"
 
                 // Indicator for bubble notification on header cart icon 
@@ -103,6 +124,16 @@ const store = Vue.reactive({
         }).catch(error => {
             console.log(`Error from add quantity: ${error}`)
         })
+    },
+    checkIfPersonalizeIsAdded(response) {
+        // Reset data
+        this.state.isPersonalizeIncluded = false
+        
+        response.data.items.forEach(item => {
+            if(item.product_type == 'hidden') {
+                this.state.isPersonalizeIncluded = true
+            }
+        });
     }
 });
 

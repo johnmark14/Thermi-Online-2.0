@@ -156,10 +156,14 @@
             },
             getCartStateOverlay() {
                 return this.cartData.state.isOverlay
+            },
+            getPersonalizeIfIncluded() {
+                return this.cartData.state.isPersonalizeIncluded
             }
         },
         created() {
             store.getCart()
+            store.getPersonalizationPrice()
         },
         updated() {
             this.$nextTick(function() {
@@ -173,7 +177,7 @@
                 }
                 
             })
-        },
+        }
     }).mount('#header')
 </script>
 
