@@ -33,7 +33,8 @@
                                     </td>
                                     <!-- Used for Mobile -->
                                     <td data-th-title="Total:" class="td-total mobile">
-                                        <span>${money(item.price)}</span>
+                                        <span v-if="item.properties.personalization">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>
+                                        <span v-else>${money(totalPrice(item.price, 0, item.quantity))}</span>
                                     </td>
                                     <td data-th-title="Quantity:" class="td-quantity mobile">
                                         <div class="items">
