@@ -168,6 +168,9 @@
                             this.cartData.state.isOverlay = true
                             this.isDisabled = false
 
+                            // Add bubble notification to header cart icon
+                            this.cartData.state.isItem = true
+
                         }, 1000)
                     }).catch(error => {
                         console.log(`Error: ${error}`)
@@ -216,7 +219,7 @@
         updated() {
             // this.personalize.quantity = this.variantQuantity
 
-            this.personalize = this.withPersonalization ? {id: 40400432300241, quantity: this.variantQuantity} : {}
+            this.personalize = this.withPersonalization ? {id: this.cartData.state.personalization, quantity: this.variantQuantity} : {}
         },
         mounted() {
             this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
