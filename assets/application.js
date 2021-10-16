@@ -20,6 +20,7 @@ const store = Vue.reactive({
     getCart() {
         axios.get('/cart.js').then(response => {
             this.state.cartState.unshift(response.data)
+            console.log(this.state.cartState)
             const loader = document.getElementById('loading');
             loader.style.opacity = '0';
             setTimeout(function() {
