@@ -18,8 +18,8 @@
         "241b9a0f-dcbb-49f8-b6bf-ae97e70eab35": {
           "type": "image",
           "settings": {
-            "imageDesktop": "shopify:\/\/shop_images\/image1-desktop.jpg",
-            "imageMobile": "shopify:\/\/shop_images\/image1-mobile.jpg"
+            "imageDesktop": "shopify:\/\/shop_images\/web-carousel-banner-final.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/web-carousel-banner-final_mobile_jpg_1bc263bb-3a53-4462-9b15-f28c397109f7.png"
           }
         },
         "cb542f42-89e1-4aac-9bf8-160b23ebc220": {
@@ -76,17 +76,17 @@
       "settings": {
         "sectionPadding": false,
         "sectionHeading": "How to",
-        "step1": "shopify:\/\/shop_images\/step_1.png",
+        "step1": "shopify:\/\/shop_images\/step1.png",
         "step1Title": "Choose",
         "step1Desc": "Choose a product",
-        "step2": "shopify:\/\/shop_images\/step_2.png",
-        "step2Title": "Mark it",
+        "step2": "shopify:\/\/shop_images\/step2.png",
+        "step2Title": "Customize",
         "step2Desc": "Choose a color design",
-        "step3": "shopify:\/\/shop_images\/step_3.png",
-        "step3Title": "order",
+        "step3": "shopify:\/\/shop_images\/step3.png",
+        "step3Title": "Use",
         "step3Desc": "After the order is complete, a stainless tumbler: 6 business days - resin bottle: 3 business days - delivered in",
         "anchorID": "section-howto",
-        "sectionColor": "#fff"
+        "sectionColor": "#ffffff"
       }
     },
     "1631083243456f3665": {
@@ -96,7 +96,7 @@
         "buttonText": "Start Customizing",
         "buttonUrl": "shopify:\/\/pages\/choose",
         "anchorID": "",
-        "sectionColor": "#fff"
+        "sectionColor": "#ffffff"
       }
     },
     "1631082372d649c2e4": {
@@ -229,7 +229,7 @@
         "serviceImg": "shopify:\/\/shop_images\/200521_KINTO44071_re_2_1_1.jpg",
         "flip": false,
         "anchorID": "section-services",
-        "sectionColor": "#fff"
+        "sectionColor": "#ffffff"
       }
     },
     "163108209993bc2011": {
@@ -264,7 +264,7 @@
         "serviceImg": "shopify:\/\/shop_images\/markitlab_top_services_01_90d9161a-03e7-4bff-baff-a8ba03452d70.jpg",
         "flip": true,
         "anchorID": "",
-        "sectionColor": "#fff"
+        "sectionColor": "#ffffff"
       }
     },
     "1631082294d036fef7": {
@@ -388,7 +388,7 @@
         "text2": "Introducing your personalized ideas",
         "imgUrl": "",
         "anchorID": "",
-        "sectionColor": "#fff"
+        "sectionColor": "#ffffff"
       }
     }
   },
