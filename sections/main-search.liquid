@@ -1,4 +1,21 @@
-<h1>Search Page</h1>
+<!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
+
+<!-- Start Search Page -->
+<section class="section-search section-padding" id="searchPage">
+    <div class="search-shell shell">
+        <div class="search-box">
+            <input type="text" name="search" id="search" placeholder="Search Product" v-model="searchTerm" autocomplete="off" ref="searchInput">
+        </div>
+        <template v-if="results">
+            <div class="page-title">
+                <p>Search Results</p>
+            </div>
+            <div class="page-products">
+                <span>products here</span>
+            </div>
+        </template>
+    </div>
+</section>
 {% schema %}
 {
     "name": "Search Page",
@@ -6,3 +23,25 @@
     ]
 }
 {% endschema %}
+
+<script>
+    const searchPage = Vue.createApp({
+        name: "Search Page",
+        delimiters: ['${', '}'],
+        data() {
+            return {
+                searchTerm: '',
+                results: false,
+                data: {}
+            }
+        },
+        watch: {
+            searchTerm() {
+                console.log(this.searchTerm)
+            }
+        },
+        mounted() {
+            this.$refs.searchInput.focus()
+        },
+    }).mount('#searchPage')
+</script>

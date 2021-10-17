@@ -1,0 +1,27 @@
+ <!-- product 1 -->
+ <div class="product-item">
+    <div class="product__inner">
+        <a href="{{ product.url | within: collection }}" class="product__image">
+            <img src="{{ product.images[0].src | img_url: 'master' }}" alt="Product Image" loading="lazy" width="{{product.images[0].width}}" height="{{product.images[0].height}}">
+        </a>
+        <div class="product__wrapper">
+            <a href="{{ product.url | within: collection }}" class="page-link"></a>
+            <h4 class="product__title">
+                {{ product.title}}
+            </h4>
+            <h5 class="product__desc">
+                {{ product.description}}
+            </h5>
+            <div class="product__variants">
+                <ul class="list-variants">
+                    {% for variant in product.variants %}
+                        {%if variant.metafields.color.value != blank%}
+                            <li><span class="variant-1" data-variant-color="{{ variant.metafields.color.value}}" style="background-color: {{ variant.metafields.color.value }}"></span></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+ <!--End product 1 -->

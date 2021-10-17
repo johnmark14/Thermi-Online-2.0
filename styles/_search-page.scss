@@ -1,0 +1,24 @@
+.search {
+
+    &-box {
+        text-align: center;
+        padding-top: 40px;
+        input {
+            padding: 10px;
+            font-size: toRem(18);
+            font-weight: 600;
+            width: 450px;
+            text-align: center;
+            border: 2px solid $lightGray1;
+            border-radius: 2px;
+            
+            &:focus {
+                border: 2px solid $lightGray;
+            }
+
+            &::placeholder {
+                color: $lightGray1;
+            }
+        }
+    }
+}

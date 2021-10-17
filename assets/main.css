@@ -4211,3 +4211,38 @@ main {
 .section-login .wrapper-register a:hover {
   text-decoration: none;
 }
+
+.search-box {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.search-box input {
+  padding: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  width: 450px;
+  text-align: center;
+  border: 2px solid #D6D6D6;
+  border-radius: 2px;
+}
+
+.search-box input:focus {
+  border: 2px solid #989898;
+}
+
+.search-box input::-webkit-input-placeholder {
+  color: #D6D6D6;
+}
+
+.search-box input:-ms-input-placeholder {
+  color: #D6D6D6;
+}
+
+.search-box input::-ms-input-placeholder {
+  color: #D6D6D6;
+}
+
+.search-box input::placeholder {
+  color: #D6D6D6;
+}
