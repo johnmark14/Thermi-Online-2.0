@@ -70,7 +70,6 @@
   </head>
 
   <body>
-
     <div class="container">
       <div id="loading" style="{% unless settings.showLoading %} display: none; {% endunless %}">
         <img src="{{ 'loadingspinner_small.gif' | asset_url }}" alt="Loader Spinner">
@@ -83,6 +82,5 @@
       </main>
       {% section 'footer' %}
     </div>
-
   </body>
 </html>
