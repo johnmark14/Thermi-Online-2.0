@@ -1,15 +1,33 @@
 .search {
-
+    &-shell {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        // This class is added when search results is out
+        &.moveToTop {
+            padding-top: 20px;
+            position: unset;
+            text-align: center;
+            transform: translate(0, 0);
+        }
+    }
     &-box {
         text-align: center;
-        padding-top: 40px;
+        
+        // This class is added when search results is out
+        &.addMarginBottom {
+            margin-bottom: 20px;
+        }
+
         input {
             padding: 10px;
             font-size: toRem(18);
             font-weight: 600;
             width: 450px;
             text-align: center;
-            border: 2px solid $lightGray1;
+            border: 2px solid $lightGray;
             border-radius: 2px;
             
             &:focus {
@@ -18,6 +36,27 @@
 
             &::placeholder {
                 color: $lightGray1;
+            }
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+            text-transform: uppercase;
+            background-color: $darkGray1;
+            color: $white;
+            padding: 10px;
+            width: 140px;
+            border-radius: 2px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+                        .5s ease-in-out,opacity .5s ease-in-out;
+
+            &:hover {
+                background-color: $black;
             }
         }
     }

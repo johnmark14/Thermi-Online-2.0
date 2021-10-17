@@ -2,16 +2,22 @@
 
 <!-- Start Search Page -->
 <section class="section-search section-padding" id="searchPage">
-    <div class="search-shell shell">
-        <div class="search-box">
+    <div class="search-shell shell" :class="{moveToTop: results}">
+        <div class="search-box" :class="{addMarginBottom: results}">
             <input type="text" name="search" id="search" placeholder="Search Product" v-model="searchTerm" autocomplete="off" ref="searchInput">
+            <button class="search-btn" @click.prevent="searchProducts">Search</button>
         </div>
         <template v-if="results">
             <div class="page-title">
-                <p>Search Results</p>
+                <p>
+                    Search Results
+                    <span>: ${searchData.length} product/s found</span>
+                </p>
             </div>
-            <div class="page-products">
-                <span>products here</span>
+            <div v-if="searchData.length != 0">
+                <div class="page-products">
+                    {% render 'product-cards' %}
+                </div>
             </div>
         </template>
     </div>
@@ -32,12 +38,26 @@
             return {
                 searchTerm: '',
                 results: false,
+                searchNote: '',
                 data: {}
             }
         },
-        watch: {
-            searchTerm() {
-                console.log(this.searchTerm)
+        methods: {
+            searchProducts() {
+                if(this.searchTerm != '') {
+                    axios.get(`/search/suggest.json?q=${this.searchTerm}&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=title,product_type,variants.title`).then(response => {
+                        this.data = response.data.resources.results
+                        this.results = true
+                        console.log(response.data.resources.results.products)
+                    }).catch(error => {
+                        console.log(error)
+                    })
+                }
+            }
+        },
+        computed: {
+            searchData() {
+                return this.data.products
             }
         },
         mounted() {

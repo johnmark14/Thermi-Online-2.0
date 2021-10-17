@@ -1,18 +1,18 @@
  <!-- product 1 -->
- <div class="product-item">
+ <div class="product-item" v-for="product in searchData">
     <div class="product__inner">
-        <a href="{{ product.url | within: collection }}" class="product__image">
-            <img src="{{ product.images[0].src | img_url: 'master' }}" alt="Product Image" loading="lazy" width="{{product.images[0].width}}" height="{{product.images[0].height}}">
+        <a :href="product.url" class="product__image">
+            <img :src="product.featured_image.url" alt="Product Image" loading="lazy" width="{{product.images[0].width}}" height="{{product.images[0].height}}">
         </a>
         <div class="product__wrapper">
-            <a href="{{ product.url | within: collection }}" class="page-link"></a>
+            <a :href="product.url" class="page-link"></a>
             <h4 class="product__title">
-                {{ product.title}}
+                ${product.title}
             </h4>
             <h5 class="product__desc">
-                {{ product.description}}
+                ${product.body}
             </h5>
-            <div class="product__variants">
+            <!-- <div class="product__variants">
                 <ul class="list-variants">
                     {% for variant in product.variants %}
                         {%if variant.metafields.color.value != blank%}
@@ -20,7 +20,7 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
