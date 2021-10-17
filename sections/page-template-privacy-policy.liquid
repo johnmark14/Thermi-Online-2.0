@@ -1,0 +1,31 @@
+<!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
+
+<!-- Start Section Main for Privacy Policy Page -->
+
+<!-- Rendered when users navigate to shop/products -->
+<section class="section-contactus section-padding">
+    <div class="contactus-shell shell">
+      {% assign policy = shop.privacy_policy %}
+        <h2 class="contactis-title section-title">{{ page.title | escape }}</h2>
+
+        <div class="contactus-body" style="margin: 0 40px">
+            {{policy.body}}
+        </div>
+    </div>
+</section>
+<!-- <div class="page-width page-width--narrow">
+    <h1 class="main-page-title page-title h0">
+      {{ page.title | escape }}
+    </h1>
+    <div class="rte">
+      {{ page.content }}
+    </div>
+  </div> -->
+  
+  {% schema %}
+  {
+    "name": "t:sections.main-page.name",
+    "tag": "section",
+    "class": "spaced-section"
+  }
+  {% endschema %}
