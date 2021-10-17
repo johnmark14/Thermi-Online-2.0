@@ -119,10 +119,22 @@ main {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
 }
 
 .container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 .container #loading {
@@ -4210,4 +4222,83 @@ main {
 
 .section-login .wrapper-register a:hover {
   text-decoration: none;
+}
+
+.search-shell {
+  padding-top: 60px;
+}
+
+.search-shell.moveToTop {
+  padding-top: 30px;
+}
+
+.search-box {
+  text-align: center;
+}
+
+.search-box.addMarginBottom {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  width: 450px;
+  text-align: center;
+  border: 2px solid #989898;
+  border-radius: 2px;
+}
+
+@media (max-width: 63.9375em) {
+  .search-box input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .search-box input {
+    width: 80%;
+  }
+}
+
+.search-box input:focus {
+  border: 2px solid #989898;
+}
+
+.search-box input::-webkit-input-placeholder {
+  color: #D6D6D6;
+}
+
+.search-box input:-ms-input-placeholder {
+  color: #D6D6D6;
+}
+
+.search-box input::-ms-input-placeholder {
+  color: #D6D6D6;
+}
+
+.search-box input::placeholder {
+  color: #D6D6D6;
+}
+
+.search-box button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #757171;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 140px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+}
+
+.search-box button:hover {
+  background-color: #000;
 }
