@@ -1748,8 +1748,17 @@ main {
 }
 
 @media (max-width: 63.9375em) {
-  .swiper-button-prev, .swiper-button-next {
-    display: none;
+  .swiper-button-next, .swiper-button-prev {
+    color: #989898;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .swiper-button-prev {
+    left: 0px;
+  }
+  .swiper-button-next {
+    right: 0px;
   }
 }
 
