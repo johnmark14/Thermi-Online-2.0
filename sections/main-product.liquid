@@ -84,6 +84,7 @@
                 variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
                 variantInventoryCount: "{{product.selected_or_first_available_variant.inventory_quantity}}",
                 isDisabled: false,
+                productType: "{{product.type}}",
                 totalPrice: "{{ product.selected_or_first_available_variant.price }}",
                 variantTitle: "{{product.selected_or_first_available_variant.title}}",
                 productTitle: "{{product.title}}",
@@ -232,6 +233,9 @@
             } else {
                 this.lidType = false
             }
+            
+            // Disable the add to cart button if user try to add the add on personalization
+            if(this.productType == 'hidden') this.isDisabled = true
         }
     }
 
