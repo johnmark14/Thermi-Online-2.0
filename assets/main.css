@@ -4225,19 +4225,11 @@ main {
 }
 
 .search-shell {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  padding-top: 60px;
 }
 
 .search-shell.moveToTop {
-  padding-top: 20px;
-  position: unset;
-  text-align: center;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  padding-top: 30px;
 }
 
 .search-box {
@@ -4256,6 +4248,18 @@ main {
   text-align: center;
   border: 2px solid #989898;
   border-radius: 2px;
+}
+
+@media (max-width: 63.9375em) {
+  .search-box input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .search-box input {
+    width: 80%;
+  }
 }
 
 .search-box input:focus {

@@ -1,19 +1,20 @@
 .search {
     &-shell {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        
+        padding-top: 60px;
+
         // This class is added when search results is out
         &.moveToTop {
-            padding-top: 20px;
-            position: unset;
-            text-align: center;
-            transform: translate(0, 0);
+            padding-top: 30px;
         }
     }
     &-box {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // // width: 100%;
+        
+        
         text-align: center;
         
         // This class is added when search results is out
@@ -29,6 +30,14 @@
             text-align: center;
             border: 2px solid $lightGray;
             border-radius: 2px;
+
+            @include breakpoint-down(medium) {
+                width: 70%;
+            }
+
+            @include breakpoint-down(medium) {
+                width: 80%;
+            }
             
             &:focus {
                 border: 2px solid $lightGray;

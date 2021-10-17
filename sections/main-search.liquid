@@ -4,8 +4,8 @@
 <section class="section-search section-padding" id="searchPage">
     <div class="search-shell shell" :class="{moveToTop: results}">
         <div class="search-box" :class="{addMarginBottom: results}">
-            <input type="text" name="search" id="search" placeholder="Search Product" v-model="searchTerm" autocomplete="off" ref="searchInput">
-            <button class="search-btn" @click.prevent="searchProducts">Search</button>
+            <input type="text" name="search" id="search" placeholder="Search Product" v-model="searchTerm" autocomplete="off" ref="searchInput" @keyup.enter.native="searchProducts">
+            <button class="search-btn" @click.prevent="searchProducts" @keyup.enter.native="searchProducts">Search</button>
         </div>
         <template v-if="results">
             <div class="page-title">
