@@ -614,8 +614,10 @@ main {
   font-size: 18px;
   text-transform: uppercase;
   padding: 16px 0;
-  -webkit-transition: color .5s ease-in-out,background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out,background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out,background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out,background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
 }
 
 .header .main-content--navigation .content-btn > a:not(:last-child) {
@@ -943,8 +945,10 @@ main {
   width: 200px;
   font-weight: 400;
   letter-spacing: 1px;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
 }
 
 .header .main-content--cart .cart-wrapper .cart-empty a:hover {
@@ -985,8 +989,10 @@ main {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
 }
 
 .header .main-content--cart .cart-wrapper .cart-footer .cart-btn a:hover {
@@ -1571,8 +1577,10 @@ main {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  -webkit-transition: color .5s ease-in-out,background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out,background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out,background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out,background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
 }
 
 .section-services .services-card .services-cta a:hover {
@@ -2737,7 +2745,7 @@ main {
 }
 
 .section-product .product-wrapper .product-preview-wrapper .product-image {
-  background-size: 127%;
+  background-size: 120%;
   background-repeat: no-repeat;
   background-position: 50%;
   height: unset;
@@ -3259,8 +3267,10 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
   border-radius: 4px;
 }
 
@@ -3690,8 +3700,10 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
   border-radius: 4px;
 }
 
@@ -3855,8 +3867,10 @@ main {
   width: 240px;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
 }
 
 .section-cart .cart-btns button.continue {
@@ -3944,8 +3958,10 @@ main {
   text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
 }
 
 .section-cart .cart-empty a:hover {
@@ -4187,8 +4203,10 @@ main {
   padding: 20px 0;
   text-transform: uppercase;
   border-radius: 4px;
-  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+ border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+ border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .section-login .wrapper-button a:hover {
@@ -4304,8 +4322,10 @@ main {
   outline: none;
   border: none;
   cursor: pointer;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+ .5s ease-in-out,opacity .5s ease-in-out;
 }
 
 .search-box button:hover {
