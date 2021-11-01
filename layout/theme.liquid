@@ -1,83 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="" />
+    <link rel="canonical" href="{{ canonical_url }}" />
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin />
 
     {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
-    {%- endif -%}
-
-    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ settings.favicon | img_url: '32x32' }}"
+    />
+    {%- endif -%} {%- unless settings.type_header_font.system? and
+    settings.type_body_font.system? -%}
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin />
     {%- endunless -%}
 
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ", " }}"{%
+      endif -%} {%- if current_page != 1 %} &ndash; Page {{ current_page }}{%
+      endif -%} {%- unless page_title contains shop.name %} &ndash;
+      {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}
-
-    {% render 'meta-tags' %}
+    <meta name="description" content="{{ page_description | escape }}" />
+    {% endif %} {% render 'meta-tags' %}
 
     <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <!-- <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js"></script> -->
-    
+
     <!-- Google Fonts -->
     <link
-    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Material Icon Fonts -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper JS -->
+    {{
+      "swiper-bundle.min.css" | asset_url | stylesheet_tag
+    }}
+
+    <!-- Custom Code by John - assets -->
+    {{
+      "main.css" | asset_url | stylesheet_tag
+    }}
+    <!-- <link rel="stylesheet" href="{{ 'main.css' | asset_url }}" type="text/css"> -->
 
     <!-- Fontawesome  -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    
-    <!-- Swiper JS -->
-    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
-    
-    <!-- Custom Code by John - assets -->
-    {{ 'main.css' | asset_url | stylesheet_tag }}
-    <!-- <link rel="stylesheet" href="{{ 'main.css' | asset_url }}" type="text/css"> -->
+    <script src="{{ 'font-awesome.js' | asset_url }}" defer></script>
 
     <!-- Swiper JS -->
     <script src="{{ 'swiper.js' | asset_url }}"></script>
 
     <!-- Axios JS -->
-    <script src="{{ 'axios.min.js' | asset_url }}" ></script>
-    
+    <script src="{{ 'axios.min.js' | asset_url }}"></script>
+
     <!-- Vue JS 03 -->
     <script src="{{ 'vue.js' | asset_url }}"></script>
     <!-- <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js"></script> -->
-    
-    <!-- Custom Code by John - assets -->
 
+    <!-- Custom Code by John - assets -->
     <script src="{{ 'application.js' | asset_url }}"></script>
 
-    {{ content_for_header }}
+    {{
+      content_for_header
+    }}
   </head>
 
   <body>
     <div class="container">
-      <div id="loading" style="{% unless settings.showLoading %} display: none; {% endunless %}">
-        <img src="{{ 'loadingspinner_small.gif' | asset_url }}" alt="Loader Spinner">
+      <div
+        id="loading"
+        style="{% unless settings.showLoading %} display: none; {% endunless %}"
+      >
+        <img
+          src="{{ 'loadingspinner_small.gif' | asset_url }}"
+          alt="Loader Spinner"
+        />
       </div>
       <!-- {% section 'announcement-bar' %} -->
       {% section 'header' %}
 
-      <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      <main
+        id="MainContent"
+        class="content-for-layout focus-none"
+        role="main"
+        tabindex="-1"
+      >
         {{ content_for_layout }}
       </main>
       {% section 'footer' %}
