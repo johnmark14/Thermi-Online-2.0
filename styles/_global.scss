@@ -240,7 +240,7 @@ main {
   text-transform: uppercase;
   padding: 60px 0 80px 0;
   font-family: "mt-bold", sans-serif;
-  color: $darkGray;
+  color: $darkGray1;
 
   @include breakpoint-down(small) {
     padding: 60px 0;
