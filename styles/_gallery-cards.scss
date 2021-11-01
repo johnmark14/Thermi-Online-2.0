@@ -1,0 +1,45 @@
+.section-gallery-cards {
+
+    .gallery-cards-shell {
+        .column {
+            .card {
+                position: relative;
+                .card-image {
+                    &:first-child {
+                        img {
+                            border-radius: 0;
+                        }
+                    }
+                }
+                background-color: transparent;
+                box-shadow: unset;
+                &-content {
+                    padding-top: 30px;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    .content {
+                        color: $lightGray;
+                        font-size: toRem(15);
+                        line-height: 2;
+
+                        @include breakpoint-down(small) {
+                            line-height: 1.8;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .card-title {
+                    position: absolute;
+                    top: 40%;
+                    left: 5%;
+                    color: $white;
+                    font-size: 46px;
+                    text-transform: uppercase;
+                    font-family: 'mt-bold', sans-serif;
+                }
+            }
+        }
+    }
+}

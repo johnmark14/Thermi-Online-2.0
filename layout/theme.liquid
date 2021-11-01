@@ -51,15 +51,15 @@
       rel="stylesheet"
     />
 
+    <!-- Bulma CSS -->
+    {{ "bulma.css" | asset_url | stylesheet_tag }}
     <!-- Swiper JS -->
     {{
       "swiper-bundle.min.css" | asset_url | stylesheet_tag
     }}
 
     <!-- Custom Code by John - assets -->
-    {{
-      "main.css" | asset_url | stylesheet_tag
-    }}
+    {{ "main.css" | asset_url | stylesheet_tag }}
     <!-- <link rel="stylesheet" href="{{ 'main.css' | asset_url }}" type="text/css"> -->
 
     <!-- Fontawesome  -->
@@ -84,7 +84,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="main-container">
       <div
         id="loading"
         style="{% unless settings.showLoading %} display: none; {% endunless %}"

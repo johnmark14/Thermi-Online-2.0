@@ -1,0 +1,100 @@
+<section class="section-gallery-cards section-padding {% if section.settings.sectionPadding %} remove-extra {% endif %}" id="{{ section.settings.anchorID }}" style="background-color: {{ section.settings.sectionColor }};">
+  <div class="gallery-cards-shell shell is-variable">
+    <h2 class="products-title section-title">{{ section.settings.sectionHeading }}</h2>
+    {% if section.blocks.size != 0%}
+      <div class="columns is-variable is-2-mobile is-3-desktop is-5-widescreen">
+        {% for block in section.blocks %}
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-1by1">
+                  <img src="{{ block.settings.productImg | img_url: 'master' }}" alt="Product image-{{ forloop.index }}"  loading="lazy"/>
+                </figure>
+                <div class="card-title">
+                  {{ block.settings.productTitle }}
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  {{ block.settings.productDescription }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}   
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+  {
+      "name": "Gallery Cards",
+      "settings": [
+            {
+              "type": "checkbox", 
+              "id": "sectionPadding",
+              "label": "Remove Section Padding?",
+              "default": false
+          },
+          {
+              "type": "text",
+              "id": "sectionHeading",
+              "label": "Section Heading",
+              "default": "Products"
+          },
+          {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
+        }
+      ],
+      "blocks": [
+          {
+              "type": "image",
+              "name": "Products",
+              "settings": [
+                  {
+                      "type": "image_picker",
+                      "id": "productImg",
+                      "label": "Product Image"
+                  },
+                  {
+                      "type": "text",
+                      "id": "productTitle",
+                      "label": "Product Heading"
+                  },
+                  {
+                      "type": "textarea",
+                      "id": "productDescription",
+                      "label": "Product Description",
+                      "default": "<p>Write something about your product.</p>"
+                  }
+              ]
+          }
+      ],
+      "presets": [
+          {
+              "name": "Gallery Cards",
+              "blocks": [
+                  {
+                      "type": "image"
+                  },
+                  {
+                      "type": "image"
+                  },
+                  {
+                      "type": "image"
+                  }
+              ]
+          }
+      ]
+  }
+{% endschema %}

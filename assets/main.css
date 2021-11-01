@@ -173,7 +173,7 @@ main {
   position: relative;
 }
 
-.container {
+.main-container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,7 +185,7 @@ main {
   min-height: 100vh;
 }
 
-.container #loading {
+.main-container #loading {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,7 +207,7 @@ main {
   transition: opacity 0.3s linear;
 }
 
-.container #loading img {
+.main-container #loading img {
   z-index: 9999;
 }
 
@@ -1802,6 +1802,46 @@ main {
   }
 }
 
+.section-gallery-cards .gallery-cards-shell .column .card {
+  position: relative;
+  background-color: transparent;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.section-gallery-cards .gallery-cards-shell .column .card .card-image:first-child img {
+  border-radius: 0;
+}
+
+.section-gallery-cards .gallery-cards-shell .column .card-content {
+  padding-top: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-gallery-cards .gallery-cards-shell .column .card-content .content {
+  color: #989898;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+@media (max-width: 39.9375em) {
+  .section-gallery-cards .gallery-cards-shell .column .card-content .content {
+    line-height: 1.8;
+    text-align: center;
+  }
+}
+
+.section-gallery-cards .gallery-cards-shell .column .card .card-title {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  color: #ffffff;
+  font-size: 46px;
+  text-transform: uppercase;
+  font-family: 'mt-bold', sans-serif;
+}
+
 .section-howto {
   background-color: #f7f7f7;
   /* howto-tut */
@@ -1814,7 +1854,7 @@ main {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 60px;
+  padding: 0 45px;
 }
 
 @media (max-width: 63.9375em) {
