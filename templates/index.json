@@ -12,6 +12,47 @@
         "sectionColor": "#f7f7f7"
       }
     },
+    "1631082372d649c2e4": {
+      "type": "gallery-with-text",
+      "disabled": true,
+      "blocks": {
+        "1631082372d649c2e4-0": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/workout-bottle.jpg",
+            "productTitle": "Workout bottle",
+            "productDescription": "<p>WORK OUT BOTTLE that supports an active and personal sports life. Since the spout can be removed, it is designed to be easy to put in ice and easy to wash. Since it has a scale, it is easy to make sports drinks, etc., and you can grasp the intake amount.<\/p>"
+          }
+        },
+        "1631082372d649c2e4-1": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/active-tumbler.jpg",
+            "productTitle": "Active Tumbler",
+            "productDescription": "<p>ACTIVE TUMBLER for a sports life where you can move your body in the sun. The spout-type mouthpiece, which is easy to open and close, is comfortable to drink. It is easy to put ice and drinks, and the vacuum double structure keeps it cold for a long time. With an elastomer on the bottom, it softens the impact and noise when placed on the floor or ground of the studio.<\/p>"
+          }
+        },
+        "1631082372d649c2e4-2": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/active_tumbler.jpg",
+            "productTitle": "PLAY TUMBLER",
+            "productDescription": "<p>PLAY TUMBLER for kids who are crazy about playing under the blue sky. It is a straw type that is easy to drink even for small children, and it has a pleasant taste and you can also remove the straw inside and drink. The vacuum double structure makes it difficult for ice to melt and keeps it cold for a long time. With a handle, it is a design that is easy to hold event with small hand.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1631082372d649c2e4-0",
+        "1631082372d649c2e4-1",
+        "1631082372d649c2e4-2"
+      ],
+      "settings": {
+        "sectionPadding": false,
+        "sectionHeading": "Products",
+        "anchorID": "section-products",
+        "sectionColor": "#f7f7f7"
+      }
+    },
     "hero": {
       "type": "landing-hero-carousel",
       "blocks": {
@@ -104,43 +145,42 @@
         "sectionColor": "#ffffff"
       }
     },
-    "1631082372d649c2e4": {
-      "type": "gallery-with-text",
+    "1635780845096844df": {
+      "type": "gallery_cards",
       "blocks": {
-        "1631082372d649c2e4-0": {
-          "type": "image",
-          "settings": {
-            "productImg": "shopify:\/\/shop_images\/workout-bottle.jpg",
-            "productTitle": "Workout bottle",
-            "productDescription": "<p>WORK OUT BOTTLE that supports an active and personal sports life. Since the spout can be removed, it is designed to be easy to put in ice and easy to wash. Since it has a scale, it is easy to make sports drinks, etc., and you can grasp the intake amount.<\/p>"
-          }
-        },
-        "1631082372d649c2e4-1": {
-          "type": "image",
-          "settings": {
-            "productImg": "shopify:\/\/shop_images\/active-tumbler.jpg",
-            "productTitle": "Active Tumbler",
-            "productDescription": "<p>ACTIVE TUMBLER for a sports life where you can move your body in the sun. The spout-type mouthpiece, which is easy to open and close, is comfortable to drink. It is easy to put ice and drinks, and the vacuum double structure keeps it cold for a long time. With an elastomer on the bottom, it softens the impact and noise when placed on the floor or ground of the studio.<\/p>"
-          }
-        },
-        "1631082372d649c2e4-2": {
+        "1635780845096844df-0": {
           "type": "image",
           "settings": {
             "productImg": "shopify:\/\/shop_images\/active_tumbler.jpg",
-            "productTitle": "PLAY TUMBLER",
-            "productDescription": "<p>PLAY TUMBLER for kids who are crazy about playing under the blue sky. It is a straw type that is easy to drink even for small children, and it has a pleasant taste and you can also remove the straw inside and drink. The vacuum double structure makes it difficult for ice to melt and keeps it cold for a long time. With a handle, it is a design that is easy to hold event with small hand.<\/p>"
+            "productTitle": "play<br>tumbler",
+            "productDescription": "PLAY TUMBLER for kids who are crazy about playing under the blue sky. It is a straw type that is easy to drink even for small children, and it has a pleasant taste and you can also remove the straw inside and drink. The vacuum double structure makes it difficult for ice to melt and keeps it cold for a long time. With a handle, it is design that is easy to hold even with small hand."
+          }
+        },
+        "1635780845096844df-1": {
+          "type": "image",
+          "settings": {
+            "productImg": "shopify:\/\/shop_images\/workout-bottle.jpg",
+            "productTitle": "workout<br>bottle",
+            "productDescription": "WORKOUT BOTTLE that supports an active and personal sports life. Since the spout can be removed, it is designed to be easy to put in ice and easy to wash. Since it has a scale, it is easy to make sports drinks, etc., and you can grasp the intake amount."
+          }
+        },
+        "1635780845096844df-2": {
+          "type": "image",
+          "settings": {
+            "productTitle": "",
+            "productDescription": "<p>Write something about your product.<\/p>"
           }
         }
       },
       "block_order": [
-        "1631082372d649c2e4-0",
-        "1631082372d649c2e4-1",
-        "1631082372d649c2e4-2"
+        "1635780845096844df-0",
+        "1635780845096844df-1",
+        "1635780845096844df-2"
       ],
       "settings": {
         "sectionPadding": false,
         "sectionHeading": "Products",
-        "anchorID": "section-products",
+        "anchorID": "",
         "sectionColor": "#f7f7f7"
       }
     },
@@ -399,10 +439,11 @@
   },
   "order": [
     "concept-movie",
+    "1631082372d649c2e4",
     "hero",
     "163108244160b25d61",
     "1631083243456f3665",
-    "1631082372d649c2e4",
+    "1635780845096844df",
     "1633346573ec5ebe89",
     "1631081559d14f13e2",
     "163108209993bc2011",
