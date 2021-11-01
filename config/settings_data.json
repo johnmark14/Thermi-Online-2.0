@@ -37,7 +37,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "textLogo": "Thermi",
+          "textLogo": "thermi",
           "textColor": "#757171",
           "logo_max_width": 100,
           "top": "main-menu",
