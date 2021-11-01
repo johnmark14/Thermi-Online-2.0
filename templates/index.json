@@ -24,6 +24,7 @@
         },
         "cb542f42-89e1-4aac-9bf8-160b23ebc220": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "imageDesktop": "shopify:\/\/shop_images\/image2-desktop.jpg",
             "imageMobile": "shopify:\/\/shop_images\/image2-mobile.jpg"
@@ -31,6 +32,7 @@
         },
         "14070d63-0c7d-4fe6-a903-9dd7683a98ed": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "imageDesktop": "shopify:\/\/shop_images\/image3-desktop.jpg",
             "imageMobile": "shopify:\/\/shop_images\/image3-mobile.jpg"
@@ -38,6 +40,7 @@
         },
         "63f9f160-08ce-4c9e-9f2d-cd2c161d8c87": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "imageDesktop": "shopify:\/\/shop_images\/image4-desktop.jpg",
             "imageMobile": "shopify:\/\/shop_images\/image4-mobile.jpg"
@@ -45,6 +48,7 @@
         },
         "db753d61-f33b-4d25-aefc-cabfd8722ce6": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "imageDesktop": "shopify:\/\/shop_images\/image5-desktop.jpg",
             "imageMobile": "shopify:\/\/shop_images\/image5-mobile.jpg"
@@ -52,6 +56,7 @@
         },
         "8adf6294-70f2-4963-9c4d-22f906e992f3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "imageDesktop": "shopify:\/\/shop_images\/image6-desktop.jpg",
             "imageMobile": "shopify:\/\/shop_images\/image6-mobile.jpg"
@@ -74,8 +79,8 @@
     "163108244160b25d61": {
       "type": "shop-steps",
       "settings": {
-        "sectionPadding": false,
-        "sectionHeading": "How to",
+        "sectionPadding": true,
+        "sectionHeading": "How to order",
         "step1": "shopify:\/\/shop_images\/step1.png",
         "step1Title": "Choose",
         "step1Desc": "Choose a product",
