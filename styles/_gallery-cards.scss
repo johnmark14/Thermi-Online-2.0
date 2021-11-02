@@ -1,69 +1,71 @@
 .section-gallery-cards {
 
     .gallery-cards-shell {
-        .column {
-            @include breakpoint-up(medium) {
+        .columns {
+            @include breakpoint-up(large) {
                 display: flex;
             }
-            .card {
-                position: relative;
-                .card-image {
-                    .image {
-                        @include breakpoint-down(small-mid) {
-                            &.is-1by1 {
-                                padding-top: 50%;
+            .column {
+                .card {
+                    position: relative;
+                    .card-image {
+                        .image {
+                            @include breakpoint-down(small-mid) {
+                                &.is-1by1 {
+                                    padding-top: 50%;
+                                }
+                            }
+                            @include breakpoint-down(small) {
+                                &.is-1by1 {
+                                    padding-top: 100%;
+                                }
                             }
                         }
-                        @include breakpoint-down(small) {
-                            &.is-1by1 {
-                                padding-top: 100%;
+                        &:first-child {
+                            img {
+                                border-radius: 0;
+                                object-fit: cover;
                             }
                         }
                     }
-                    &:first-child {
-                        img {
-                            border-radius: 0;
-                            object-fit: cover;
-                        }
-                    }
-                }
-                background-color: transparent;
-                box-shadow: unset;
-                &-content {
-                    padding-top: 30px;
-                    padding-left: 0;
-                    padding-right: 0;
-
-                    .content {
-                        color: $lightGray;
-                        font-size: toRem(15);
-                        line-height: 2;
-
-                        @include breakpoint-down(medium) {
-                            line-height: 2;
-                            text-align: left;
-                            font-size: toRem(18);
-                            padding: 0 15px 20px 15px;
-                        }
-
-                        @include breakpoint-down(small) {
-                            text-align: center;
-                            line-height: 1.8;
-                            padding: 0;
-                            padding-bottom: 20px;
+                    background-color: transparent;
+                    box-shadow: unset;
+                    &-content {
+                        padding-top: 30px;
+                        padding-left: 0;
+                        padding-right: 0;
+    
+                        .content {
+                            color: $lightGray;
                             font-size: toRem(15);
-                        } 
+                            line-height: 2;
+    
+                            @include breakpoint-down(medium) {
+                                line-height: 2;
+                                text-align: left;
+                                font-size: toRem(18);
+                                padding: 0 15px 20px 15px;
+                            }
+    
+                            @include breakpoint-down(small) {
+                                text-align: center;
+                                line-height: 1.8;
+                                padding: 0;
+                                padding-bottom: 20px;
+                                font-size: toRem(15);
+                            } 
+                        }
                     }
-                }
-
-                .card-title {
-                    position: absolute;
-                    top: 40%;
-                    left: 5%;
-                    color: $white;
-                    font-size: 46px;
-                    text-transform: uppercase;
-                    font-family: 'mt-bold', sans-serif;
+    
+                    .card-title {
+                        position: absolute;
+                        top: 40%;
+                        left: 5%;
+                        color: $white;
+                        font-size: 46px;
+                        text-transform: uppercase;
+                        font-family: 'mt-bold', sans-serif;
+                    }
                 }
             }
         }
