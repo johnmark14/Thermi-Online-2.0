@@ -1480,6 +1480,14 @@ main {
   opacity: 1;
 }
 
+@media (min-width: 40em) {
+  .section-cardwtext .cardwtext-shell .container .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .section-cardwtext .cardwtext-shell .container .columns .column .card {
   border-radius: 0;
 }

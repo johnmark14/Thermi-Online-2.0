@@ -2,6 +2,9 @@
     .cardwtext-shell {
         .container {
             .columns {
+                @include breakpoint-up(medium) {
+                    display: flex;
+                }
                 .column {
                     .card {
                         border-radius: 0;
