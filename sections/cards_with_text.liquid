@@ -1,6 +1,38 @@
-<section id="{{ section.settings.anchorID }}" class="section-services section-padding {% if section.settings.sectionPadding %} remove-extra  {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
-    <div class="services-shell shell">
-        <h2 class="services-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
+<section id="{{ section.settings.anchorID }}" class="section-cardwtext section-padding {% if section.settings.sectionPadding %} remove-extra  {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
+    <div class="cardwtext-shell shell">
+        <h2 class="cardwtext-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
+        <div class="container">
+            <div class="columns is-variable is-2">
+                <div class="column">
+                   <div class="card">
+                       <div class="card-image">
+                           <figure class="image is-1by1">
+                                <img src="{{ section.settings.cardImg1 | img_url: 'master' }}" alt="Card Image" loading="lazy">
+                           </figure>
+                       </div>
+                        <footer class="card-footer">
+                            <div class="card-footer-item">
+                               {{ section.settings.cardText1 }}
+                            </div>
+                        </footer>
+                   </div>
+                </div>
+                <div class="column">
+                   <div class="card">
+                       <div class="card-image">
+                           <figure class="image is-1by1">
+                                <img src="{{ section.settings.cardImg2 | img_url: 'master' }}" alt="Card Image" loading="lazy">
+                           </figure>
+                       </div>
+                        <footer class="card-footer">
+                            <div class="card-footer-item">
+                                {{ section.settings.cardText2 }}
+                            </div>
+                        </footer>
+                   </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -21,69 +53,32 @@
             "default": "Services"
         },
         {
-            "type": "text",
-            "id": "serviceName",
-            "label": "Service Name",
-            "default": "Service 1"
-        },
-        {
-            "type": "richtext",
-            "id": "serviceDescription",
-            "label": "Service Description",
-            "default": "<p>Write something for your services offered.</p>"
-        },
-        {
-            "type": "text",
-            "id": "ctaText",
-            "label": "CTA Text",
-            "default": "Order Now"
-        },
-        {
-            "type": "url",
-            "id": "ctaUrl",
-            "label": "CTA Page"
+            "type": "textarea",
+            "id": "cardText1",
+            "label": "Card Text Left",
+            "default": "Write something here to describe your services"
         },
         {
             "type": "image_picker",
-            "id": "serviceImg",
-            "label": "Service Image"
+            "id": "cardImg1",
+            "label": "Card Image Left"
         },
         {
-            "type": "checkbox",
-            "id": "flip",
-            "label": "Flip?",
-            "default": false
+            "type": "textarea",
+            "id": "cardText2",
+            "label": "Card Text Right",
+            "default": "Write something here to describe your services"
         },
         {
-            "type": "text",
-            "id": "anchorID",
-            "label": "Anchor ID",
-            "info": "Add an anchor link to create an on page navigation."
+            "type": "image_picker",
+            "id": "cardImg2",
+            "label": "Card Image Right"
         },
         {
           "type": "color",
           "id": "sectionColor",
           "label": "Section BG",
           "default": "#f7f7f7"
-        }
-    ],
-    "blocks": [
-            {
-                "type": "image",
-                "name": "Service Icon",
-                "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "iconImg",
-                    "label": "Icon"
-                },
-                {
-                    "type": "text",
-                    "id": "altText",
-                    "label": "Text Description (alt)",
-                    "info": "Optional"
-                }
-            ]
         }
     ],
     "presets": [

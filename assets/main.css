@@ -276,7 +276,13 @@ main {
 }
 
 .remove-extra {
-  margin-bottom: -40px;
+  margin-bottom: -50px;
+}
+
+@media (max-width: 48.0625em) {
+  .remove-extra {
+    margin-bottom: -80px;
+  }
 }
 
 .section-padding.pad-bot {
@@ -1472,6 +1478,16 @@ main {
 .plaintext-demo .showOverlay {
   visibility: visible;
   opacity: 1;
+}
+
+.section-cardwtext .cardwtext-shell .container .columns .column .card {
+  border-radius: 0;
+}
+
+.section-cardwtext .cardwtext-shell .container .columns .column .card .card-image .image img {
+  border-radius: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section-services {
