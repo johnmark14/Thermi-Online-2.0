@@ -74,23 +74,24 @@
       &:not(:last-child) {
         &::after {
           content: "";
-          background: url(https://cdn.shopify.com/s/files/1/0598/6159/8417/files/arrow-right.png?v=1635755188)
+          background: url(https://cdn.shopify.com/s/files/1/0598/6159/8417/files/arrow_version_2.svg?v=1635836568)
             no-repeat 0 0;
           background-size: 100% 100%;
-          width: 45px;
-          height: 16px;
+          width: 35px;
+          height: 50px;
           margin-left: 20px;
           display: inline-block;
 
           position: absolute;
           right: 0;
-          top: 120px;
+          top: 100px;
 
           @include breakpoint-down(small) {
             transform: rotate(90deg);
             left: 115px;
             width: 35px;
-            top: 160px;
+            height: 40px;
+            top: 145px;
           }
         }
       }
