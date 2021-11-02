@@ -1826,15 +1826,7 @@ main {
   }
 }
 
-@media (min-width: 64em) {
-  .section-gallery-cards .gallery-cards-shell .columns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.section-gallery-cards .gallery-cards-shell .columns .column .card {
+.section-gallery-cards .gallery-cards-shell .column .card {
   position: relative;
   background-color: transparent;
   -webkit-box-shadow: unset;
@@ -1842,37 +1834,37 @@ main {
 }
 
 @media (max-width: 48.0625em) {
-  .section-gallery-cards .gallery-cards-shell .columns .column .card .card-image .image.is-1by1 {
+  .section-gallery-cards .gallery-cards-shell .column .card .card-image .image.is-1by1 {
     padding-top: 50%;
   }
 }
 
 @media (max-width: 39.9375em) {
-  .section-gallery-cards .gallery-cards-shell .columns .column .card .card-image .image.is-1by1 {
+  .section-gallery-cards .gallery-cards-shell .column .card .card-image .image.is-1by1 {
     padding-top: 100%;
   }
 }
 
-.section-gallery-cards .gallery-cards-shell .columns .column .card .card-image:first-child img {
+.section-gallery-cards .gallery-cards-shell .column .card .card-image:first-child img {
   border-radius: 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.section-gallery-cards .gallery-cards-shell .columns .column .card-content {
+.section-gallery-cards .gallery-cards-shell .column .card-content {
   padding-top: 30px;
   padding-left: 0;
   padding-right: 0;
 }
 
-.section-gallery-cards .gallery-cards-shell .columns .column .card-content .content {
+.section-gallery-cards .gallery-cards-shell .column .card-content .content {
   color: #989898;
   font-size: 0.9375rem;
   line-height: 2;
 }
 
 @media (max-width: 63.9375em) {
-  .section-gallery-cards .gallery-cards-shell .columns .column .card-content .content {
+  .section-gallery-cards .gallery-cards-shell .column .card-content .content {
     line-height: 2;
     text-align: left;
     font-size: 1.125rem;
@@ -1881,7 +1873,7 @@ main {
 }
 
 @media (max-width: 39.9375em) {
-  .section-gallery-cards .gallery-cards-shell .columns .column .card-content .content {
+  .section-gallery-cards .gallery-cards-shell .column .card-content .content {
     text-align: center;
     line-height: 1.8;
     padding: 0;
@@ -1890,7 +1882,7 @@ main {
   }
 }
 
-.section-gallery-cards .gallery-cards-shell .columns .column .card .card-title {
+.section-gallery-cards .gallery-cards-shell .column .card .card-title {
   position: absolute;
   top: 40%;
   left: 5%;
