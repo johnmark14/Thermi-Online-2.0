@@ -339,6 +339,16 @@
         "sectionColor": "#fff"
       }
     },
+    "1635858226384ff358": {
+      "type": "big-button",
+      "settings": {
+        "sectionPadding": false,
+        "buttonText": "",
+        "buttonUrl": "",
+        "anchorID": "",
+        "sectionColor": "#f7f7f7"
+      }
+    },
     "1631082294d036fef7": {
       "type": "products-gallery",
       "blocks": {
@@ -476,6 +486,7 @@
     "1633346573ec5ebe89",
     "16358581613b249960",
     "16358581853c27d3f1",
+    "1635858226384ff358",
     "1631082294d036fef7",
     "16310833551ae52905",
     "1631083388fef06008"
