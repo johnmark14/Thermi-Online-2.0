@@ -1826,6 +1826,14 @@ main {
   }
 }
 
+@media (min-width: 40em) {
+  .section-gallery-cards .gallery-cards-shell .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .section-gallery-cards .gallery-cards-shell .column .card {
   position: relative;
   background-color: transparent;

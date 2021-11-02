@@ -2,6 +2,9 @@
 
     .gallery-cards-shell {
         .column {
+            @include breakpoint-up(medium) {
+                display: flex;
+            }
             .card {
                 position: relative;
                 .card-image {
