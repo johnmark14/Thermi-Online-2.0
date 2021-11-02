@@ -333,8 +333,10 @@
         "sectionPadding": false,
         "sectionTitle": "",
         "cardText1": "Write something here to describe your services",
+        "cardImg1": "shopify:\/\/shop_images\/image12.jpg",
         "cardText2": "Write something here to describe your services",
-        "sectionColor": "#f7f7f7"
+        "cardImg2": "shopify:\/\/shop_images\/prod1.jpg",
+        "sectionColor": "#fff"
       }
     },
     "1631082294d036fef7": {
