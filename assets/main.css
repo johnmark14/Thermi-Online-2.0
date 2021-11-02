@@ -1906,6 +1906,7 @@ main {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   padding: 0 45px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 63.9375em) {
@@ -1919,6 +1920,7 @@ main {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 70px;
+    margin-bottom: 60px;
   }
 }
 
