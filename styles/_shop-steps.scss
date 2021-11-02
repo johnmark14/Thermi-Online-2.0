@@ -86,6 +86,10 @@
           right: 0;
           top: 100px;
 
+          @include breakpoint-down(small-mid) {
+            width: 20px;
+          }
+
           @include breakpoint-down(small) {
             transform: rotate(90deg);
             left: 115px;

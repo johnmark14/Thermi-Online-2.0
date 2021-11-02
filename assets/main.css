@@ -1959,6 +1959,12 @@ main {
   top: 100px;
 }
 
+@media (max-width: 50em) {
+  .section-howto .howto-tut .howto-step:not(:last-child)::after {
+    width: 20px;
+  }
+}
+
 @media (max-width: 39.9375em) {
   .section-howto .howto-tut .howto-step:not(:last-child)::after {
     -webkit-transform: rotate(90deg);
