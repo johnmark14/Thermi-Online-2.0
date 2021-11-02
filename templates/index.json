@@ -173,6 +173,20 @@
         "sectionColor": "#ffffff"
       }
     },
+    "16310833551ae52905": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "sectionHeading": "Visit",
+        "leftBigImg": "shopify:\/\/shop_images\/left.jpg",
+        "rightSmallImg": "shopify:\/\/shop_images\/logo_c04ac5c5-4f8e-47f0-854a-3af3ddf487b3.png",
+        "rightTextDesc": "<p>It is an experience space where you can enjoy MARK IT BY KINTO even more.<\/p><p>You can see the product in your hand.<\/p>",
+        "btnText": "View more",
+        "btnUrl": "",
+        "anchorID": "section-visit",
+        "sectionColor": "#f7f7f7"
+      }
+    },
     "hero": {
       "type": "landing-hero-carousel",
       "blocks": {
@@ -396,22 +410,9 @@
         "sectionColor": "#f7f7f7"
       }
     },
-    "16310833551ae52905": {
-      "type": "image-with-text",
-      "disabled": true,
-      "settings": {
-        "sectionHeading": "Visit",
-        "leftBigImg": "shopify:\/\/shop_images\/left.jpg",
-        "rightSmallImg": "shopify:\/\/shop_images\/logo_c04ac5c5-4f8e-47f0-854a-3af3ddf487b3.png",
-        "rightTextDesc": "<p>It is an experience space where you can enjoy MARK IT BY KINTO even more.<\/p><p>You can see the product in your hand.<\/p>",
-        "btnText": "View more",
-        "btnUrl": "",
-        "anchorID": "section-visit",
-        "sectionColor": "#f7f7f7"
-      }
-    },
     "1631083388fef06008": {
       "type": "gallery-with-heading",
+      "disabled": true,
       "blocks": {
         "73f2cbb9-30a7-4286-ba8e-1c1e37357ce3": {
           "type": "image",
@@ -479,6 +480,7 @@
     "1631082372d649c2e4",
     "1631081559d14f13e2",
     "163108209993bc2011",
+    "16310833551ae52905",
     "hero",
     "163108244160b25d61",
     "1631083243456f3665",
@@ -488,7 +490,6 @@
     "16358581853c27d3f1",
     "1635858226384ff358",
     "1631082294d036fef7",
-    "16310833551ae52905",
     "1631083388fef06008"
   ]
 }
