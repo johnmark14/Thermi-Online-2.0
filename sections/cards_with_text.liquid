@@ -1,0 +1,95 @@
+<section id="{{ section.settings.anchorID }}" class="section-services section-padding {% if section.settings.sectionPadding %} remove-extra  {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
+    <div class="services-shell shell">
+        <h2 class="services-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Card with Text",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "sectionPadding",
+            "label": "Remove section padding?",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "sectionTitle",
+            "label": "Section Heading",
+            "default": "Services"
+        },
+        {
+            "type": "text",
+            "id": "serviceName",
+            "label": "Service Name",
+            "default": "Service 1"
+        },
+        {
+            "type": "richtext",
+            "id": "serviceDescription",
+            "label": "Service Description",
+            "default": "<p>Write something for your services offered.</p>"
+        },
+        {
+            "type": "text",
+            "id": "ctaText",
+            "label": "CTA Text",
+            "default": "Order Now"
+        },
+        {
+            "type": "url",
+            "id": "ctaUrl",
+            "label": "CTA Page"
+        },
+        {
+            "type": "image_picker",
+            "id": "serviceImg",
+            "label": "Service Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "flip",
+            "label": "Flip?",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "anchorID",
+            "label": "Anchor ID",
+            "info": "Add an anchor link to create an on page navigation."
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
+        }
+    ],
+    "blocks": [
+            {
+                "type": "image",
+                "name": "Service Icon",
+                "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "iconImg",
+                    "label": "Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "altText",
+                    "label": "Text Description (alt)",
+                    "info": "Optional"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Card with Text"
+        }
+    ]
+}
+{% endschema %}
