@@ -5,9 +5,22 @@
             .card {
                 position: relative;
                 .card-image {
+                    .image {
+                        @include breakpoint-down(small-mid) {
+                            &.is-1by1 {
+                                padding-top: 50%;
+                            }
+                        }
+                        @include breakpoint-down(small) {
+                            &.is-1by1 {
+                                padding-top: 100%;
+                            }
+                        }
+                    }
                     &:first-child {
                         img {
                             border-radius: 0;
+                            object-fit: cover;
                         }
                     }
                 }
@@ -23,10 +36,20 @@
                         font-size: toRem(15);
                         line-height: 2;
 
-                        @include breakpoint-down(small) {
-                            line-height: 1.8;
-                            text-align: center;
+                        @include breakpoint-down(medium) {
+                            line-height: 2;
+                            text-align: left;
+                            font-size: toRem(18);
+                            padding: 0 15px 20px 15px;
                         }
+
+                        @include breakpoint-down(small) {
+                            text-align: center;
+                            line-height: 1.8;
+                            padding: 0;
+                            padding-bottom: 20px;
+                            font-size: toRem(15);
+                        } 
                     }
                 }
 

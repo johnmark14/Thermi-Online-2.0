@@ -1809,8 +1809,22 @@ main {
           box-shadow: unset;
 }
 
+@media (max-width: 48.0625em) {
+  .section-gallery-cards .gallery-cards-shell .column .card .card-image .image.is-1by1 {
+    padding-top: 50%;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .section-gallery-cards .gallery-cards-shell .column .card .card-image .image.is-1by1 {
+    padding-top: 100%;
+  }
+}
+
 .section-gallery-cards .gallery-cards-shell .column .card .card-image:first-child img {
   border-radius: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section-gallery-cards .gallery-cards-shell .column .card-content {
@@ -1825,10 +1839,22 @@ main {
   line-height: 2;
 }
 
+@media (max-width: 63.9375em) {
+  .section-gallery-cards .gallery-cards-shell .column .card-content .content {
+    line-height: 2;
+    text-align: left;
+    font-size: 1.125rem;
+    padding: 0 15px 20px 15px;
+  }
+}
+
 @media (max-width: 39.9375em) {
   .section-gallery-cards .gallery-cards-shell .column .card-content .content {
-    line-height: 1.8;
     text-align: center;
+    line-height: 1.8;
+    padding: 0;
+    padding-bottom: 20px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -1959,7 +1985,7 @@ main {
   top: 100px;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 48.0625em) {
   .section-howto .howto-tut .howto-step:not(:last-child)::after {
     width: 20px;
   }
