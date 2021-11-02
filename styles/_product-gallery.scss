@@ -28,19 +28,21 @@
     }
 
     &-btn {
-        padding: 70px 70px 0 70px;
+        padding: 100px 0 0 0;
         text-align: center;
         >a {
-            font-size: toRem(18);
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: underline;
-            color: $lightGray;
-            transition: color .3s ease;
+            background: $darkGray1;
+            font-size: toRem(20);
+            padding: 16px 110px;
+            
+            border-radius: 34px;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            color: $white;
+            transition: background .1s ;
 
             &:hover {
-                color: $darkGray;
+                background: $darkGray;
             }
         }
     }

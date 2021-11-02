@@ -1708,23 +1708,24 @@ main {
 }
 
 .ideas-btn {
-  padding: 70px 70px 0 70px;
+  padding: 100px 0 0 0;
   text-align: center;
 }
 
 .ideas-btn > a {
-  font-size: 1.125rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: underline;
-  color: #989898;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
+  background: #757171;
+  font-size: 1.25rem;
+  padding: 16px 110px;
+  border-radius: 34px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: #ffffff;
+  -webkit-transition: background .1s;
+  transition: background .1s;
 }
 
 .ideas-btn > a:hover {
-  color: #5e5e5e;
+  background: #5e5e5e;
 }
 
 .products {
