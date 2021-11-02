@@ -343,10 +343,10 @@
       "type": "big-button",
       "settings": {
         "sectionPadding": false,
-        "buttonText": "",
+        "buttonText": "Contact Us",
         "buttonUrl": "",
         "anchorID": "",
-        "sectionColor": "#f7f7f7"
+        "sectionColor": "#fff"
       }
     },
     "1631082294d036fef7": {
