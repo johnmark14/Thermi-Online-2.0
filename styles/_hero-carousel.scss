@@ -8,9 +8,9 @@
     position: relative;
     height: 664px;
 
-    @include breakpoint-down(large) {
-      height: 90vh;
-    }
+    // @include breakpoint-down(large) {
+    //   height: 90vh;
+    // }
     @include breakpoint-down(small) {
       height: 62vh;
     }

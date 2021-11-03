@@ -1154,12 +1154,6 @@ main {
   height: 664px;
 }
 
-@media (max-width: 87.4375em) {
-  .intro-slider {
-    height: 90vh;
-  }
-}
-
 @media (max-width: 39.9375em) {
   .intro-slider {
     height: 62vh;
