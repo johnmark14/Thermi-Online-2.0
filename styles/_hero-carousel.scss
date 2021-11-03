@@ -93,8 +93,8 @@
 
         @include breakpoint-down(small) {
           width: 220px;
-          padding: 12px 16px;
-          font-size: toRem(18);
+          padding: 16px 16px;
+          font-size: toRem(20);
         }
 
         &:hover {
@@ -110,7 +110,7 @@
           margin-left: 20px;
 
           @include breakpoint-down(small) {
-            width: 22px;
+            width: 24px;
           }
   
           svg {
@@ -122,7 +122,7 @@
           width: 28px;
           line-height: 0;
           @include breakpoint-down(small) {
-            width: 22px;
+            width: 24px;
           }
          svg {
             fill: $yellowAccent;
