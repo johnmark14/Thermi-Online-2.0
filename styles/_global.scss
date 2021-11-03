@@ -319,3 +319,23 @@ main {
     // width: 300px;
   }
 }
+
+.small-btn {
+  padding: 100px 0 0 0;
+  text-align: center;
+  >a {
+      background: $darkGray1;
+      font-size: toRem(20);
+      padding: 16px 110px;
+      
+      border-radius: 34px;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      color: $white;
+      transition: background .1s ;
+
+      &:hover {
+          background: $darkGray;
+      }
+  }
+}

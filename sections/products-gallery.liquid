@@ -12,9 +12,7 @@
         </div>
         {% endif %}
         {% if section.settings.linkText != blank%}
-            <div class="ideas-btn">
-                <a href="{{ section.settings.url }}">{{ section.settings.linkText }}</a>
-            </div>
+            {% render 'small-btn' %}
         {% endif %}
     </div>
 </section>

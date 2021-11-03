@@ -377,6 +377,27 @@ main {
   }
 }
 
+.small-btn {
+  padding: 100px 0 0 0;
+  text-align: center;
+}
+
+.small-btn > a {
+  background: #757171;
+  font-size: 1.25rem;
+  padding: 16px 110px;
+  border-radius: 34px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: #ffffff;
+  -webkit-transition: background .1s;
+  transition: background .1s;
+}
+
+.small-btn > a:hover {
+  background: #5e5e5e;
+}
+
 @-webkit-keyframes fade-in {
   from {
     background-color: rgba(0, 0, 0, 0);
@@ -1705,27 +1726,6 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.ideas-btn {
-  padding: 100px 0 0 0;
-  text-align: center;
-}
-
-.ideas-btn > a {
-  background: #757171;
-  font-size: 1.25rem;
-  padding: 16px 110px;
-  border-radius: 34px;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  color: #ffffff;
-  -webkit-transition: background .1s;
-  transition: background .1s;
-}
-
-.ideas-btn > a:hover {
-  background: #5e5e5e;
 }
 
 .products {
