@@ -330,15 +330,24 @@ main {
 }
 
 .big-btn {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #ffffff;
   text-align: center;
   text-transform: capitalize;
   padding: 16px 0;
   width: 300px;
   margin: 0 auto;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   background: #757171;
+  font-weight: bold;
   letter-spacing: 1px;
   border-radius: 30px;
   -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -352,23 +361,15 @@ main {
 .big-btn span {
   color: #fff;
   text-align: left;
+  line-height: 0;
 }
 
-.big-btn span::after {
-  content: "";
-  background: url(https://cdn.shopify.com/s/files/1/0076/8747/1170/t/97/assets/ico-arrow-right@2x.png?v=2691161101697521585) no-repeat 0 0;
-  background-size: 100% 100%;
-  width: 32px;
-  height: 12px;
-  margin-left: 20px;
-  display: inline-block;
+.big-btn span:last-child {
+  margin-left: 10px;
 }
 
-@media (max-width: 63.9375em) {
-  .big-btn span::after {
-    margin-left: 15px;
-    width: 28px;
-  }
+.big-btn span:last-child svg {
+  height: 32px;
 }
 
 @media (max-width: 39.9375em) {
@@ -384,7 +385,8 @@ main {
 
 .small-btn > a {
   background: #757171;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: bold;
   padding: 16px 110px;
   border-radius: 34px;
   letter-spacing: 1px;

@@ -269,15 +269,18 @@ main {
 // Big Button
 
 .big-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $white;
   text-align: center;
   text-transform: capitalize;
   padding: 16px 0;
   width: 300px;
   margin: 0 auto;
-  font-size: toRem(20);
+  font-size: toRem(18);
   background: $darkGray1;
+  font-weight: bold;
   letter-spacing: 1px;
   border-radius: 30px;
   transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
@@ -290,21 +293,29 @@ main {
   span {
     color: #fff;
     text-align: left;
-    &::after {
-      content: "";
-      background: url(https://cdn.shopify.com/s/files/1/0076/8747/1170/t/97/assets/ico-arrow-right@2x.png?v=2691161101697521585)
-        no-repeat 0 0;
-      background-size: 100% 100%;
-      width: 32px;
-      height: 12px;
-      margin-left: 20px;
-      display: inline-block;
+    line-height: 0;
 
-      @include breakpoint-down(medium) {
-        margin-left: 15px;
-        width: 28px;
+    &:last-child {
+      margin-left: 10px;
+      svg {
+        height: 32px;
       }
     }
+    // &::after {
+    //   content: "";
+    //   background: url(https://cdn.shopify.com/s/files/1/0598/6159/8417/files/fat_arrow_right.svg?v=1635966019)
+    //     no-repeat 0 0;
+    //   background-size: 100% 100%;
+    //   width: 32px;
+    //   height: 12px;
+    //   margin-left: 20px;
+    //   display: inline-block;
+
+    //   @include breakpoint-down(medium) {
+    //     margin-left: 15px;
+    //     width: 28px;
+    //   }
+    // }
   }
 
   @include breakpoint-down(medium) {
@@ -325,7 +336,8 @@ main {
   text-align: center;
   >a {
       background: $darkGray1;
-      font-size: toRem(20);
+      font-size: toRem(18);
+      font-weight: bold;
       padding: 16px 110px;
       
       border-radius: 34px;
