@@ -135,48 +135,74 @@
       }
 
       .content-btn {
-        flex-grow: 0;
+        margin-top: 45px;
         text-align: center;
-        padding: 50px 35px 26px 35px;
 
-        @include breakpoint-down(small) {
-          padding: 35px 20px 20px 20px;
+        .btn-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: toRem(18);
+          font-weight: normal;
+          padding-left: 20px;
+          padding-right: 20px;
+          width: 260px;
         }
 
-        // Buttons Login/Order Global
-        > a {
-          display: block;
-          color: $white;
-          font-weight: 500;
-          letter-spacing: 2px;
-          font-size: 18px;
-          text-transform: uppercase;
-          padding: 16px 0;
-          transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
-            border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
-
-          &:not(:last-child) {
-            margin-bottom: 5px;
-          }
-        }
-
-        // Button Login
         .btn-login {
-          background-color: $darkGray;
+          background-color: $black;
+          color: $white;
 
-          &:hover {
-            background-color: $black;
+          span:nth-child(1) {
+            width: 26px;
+            line-height: 0;
+            svg {
+              fill: $white;
+            }
+          }
+
+          span:last-child {
+            line-height: 0;
+            svg {
+              width: 26px;
+            }
           }
         }
 
-        // Button Order
-        .btn-order {
-          color: $darkGray;
-          background-color: $lighterGray;
+        .btn-account {
+          color: $black;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
+          .5s ease-in-out,opacity .5s ease-in-out;
+
+          span:nth-child(1) {
+            line-height: 0;
+            margin-right: 10px;
+            svg {
+              width: 30px;
+              fill: $black;
+            }
+          }
+
+          span:last-child {
+            line-height: 0;
+            margin-left: 10px;
+            svg {
+              width: 26px;
+              fill: $black;
+            }
+          }
 
           &:hover {
-            color: $white;
             background-color: $black;
+
+            span {
+              color: $white;
+              svg {
+                fill: $white;
+              }
+            }
           }
         }
       }

@@ -30,11 +30,19 @@
           <a href="/" class="header__nav-hamburger" @click.prevent="toggleMenu">
               <span></span><span></span><span></span>
           </a>
-
+          <!-- :class='{ showLeft: isMainOpen}' -->
           <div class="main-content main-content--navigation" :class='{ showLeft: isMainOpen}'>
               <div class="content-btn">
-                  <a href="/pages/choose" class="btn-login">Order</a>
-                  <a href="/account/login" class="btn-order">My Account</a>
+                  <a href="/pages/choose" class="side-btn btn-header btn-login">
+                    <span>{% render 'shopping-cart' %}</span>
+                    <span>Order Now</span>
+                    <span>{% render 'fat-arrow-right'%}</span>
+                  </a>
+                  <a href="/account/login" class="side-btn btn-header btn-account">
+                    <span>{% render 'fat-account-icon' %}</span>
+                    <span>My Account</span>
+                    <span>{% render 'fat-arrow-right'%}</span>
+                 </a>
               </div>
               {% if section.settings.top %}
                 <div class="content-nav">

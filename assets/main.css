@@ -400,6 +400,20 @@ main {
   background: #5e5e5e;
 }
 
+.side-btn {
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  padding: 16px 0;
+  border: 2px solid #000;
+  border-radius: 60px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: 'mt-medium', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 @-webkit-keyframes fade-in {
   from {
     background-color: rgba(0, 0, 0, 0);
@@ -662,51 +676,87 @@ main {
 }
 
 .header .main-content--navigation .content-btn {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  margin-top: 45px;
   text-align: center;
-  padding: 50px 35px 26px 35px;
 }
 
-@media (max-width: 39.9375em) {
-  .header .main-content--navigation .content-btn {
-    padding: 35px 20px 20px 20px;
-  }
-}
-
-.header .main-content--navigation .content-btn > a {
-  display: block;
-  color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 2px;
-  font-size: 18px;
-  text-transform: uppercase;
-  padding: 16px 0;
-  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.header .main-content--navigation .content-btn > a:not(:last-child) {
-  margin-bottom: 5px;
+.header .main-content--navigation .content-btn .btn-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.125rem;
+  font-weight: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 260px;
 }
 
 .header .main-content--navigation .content-btn .btn-login {
-  background-color: #5e5e5e;
-}
-
-.header .main-content--navigation .content-btn .btn-login:hover {
   background-color: #000;
-}
-
-.header .main-content--navigation .content-btn .btn-order {
-  color: #5e5e5e;
-  background-color: #f7f7f7;
-}
-
-.header .main-content--navigation .content-btn .btn-order:hover {
   color: #ffffff;
+}
+
+.header .main-content--navigation .content-btn .btn-login span:nth-child(1) {
+  width: 26px;
+  line-height: 0;
+}
+
+.header .main-content--navigation .content-btn .btn-login span:nth-child(1) svg {
+  fill: #ffffff;
+}
+
+.header .main-content--navigation .content-btn .btn-login span:last-child {
+  line-height: 0;
+}
+
+.header .main-content--navigation .content-btn .btn-login span:last-child svg {
+  width: 26px;
+}
+
+.header .main-content--navigation .content-btn .btn-account {
+  color: #000;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+}
+
+.header .main-content--navigation .content-btn .btn-account span:nth-child(1) {
+  line-height: 0;
+  margin-right: 10px;
+}
+
+.header .main-content--navigation .content-btn .btn-account span:nth-child(1) svg {
+  width: 30px;
+  fill: #000;
+}
+
+.header .main-content--navigation .content-btn .btn-account span:last-child {
+  line-height: 0;
+  margin-left: 10px;
+}
+
+.header .main-content--navigation .content-btn .btn-account span:last-child svg {
+  width: 26px;
+  fill: #000;
+}
+
+.header .main-content--navigation .content-btn .btn-account:hover {
   background-color: #000;
+}
+
+.header .main-content--navigation .content-btn .btn-account:hover span {
+  color: #ffffff;
+}
+
+.header .main-content--navigation .content-btn .btn-account:hover span svg {
+  fill: #ffffff;
 }
 
 .header .main-content--navigation .content-nav {

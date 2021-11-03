@@ -331,6 +331,7 @@ main {
   }
 }
 
+// small buttons
 .small-btn {
   padding: 100px 0 0 0;
   text-align: center;
@@ -350,4 +351,21 @@ main {
           background: $darkGray;
       }
   }
+}
+
+// side buttons
+.side-btn {
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  padding: 16px 0;
+  border: 2px solid $black;
+  border-radius: 60px;
+  margin-bottom: 15px;
+
+  text-transform: uppercase;
+  font-family: 'mt-medium', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+
 }
