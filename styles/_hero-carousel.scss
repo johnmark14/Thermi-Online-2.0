@@ -8,11 +8,15 @@
     position: relative;
     height: 664px;
 
+    @include breakpoint-up(xlarge) {
+      height: 90vh;
+    }
+
     @include breakpoint-down(medium) {
-      height: 60vh;
+      height: 70vh;
     }
     @include breakpoint-down(small) {
-      height: 52vh;
+      height: 60vh;
     }
 
     .swiper {
