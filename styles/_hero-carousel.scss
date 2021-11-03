@@ -59,74 +59,95 @@
 
   &-actions {
     position: absolute;
-    bottom: -120px;
-    right: -10px;
+    bottom: 38px;
+    right: 90px;
     z-index: 99;
+    background: transparent;
 
     @include breakpoint-down(medium) {
-      bottom: -85px;
-      right: 2px;
+      right: 40px;
     }
+
     @include breakpoint-down(small) {
-      bottom: -70px;
-      right: 10px;
+      right: 74px;
+      bottom: 26px;
     }
 
-    .btn-oval {
-      box-sizing: border-box;
-      width: 250px;
-      height: 250px;
-      background-color: $darkGray;
-      border-radius: 50%;
-      color: #fff;
-      font-weight: 500;
-      line-height: 1.4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: toRem(26);
-      line-height: 1.4;
-      text-transform: uppercase;
-      flex-flow: row wrap;
-      box-align: center;
-      letter-spacing: 0.22em;
-      padding: 0 45px 0 69px;
-      transition: background-color 0.3s;
-
-      @include breakpoint-down(medium) {
-        width: 180px;
-        height: 180px;
-        font-size: 20px;
-        padding: 0 40px;
-      }
-      @include breakpoint-down(small) {
-        width: 140px;
-        height: 140px;
-        font-size: 1rem;
-        padding: 0 27px;
-      }
-
-      &:hover {
-        background-color: $darkGray1;
-      }
-
-      span {
+    .btn {
+      
+      &-oval {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-sizing: border-box;
+        width: 280px;
+        padding: 20px 15px;
+        background-color: rgba($color: #d6d6d6, $alpha: .5);
+        border-radius: 40px;
         color: #fff;
-        text-align: left;
-        &::after {
-          content: "";
-          background: url(https://cdn.shopify.com/s/files/1/0076/8747/1170/t/97/assets/ico-arrow-right@2x.png?v=2691161101697521585)
-            no-repeat 0 0;
-          background-size: 100% 100%;
-          width: 32px;
-          height: 12px;
-          display: inline-block;
+        letter-spacing: 1px;
+        font-family: 'mt-thin', sans-serif;
+        font-weight: bold;
+        font-size: toRem(24);
+        transition: background-color 0.3s;
 
-          @include breakpoint-down(medium) {
-            width: 28px;
+        @include breakpoint-down(small) {
+          width: 220px;
+          padding: 12px 16px;
+          font-size: toRem(18);
+        }
+
+        &:hover {
+          background-color: rgba($color: #5e5e5e, $alpha: .9);
+        }
+      }
+
+      &-icons {
+        display: flex;
+        span:nth-child(1) {
+          width: 28px;
+          line-height: 0;
+          margin-left: 20px;
+
+          @include breakpoint-down(small) {
+            width: 22px;
+          }
+  
+          svg {
+            fill: $yellowAccent;
+          }
+        }
+  
+        span:last-child {
+          width: 28px;
+          line-height: 0;
+          @include breakpoint-down(small) {
+            width: 22px;
+          }
+         svg {
+            fill: $yellowAccent;
           }
         }
       }
+      
+
+      // span {
+      //   color: #fff;
+      //   text-align: left;
+      //   &::after {
+      //     content: "";
+      //     background: url(https://cdn.shopify.com/s/files/1/0076/8747/1170/t/97/assets/ico-arrow-right@2x.png?v=2691161101697521585)
+      //       no-repeat 0 0;
+      //     background-size: 100% 100%;
+      //     width: 32px;
+      //     height: 12px;
+      //     display: inline-block;
+
+      //     @include breakpoint-down(medium) {
+      //       width: 28px;
+      //     }
+      //   }
+      // }
     }
   }
 }

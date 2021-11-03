@@ -51,13 +51,21 @@
         </div>
       </div>
       {% endif %}
-      <!-- <div class="intro-actions">
-                <a href="{{ section.settings.ctaUrl }}" class="btn-oval">
-                    <span>
-                        {{ section.settings.ctaText }}
-                    </span>
-                </a>
-            </div> -->
+      <div class="intro-actions">
+          <a href="{{ section.settings.ctaUrl }}" class="btn-oval">
+              <span>
+                  {{ section.settings.ctaText }}
+              </span>
+              <div class="btn-icons">
+                <span>
+                  {% render "shopping-cart" %}
+                </span>
+                <span>
+                  {% render 'chevron-thin-right' %}
+                </span>
+              </div>
+          </a>
+      </div>
     </div>
   </div>
 </section>
