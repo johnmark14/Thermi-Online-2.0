@@ -1156,13 +1156,13 @@ main {
 
 @media (min-width: 87.5em) {
   .intro-slider {
-    height: 80vh;
+    height: 70vh;
   }
 }
 
 @media (max-width: 63.9375em) {
   .intro-slider {
-    height: 70vh;
+    height: 65vh;
   }
 }
 

@@ -9,11 +9,11 @@
     height: 664px;
 
     @include breakpoint-up(xlarge) {
-      height: 80vh;
+      height: 70vh;
     }
 
     @include breakpoint-down(medium) {
-      height: 70vh;
+      height: 65vh;
     }
     @include breakpoint-down(small) {
       height: 60vh;
