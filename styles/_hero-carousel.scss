@@ -8,15 +8,11 @@
     position: relative;
     height: 664px;
 
-    @include breakpoint-up(xlarge) {
-      height: 75vh;
-    }
-
-    @include breakpoint-down(medium) {
-      height: 68vh;
+    @include breakpoint-down(large) {
+      height: 90vh;
     }
     @include breakpoint-down(small) {
-      height: 60vh;
+      height: 62vh;
     }
 
     .swiper {
@@ -63,7 +59,7 @@
 
   &-actions {
     position: absolute;
-    bottom: 38px;
+    bottom: 30px;
     right: 90px;
     z-index: 99;
     background: transparent;
@@ -85,7 +81,7 @@
         align-items: center;
         box-sizing: border-box;
         width: 280px;
-        padding: 20px 15px;
+        padding: 16px 15px;
         background-color: rgba($color: #d6d6d6, $alpha: .5);
         border-radius: 40px;
         color: #fff;

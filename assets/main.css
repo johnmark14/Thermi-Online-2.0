@@ -1154,21 +1154,15 @@ main {
   height: 664px;
 }
 
-@media (min-width: 87.5em) {
+@media (max-width: 87.4375em) {
   .intro-slider {
-    height: 75vh;
-  }
-}
-
-@media (max-width: 63.9375em) {
-  .intro-slider {
-    height: 68vh;
+    height: 90vh;
   }
 }
 
 @media (max-width: 39.9375em) {
   .intro-slider {
-    height: 60vh;
+    height: 62vh;
   }
 }
 
@@ -1220,7 +1214,7 @@ main {
 
 .intro-actions {
   position: absolute;
-  bottom: 38px;
+  bottom: 30px;
   right: 90px;
   z-index: 99;
   background: transparent;
@@ -1252,7 +1246,7 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 280px;
-  padding: 20px 15px;
+  padding: 16px 15px;
   background-color: rgba(214, 214, 214, 0.5);
   border-radius: 40px;
   color: #fff;
