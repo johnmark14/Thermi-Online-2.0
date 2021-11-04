@@ -6,7 +6,7 @@
         <div class="cart-info">
             <p>Recently Added Products</p>
         </div>
-        <div class="cart-items"  :class="{scrollY: isOverflowing}" ref="cartItems">
+        <div class="cart-items" :class="{scrollY: isOverflowing}" ref="cartItems">
             <div v-for="item in cart.items">
                 <div class="cart-item" v-if="item.product_type != 'hidden'">
                     <div class="cart-item--img">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart-footer ">
+        <div class="cart-footer">
             <div class="cart-desc">
                 <p v-if="getPersonalizeIfIncluded">${cart.items.length - 1} Product/s in Cart</p>
                 <p v-else>${cart.items.length} Product/s in Cart</p>

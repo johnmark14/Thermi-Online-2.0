@@ -1029,7 +1029,7 @@ main {
 }
 
 .header .main-content--cart .cart-wrapper .cart-items {
-  height: 70vh;
+  height: 60vh;
   padding-top: 20px;
   overflow: hidden;
 }
@@ -1226,7 +1226,7 @@ main {
 }
 
 .header .main-content--cart .cart-wrapper .cart-footer {
-  height: 25vh;
+  height: 30vh;
   justify-self: flex-end;
   padding-top: 20px;
 }
