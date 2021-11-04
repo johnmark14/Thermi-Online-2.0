@@ -838,7 +838,7 @@ main {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
-  padding: 20px 35px 0 35px;
+  padding: 20px 30px 0 30px;
 }
 
 .header .main-content--navigation .content-nav .nav-header {
