@@ -1,82 +1,26 @@
 .page{
-    &-back {
-        font-size: toRem(14);
-        display: none;
-    }
-
 	&-steps {
+        margin-top: 30px;
         display: flex;
-        flex-flow: row wrap;
-        padding: 0;
-        padding-top: 40px;
-        max-width: 900px;
-        margin: 0 auto;
-        list-style: none;
-        list-style-position: outside;
-        user-select: none;
-
+        justify-content: center;
         .step {
-            background-color: $notActive;
-            flex: 1;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 98px;
-            color: $textNotActive;
-            border-left: 2px solid $white;
-            position: relative;
-
-            &:not(:last-child)::before {
-                content: '';
-                border-top: 50px solid transparent;
-                border-bottom: 50px solid transparent;
-                border-left: 20px solid $white;
-                position: absolute;
-                left: 100%;
-                top: 0;
-                margin-left: 2px;
-                z-index: 1;
+            list-style: none;
+            &:not(:last-child) {
+                margin-right: 70px;
             }
-            &:not(:last-child)::after {
-                content: '';
-                border-top: 50px solid transparent;
-                border-bottom: 50px solid transparent;
-                border-left: 20px solid $notActive;
-                position: absolute;
-                left: 100%;
-                top: 0;
-                z-index: 2;
-            }
-
-            &.active {
-                color: $activeText;
-                background-color: $active;
-
-                &::after {
-                    border-left-color: $active;
-                }
-            }
-
             div {
-
-                h4 {
-                    font-size: toRem(20);
-                    font-weight: 400;
-                    letter-spacing: 1px;
-                }
-
-                span {
-                    display: inline-block;
-                    font-size: toRem(14);
-                    letter-spacing: 1px;
-                    font-weight: 300;
-                    padding-top: 5px;
-                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: $white;
+                width: 260px;
+                height: 100px;
+                border-radius: 20px;
+                box-shadow: -5px 7px 20px -3px rgba(94,94,94,0.75);
             }
+        }
 
-        } /* Step */
     }
 } /* .page */
 
