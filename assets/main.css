@@ -2765,7 +2765,7 @@ main {
   top: 20px;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 48.0625em) {
   .page-steps .step:not(:last-child) div::after {
     width: 22px;
     right: -35px;

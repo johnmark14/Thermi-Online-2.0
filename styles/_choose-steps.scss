@@ -75,7 +75,7 @@
                         right: -45px; 
                         top: 20px;
 
-                        @include breakpoint-down(medium) {
+                        @include breakpoint-down(small-mid) {
                             width: 22px;
                             right: -35px;
                         }
