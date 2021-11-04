@@ -30,7 +30,6 @@
           <a href="/" class="header__nav-hamburger" @click.prevent="toggleMenu">
               <span></span><span></span><span></span>
           </a>
-          <!-- :class='{ showLeft: isMainOpen}' -->
           <div class="main-content main-content--navigation" :class='{ showLeft: isMainOpen}'>
               <div class="content-btn">
                   <a href="/pages/choose" class="side-btn btn-header btn-login">
@@ -49,19 +48,28 @@
                     <!-- <h4 class="nav-header">{{ section.settings.top.title }}</h4> -->
                     <ul class="nav-links">
                         {% for link in section.settings.top.links %}
-                        <li><a href="{{ link.url }}" class="links" @click="removeMenu">-- {{ link.title }}</a></li>
+                            <li><a href="{{ link.url }}" class="links" @click="removeMenu">
+                                <span>{{ link.title }}</span>
+                                <span>{% render 'fat-arrow-right' %}</span>
+                            </a></li>
                         {% endfor %}
                     </ul>
                 </div>
               {% endif %}
+              <div class="content-btn">
+                <a href="/pages/contact-us" class="side-btn btn-header btn-contact-us">
+                    <span>{% render 'fat-mail-icon' %}</span>
+                    <span>Contact Us</span>
+                 </a>
+              </div>
               <div class="content-footer">
-                  {% if linklists.footer.links.size != 0 %}
+                  <!-- {% if linklists.footer.links.size != 0 %}
                     <ul class="footer-links">
                         {% for link in linklists.footer.links %}
                             <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                         {% endfor %}
                     </ul>
-                  {% endif %}
+                  {% endif %} -->
                   <div class="footer-brand">
                       {% if section.settings.logo %}
                          <a href="/" class="logo"><img src="{{ section.settings.logo | img_url: 'medium' }}" alt="logo" loading="lazy"></a>

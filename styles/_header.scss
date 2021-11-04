@@ -173,8 +173,8 @@
           color: $black;
           padding-top: 14px;
           padding-bottom: 14px;
-          transition: color .5s ease-in-out, background .5s ease-in-out,border-color 
-          .5s ease-in-out,opacity .5s ease-in-out;
+          transition: color .3s ease-in-out, background .3s ease-in-out,border-color 
+          .3s ease-in-out,opacity .3s ease-in-out;
 
           span:nth-child(1) {
             line-height: 0;
@@ -205,11 +205,34 @@
             }
           }
         }
+
+        .btn-contact-us {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-color: $lightGray;
+          background-color: $lightGray;
+          color: $white;
+          padding-top: 14px;
+          padding-bottom: 14px;
+
+          span {
+            line-height: 0;
+            svg {
+              fill: $white;
+              width: 32px;
+            }
+
+            &:last-child {
+              margin-left: 10px;
+            }
+          }
+        }
       }
 
       .content-nav {
         flex-grow: 3;
-        padding: 20px 35px 100px 35px;
+        padding: 20px 35px 0 35px;
 
         .nav-header {
           font-size: toRem(26);
@@ -227,32 +250,66 @@
         }
 
         .nav-links {
-          li {
-            padding-left: 10px;
-
-            &:not(:last-child) {
-              margin-bottom: 22px;
-            }
-            a {
+          .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0 16px 0;
+            border-bottom: 1px solid $lightGray;
+            color: $lightGray;
+            transition: color .3s ease-in-out, background .3s ease-in-out,border-color 
+          .3s ease-in-out,opacity .3s ease-in-out, border-color .3s ease-in-out;
+            
+            span {
+              line-height: 0;
+              font-size: toRem(18);
+              font-weight: bold;
+              letter-spacing: 1px;
               color: inherit;
-              font-size: toRem(19);
-              font-weight: 600;
-              letter-spacing: 2px;
-              transition: color 0.3s;
+              text-transform: capitalize;
 
-              &:hover {
-                color: $darkGray;
-                text-decoration: underline;
+              &:last-child {
+                svg {
+                  width: 26px;
+                  fill: $black;
+                }
               }
+            }
 
-              @include breakpoint-down(small) {
-                font-size: toRem(16);
-              }
+            &:hover {
+              color: $black;
+              border-color: $black;
             }
           }
+
+          
+        //   li {
+        //     padding-left: 10px;
+
+        //     &:not(:last-child) {
+        //       margin-bottom: 22px;
+        //     }
+        //     a {
+        //       color: inherit;
+        //       font-size: toRem(19);
+        //       font-weight: 600;
+        //       letter-spacing: 2px;
+        //       transition: color 0.3s;
+
+        //       &:hover {
+        //         color: $darkGray;
+        //         text-decoration: underline;
+        //       }
+
+        //       @include breakpoint-down(small) {
+        //         font-size: toRem(16);
+        //       }
+        //     }
+        //   }
         }
       }
       .content-footer {
+        margin-top: 100px;
         flex-grow: 1;
         padding: 26px 35px;
         background-color: $lightGray1;
@@ -278,7 +335,7 @@
         }
 
         .footer-brand {
-          padding-top: 80px;
+          padding-top: 20px;
           text-align: center;
           a > img {
             width: toRem(116);
