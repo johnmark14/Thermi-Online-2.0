@@ -75,13 +75,21 @@
                             <span class="info">Shipping costs will be displayed in the next step</span>
                         </div>
                     </div>
-                    <div class="cart-btns mobile">
+                    <!-- <div class="cart-btns mobile">
                         <button class="checkout" @click.prevent="checkOut">Check Out</button>
                         <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
-                    </div>
+                    </div> -->
                     <div class="cart-btns wide">
-                        <button class="continue" @click.prevent="openCollect">Continue Shopping</button>
-                        <button class="checkout" @click.prevent="checkOut">Check Out</button>
+                       <div class="btns-container">
+                            <a href="/pages/choose" class="side-btn btn-header btn-cart">
+                                <span>Continue Shopping</span>
+                                <span>{% render 'fat-arrow-right' %}</span>
+                            </a>
+                            <a href="#" class="side-btn btn-header btn-cart" @click.prevent="checkOut">
+                                <span>Checkout</span>
+                                <span>{% render 'fat-arrow-right' %}</span>
+                            </a>
+                       </div>
                     </div>
                 </form>
             </template>

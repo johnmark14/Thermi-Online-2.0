@@ -407,7 +407,7 @@ main {
   padding: 12px 0;
   border: 2px solid #000;
   border-radius: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-family: 'mt-medium', sans-serif;
   font-weight: bold;
@@ -4188,61 +4188,106 @@ main {
 }
 
 .section-cart .cart-btns {
-  margin-top: 80px;
-  text-align: center;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.section-cart .cart-btns button {
-  height: 60px;
-  width: 240px;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-}
-
-.section-cart .cart-btns button.continue {
-  border: 1px solid #757171;
-  color: #757171;
-  margin-right: 25px;
-}
-
-.section-cart .cart-btns button.checkout {
-  background-color: #757171;
-  color: #ffffff;
-}
-
-.section-cart .cart-btns button:hover {
-  color: #ffffff;
-  background-color: #000;
+.section-cart .cart-btns .btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width: 39.9375em) {
-  .section-cart .cart-btns button {
-    display: block;
-    width: 100%;
-  }
-  .section-cart .cart-btns button.continue {
-    margin: 0 auto;
-  }
-  .section-cart .cart-btns button.checkout {
-    margin: 0 auto;
-  }
-  .section-cart .cart-btns button:not(:last-child) {
-    margin-bottom: 10px;
+  .section-cart .cart-btns .btns-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-@media (min-width: 40em) {
-  .section-cart .cart-btns.mobile {
-    display: none;
-  }
+.section-cart .cart-btns .btns-container .btn-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.875rem;
+  padding-right: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-color: #5e5e5e;
+  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 @media (max-width: 39.9375em) {
-  .section-cart .cart-btns.wide {
-    display: none;
+  .section-cart .cart-btns .btns-container .btn-cart {
+    width: 280px;
+    margin-bottom: 15px;
   }
+}
+
+.section-cart .cart-btns .btns-container .btn-cart:not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-cart .cart-btns .btns-container .btn-cart:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+.section-cart .cart-btns .btns-container .btn-cart:hover {
+  background-color: #5e5e5e;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart:hover span {
+  color: #ffffff;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart:hover span svg {
+  fill: #ffffff;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart span {
+  line-height: 0;
+  color: #5e5e5e;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart span:nth-child(1) {
+  padding-left: 20px;
+  margin: auto;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart span svg {
+  width: 26px;
+  fill: #5e5e5e;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart:last-child {
+  background-color: #5e5e5e;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart:last-child span {
+  color: #ffffff;
+}
+
+.section-cart .cart-btns .btns-container .btn-cart:last-child span svg {
+  fill: #ffffff;
 }
 
 .section-cart .cart-empty {
