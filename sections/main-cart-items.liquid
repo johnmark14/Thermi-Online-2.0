@@ -36,21 +36,23 @@
                                         <span v-if="item.properties.personalization">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>
                                         <span v-else>${money(totalPrice(item.price, 0, item.quantity))}</span>
                                     </td>
-                                    <td data-th-title="Quantity:" class="td-quantity mobile">
+                                    <!-- <td data-th-title="Quantity:" class="td-quantity mobile">
                                         <div class="items">
                                             <span>${item.quantity}</span>
                                         </div>
-                                    </td>
+                                    </td> -->
                                     <td class="td-quantity">
-                                        <div class="body">
-                                            <div class="qb add">
-                                                <a href="/" @click.prevent="cartDateObject.addQuantity(item, $event)">+</a>
-                                            </div>
-                                            <div class="qb items wide">
-                                                <span>${item.quantity}</span>
-                                            </div>
-                                            <div class="qb minus">
-                                                <a href="/" @click.prevent="cartDateObject.removeQuantity(item, $event)">-</a>
+                                        <div class="item-quantity">
+                                            <div class="item-actions">
+                                                <div class="qt add">
+                                                    <a href="/" @click.prevent="cartDataObject.addQuantity(item, $event)">+</a>
+                                                </div>
+                                                <div class="qt items wide">
+                                                    <span>${item.quantity}</span>
+                                                </div>
+                                                <div class="qt minus">
+                                                    <a href="/" @click.prevent="cartDataObject.removeQuantity(item, $event)">-</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
@@ -126,7 +128,7 @@ const MainCart = {
         cart() {
             return this.cartData.state.cartState[0];
         },
-        cartDateObject() {
+        cartDataObject() {
             return this.cartData;
         },
         getPersonalizationPrice() {

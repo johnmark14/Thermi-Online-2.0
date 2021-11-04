@@ -147,6 +147,7 @@
           padding-left: 20px;
           padding-right: 20px;
           width: 260px;
+          box-sizing: border-box;
           
           @include breakpoint-down(small) {
             padding-left: 28px;
@@ -195,8 +196,6 @@
 
         .btn-account {
           color: $black;
-          padding-top: 14px;
-          padding-bottom: 14px;
           transition: color .3s ease-in-out, background .3s ease-in-out,border-color 
           .3s ease-in-out,opacity .3s ease-in-out;
 
@@ -204,7 +203,7 @@
             line-height: 0;
             margin-right: 10px;
             svg {
-              width: 30px;
+              width: 26px;
               fill: $black;
             }
           }
@@ -256,15 +255,11 @@
           border-color: $lightGray;
           background-color: $lightGray;
           color: $white;
-          padding-top: 14px;
-          padding-bottom: 14px;
-
-          
           span {
             line-height: 0;
             svg {
               fill: $white;
-              width: 32px;
+              width: 26px;
             }
             
             &:last-child {
@@ -514,14 +509,27 @@
               }
 
               .item-quantity {
-                padding-top: 15px;
-                display: flex;
+                margin-top: 15px;
+                background-color: $darkGray1;
+                border: 1px solid $darkGray1;
+                color: $white;
+                display: inline-block;
+                border-radius: 5px;
+                
+                .item-actions {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
 
                 .qt {
-                  border: 1px solid $lightGray1;
                   text-align: center;
-                  padding: 2px;
+                  padding: 5px 8px;
                   font-weight: 700;
+
+                  a {
+                    color: $white;
+                  }
                 }
 
                 .add {
@@ -539,9 +547,12 @@
 
                 .items {
                   font-weight: 400;
-                  margin-right: 8px;
-                  margin-left: 8px;
                   border: none;
+                  background-color: $white;
+                  color: $darkGray;
+                  span {
+                    padding: 0 10px;
+                  }
                 }
 
                 .minus {
@@ -599,30 +610,57 @@
           .cart-desc {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 20px;
 
             p:last-child {
               padding-right: 15px;
             }
           }
-
-          .cart-btn {
-            text-align: center;
-            padding-top: 40px;
-            padding-bottom: 25px;
-            a {
-              display: block;
-              padding: 18px 0;
-              background-color: $darkGray1;
-              color: $white;
-              text-transform: uppercase;
-              font-weight: 400;
-              letter-spacing: 1px;
+          .content-btn {
+            .btn-cart {
+              display: flex;
+              align-items: center;
+              box-sizing: border-box;
+              font-size: toRem(14);
+              padding-right: 15px;
+              justify-content: space-between;
               transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
-                border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+              border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
               &:hover {
-                color: $white;
                 background-color: $black;
+                span {
+                  color: $white;
+                  svg {
+                    fill: $white;
+                  }
+                }
+
+              }
+
+              span {
+                line-height: 0;
+                color: $darkerGray;
+                &:nth-child(1) {
+                  padding-left: 20px;
+                  margin: auto;
+                }
+                svg {
+                  width: 26px;
+                  fill: $darkerGray;
+                }
+              }
+
+              &:last-child {
+                background-color: $darkerGray;
+
+                span {
+                  color: $white;
+
+                  svg {
+                    fill: $white;
+                  }
+                }
               }
             }
           }
