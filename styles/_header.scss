@@ -147,7 +147,14 @@
           padding-left: 20px;
           padding-right: 20px;
           width: 260px;
+          
+          @include breakpoint-down(small) {
+            padding-left: 28px;
+            padding-right: 28px;
+            font-size: toRem(14);
+          }
         }
+
 
         .btn-login {
           background-color: $black;
@@ -165,6 +172,23 @@
             line-height: 0;
             svg {
               width: 26px;
+            }
+          }
+
+          @include breakpoint-down(small) {
+            span:nth-child(1) {
+              width: 22px;
+              line-height: 0;
+              svg {
+                fill: $white;
+              }
+            }
+  
+            span:last-child {
+              line-height: 0;
+              svg {
+                width: 22px;
+              }
             }
           }
         }
@@ -193,6 +217,25 @@
               fill: $black;
             }
           }
+          
+          @include breakpoint-down(small) {
+            span:nth-child(1) {
+              svg {
+                width: 26px;
+                fill: $black;
+              }
+            }
+  
+            span:last-child {
+              line-height: 0;
+              margin-left: 10px;
+              svg {
+                width: 22px;
+                fill: $black;
+              }
+            }
+
+          }
 
           &:hover {
             background-color: $black;
@@ -216,15 +259,21 @@
           padding-top: 14px;
           padding-bottom: 14px;
 
+          
           span {
             line-height: 0;
             svg {
               fill: $white;
               width: 32px;
             }
-
+            
             &:last-child {
               margin-left: 10px;
+            }
+            @include breakpoint-down(small) {
+              svg{
+                width: 28px;
+              }
             }
           }
         }
@@ -274,8 +323,16 @@
                   fill: $black;
                 }
               }
+              @include breakpoint-down(small) {
+                font-size: toRem(16);
+                &:last-child {
+                  svg {
+                    width: 22px;
+                    fill: $black;
+                  }
+                }
+              }
             }
-
             &:hover {
               color: $black;
               border-color: $black;

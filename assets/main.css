@@ -697,6 +697,14 @@ main {
   width: 260px;
 }
 
+@media (max-width: 39.9375em) {
+  .header .main-content--navigation .content-btn .btn-header {
+    padding-left: 28px;
+    padding-right: 28px;
+    font-size: 0.875rem;
+  }
+}
+
 .header .main-content--navigation .content-btn .btn-login {
   background-color: #000;
   color: #ffffff;
@@ -717,6 +725,22 @@ main {
 
 .header .main-content--navigation .content-btn .btn-login span:last-child svg {
   width: 26px;
+}
+
+@media (max-width: 39.9375em) {
+  .header .main-content--navigation .content-btn .btn-login span:nth-child(1) {
+    width: 22px;
+    line-height: 0;
+  }
+  .header .main-content--navigation .content-btn .btn-login span:nth-child(1) svg {
+    fill: #ffffff;
+  }
+  .header .main-content--navigation .content-btn .btn-login span:last-child {
+    line-height: 0;
+  }
+  .header .main-content--navigation .content-btn .btn-login span:last-child svg {
+    width: 22px;
+  }
 }
 
 .header .main-content--navigation .content-btn .btn-account {
@@ -745,6 +769,21 @@ main {
 .header .main-content--navigation .content-btn .btn-account span:last-child svg {
   width: 26px;
   fill: #000;
+}
+
+@media (max-width: 39.9375em) {
+  .header .main-content--navigation .content-btn .btn-account span:nth-child(1) svg {
+    width: 26px;
+    fill: #000;
+  }
+  .header .main-content--navigation .content-btn .btn-account span:last-child {
+    line-height: 0;
+    margin-left: 10px;
+  }
+  .header .main-content--navigation .content-btn .btn-account span:last-child svg {
+    width: 22px;
+    fill: #000;
+  }
 }
 
 .header .main-content--navigation .content-btn .btn-account:hover {
@@ -787,6 +826,12 @@ main {
 
 .header .main-content--navigation .content-btn .btn-contact-us span:last-child {
   margin-left: 10px;
+}
+
+@media (max-width: 39.9375em) {
+  .header .main-content--navigation .content-btn .btn-contact-us span svg {
+    width: 28px;
+  }
 }
 
 .header .main-content--navigation .content-nav {
@@ -842,6 +887,16 @@ main {
 .header .main-content--navigation .content-nav .nav-links .links span:last-child svg {
   width: 26px;
   fill: #000;
+}
+
+@media (max-width: 39.9375em) {
+  .header .main-content--navigation .content-nav .nav-links .links span {
+    font-size: 1rem;
+  }
+  .header .main-content--navigation .content-nav .nav-links .links span:last-child svg {
+    width: 22px;
+    fill: #000;
+  }
 }
 
 .header .main-content--navigation .content-nav .nav-links .links:hover {
