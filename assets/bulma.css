@@ -285,9 +285,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: inherit;
-}
+} */
 
 img,
 video {
@@ -299,52 +299,6 @@ iframe {
   border: 0;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
-td:not([align]),
-th:not([align]) {
-  text-align: inherit;
-}
-
-html {
-  background-color: white;
-  font-size: 16px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  min-width: 300px;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-          text-size-adjust: 100%;
-}
-
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-section {
-  display: block;
-}
-
-body,
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
 code,
 pre {
   -moz-osx-font-smoothing: auto;
@@ -352,25 +306,13 @@ pre {
   font-family: monospace;
 }
 
-body {
-  color: #4a4a4a;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
 a {
-  color: #485fc7;
   cursor: pointer;
   text-decoration: none;
 }
 
 a strong {
   color: currentColor;
-}
-
-a:hover {
-  color: #363636;
 }
 
 code {
@@ -394,28 +336,6 @@ img {
   max-width: 100%;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  vertical-align: baseline;
-}
-
-small {
-  font-size: 0.875em;
-}
-
-span {
-  font-style: inherit;
-  font-weight: inherit;
-}
-
-strong {
-  color: #363636;
-  font-weight: 700;
-}
-
-fieldset {
-  border: none;
-}
 
 pre {
   -webkit-overflow-scrolling: touch;
@@ -435,10 +355,10 @@ pre code {
   padding: 0;
 }
 
-table td,
+/* table td,
 table th {
   vertical-align: top;
-}
+} */
 
 table td:not([align]),
 table th:not([align]) {
@@ -2327,7 +2247,7 @@ div.icon-text {
   width: 128px;
 }
 
-.notification {
+/* .notification {
   background-color: whitesmoke;
   border-radius: 4px;
   position: relative;
@@ -2442,7 +2362,7 @@ div.icon-text {
 .notification.is-danger.is-light {
   background-color: #feecf0;
   color: #cc0f35;
-}
+} */
 
 .progress {
   -moz-appearance: none;
