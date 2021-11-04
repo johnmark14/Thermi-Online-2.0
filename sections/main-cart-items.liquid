@@ -96,7 +96,12 @@
             <template v-else>
                 <div class="cart-empty">
                     <p>Your Shopping Cart is Empty!</p>
-                    <a href="/pages/choose"><span>Continue Shopping</span></a>
+                    <div class="content-btn">
+                        <a href="/pages/choose" class="side-btn btn-header btn-cart">
+                            <span>Continue Shopping</span>
+                            <span>{% render 'fat-arrow-right' %}</span>
+                        </a>
+                    </div>
                 </div>
             </template>
         </div>

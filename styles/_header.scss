@@ -581,23 +581,53 @@
             text-transform: uppercase;
           }
 
-          a {
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: toRem(12);
-            padding: 15px 0;
+          .content-btn {
             margin-top: 20px;
-            background-color: $darkGray1;
-            color: $white;
-            width: 200px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+            .btn-cart {
+              display: flex;
+              align-items: center;
+              box-sizing: border-box;
+              font-size: toRem(14);
+              padding-right: 15px;
+              justify-content: space-between;
+              transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
               border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
-            &:hover {
-              color: $white;
-              background-color: $black;
+              &:hover {
+                background-color: $black;
+                span {
+                  color: $white;
+                  svg {
+                    fill: $white;
+                  }
+                }
+
+              }
+
+              span {
+                line-height: 0;
+                color: $darkerGray;
+                &:nth-child(1) {
+                  padding-left: 20px;
+                  margin: auto;
+                }
+                svg {
+                  width: 26px;
+                  fill: $darkerGray;
+                }
+              }
+
+              &:last-child {
+                background-color: $darkerGray;
+
+                span {
+                  color: $white;
+
+                  svg {
+                    fill: $white;
+                  }
+                }
+              }
             }
           }
         }

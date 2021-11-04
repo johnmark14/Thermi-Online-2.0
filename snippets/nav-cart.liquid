@@ -54,7 +54,12 @@
     <template v-else>
         <div class="cart-empty">
             <p>Your shopping cart is empty!</p>
-            <a href="/pages/choose">Continue Shopping</a>
+            <div class="content-btn">
+                <a href="/pages/choose" class="side-btn btn-header btn-cart">
+                    <span>Continue Shopping</span>
+                    <span>{% render 'fat-arrow-right' %}</span>
+                </a>
+            </div>
         </div>
     </template>
 </div>

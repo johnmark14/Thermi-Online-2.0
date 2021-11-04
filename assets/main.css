@@ -1164,24 +1164,65 @@ main {
   text-transform: uppercase;
 }
 
-.header .main-content--cart .cart-wrapper .cart-empty a {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  padding: 15px 0;
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn {
   margin-top: 20px;
-  background-color: #757171;
-  color: #ffffff;
-  width: 200px;
-  font-weight: 400;
-  letter-spacing: 1px;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.875rem;
+  padding-right: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
   transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.header .main-content--cart .cart-wrapper .cart-empty a:hover {
-  color: #ffffff;
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart:hover {
   background-color: #000;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart:hover span {
+  color: #ffffff;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart:hover span svg {
+  fill: #ffffff;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart span {
+  line-height: 0;
+  color: #303030;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart span:nth-child(1) {
+  padding-left: 20px;
+  margin: auto;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart span svg {
+  width: 26px;
+  fill: #303030;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart:last-child {
+  background-color: #303030;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart:last-child span {
+  color: #ffffff;
+}
+
+.header .main-content--cart .cart-wrapper .cart-empty .content-btn .btn-cart:last-child span svg {
+  fill: #ffffff;
 }
 
 .header .main-content--cart .cart-wrapper .cart-footer {
@@ -4317,27 +4358,65 @@ main {
   }
 }
 
-.section-cart .cart-empty a {
-  font-size: 0.75rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-top: 40px;
-  display: inline-block;
-  text-transform: uppercase;
-  padding: 15px 0;
-  width: 220px;
-  background-color: #757171;
-  color: #ffffff;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
-  transition: color .5s ease-in-out, background .5s ease-in-out,border-color  .5s ease-in-out,opacity .5s ease-in-out;
+.section-cart .cart-empty .content-btn {
+  margin-top: 20px;
 }
 
-.section-cart .cart-empty a:hover {
-  color: #ffffff;
+.section-cart .cart-empty .content-btn .btn-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.875rem;
+  padding-right: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart:hover {
   background-color: #000;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart:hover span {
+  color: #ffffff;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart:hover span svg {
+  fill: #ffffff;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart span {
+  line-height: 0;
+  color: #303030;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart span:nth-child(1) {
+  padding-left: 20px;
+  margin: auto;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart span svg {
+  width: 26px;
+  fill: #303030;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart:last-child {
+  background-color: #303030;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart:last-child span {
+  color: #ffffff;
+}
+
+.section-cart .cart-empty .content-btn .btn-cart:last-child span svg {
+  fill: #ffffff;
 }
 
 .section-cart .tb-body {
