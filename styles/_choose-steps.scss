@@ -1,14 +1,22 @@
-.page{
+.page {
+    &-back {
+        font-size: toRem(14);
+        display: none;
+    }
 	&-steps {
+        margin: auto;
         margin-top: 30px;
+        max-width: 1035px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+
+        @include breakpoint-down(small-mid) {
+            justify-content: space-between;
+        }
         .step {
             list-style: none;
-            &:not(:last-child) {
-                margin-right: 70px;
-            }
             div {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -18,10 +26,65 @@
                 height: 100px;
                 border-radius: 20px;
                 box-shadow: -5px 7px 20px -3px rgba(94,94,94,0.75);
+
+                h4 {
+                    font-family: 'mt-medium', sans-serif;
+                    font-size: toRem(20);
+                    color: $darkGray1;
+                }
+                span {
+                    font-family: 'mt-thin', sans-serif;
+                    font-weight: bold;
+                    padding-top: 2px;
+                }
+
+                @include breakpoint-down(medium) {
+                    width: 200px;
+                    height: 90px;
+
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                
+            }
+
+            &.active {
+                div {
+                    background-color: $lightGray;
+                    h4, span {
+                        color: $white;
+                    }
+                }
             }
         }
+        .step {
+            &:not(:last-child) {
+                div {
+                    &::after {
+                        content: "";
+                        background: url(https://cdn.shopify.com/s/files/1/0598/6159/8417/files/arrow_version_2.svg?v=1635836568) no-repeat 0 0;
+                        background-size: 100% 100%;
+                        width: 24px;
+                        height: 60px;
+                        position: absolute;
+                        right: -45px; 
+                        top: 20px;
 
+                        @include breakpoint-down(medium) {
+                            width: 22px;
+                            right: -35px;
+                        }
+                    }
+                }
+            }
+        }
     }
+
 } /* .page */
 
 // Hide this on Mobile
