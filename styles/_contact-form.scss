@@ -15,7 +15,7 @@
                         flex-direction: column;
 
                         &.mobile {
-                            @include breakpoint-up(medium) {
+                            @include breakpoint-up(large) {
                                 display: none;
                             }
                         }

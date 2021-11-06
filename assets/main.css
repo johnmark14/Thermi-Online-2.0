@@ -2508,7 +2508,7 @@ main {
           flex-direction: column;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .section-contactus .contactus-form-shell form .columns .column .form.mobile {
     display: none;
   }
