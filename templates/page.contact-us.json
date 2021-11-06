@@ -58,7 +58,7 @@
       "type": "contact_form",
       "settings": {
         "sectionPadding": false,
-        "sectionHeading": "Contact Us",
+        "sectionHeading": "Send us a message",
         "sectionColor": "#f7f7f7"
       }
     }
