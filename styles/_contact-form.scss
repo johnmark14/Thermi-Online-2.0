@@ -44,6 +44,10 @@
                             font-size: toRem(16);
                             outline: none;
                             border: 2px solid $lightGray1;
+
+                            &::placeholder {
+                                color: $lightGray1;
+                            }
                         }
                     }
 

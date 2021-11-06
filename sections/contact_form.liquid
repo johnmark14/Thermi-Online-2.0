@@ -17,23 +17,23 @@
                         </div>
                         <div class="form form-name">
                             <label for="form-name" class="required">Name</label>
-                            <input v-model="formName" id="form-name" type="text" name="contact_name"/>
+                            <input v-model="formName" id="form-name" type="text" name="contact_name" placeholder="Name"/>
                         </div>
                         <div class="form form-email mobile">
                             <label for="form-email" class="required">E-mail</label>
-                            <input v-model="formEmail" id="form-email" type="email" name="contact_email">
+                            <input v-model="formEmail" id="form-email" type="email" name="contact_email" placeholder="E-mail">
                         </div>
                         <div class="form form-tel mobile">
                             <label for="form-tel">Telephone <span>(Optional)</span></label>
-                            <input id="form-tel" type="tel" name="contact_tel">
+                            <input id="form-tel" type="tel" name="contact_tel" placeholder="(XXX) XXX-XXX">
                         </div>
                         <div class="form form-subject">
                             <label for="form-subject" class="required">Form Subject</label>
-                            <input v-model="formSubject" id="form-subject" type="text" name="contact_subject"/>
+                            <input v-model="formSubject" id="form-subject" type="text" name="contact_subject" placeholder="Message Subject"/>
                         </div>
                         <div class="form form-message">
                             <label for="form-message" class="required">Message</label>
-                            <textarea v-model="formMessage" id="form-message" name="contact_body" rows="4" cols="50"></textarea>
+                            <textarea v-model="formMessage" id="form-message" name="contact_body" rows="4" cols="50" placeholder="Enter your Message Here..."></textarea>
                         </div>
                         <div class="submit">
                             <a class="side-btn btn-submit" href="/" @click.prevent="sendEmail">
@@ -45,11 +45,11 @@
                     <div class="column wide">
                         <div class="form form-email">
                             <label for="form-email" class="required">E-mail</label>
-                            <input v-model="formEmail" id="form-email" type="email" name="contact_email">
+                            <input v-model="formEmail" id="form-email" type="email" name="contact_email" placeholder="E-mail">
                         </div>
                         <div class="form form-tel">
                             <label for="form-tel">Telephone <span>(Optional)</span></label>
-                            <input id="form-tel" type="tel" name="contact_tel">
+                            <input id="form-tel" type="tel" name="contact_tel" placeholder="(XXX) XXX-XXX">
                         </div>
                     </div>
                 </div>

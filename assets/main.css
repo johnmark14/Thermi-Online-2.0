@@ -2539,6 +2539,22 @@ main {
   border: 2px solid #d6d6d6;
 }
 
+.section-contactus .contactus-form-shell form .columns .column .form input::-webkit-input-placeholder, .section-contactus .contactus-form-shell form .columns .column .form textarea::-webkit-input-placeholder {
+  color: #d6d6d6;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form input:-ms-input-placeholder, .section-contactus .contactus-form-shell form .columns .column .form textarea:-ms-input-placeholder {
+  color: #d6d6d6;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form input::-ms-input-placeholder, .section-contactus .contactus-form-shell form .columns .column .form textarea::-ms-input-placeholder {
+  color: #d6d6d6;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form input::placeholder, .section-contactus .contactus-form-shell form .columns .column .form textarea::placeholder {
+  color: #d6d6d6;
+}
+
 .section-contactus .contactus-form-shell form .columns .column .submit {
   margin-top: 15px;
 }
