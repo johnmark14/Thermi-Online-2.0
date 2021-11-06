@@ -3248,6 +3248,25 @@ main {
   }
 }
 
+.section-contactus .contactus-shell .contactus-body .contact-info {
+  margin-bottom: 26px;
+}
+
+.section-contactus .contactus-shell .contactus-body .contact-info h6 {
+  font-size: 1.75rem;
+  font-family: 'mt-medium', sans-serif;
+  color: #757171;
+  margin-bottom: 10px;
+}
+
+.section-contactus .contactus-shell .contactus-body .contact-info p {
+  margin-bottom: 5px;
+}
+
+.section-contactus .contactus-shell .contactus-body .contact-info p a {
+  text-decoration: underline;
+}
+
 .section-product .product-back {
   font-weight: 500;
 }
