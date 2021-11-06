@@ -3093,6 +3093,161 @@ main {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .section-faq .faq-col-left {
+    display: none;
+  }
+}
+
+.section-faq .faq-nav-items:not(:nth-child(1)) {
+  margin-top: 30px;
+}
+
+.section-faq .faq-nav-items .item li {
+  border-bottom: 1px solid #989898;
+  font-family: 'mt-thin', sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.section-faq .faq-nav-items .item li:nth-child(1) {
+  font-family: 'mt-regular', sans-serif;
+  font-size: 1rem;
+  padding-bottom: 8px;
+}
+
+.section-faq .faq-nav-items .item li:not(:first-child) {
+  padding: 8px 0;
+}
+
+.section-faq .faq-message {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-faq .faq-message {
+    font-size: 1rem;
+  }
+}
+
+.section-faq .faq-accord:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.section-faq .faq-accord-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-faq .accord-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.section-faq .accord-wrapper input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.section-faq .accord-wrapper input:checked + label span svg {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.section-faq .accord-wrapper input:checked ~ .accord-body {
+  max-height: 1500vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-faq .accord-wrapper input:checked ~ .accord-body {
+    padding-top: 5px;
+  }
+}
+
+.section-faq .accord-wrapper label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #f7f7f7;
+  padding: 0 10px;
+  height: 38px;
+}
+
+@media (max-width: 39.9375em) {
+  .section-faq .accord-wrapper label {
+    padding: 5px 10px;
+  }
+}
+
+.section-faq .accord-wrapper label p {
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 39.9375em) {
+  .section-faq .accord-wrapper label p {
+    font-size: 1rem;
+  }
+}
+
+.section-faq .accord-wrapper label span {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.section-faq .accord-wrapper label span svg {
+  width: 34px;
+  fill: #989898;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+@media (max-width: 39.9375em) {
+  .section-faq .accord-wrapper label span {
+    padding-left: 5px;
+  }
+  .section-faq .accord-wrapper label span svg {
+    width: 32px;
+  }
+}
+
+.section-faq .accord-body {
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.section-faq .accord-body p {
+  font-size: 0.875rem;
+  font-family: 'mt-thin', sans-serif;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+@media (max-width: 39.9375em) {
+  .section-faq .accord-body p {
+    font-size: 0.8125rem;
+  }
+  .section-faq .accord-body p:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
 .section-product .product-back {
   font-weight: 500;
 }

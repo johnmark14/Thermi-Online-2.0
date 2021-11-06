@@ -3,17 +3,153 @@
 <!-- Start Section Main for FAQ Page -->
 
 <!-- Rendered when users navigate to shop/products -->
-<section class="section-contactus section-padding">
-    <div class="contactus-shell shell">
-        <h2 class="contactis-title section-title">{{ page.title | escape }}</h2>
-
-        <div class="contactus-body" style="margin: 0 40px">
-            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat est explicabo qui harum eum quos nemo quidem labore vel, totam sequi nulla similique asperiores debitis natus facere deleniti distinctio velit!</span><span>Cumque suscipit voluptatibus non corrupti modi molestias rerum? Similique saepe minima tenetur officiis sit, commodi consectetur natus voluptatibus nam at architecto aut facere modi inventore, quod, nihil repellat! Vero, necessitatibus!</span></p>
-            <br/>
-            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat est explicabo qui harum eum quos nemo quidem labore vel, totam sequi nulla similique asperiores debitis natus facere deleniti distinctio velit!</span><span>Cumque suscipit voluptatibus non corrupti modi molestias rerum? Similique saepe minima tenetur officiis sit, commodi consectetur natus voluptatibus nam at architecto aut facere modi inventore, quod, nihil repellat! Vero, necessitatibus!</span></p>
-            <br/>
-            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat est explicabo qui harum eum quos nemo quidem labore vel, totam sequi nulla similique asperiores debitis natus facere deleniti distinctio velit!</span><span>Cumque suscipit voluptatibus non corrupti modi molestias rerum? Similique saepe minima tenetur officiis sit, commodi consectetur natus voluptatibus nam at architecto aut facere modi inventore, quod, nihil repellat! Vero, necessitatibus!</span></p>
-            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat est explicabo qui harum eum quos nemo quidem labore vel, totam sequi nulla similique asperiores debitis natus facere deleniti distinctio velit!</span><span>Cumque suscipit voluptatibus non corrupti modi molestias rerum? Similique saepe minima tenetur officiis sit, commodi consectetur natus voluptatibus nam at architecto aut facere modi inventore, quod, nihil repellat! Vero, necessitatibus!</span></p>
+<section class="section-faq section-padding">
+    <div class="faq-shell shell">
+        <h2 class="faq-title section-title">{{ page.title | escape }}</h2>
+        <div class="faq-body">
+            <div class="columns is-variable is-4 is-2-tablet">
+              <div class="column is-one-fifth faq-col-left">
+                <div class="faq-nav">
+                  <!-- List item 1 -->
+                  <div class="faq-nav-items">
+                    <ul class="item">
+                      <li>Drinkware</li>
+                      <li>Product Usage</li>
+                      <li>Product Care</li>
+                    </ul>
+                  </div>
+                  <!-- List item 2 -->
+                  <div class="faq-nav-items">
+                    <ul class="item">
+                      <li>Shipping</li>
+                      <li>When will my order ship?</li>
+                      <li>Shipping Options</li>
+                    </ul>
+                  </div>
+                  <!-- List item 3 -->
+                  <div class="faq-nav-items">
+                    <ul class="item">
+                      <li>Returns</li>
+                      <li>Customized Orders</li>
+                      <li>Non-Customized Orders</li>
+                    </ul>
+                  </div>
+                  <!-- List item 4 -->
+                  <div class="faq-nav-items">
+                    <ul class="item">
+                      <li>Warranty</li>
+                      <li>Warranty Info</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="faq-message">
+                  <p>{{ section.settings.pageMessage }}</p>
+                </div>
+                <!-- Accord 1 -->
+                <div class="faq-accord">
+                  <div class="faq-accord-heading">
+                    <span>Drinkware</span>
+                  </div>
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-drinkware-1" />
+                    <label for="accord-drinkware-1">
+                      <p>How is my Thermi drinkware meant to be used?</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem ipsa tenetur molestiae aliquam rem, 
+                        soluta at nemo itaque enim labore deserunt? Nihil minus ad error, libero rem voluptas.</p>
+                    </div>
+                  </div>
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-drinkware-2" />
+                    <label for="accord-drinkware-2">
+                      <p>How should I care for my Thermi?</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem ipsa tenetur molestiae aliquam rem, 
+                        soluta at nemo itaque enim labore deserunt? Nihil minus ad error, libero rem voluptas.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accord 2 -->
+                <div class="faq-accord">
+                  <div class="faq-accord-heading">
+                    <span>Shipping</span>
+                  </div>
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-shipping-1" />
+                    <label for="accord-shipping-1">
+                      <p>When will my order ship? How long to receive it?</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem ipsa tenetur molestiae aliquam rem, 
+                        soluta at nemo itaque enim labore deserunt? Nihil minus ad error, libero rem voluptas.</p>
+                    </div>
+                  </div>
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-shipping-2" />
+                    <label for="accord-shipping-2">
+                      <p>Which shipping carriers do you ship with?</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem ipsa tenetur molestiae aliquam rem, 
+                        soluta at nemo itaque enim labore deserunt? Nihil minus ad error, libero rem voluptas.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accord 3 -->
+                <div class="faq-accord">
+                  <div class="faq-accord-heading">
+                    <span>Returns</span>
+                  </div>
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-returns-1" />
+                    <label for="accord-returns-1">
+                      <p>Can I return a customized order?</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem ipsa tenetur molestiae aliquam rem, 
+                        soluta at nemo itaque enim labore deserunt? Nihil minus ad error, libero rem voluptas.</p>
+                    </div>
+                  </div>
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-returns-2" />
+                    <label for="accord-returns-2">
+                      <p>Can I return a non-customized order?</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem ipsa tenetur molestiae aliquam rem, 
+                        soluta at nemo itaque enim labore deserunt? Nihil minus ad error, libero rem voluptas.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Accord 4 -->
+                <div class="faq-accord">
+                  <div class="faq-accord-heading">
+                    <span>Warranty</span>
+                  </div>
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-warranty-1" />
+                    <label for="accord-warranty-1">
+                      <p>Does my Thermi product come with a warranty?</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti quidem ipsa tenetur molestiae aliquam rem, 
+                        soluta at nemo itaque enim labore deserunt? Nihil minus ad error, libero rem voluptas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
 </section>
@@ -28,8 +164,48 @@
   
   {% schema %}
   {
-    "name": "t:sections.main-page.name",
-    "tag": "section",
-    "class": "spaced-section"
+    "name": "Page FAQ",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "pageMessage",
+        "label": "Page Message",
+        "default": "Please checkout out some of the answer to our most commonly asked questions below. Can'f find the answer you are looking for? Please contact us and we will be glad to help!"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "accord-heading",
+        "name": "Accord heading",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "textHeading",
+            "label": "Text Heading"
+          }
+        ]
+      },
+      {
+        "type": "accord-item",
+        "name": "Accord item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "textHeadingItem",
+            "label": "Text Item"
+          },
+          {
+            "type": "text",
+            "id": "textLeftHeadingItem",
+            "label": "Text Left Item"
+          },
+          {
+            "type": "textarea",
+            "id": "textContent",
+            "label": "Text Content"
+          }
+        ]
+      }
+    ]
   }
   {% endschema %}

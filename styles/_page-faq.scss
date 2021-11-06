@@ -1,0 +1,144 @@
+.section-faq {
+    // Heading and Texts
+
+    
+    .faq {
+        &-col-left {
+            @include breakpoint-down(small) {
+                display: none;
+            }
+        }
+        &-nav {
+            &-items {
+                &:not(:nth-child(1)) {
+                    margin-top: 30px;
+                }
+                .item {
+                    li {
+                        border-bottom: 1px solid $lightGray;
+                        font-family: 'mt-thin', sans-serif;
+                        font-weight: bold;
+                        font-size: toRem(14);
+                        &:nth-child(1) {
+                            font-family: 'mt-regular', sans-serif;
+                            font-size: toRem(16);
+                            padding-bottom: 8px;
+                        }
+                        
+                        &:not(:first-child) {
+                            padding: 8px 0;
+                        }
+
+                    }
+                }
+            }
+        }
+        &-message {
+            margin-bottom: 20px;
+
+            @include breakpoint-down(small) {
+                font-size: toRem(16);
+            }
+        }
+
+        &-accord {
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &-heading {
+                font-size: toRem(16);
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    // Accordion
+    .accord {
+        &-wrapper {
+            position: relative;
+            margin-bottom: 10px;
+            
+            input {
+                position: absolute;
+                visibility: hidden;
+
+                &:checked + label {
+                    span svg {
+                        transform: rotate(-180deg);
+                    }
+                }
+                &:checked ~ .accord-body {
+                    max-height: 1500vh;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+
+                    @include breakpoint-down(small) {
+                        padding-top: 5px;
+                    }
+                }
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                user-select: none;
+                background-color: $lighterGray;
+                padding: 0 10px;
+                height: 38px;
+
+                @include breakpoint-down(small) {
+                    padding: 5px 10px;
+                }
+                p {
+                    font-size: toRem(15);
+
+                    @include breakpoint-down(small) {
+                        font-size: toRem(16);
+                    }
+                }
+
+                span {
+                    padding-left: 10px;
+                    padding-top: 5px;
+                    svg {
+                        width: 34px;
+                        fill: $lightGray;
+                        transition: all .35s;
+                    }
+
+                    @include breakpoint-down(small) {
+                        padding-left: 5px;
+
+                        svg {
+                            width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-body {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .35s;
+            p {
+                font-size: toRem(14);
+                font-family: 'mt-thin', sans-serif;
+                font-weight: bold;
+                line-height: 1.8;
+
+                @include breakpoint-down(small) {
+                    font-size: toRem(13);
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
