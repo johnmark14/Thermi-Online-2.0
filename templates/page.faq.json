@@ -2,7 +2,103 @@
   "sections": {
     "main": {
       "type": "page-template-faq",
+      "blocks": {
+        "6ccb31b3-0431-4142-95b8-91fe92d3e4a2": {
+          "type": "accord-heading",
+          "settings": {
+            "textHeading": "Drinkware"
+          }
+        },
+        "eb9c87d1-508a-4cc4-bf32-ea76a1b19de5": {
+          "type": "accord-item",
+          "settings": {
+            "textHeadingItem": "How is my Thermi drinkware meant to be used?",
+            "textLeftHeadingItem": "Product Usage",
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+          }
+        },
+        "4d2eaabf-f9c9-49ef-b824-ca2988b816ad": {
+          "type": "accord-item",
+          "settings": {
+            "textHeadingItem": "How should I care for my Thermi?",
+            "textLeftHeadingItem": "Product Care",
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+          }
+        },
+        "f66be599-1ad4-40a9-abec-9ff8d0751f85": {
+          "type": "accord-heading",
+          "settings": {
+            "textHeading": "Shipping"
+          }
+        },
+        "e264b860-cc5a-471f-b03a-41dea3770071": {
+          "type": "accord-item",
+          "settings": {
+            "textHeadingItem": "When will my order ship? How long to receive it?",
+            "textLeftHeadingItem": "When will my order ship?",
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+          }
+        },
+        "77854cb5-47fe-4df2-b52e-828cabb1709c": {
+          "type": "accord-item",
+          "settings": {
+            "textHeadingItem": "Which shipping carriers do you ship with?",
+            "textLeftHeadingItem": "Shipping Options",
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+          }
+        },
+        "4605b017-a149-4fe5-aa73-bc14809d708c": {
+          "type": "accord-heading",
+          "settings": {
+            "textHeading": "Returns"
+          }
+        },
+        "e96953c9-7d85-4d03-a08c-16edf8bee682": {
+          "type": "accord-item",
+          "settings": {
+            "textHeadingItem": "Can I return a custmized order?",
+            "textLeftHeadingItem": "Customized Orders",
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+          }
+        },
+        "7053b127-080b-4495-9a83-1ecbb3f82507": {
+          "type": "accord-item",
+          "settings": {
+            "textHeadingItem": "Can I return a non-customized order?",
+            "textLeftHeadingItem": "Non-Customized Orders",
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+          }
+        },
+        "b84b1256-dee3-4c17-ba6b-ca68733995ac": {
+          "type": "accord-heading",
+          "settings": {
+            "textHeading": "Warranty"
+          }
+        },
+        "76796726-9466-4361-8013-d5eed1d31e00": {
+          "type": "accord-item",
+          "settings": {
+            "textHeadingItem": "Does my Thermi product come with a warranty?",
+            "textLeftHeadingItem": "Warranty Info",
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+          }
+        }
+      },
+      "block_order": [
+        "6ccb31b3-0431-4142-95b8-91fe92d3e4a2",
+        "eb9c87d1-508a-4cc4-bf32-ea76a1b19de5",
+        "4d2eaabf-f9c9-49ef-b824-ca2988b816ad",
+        "f66be599-1ad4-40a9-abec-9ff8d0751f85",
+        "e264b860-cc5a-471f-b03a-41dea3770071",
+        "77854cb5-47fe-4df2-b52e-828cabb1709c",
+        "4605b017-a149-4fe5-aa73-bc14809d708c",
+        "e96953c9-7d85-4d03-a08c-16edf8bee682",
+        "7053b127-080b-4495-9a83-1ecbb3f82507",
+        "b84b1256-dee3-4c17-ba6b-ca68733995ac",
+        "76796726-9466-4361-8013-d5eed1d31e00"
+      ],
       "settings": {
+        "pageMessage": "Please checkout out some of the answer to our most commonly asked questions below. Can'f find the answer you are looking for? Please contact us and we will be glad to help!"
       }
     }
   },
