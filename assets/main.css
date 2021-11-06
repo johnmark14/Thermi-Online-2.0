@@ -2796,6 +2796,9 @@ main {
   max-width: 1035px;
   margin: 0 auto;
   padding-bottom: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 39.9375em) {

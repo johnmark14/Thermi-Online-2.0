@@ -6,6 +6,7 @@
         max-width: 1035px;
         margin: 0 auto;
         padding-bottom: 50px;
+        justify-content: center;
 
         @include breakpoint-down(small) {
             display: block;
