@@ -10,37 +10,25 @@
       <div class="columns is-variable is-4 is-2-tablet">
         <div class="column is-one-fifth faq-col-left">
           <div class="faq-nav">
-            <!-- List item 1 -->
-            <div class="faq-nav-items">
-              <ul class="item">
-                <li>Drinkware</li>
-                <li>Product Usage</li>
-                <li>Product Care</li>
-              </ul>
-            </div>
-            <!-- List item 2 -->
-            <div class="faq-nav-items">
-              <ul class="item">
-                <li>Shipping</li>
-                <li>When will my order ship?</li>
-                <li>Shipping Options</li>
-              </ul>
-            </div>
-            <!-- List item 3 -->
-            <div class="faq-nav-items">
-              <ul class="item">
-                <li>Returns</li>
-                <li>Customized Orders</li>
-                <li>Non-Customized Orders</li>
-              </ul>
-            </div>
-            <!-- List item 4 -->
-            <div class="faq-nav-items">
-              <ul class="item">
-                <li>Warranty</li>
-                <li>Warranty Info</li>
-              </ul>
-            </div>
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'accord-heading' %}
+                  <div class="faq-nav-items">
+                    <ul class="item">
+                      <li>{{ block.settings.textHeading}}</li>
+                      {% for block in section.blocks offset:forloop.index %}
+                        {% case block.type %}
+                          {% when 'accord-item' %}
+                            <li>{{ block.settings.textLeftHeadingItem }}</li>
+                          {% else %}
+                            {% break %}
+                        {% endcase %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% else %}
+              {% endcase %}
+            {% endfor %}
           </div>
         </div>
         <div class="column">
