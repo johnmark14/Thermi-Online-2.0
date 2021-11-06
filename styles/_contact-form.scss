@@ -6,7 +6,7 @@
             .columns {
                 .column {
                     &.wide {
-                        @include breakpoint-down(small) {
+                        @include breakpoint-down(medium) {
                             display: none;
                         }
                     }
