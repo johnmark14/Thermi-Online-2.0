@@ -3130,14 +3130,14 @@ main {
   }
 }
 
-.section-faq .faq-accord:not(:last-child) {
-  margin-bottom: 20px;
-}
-
 .section-faq .faq-accord-heading {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.section-faq .faq-accord-heading:not(:nth-child(1)) {
+  margin-top: 20px;
 }
 
 .section-faq .accord-wrapper {

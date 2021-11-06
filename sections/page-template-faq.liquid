@@ -5,73 +5,73 @@
 <!-- Rendered when users navigate to shop/products -->
 <section class="section-faq section-padding">
   <div class="faq-shell shell">
-      <h2 class="faq-title section-title">{{ page.title | escape }}</h2>
-      <div class="faq-body">
-          <div class="columns is-variable is-4 is-2-tablet">
-            <div class="column is-one-fifth faq-col-left">
-              <div class="faq-nav">
-                <!-- List item 1 -->
-                <div class="faq-nav-items">
-                  <ul class="item">
-                    <li>Drinkware</li>
-                    <li>Product Usage</li>
-                    <li>Product Care</li>
-                  </ul>
-                </div>
-                <!-- List item 2 -->
-                <div class="faq-nav-items">
-                  <ul class="item">
-                    <li>Shipping</li>
-                    <li>When will my order ship?</li>
-                    <li>Shipping Options</li>
-                  </ul>
-                </div>
-                <!-- List item 3 -->
-                <div class="faq-nav-items">
-                  <ul class="item">
-                    <li>Returns</li>
-                    <li>Customized Orders</li>
-                    <li>Non-Customized Orders</li>
-                  </ul>
-                </div>
-                <!-- List item 4 -->
-                <div class="faq-nav-items">
-                  <ul class="item">
-                    <li>Warranty</li>
-                    <li>Warranty Info</li>
-                  </ul>
-                </div>
-              </div>
+    <h2 class="faq-title section-title">{{ page.title | escape }}</h2>
+    <div class="faq-body">
+      <div class="columns is-variable is-4 is-2-tablet">
+        <div class="column is-one-fifth faq-col-left">
+          <div class="faq-nav">
+            <!-- List item 1 -->
+            <div class="faq-nav-items">
+              <ul class="item">
+                <li>Drinkware</li>
+                <li>Product Usage</li>
+                <li>Product Care</li>
+              </ul>
             </div>
-            <div class="column">
-              <div class="faq-message">
-                <p>{{ section.settings.pageMessage }}</p>
-              </div>
-              <!-- Accord 1 -->
-              {% for block in section.blocks %}
-                {%- case block.type -%}
-                  {%- when 'accord-heading' -%}
-                  <div class="faq-accord-heading">
-                    <span>{{ block.settings.textHeading }}</span>
-                  </div>
-                  {%- when 'accord-item' -%}
-                    <div class="faq-accord">
-                      <div class="accord-wrapper">
-                        <input type="checkbox" name="accord-header" id="accord-{{-block.settings.textHeadingItem | remove: " "-}}-{{-forloop.index-}}" />
-                        <label for="accord-{{-block.settings.textHeadingItem | remove: " "-}}-{{-forloop.index-}}">
-                          <p>{{ block.settings.textHeadingItem}}</p>
-                          <span> {% render "chevron-down" %} </span>
-                        </label>
-                        <div class="accord-body">
-                          <p>{{ block.settings.textContent }}</p>
-                        </div>
-                    </div>
-                {%- endcase -%}
-              {% endfor %}
-              </div>
+            <!-- List item 2 -->
+            <div class="faq-nav-items">
+              <ul class="item">
+                <li>Shipping</li>
+                <li>When will my order ship?</li>
+                <li>Shipping Options</li>
+              </ul>
+            </div>
+            <!-- List item 3 -->
+            <div class="faq-nav-items">
+              <ul class="item">
+                <li>Returns</li>
+                <li>Customized Orders</li>
+                <li>Non-Customized Orders</li>
+              </ul>
+            </div>
+            <!-- List item 4 -->
+            <div class="faq-nav-items">
+              <ul class="item">
+                <li>Warranty</li>
+                <li>Warranty Info</li>
+              </ul>
             </div>
           </div>
+        </div>
+        <div class="column">
+          <div class="faq-message">
+            <p>{{ section.settings.pageMessage }}</p>
+          </div>
+          <!-- Accord 1 -->
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when 'accord-heading' -%}
+                <div class="faq-accord-heading">
+                  <span>{{ block.settings.textHeading }}</span>
+                </div>
+              {%- when 'accord-item' -%}
+                <div class="faq-accord">
+                  <div class="accord-wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-{{-block.settings.textHeadingItem | remove: " "-}}-{{-forloop.index-}}" />
+                    <label for="accord-{{-block.settings.textHeadingItem | remove: " "-}}-{{-forloop.index-}}">
+                      <p>{{ block.settings.textHeadingItem}}</p>
+                      <span> {% render "chevron-down" %} </span>
+                    </label>
+                    <div class="accord-body">
+                      <p>{{ block.settings.textContent }}</p>
+                    </div>
+                  </div>
+                </div>
+            {%- endcase -%}
+          {% endfor %}
+        </div>
       </div>
+    </div>
   </div>
 </section>
 <!-- <div class="page-width page-width--narrow">

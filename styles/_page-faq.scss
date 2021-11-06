@@ -42,12 +42,10 @@
         }
 
         &-accord {
-
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-
             &-heading {
+                &:not(:nth-child(1)) {
+                    margin-top: 20px;
+                }
                 font-size: toRem(16);
                 font-weight: bold;
                 margin-bottom: 10px;
