@@ -5,7 +5,9 @@
         .contactus-body {
            
             .contact-info {
-                margin-bottom: 26px;
+                &:not(:last-child) {
+                    margin-bottom: 26px;
+                }
 
                 h6 {
                     font-size: toRem(28);

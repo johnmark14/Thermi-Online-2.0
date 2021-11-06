@@ -1,0 +1,87 @@
+.section-contactus {
+
+    .contactus-form-shell {
+
+        form {
+            .columns {
+                .column {
+                    &.wide {
+                        @include breakpoint-down(small) {
+                            display: none;
+                        }
+                    }
+                    .form {
+                        display: flex;
+                        flex-direction: column;
+
+                        &.mobile {
+                            @include breakpoint-up(medium) {
+                                display: none;
+                            }
+                        }
+
+                        &:not(:first-child) {
+                            margin-top: 10px;
+                        }
+                        label {
+                            position: relative;
+                            margin-bottom: 5px;
+                            color: $darkGray;
+
+                            &.required {
+                                &::after {
+                                    content: '*';
+                                    margin-left: 5px;
+                                    color: red;
+                                }
+                            }
+                        }
+
+                        input, textarea {
+                            font-family: 'mt-regular',sans-serif;
+                            color: $lightGray;
+                            padding: 5px;
+                            font-size: toRem(16);
+                            outline: none;
+                            border: 2px solid $lightGray1;
+                        }
+                    }
+
+                    .submit {
+                        margin-top: 15px;
+                        .btn-submit {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;    
+                            background-color: $darkGray;
+                            border-color: $darkGray;
+                            margin-left: auto;
+                            margin-right: 0;
+                            padding: 10px 0;
+                            width: 200px;
+                            transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+                            border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+                            &:hover {
+                                background-color: $darkGray1;
+                                border-color: $darkGray1;
+                            }
+                            span {
+                                color: $white;
+                                line-height: 0;
+                                font-size: toRem(14);
+                                font-family: 'mt-regular',sans-serif;
+                                &:first-child {
+                                    margin-right: 10px;
+                                }
+                                svg {
+                                    width: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

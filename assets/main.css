@@ -276,12 +276,12 @@ main {
 }
 
 .remove-extra {
-  margin-bottom: -50px;
+  padding-bottom: 50px !important;
 }
 
 @media (max-width: 48.0625em) {
   .remove-extra {
-    margin-bottom: -80px;
+    padding-bottom: 80px !important;
   }
 }
 
@@ -312,6 +312,17 @@ main {
     padding: 60px 0;
     font-size: 1.5625rem;
   }
+}
+
+.section-sub-title {
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0;
+  font-family: "mt-medium", sans-serif;
+  color: #757171;
 }
 
 .page-title {
@@ -2481,6 +2492,97 @@ main {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .section-contactus .contactus-form-shell form .columns .column.wide {
+    display: none;
+  }
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .section-contactus .contactus-form-shell form .columns .column .form.mobile {
+    display: none;
+  }
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form:not(:first-child) {
+  margin-top: 10px;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form label {
+  position: relative;
+  margin-bottom: 5px;
+  color: #5e5e5e;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form label.required::after {
+  content: '*';
+  margin-left: 5px;
+  color: red;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .form input, .section-contactus .contactus-form-shell form .columns .column .form textarea {
+  font-family: 'mt-regular',sans-serif;
+  color: #989898;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: 2px solid #d6d6d6;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .submit {
+  margin-top: 15px;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .submit .btn-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5e5e5e;
+  border-color: #5e5e5e;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 10px 0;
+  width: 200px;
+  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .submit .btn-submit:hover {
+  background-color: #757171;
+  border-color: #757171;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .submit .btn-submit span {
+  color: #ffffff;
+  line-height: 0;
+  font-size: 0.875rem;
+  font-family: 'mt-regular',sans-serif;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .submit .btn-submit span:first-child {
+  margin-right: 10px;
+}
+
+.section-contactus .contactus-form-shell form .columns .column .submit .btn-submit span svg {
+  width: 22px;
+}
+
 .footer-shell {
   background-color: #d6d6d6;
   padding-top: 60px;
@@ -3248,7 +3350,7 @@ main {
   }
 }
 
-.section-contactus .contactus-shell .contactus-body .contact-info {
+.section-contactus .contactus-shell .contactus-body .contact-info:not(:last-child) {
   margin-bottom: 26px;
 }
 

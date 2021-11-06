@@ -1,0 +1,135 @@
+<!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
+
+<!-- Start Section Main for Contact US Page -->
+<section class="section-contactus section-padding {% if section.settings.sectionPadding %} remove-extra {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
+    <div class="contactus-form-shell shell">
+        <h2 class="contactus-form-title section-sub-title">{{ section.settings.sectionHeading }}</h2>
+        <div class="form-body" id="contactForm">
+            <form ref="contactForm">
+                <div class="columns">
+                    <div class="column">
+                        <div class="form-errors" v-if="errors.length">
+                            <p v-if="errors.length == 1">The following field is required:</p>
+                            <p v-if="errors.length > 1">The following fields are required:</p>
+                            <ul>
+                                <li v-for="error in errors">${error}</li>
+                            </ul>
+                        </div>
+                        <div class="form form-name">
+                            <label for="form-name" class="required">Name</label>
+                            <input v-model="formName" id="form-name" type="text" name="contact_name"/>
+                        </div>
+                        <div class="form form-email mobile">
+                            <label for="form-email" class="required">E-mail</label>
+                            <input v-model="formEmail" id="form-email" type="email" name="contact_email">
+                        </div>
+                        <div class="form form-tel mobile">
+                            <label for="form-tel">Telephone <span>(Optional)</span></label>
+                            <input id="form-tel" type="tel" name="contact_tel">
+                        </div>
+                        <div class="form form-subject">
+                            <label for="form-subject" class="required">Form Subject</label>
+                            <input v-model="formSubject" id="form-subject" type="text" name="contact_subject"/>
+                        </div>
+                        <div class="form form-message">
+                            <label for="form-message" class="required">Message</label>
+                            <textarea v-model="formMessage" id="form-message" name="contact_body" rows="4" cols="50"></textarea>
+                        </div>
+                        <div class="submit">
+                            <a class="side-btn btn-submit" href="/" @click.prevent="sendEmail">
+                                <span>Send Message</span>
+                                <span>{% render 'fat-arrow-right'%}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column wide">
+                        <div class="form form-email">
+                            <label for="form-email" class="required">E-mail</label>
+                            <input v-model="formEmail" id="form-email" type="email" name="contact_email">
+                        </div>
+                        <div class="form form-tel">
+                            <label for="form-tel">Telephone <span>(Optional)</span></label>
+                            <input id="form-tel" type="tel" name="contact_tel">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+      "name": "Contact Form",
+      "settings": [
+        {
+        "type": "checkbox", 
+        "id": "sectionPadding",
+        "label": "Remove Section Padding?",
+        "default": false
+        },
+        {
+            "type": "text",
+            "id": "sectionHeading",
+            "label": "Section Heading",
+            "default": "Contact Us"
+        },
+        {
+          "type": "color",
+          "id": "sectionColor",
+          "label": "Section BG",
+          "default": "#f7f7f7"
+        }
+      ],
+      "presets": [
+          {
+              "name": "Contact Form"
+          }
+      ]
+  }
+  {% endschema %}
+  <script>
+      const contactForm = Vue.createApp({
+        name: "Contact Form",
+        delimiters: ['${', '}'],
+        data() {
+            return {
+                errors: [],
+                formName: null,
+                formSubject: null,
+                formMessage: null,
+                formEmail: null,
+            }
+        },
+        methods: {
+            sendEmail() {
+                if(this.formName && this.formSubject && this.formMessage && this.formEmail) {
+                    emailjs.sendForm('contact_service','contact_form',this.$refs.contactForm).then(function() {
+                    console.log('Success');
+                    }, function(err) {
+                        console.log('Err..', err)
+                    });
+                }
+
+                this.errors = []
+
+                if(!this.formName) {
+                    this.errors.push('Your name is required.');
+                }
+                if(!this.formSubject) {
+                    this.errors.push('Your subject is required.');
+                }
+                if(!this.formMessage) {
+                    this.errors.push('Your message is required.');
+                }
+                if(!this.formEmail) {
+                    this.errors.push('Your email is required.');
+                }
+            }
+        },
+        mounted() {
+            emailjs.init("user_kSOE2xpZiHfQmTaRAjmzI")
+            console.log('init')
+        },
+      }).mount('#contactForm');
+  </script>

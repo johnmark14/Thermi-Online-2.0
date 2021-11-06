@@ -214,10 +214,10 @@ main {
 
 // Remove extra padding
 .remove-extra {
-  margin-bottom: -50px;
+  padding-bottom: 50px !important;
 
   @include breakpoint-down(small-mid) {
-    margin-bottom: -80px;
+    padding-bottom: 80px !important;
   }
 }
 
@@ -250,6 +250,22 @@ main {
     padding: 60px 0;
     font-size: toRem(25);
   }
+}
+
+.section-sub-title {
+  font-size: toRem(22);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0;
+  font-family: "mt-medium", sans-serif;
+  color: $darkGray1;
+
+  // @include breakpoint-down(small) {
+  //   padding: 60px 0;
+  //   font-size: toRem(25);
+  // }
 }
 
 // Page Title

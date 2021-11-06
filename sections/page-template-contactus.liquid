@@ -3,7 +3,7 @@
 <!-- Start Section Main for Contact US Page -->
 
 <!-- Rendered when users navigate to shop/products -->
-<section class="section-contactus section-padding">
+<section class="section-contactus section-padding {% if section.settings.sectionPadding %} remove-extra {% endif %}">
     <div class="contactus-shell shell">
         <h2 class="contactis-title section-title">{{ page.title | escape }}</h2>
         <div class="contactus-body">
@@ -41,6 +41,14 @@
   {% schema %}
   {
     "name": "Contact Us",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "sectionPadding",
+        "label": "Remove Section Padding?",
+        "default": false
+      }
+    ],
     "blocks": [
       {
         "type": "contact-info",
