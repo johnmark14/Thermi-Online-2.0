@@ -19,11 +19,11 @@
                             <label for="form-name" class="required">Name</label>
                             <input v-model="formName" id="form-name" type="text" name="contact_name" placeholder="Name"/>
                         </div>
-                        <div class="form form-email mobile">
+                        <div class="form form-email" v-if="screen==true">
                             <label for="form-email" class="required">E-mail</label>
                             <input v-model="formEmail" id="form-email" type="email" name="contact_email" placeholder="E-mail">
                         </div>
-                        <div class="form form-tel mobile">
+                        <div class="form form-tel" v-if="screen==true">
                             <label for="form-tel">Telephone <span>(Optional)</span></label>
                             <input id="form-tel" type="tel" name="contact_tel" placeholder="(XXX) XXX-XXX">
                         </div>
@@ -42,7 +42,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="column wide">
+                    <div class="column" v-if="screen == false">
                         <div class="form form-email">
                             <label for="form-email" class="required">E-mail</label>
                             <input v-model="formEmail" id="form-email" type="email" name="contact_email" placeholder="E-mail">
@@ -99,6 +99,7 @@
                 formSubject: null,
                 formMessage: null,
                 formEmail: null,
+                screen: false
             }
         },
         methods: {
@@ -125,11 +126,27 @@
                 if(!this.formEmail) {
                     this.errors.push('Your email is required.');
                 }
+            },
+            checkWindow(screen) {
+                if(screen.matches) {
+                    // Remove forms element
+                    this.screen = true
+                } else {
+                    // Bring back form element
+                    this.screen = false
+                }
             }
         },
         mounted() {
             emailjs.init("user_kSOE2xpZiHfQmTaRAjmzI")
             console.log('init')
+
+            
+            const screen = window.matchMedia("(max-width: 1023px)")
+            this.checkWindow(screen)
+            screen.addListener(() => {
+                this.checkWindow(screen);
+            });
         },
       }).mount('#contactForm');
   </script>
