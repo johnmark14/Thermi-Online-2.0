@@ -1,0 +1,42 @@
+<div class="modal" :class="{'is-active': modal}">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="card">
+            <div class="container" v-if="isMessageLoading">
+                <div class="card-image">
+                    <img src="{{ 'loading_spinner_small.gif' | asset_url }}" alt="Loader Spinner"/>
+                </div>
+                <div class="card-header">
+                    <p class="card-header-title is-centered">
+                        Sending your message...
+                    </p>
+                </div>
+            </div>
+            <div class="container" v-if="isMessageSent">
+                <div class="card-header">
+                    <p class="card-header-title is-centered">
+                        Your message has been received. We will get back to you as soon as possible!
+                    </p>
+                </div>
+                <div class="card-content">
+                    <a class="side-btn btn-submit" href="/pages/choose">
+                        <span>Continue Shopping</span>
+                    </a>
+                </div>
+            </div>
+            <div class="container" v-if="isMessageErr">
+                <div class="card-header">
+                    <p class="card-header-title is-centered">
+                        Something went wrong!<br/>Please check your Internet connection and try again.
+                    </p>
+                </div>
+                <div class="card-content">
+                    <a class="side-btn btn-submit" href="/" @click.prevent="modalTryAgain">
+                        <span>Close</span>
+                    </a>
+                </div>
+            </div>
+      </div>
+    </div>
+    <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+  </div>

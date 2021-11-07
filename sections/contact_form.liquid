@@ -5,6 +5,7 @@
     <div class="contactus-form-shell shell">
         <h2 class="contactus-form-title section-sub-title">{{ section.settings.sectionHeading }}</h2>
         <div class="form-body" id="contactForm">
+            {% render 'pop-modal' %}
             <form ref="contactForm">
                 <div class="columns">
                     <div class="column">
@@ -36,14 +37,18 @@
                             <label for="form-message" class="required">Message</label>
                             <textarea v-model="formMessage" id="form-message" name="contact_body" rows="4" cols="50" placeholder="Enter your Message Here..."></textarea>
                         </div>
-                        <br/>
-                        <div class="g-recaptcha" data-sitekey="6LciqxwdAAAAAKlDnJa4GVl0j2o__szao9JhRLC0" data-callback="enableBtn"></div>
-                        <br/>
                         <div class="submit">
-                            <a class="side-btn btn-submit" :class="{disabled: captchaNotVerified}" href="/" @click.prevent="sendEmail">
-                                <span>Send Message</span>
-                                <span>{% render 'fat-arrow-right'%}</span>
-                            </a>
+                            <div class="columns is-multiline is-mobile">
+                                <div class="column"> 
+                                    <div class="g-recaptcha" data-sitekey="6LciqxwdAAAAAKlDnJa4GVl0j2o__szao9JhRLC0" data-callback="enableBtn"></div>
+                                </div>
+                                <div class="column">
+                                    <a class="side-btn btn-submit" :class="{disabled: captchaNotVerified}" href="/" @click.prevent="sendEmail">
+                                        <span>Send Message</span>
+                                        <span>{% render 'fat-arrow-right'%}</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="column" v-if="screen == false">
@@ -105,7 +110,11 @@
                 formMessage: null,
                 formEmail: null,
                 screen: false,
-                captchaNotVerified: true
+                captchaNotVerified: true,
+                modal: false,
+                isMessageSent: false,
+                isMessageLoading: false,
+                isMessageErr: false
             }
         },
         methods: {
@@ -115,9 +124,14 @@
             sendEmail() {
                 if(!this.captchaNotVerified) {
                     if(this.formName && this.formSubject && this.formMessage && this.formEmail) {
-                        emailjs.sendForm('contact_service','contact_form',this.$refs.contactForm).then(function() {
-                        console.log('Success');
-                        }, function(err) {
+                        this.modal = true
+                        this.isMessageLoading = true
+                        emailjs.sendForm('contact_service','contact_form',this.$refs.contactForm).then(() => {
+                            this.isMessageLoading = false
+                            this.isMessageSent = true
+                            console.log('mesg should be closed here')
+                        }, (err) => {
+                            this.isMessageErr = true
                             console.log('Err..', err)
                         });
                     }
@@ -141,6 +155,14 @@
                         grecaptcha.reset()
                     }
                 }
+            },
+            modalTryAgain() {
+                // Reset
+                this.modal = false
+                this.isMessageSent = false
+                this.isMessageLoading = false
+                this.isMessageErr = false
+                grecaptcha.reset()
             },
             checkWindow(screen) {
                 if(screen.matches) {

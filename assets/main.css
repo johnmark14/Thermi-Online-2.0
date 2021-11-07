@@ -534,7 +534,7 @@ main {
   position: sticky;
   width: 100%;
   top: 0;
-  z-index: 100;
+  z-index: 20;
   background-color: #ffffff;
 }
 
@@ -660,7 +660,7 @@ main {
   width: 320px;
   background-color: #ffffff;
   border-right: 1px solid black;
-  z-index: 999;
+  z-index: 10;
 }
 
 .header .main-content--navigation {
@@ -1321,7 +1321,7 @@ main {
   left: 0;
   background-color: rgba(0, 0, 0, 0.75);
   cursor: default;
-  z-index: 200;
+  z-index: 5;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0s, opacity 0.3s ease;
@@ -2579,6 +2579,13 @@ main {
   transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+@media (max-width: 39.9375em) {
+  .section-contactus .contactus-form-shell form .columns .column .submit .btn-submit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .section-contactus .contactus-form-shell form .columns .column .submit .btn-submit:hover {
   background-color: #757171;
   border-color: #757171;
@@ -3383,12 +3390,64 @@ main {
   margin-bottom: 10px;
 }
 
+@media (max-width: 39.9375em) {
+  .section-contactus .contactus-shell .contactus-body .contact-info h6 {
+    font-size: 1.625rem;
+  }
+}
+
 .section-contactus .contactus-shell .contactus-body .contact-info p {
   margin-bottom: 5px;
 }
 
 .section-contactus .contactus-shell .contactus-body .contact-info p a {
   text-decoration: underline;
+}
+
+.modal .modal-content .card {
+  padding: 50px 0 20px 0;
+}
+
+.modal .modal-content .card .container .card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modal-content .card .container .card-header {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.modal .modal-content .card .container .card-header p {
+  color: #5e5e5e;
+  font-family: 'mt-regular', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.modal .modal-content .card .container .card-content a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  font-size: 0.875rem;
+  -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background 0.5s ease-in-out, border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.modal .modal-content .card .container .card-content a:hover {
+  background-color: #000;
+  color: #ffffff;
 }
 
 .section-product .product-back {

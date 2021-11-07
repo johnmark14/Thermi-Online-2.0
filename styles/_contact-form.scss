@@ -66,6 +66,10 @@
                             transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
                             border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
+                            @include breakpoint-down(small) {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
                             &:hover {
                                 background-color: $darkGray1;
                                 border-color: $darkGray1;
