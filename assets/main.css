@@ -2599,6 +2599,12 @@ main {
   width: 22px;
 }
 
+.section-contactus .contactus-form-shell form .columns .column .submit .btn-submit.disabled {
+  background-color: #d6d6d6;
+  border-color: #d6d6d6;
+  cursor: no-drop;
+}
+
 .footer-shell {
   background-color: #d6d6d6;
   padding-top: 60px;

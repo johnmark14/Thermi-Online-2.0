@@ -15,6 +15,7 @@
                                 <li v-for="error in errors">${error}</li>
                             </ul>
                         </div>
+                        <input type="hidden" name="form_type" value="contact">
                         <div class="form form-name">
                             <label for="form-name" class="required">Name</label>
                             <input v-model="formName" id="form-name" type="text" name="contact_name" placeholder="Name"/>
@@ -35,8 +36,11 @@
                             <label for="form-message" class="required">Message</label>
                             <textarea v-model="formMessage" id="form-message" name="contact_body" rows="4" cols="50" placeholder="Enter your Message Here..."></textarea>
                         </div>
+                        <br/>
+                        <div class="g-recaptcha" data-sitekey="6LciqxwdAAAAAKlDnJa4GVl0j2o__szao9JhRLC0" data-callback="enableBtn"></div>
+                        <br/>
                         <div class="submit">
-                            <a class="side-btn btn-submit" href="/" @click.prevent="sendEmail">
+                            <a class="side-btn btn-submit" :class="{disabled: captchaNotVerified}" href="/" @click.prevent="sendEmail">
                                 <span>Send Message</span>
                                 <span>{% render 'fat-arrow-right'%}</span>
                             </a>
@@ -89,6 +93,7 @@
   }
   {% endschema %}
   <script>
+      
       const contactForm = Vue.createApp({
         name: "Contact Form",
         delimiters: ['${', '}'],
@@ -99,32 +104,42 @@
                 formSubject: null,
                 formMessage: null,
                 formEmail: null,
-                screen: false
+                screen: false,
+                captchaNotVerified: true
             }
         },
         methods: {
+            enableBtn(response) {
+                if (response.length > 1) this.captchaNotVerified = false
+            },
             sendEmail() {
-                if(this.formName && this.formSubject && this.formMessage && this.formEmail) {
-                    emailjs.sendForm('contact_service','contact_form',this.$refs.contactForm).then(function() {
-                    console.log('Success');
-                    }, function(err) {
-                        console.log('Err..', err)
-                    });
-                }
+                if(!this.captchaNotVerified) {
+                    if(this.formName && this.formSubject && this.formMessage && this.formEmail) {
+                        emailjs.sendForm('contact_service','contact_form',this.$refs.contactForm).then(function() {
+                        console.log('Success');
+                        }, function(err) {
+                            console.log('Err..', err)
+                        });
+                    }
 
-                this.errors = []
+                    this.errors = []
 
-                if(!this.formName) {
-                    this.errors.push('Your name is required.');
-                }
-                if(!this.formSubject) {
-                    this.errors.push('Your subject is required.');
-                }
-                if(!this.formMessage) {
-                    this.errors.push('Your message is required.');
-                }
-                if(!this.formEmail) {
-                    this.errors.push('Your email is required.');
+                    if(!this.formName) {
+                        this.errors.push('Your name is required.');
+                        grecaptcha.reset()
+                    }
+                    if(!this.formSubject) {
+                        this.errors.push('Your subject is required.');
+                        grecaptcha.reset()
+                    }
+                    if(!this.formMessage) {
+                        this.errors.push('Your message is required.');
+                        grecaptcha.reset()
+                    }
+                    if(!this.formEmail) {
+                        this.errors.push('Your email is required.');
+                        grecaptcha.reset()
+                    }
                 }
             },
             checkWindow(screen) {
@@ -135,6 +150,9 @@
                     // Bring back form element
                     this.screen = false
                 }
+            },
+            conLog() {
+                console.log('Callback');
             }
         },
         mounted() {
@@ -147,6 +165,9 @@
             screen.addListener(() => {
                 this.checkWindow(screen);
             });
+
+            // Get Google Recaptcha response
+            window.enableBtn = this.enableBtn
         },
       }).mount('#contactForm');
   </script>

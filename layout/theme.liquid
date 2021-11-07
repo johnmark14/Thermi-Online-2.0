@@ -53,14 +53,16 @@
 
     <!-- Bulma CSS -->
     {{ "bulma.css" | asset_url | stylesheet_tag }}
+
     <!-- Swiper JS -->
-    {{
-      "swiper-bundle.min.css" | asset_url | stylesheet_tag
-    }}
+    {{ "swiper-bundle.min.css" | asset_url | stylesheet_tag }}
 
     <!-- Custom Code by John - assets -->
     {{ "main.css" | asset_url | stylesheet_tag }}
     <!-- <link rel="stylesheet" href="{{ 'main.css' | asset_url }}" type="text/css"> -->
+
+    <!-- Google recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <!-- Fontawesome  -->
     <script src="{{ 'font-awesome.js' | asset_url }}" defer></script>
