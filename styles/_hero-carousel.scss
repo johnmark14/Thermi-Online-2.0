@@ -61,7 +61,7 @@
     position: absolute;
     bottom: 30px;
     right: 90px;
-    z-index: 99;
+    z-index: 5;
     background: transparent;
 
     @include breakpoint-down(medium) {
