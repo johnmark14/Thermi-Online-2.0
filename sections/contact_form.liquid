@@ -123,7 +123,36 @@
             },
             sendEmail() {
                 if(!this.captchaNotVerified) {
-                    if(this.formName && this.formSubject && this.formMessage && this.formEmail) {
+                    this.errors = []
+
+                    if(!this.formName) {
+                        this.errors.push('Your name is required.');
+                        grecaptcha.reset()
+                        this.captchaNotVerified = false
+                    }
+                    if(!this.formSubject) {
+                        this.errors.push('Your subject is required.');
+                        grecaptcha.reset()
+                        this.captchaNotVerified = false
+                    }
+                    if(!this.formMessage) {
+                        this.errors.push('Your message is required.');
+                        grecaptcha.reset()
+                        this.captchaNotVerified = false
+                    }
+                    if(!this.formEmail) {
+                        this.errors.push('Your email is required.');
+                        grecaptcha.reset()
+                        this.captchaNotVerified = false
+                    }
+                    
+                    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(String(this.formEmail).toLowerCase())) {
+                        this.errors.push('Please enter a valid email address')
+                        grecaptcha.reset()
+                        this.captchaNotVerified = true
+                    }
+
+                    if(this.errors.length == 0) {
                         this.modal = true
                         this.isMessageLoading = true
                         emailjs.sendForm('contact_service','contact_form',this.$refs.contactForm).then(() => {
@@ -134,25 +163,6 @@
                             this.isMessageErr = true
                             console.log('Err..', err)
                         });
-                    }
-
-                    this.errors = []
-
-                    if(!this.formName) {
-                        this.errors.push('Your name is required.');
-                        grecaptcha.reset()
-                    }
-                    if(!this.formSubject) {
-                        this.errors.push('Your subject is required.');
-                        grecaptcha.reset()
-                    }
-                    if(!this.formMessage) {
-                        this.errors.push('Your message is required.');
-                        grecaptcha.reset()
-                    }
-                    if(!this.formEmail) {
-                        this.errors.push('Your email is required.');
-                        grecaptcha.reset()
                     }
                 }
             },
