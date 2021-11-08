@@ -10,7 +10,7 @@
           {% for block in section.blocks %}
             <div class="contact-info">
               {% if block.settings.infoHeading != blank %}
-                <h6>{{ block.settings.infoHeading }}</h6>
+                <h6 class="g-list-title">{{ block.settings.infoHeading }}</h6>
               {% endif %}
               {% if block.settings.text1 != blank %}
                 <p>{{ block.settings.text1 }}</p>

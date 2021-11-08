@@ -15,11 +15,11 @@
                 {% when 'accord-heading' %}
                   <div class="faq-nav-items">
                     <ul class="item">
-                      <li>{{ block.settings.textHeading}}</li>
+                      <li class="g-heading-color">{{ block.settings.textHeading}}</li>
                       {% for block in section.blocks offset:forloop.index %}
                         {% case block.type %}
                           {% when 'accord-item' %}
-                            <li>{{ block.settings.textLeftHeadingItem }}</li>
+                            <li class="g-text-color">{{ block.settings.textLeftHeadingItem }}</li>
                           {% else %}
                             {% break %}
                         {% endcase %}
@@ -33,25 +33,25 @@
         </div>
         <div class="column">
           <div class="faq-message">
-            <p>{{ section.settings.pageMessage }}</p>
+            <p class="g-sub-heading-color">{{ section.settings.pageMessage }}</p>
           </div>
           <!-- Accord 1 -->
           {% for block in section.blocks %}
             {%- case block.type -%}
               {%- when 'accord-heading' -%}
                 <div class="faq-accord-heading">
-                  <span>{{ block.settings.textHeading }}</span>
+                  <span class="g-heading-color">{{ block.settings.textHeading }}</span>
                 </div>
               {%- when 'accord-item' -%}
                 <div class="faq-accord">
                   <div class="accord-wrapper">
                     <input type="checkbox" name="accord-header" id="accord-{{-block.settings.textHeadingItem | remove: " "-}}-{{-forloop.index-}}" />
                     <label for="accord-{{-block.settings.textHeadingItem | remove: " "-}}-{{-forloop.index-}}">
-                      <p>{{ block.settings.textHeadingItem}}</p>
+                      <p class="g-sub-heading-color">{{ block.settings.textHeadingItem}}</p>
                       <span> {% render "chevron-down" %} </span>
                     </label>
                     <div class="accord-body">
-                      <p>{{ block.settings.textContent }}</p>
+                      <p class="g-text-color">{{ block.settings.textContent }}</p>
                     </div>
                   </div>
                 </div>

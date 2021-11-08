@@ -138,139 +138,8 @@
         margin-top: 45px;
         text-align: center;
 
-        .btn-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: toRem(18);
-          font-weight: normal;
-          padding-left: 20px;
-          padding-right: 20px;
-          width: 260px;
-          box-sizing: border-box;
-          
-          @include breakpoint-down(small) {
-            padding-left: 28px;
-            padding-right: 28px;
-            font-size: toRem(14);
-          }
-        }
-
-
-        .btn-login {
-          background-color: $black;
-          color: $white;
-
-          span:nth-child(1) {
-            width: 26px;
-            line-height: 0;
-            svg {
-              fill: $white;
-            }
-          }
-
-          span:last-child {
-            line-height: 0;
-            svg {
-              width: 26px;
-            }
-          }
-
-          @include breakpoint-down(small) {
-            span:nth-child(1) {
-              width: 22px;
-              line-height: 0;
-              svg {
-                fill: $white;
-              }
-            }
-  
-            span:last-child {
-              line-height: 0;
-              svg {
-                width: 22px;
-              }
-            }
-          }
-        }
-
-        .btn-account {
-          color: $black;
-          transition: color .3s ease-in-out, background .3s ease-in-out,border-color 
-          .3s ease-in-out,opacity .3s ease-in-out;
-
-          span:nth-child(1) {
-            line-height: 0;
-            margin-right: 10px;
-            svg {
-              width: 26px;
-              fill: $black;
-            }
-          }
-
-          span:last-child {
-            line-height: 0;
-            margin-left: 10px;
-            svg {
-              width: 26px;
-              fill: $black;
-            }
-          }
-          
-          @include breakpoint-down(small) {
-            span:nth-child(1) {
-              svg {
-                width: 26px;
-                fill: $black;
-              }
-            }
-  
-            span:last-child {
-              line-height: 0;
-              margin-left: 10px;
-              svg {
-                width: 22px;
-                fill: $black;
-              }
-            }
-
-          }
-
-          &:hover {
-            background-color: $black;
-
-            span {
-              color: $white;
-              svg {
-                fill: $white;
-              }
-            }
-          }
-        }
-
-        .btn-contact-us {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-color: $lightGray;
-          background-color: $lightGray;
-          color: $white;
-          span {
-            line-height: 0;
-            svg {
-              fill: $white;
-              width: 26px;
-            }
-            
-            &:last-child {
-              margin-left: 10px;
-            }
-            @include breakpoint-down(small) {
-              svg{
-                width: 28px;
-              }
-            }
-          }
+        .btn-nav:first-child {
+          margin-bottom: 10px;
         }
       }
 
@@ -581,54 +450,8 @@
             text-transform: uppercase;
           }
 
-          .content-btn {
+          .cart-btn {
             margin-top: 20px;
-            .btn-cart {
-              display: flex;
-              align-items: center;
-              box-sizing: border-box;
-              font-size: toRem(14);
-              padding-right: 15px;
-              justify-content: space-between;
-              transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
-              border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
-
-              &:hover {
-                background-color: $black;
-                span {
-                  color: $white;
-                  svg {
-                    fill: $white;
-                  }
-                }
-
-              }
-
-              span {
-                line-height: 0;
-                color: $darkerGray;
-                &:nth-child(1) {
-                  padding-left: 20px;
-                  margin: auto;
-                }
-                svg {
-                  width: 26px;
-                  fill: $darkerGray;
-                }
-              }
-
-              &:last-child {
-                background-color: $darkerGray;
-
-                span {
-                  color: $white;
-
-                  svg {
-                    fill: $white;
-                  }
-                }
-              }
-            }
           }
         }
 
@@ -646,52 +469,10 @@
               padding-right: 15px;
             }
           }
-          .content-btn {
-            .btn-cart {
-              display: flex;
-              align-items: center;
-              box-sizing: border-box;
-              font-size: toRem(14);
-              padding-right: 15px;
-              justify-content: space-between;
-              transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
-              border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
-              &:hover {
-                background-color: $black;
-                span {
-                  color: $white;
-                  svg {
-                    fill: $white;
-                  }
-                }
-
-              }
-
-              span {
-                line-height: 0;
-                color: $darkerGray;
-                &:nth-child(1) {
-                  padding-left: 20px;
-                  margin: auto;
-                }
-                svg {
-                  width: 26px;
-                  fill: $darkerGray;
-                }
-              }
-
-              &:last-child {
-                background-color: $darkerGray;
-
-                span {
-                  color: $white;
-
-                  svg {
-                    fill: $white;
-                  }
-                }
-              }
+          .footer-btns {
+            .footer-btn:nth-child(1) {
+              margin-bottom: 10px;
             }
           }
         }

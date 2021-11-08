@@ -16,8 +16,6 @@
                 .item {
                     li {
                         border-bottom: 1px solid $lightGray;
-                        font-family: 'mt-thin', sans-serif;
-                        font-weight: bold;
                         font-size: toRem(14);
                         &:nth-child(1) {
                             font-family: 'mt-regular', sans-serif;
@@ -125,10 +123,10 @@
             overflow: hidden;
             transition: all .35s;
             p {
+                padding-top: 15px;
                 font-size: toRem(14);
-                font-family: 'mt-thin', sans-serif;
-                font-weight: bold;
                 line-height: 1.8;
+                letter-spacing: .2px;
 
                 @include breakpoint-down(small) {
                     font-size: toRem(13);

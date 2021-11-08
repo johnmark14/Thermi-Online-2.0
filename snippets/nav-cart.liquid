@@ -39,12 +39,12 @@
                 <p v-if="getPersonalizeIfIncluded">${cart.items.length - 1} Product/s in Cart</p>
                 <p v-else>${cart.items.length} Product/s in Cart</p>
             </div>
-            <div class="content-btn">
-                <a href="/pages/choose" class="side-btn btn-header btn-cart">
+            <div class="footer-btns">
+                <a href="/pages/choose" class="g-base-btn g-btn-arrow-right footer-btn">
                     <span>Continue Shopping</span>
                     <span>{% render 'fat-arrow-right' %}</span>
                 </a>
-                <a href="/cart" class="side-btn btn-header btn-cart">
+                <a href="/cart" class="g-base-btn g-btn-arrow-right footer-btn">
                     <span>Checkout Now</span>
                     <span>{% render 'fat-arrow-right' %}</span>
                 </a>
@@ -54,8 +54,8 @@
     <template v-else>
         <div class="cart-empty">
             <p>Your shopping cart is empty!</p>
-            <div class="content-btn">
-                <a href="/pages/choose" class="side-btn btn-header btn-cart">
+            <div class="cart-btn">
+                <a href="/pages/choose" class="g-base-btn g-btn-arrow-right">
                     <span>Continue Shopping</span>
                     <span>{% render 'fat-arrow-right' %}</span>
                 </a>

@@ -90,15 +90,7 @@
                     flex-direction: column;
                 }
                 .btn-cart {
-                    display: flex;
-                    align-items: center;
-                    box-sizing: border-box;
-                    font-size: toRem(14);
-                    padding-right: 15px;
-                    justify-content: space-between;
                     border-color: $darkGray;
-                    transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
-                    border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
                     
                     @include breakpoint-down(small) {
                         width: 280px;
@@ -120,25 +112,17 @@
                           fill: $white;
                         }
                       }
-      
                     }
       
                     span {
-                      line-height: 0;
                       color: $darkGray;
-                      &:nth-child(1) {
-                        padding-left: 20px;
-                        margin: auto;
-                      }
                       svg {
-                        width: 26px;
                         fill: $darkGray;
                       }
                     }
       
                     &:last-child {
                       background-color: $darkGray;
-      
                       span {
                         color: $white;
       

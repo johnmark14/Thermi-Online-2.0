@@ -10,14 +10,7 @@
                 }
 
                 h6 {
-                    font-size: toRem(28);
-                    font-family: 'mt-medium', sans-serif;
-                    color: $darkGray1;
                     margin-bottom: 10px;
-
-                    @include breakpoint-down(small) {
-                        font-size: toRem(26);
-                    }
                 }
                 p {
                     margin-bottom: 5px;

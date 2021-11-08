@@ -54,21 +54,10 @@
           @include breakpoint-down(small) {
             margin-top: 0;
           }
-          p {
-            font-size: toRem(26);
-            // font-weight: 100;
-            text-transform: capitalize;
-            color: $darkerGray;
-            font-family: "mt-medium";
-          }
         }
-
         // The step add info
         .stp-info {
           text-align: center;
-          font-size: toRem(14);
-          line-height: 20px;
-          color: $darkGray;
         }
       }
 

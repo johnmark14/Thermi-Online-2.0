@@ -32,23 +32,13 @@
                     padding-right: 0;
 
                     .content {
-                        color: $lightGray;
-                        font-size: toRem(15);
-                        line-height: 2;
-
                         @include breakpoint-down(medium) {
-                            line-height: 2;
-                            text-align: left;
-                            font-size: toRem(18);
                             padding: 0 15px 20px 15px;
                         }
 
                         @include breakpoint-down(small) {
-                            text-align: center;
-                            line-height: 1.8;
                             padding: 0;
                             padding-bottom: 20px;
-                            font-size: toRem(15);
                         } 
                     }
                 }
