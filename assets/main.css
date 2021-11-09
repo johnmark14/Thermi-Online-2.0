@@ -3346,6 +3346,38 @@ main {
   text-decoration: underline;
 }
 
+.section-blogs .blogs-shell .blogs-body {
+  /* end columns */
+}
+
+.section-blogs .blogs-shell .blogs-body .columns .column .card {
+  position: relative;
+}
+
+.section-blogs .blogs-shell .blogs-body .columns .column .card .card-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.section-blogs .blogs-shell .blogs-body .columns .column .card .card-link:hover ~ .card-content > .card-title {
+  text-decoration: underline;
+}
+
+.section-blogs .blogs-shell .blogs-body .columns .column .card .card-content .card-title {
+  margin-bottom: 5px;
+}
+
+.section-blogs .blogs-shell .blogs-body .columns .column .card .card-content .card-heading {
+  font-size: 1.25rem;
+}
+
+.section-blogs .blogs-shell .blogs-body .blogs-btn {
+  margin-top: 45px;
+}
+
 .modal .modal-content .card {
   padding: 50px 0 20px 0;
 }
