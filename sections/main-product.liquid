@@ -4,39 +4,176 @@
 <section class="section-product section-padding remove-extra">
     <div id="mainProduct" class="product-shell shell">
         <a href="/pages/choose" class="product-back">< Product Selection</a>
-        <div class="product-wrapper">
-            <div class="product-options small">
-                <div class="product-info">
-                    <h5 class="product-title">{{ product.title }}</h5>
-                    <p class="product-desc">{{ product.description }}</p>
-                    <p class="product-price">${ getTotalPrice }</p>
+        <div class="product-body">
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <figure class="image is-1by1">
+                        <img src="https://bulma.io/images/placeholders/480x480.png">
+                    </figure>
                 </div>
-            </div>
-            <div class="product-preview">
-                {% render "product-preview" %}
-                <div class="product-disclaimer">
-                    <p>{{ section.settings.textBelowImg }}</p>
-                </div>
-            </div>
-            <div class="product-options">
-                <div class="product-info wide">
-                    <h5 class="product-title">{{ product.title }}</h5>
-                    <p class="product-desc">{{ product.description }}</p>
-                    <p class="product-price">${ getTotalPrice }</p>
-                </div>
-                <div class="product-form">
-                    <!-- To be render -->
-                    {% render "product-options" %}
-                </div>
-                <div class="product-button">
-                    <button @click.prevent="addToCart($event)" :class="{disabled: isDisabled}">
-                        <span>{% render "shopping-cart" %}</span>
-                        <span>Add To Cart</span>
-                    </button>
-                    <!-- <button @click.prevent="openPage" :class="{disabled: isDisabled}">
-                        <span>{{ section.settings.btnText1 }}</span>
-                        <span>{{ section.settings.btnText2 }}</span>
-                    </button> -->
+                <div class="column is-3">
+                    <div class="container">
+                        <div class="product-headings">
+                            <div class="product-title">
+                                <h1 class="g-heading-color">20oz TUMBLER</h1>
+                            </div>
+                            <div class="product-price">
+                                <p>Starts at <span>$24.95</span></p>
+                            </div>
+                        </div>
+                        <div class="product-options">
+                            <!-- Option 1 -->
+                            <div class="option-title">
+                                <h4 class="g-heading-color">Choose your color.</h4>
+                            </div>
+                            <div class="options-wrapper">
+                                <div class="columns is-multiline is-variable is-2">
+                                    <div class="column is-one-third">
+                                        <div class="option option-color">
+                                            <input type="radio" name="color" id="option-color-1" checked>
+                                            <label for="option-color-1">
+                                                <div class="color" style="background-color: #1b1d29;"></div>
+                                                <div class="color-title opt-title">
+                                                    <span>Nero Black</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-one-third">
+                                        <div class="option option-color">
+                                            <input type="radio" name="color" id="option-color-2">
+                                            <label for="option-color-2">
+                                                <div class="color" style="background-color: #123158;"></div>
+                                                <div class="color-title opt-title">
+                                                    <span>Midnight Blue</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-one-third">
+                                        <div class="option">
+                                            <input type="radio" name="color" id="option-color-3">
+                                            <label for="option-color-3">
+                                                <div class="color" style="background-color: #939393;"></div>
+                                                <div class="color-title opt-title">
+                                                    <span>Stainless Steel</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-one-third">
+                                        <div class="option option-color">
+                                            <input type="radio" name="color" id="option-color-4">
+                                            <label for="option-color-4">
+                                                <div class="color" style="background-color: #e8e8e8;"></div>
+                                                <div class="color-title opt-title">
+                                                    <span>White</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-one-third">
+                                        <div class="option option-color">
+                                            <input type="radio" name="color" id="option-color-5">
+                                            <label for="option-color-5">
+                                                <div class="color" style="background-color: #f2a8bc;"></div>
+                                                <div class="color-title opt-title">
+                                                    <span>Classic Pink</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-one-third">
+                                        <div class="option option-color">
+                                            <input type="radio" name="color" id="option-color-6">
+                                            <label for="option-color-6">
+                                                <div class="color" style="background-color: #68dbd8;"></div>
+                                                <div class="color-title opt-title">
+                                                    <span>Mint</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-one-third">
+                                        <div class="option option-color">
+                                            <input type="radio" name="color" id="option-color-7">
+                                            <label for="option-color-7">
+                                                <div class="color" style="background-color: #b1775f;"></div>
+                                                <div class="color-title opt-title">
+                                                    <span>Copper</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Option 2 -->
+                            <div class="option-title">
+                                <h4 class="g-heading-color">Choose your lid.</h4>
+                            </div>
+                            <div class="options-wrapper">
+                                <div class="columns is-variable is-2">
+                                    <div class="column">
+                                        <div class="option">
+                                            <input type="radio" name="lid" id="option-lid-1" checked>
+                                            <label for="option-lid-1" class="lid-option">
+                                                <div class="lid-title opt-title">
+                                                    <span class="g-heading-color">Sliding Lid</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="option">
+                                            <input type="radio" name="lid" id="option-lid-2">
+                                            <label for="option-lid-2" class="lid-option">
+                                                <div class="lid-title opt-title">
+                                                    <span class="g-heading-color">Non-Sliding Lid</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Option 3 -->
+                            <div class="option-title">
+                                <h4 class="g-heading-color">Do you want to personalize your item?</h4>
+                            </div>
+                            <div class="options-wrapper">
+                                <div class="columns is-multiline">
+                                    <div class="column is-full">
+                                        <div class="option">
+                                            <input type="radio" name="personalize" id="option-personalize-1" checked>
+                                            <label for="option-personalize-1" class="personalize-option">
+                                                <div class="personalize-title opt-title">
+                                                    <div class="personalize-title-txt">
+                                                        <span class="g-heading-color">Yes, engrave my item!</span>
+                                                        <p>
+                                                            Engrave your item with your own choice of text,
+                                                            numbers, an icon* or even a custom logo*! *Additional fees apply
+                                                        </p>
+                                                    </div>
+                                                    <div class="personalize-title-price">
+                                                        <span class="g-heading-color">Free</span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="option">
+                                            <input type="radio" name="personalize" id="option-personalize-2">
+                                            <label for="option-personalize-2" class="personalize-option">
+                                                <div class="personalize-title opt-title">
+                                                    <span class="g-heading-color">Skip engraving.</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
