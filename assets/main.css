@@ -3352,6 +3352,7 @@ main {
 
 .section-blogs .blogs-shell .blogs-body .columns .column .card {
   position: relative;
+  border-radius: 0;
 }
 
 .section-blogs .blogs-shell .blogs-body .columns .column .card .card-link {
