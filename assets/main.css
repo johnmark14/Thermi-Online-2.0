@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 @font-face {
   font-family: "mt-black";
   src: url("https://cdn.shopify.com/s/files/1/0598/6159/8417/files/made_tommy_black.otf?v=1635766617");
@@ -698,6 +706,70 @@ main {
   background-color: #d6d6d6;
   border-color: #d6d6d6;
   cursor: no-drop;
+}
+
+.g-font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.g-font-dancing.this-font-size {
+  font-size: 18px !important;
+}
+
+.g-font-caveat {
+  font-family: 'Caveat', cursive;
+}
+
+.g-font-caveat.this-font-size {
+  font-size: 17px !important;
+}
+
+.g-font-acme {
+  font-family: 'Acme', sans-serif;
+}
+
+.g-font-acme.this-font-size {
+  font-size: 15px !important;
+}
+
+.g-font-satisfy {
+  font-family: 'Satisfy', cursive;
+}
+
+.g-font-satisfy.this-font-size {
+  font-size: 15px !important;
+}
+
+.g-font-cookie {
+  font-family: 'Cookie', cursive;
+}
+
+.g-font-cookie.this-font-size {
+  font-size: 20px !important;
+}
+
+.g-font-secular {
+  font-family: 'Secular One', sans-serif;
+}
+
+.g-font-secular.this-font-size {
+  font-size: 16px !important;
+}
+
+.g-font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.g-font-montserrat.this-font-size {
+  font-size: 16px !important;
+}
+
+.g-font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+.g-font-cairo.this-font-size {
+  font-size: 16px !important;
 }
 
 @-webkit-keyframes fade-in {
@@ -3492,6 +3564,10 @@ main {
   color: #ffffff !important;
 }
 
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label .opt-title svg, .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label span svg {
+  fill: #ffffff;
+}
+
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3512,6 +3588,10 @@ main {
       -ms-user-select: none;
           user-select: none;
   font-weight: bold;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label:hover {
+  border-color: #5e5e5e;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .color {
@@ -3567,6 +3647,68 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   height: 60px;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .style-title-txt {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .style-title-txt span {
+  display: block;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .style-title-txt span:not(:first-child) {
+  font-size: 12px;
+  font-family: 'mt-thin', sans-serif;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .icon-icon {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .icon-icon span svg {
+  fill: #5e5e5e;
+  height: 42px;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.font-option .font-title-txt {
+  height: 26px;
+  max-height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.font-option .font-title-txt span {
+  font-size: 14px;
 }
 
 .section-accordion .accord-wrapper {

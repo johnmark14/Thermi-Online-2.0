@@ -45,6 +45,10 @@
                                                 }
                                                 .opt-title, span {
                                                     color: $white !important;
+
+                                                    svg {
+                                                        fill: $white;
+                                                    }
                                                 }
                                             }
                                         }
@@ -59,6 +63,10 @@
                                             border: 1px solid $lightGray;
                                             user-select: none;
                                             font-weight: bold;
+
+                                            &:hover {
+                                                border-color: $darkGray;
+                                            }
 
                                             // For color option
                                             .color {
@@ -102,11 +110,56 @@
                                                     }
                                                 }
                                             }
-                                            // Fore personalization
+                                            // For personalization
                                             &.personalize-option {
                                                 align-items: flex-start;
                                                 justify-content: center;
                                                 height: 60px;
+                                            }
+                                            // For style option
+                                            .style-title {
+                                               &-txt {
+                                                    height: 60px;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    span {
+                                                        display: block;
+                                                        &:not(:first-child){
+                                                            font-size: 12px;
+                                                            font-family: 'mt-thin', sans-serif;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            // For icon option
+                                            .icon-icon {
+                                                height: 60px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                span {
+                                                    svg {
+                                                        fill: $darkGray;
+                                                        height: 42px;
+                                                    }
+                                                }
+                                            }
+                                            // Font font style
+                                            &.font-option {
+                                                .font-title {
+                                                    &-txt {
+                                                        height: 26px;
+                                                        max-height: 26px;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        span {
+                                                            font-size: 14px;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     } /* end of option */
