@@ -3530,6 +3530,7 @@ main {
   padding-bottom: 26px;
   border-bottom: 1px solid #989898;
   /* end of columns */
+  /* end of option texts */
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns {
@@ -3709,6 +3710,35 @@ main {
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.font-option .font-title-txt span {
   font-size: 14px;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .option-texts .option-text:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .option-texts .option-text input {
+  width: 100%;
+  font-family: 'mt-regular',sans-serif;
+  color: #989898;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #989898;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .option-texts .option-text input:focus {
+  border: 2px solid #989898;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .option-texts .option-text span {
+  margin-top: 5px;
+  font-size: 14px;
+  display: inline-block;
+  font-family: 'mt-thin', sans-serif;
+  font-weight: bold;
 }
 
 .section-accordion .accord-wrapper {

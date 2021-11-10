@@ -165,6 +165,36 @@
                                     } /* end of option */
                                 } /* end of column */
                             } /* end of columns */
+
+                            .option-texts {
+                                .option-text {
+                                    &:not(:last-child) {
+                                        margin-bottom: 16px;
+                                    }
+                                    input {
+                                        width: 100%;
+                                        font-family: 'mt-regular',sans-serif;
+                                        color: $lightGray;
+                                        padding: 5px;
+                                        font-size: toRem(16);
+                                        outline: none;
+                                        border: 1px solid $lightGray;
+                                        border-radius: 5px;
+                                        box-sizing: border-box;
+                                        
+                                        &:focus {
+                                            border: 2px solid $lightGray;
+                                        }
+                                    }
+                                    span {
+                                        margin-top: 5px;
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        font-family: 'mt-thin', sans-serif;
+                                        font-weight: bold;
+                                    }
+                                }
+                            } /* end of option texts */
                         } /* end of wrapper */
                     }
                 }
