@@ -376,65 +376,6 @@
                 font-weight: 400;
                 font-size: toRem(13);
               }
-
-              .item-quantity {
-                margin-top: 15px;
-                background-color: $darkGray1;
-                border: 1px solid $darkGray1;
-                color: $white;
-                display: inline-block;
-                border-radius: 5px;
-                
-                .item-actions {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                }
-
-                .qt {
-                  text-align: center;
-                  padding: 5px 8px;
-                  font-weight: 700;
-
-                  a {
-                    color: $white;
-                  }
-                }
-
-                .add {
-                  width: 18px;
-                  cursor: pointer;
-
-                  a {
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                    background-color: transparent;
-                    -webkit-tap-highlight-color: transparent;
-                  }
-                }
-
-                .items {
-                  font-weight: 400;
-                  border: none;
-                  background-color: $white;
-                  color: $darkGray;
-                  span {
-                    padding: 0 10px;
-                  }
-                }
-
-                .minus {
-                  width: 18px;
-                  cursor: pointer;
-
-                  a {
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                  }
-                }
-              }
             }
           }
         }

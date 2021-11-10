@@ -41,7 +41,9 @@
                                             <span>${item.quantity}</span>
                                         </div>
                                     </td> -->
-                                    {% render 'quantity-options' %}
+                                    <td class="td-quantity">
+                                        {% render 'quantity-options' %}
+                                    </td>
                                     <!-- Used for desktop -->
                                     <td class="td-total wide">
                                         <span v-if="item.properties.personalization">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>

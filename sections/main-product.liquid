@@ -6,7 +6,7 @@
         <a href="/pages/choose" class="product-back">< Product Selection</a>
         <div class="product-body">
             <div class="columns is-centered">
-                <div class="column is-6">
+                <div class="column is-6 product-featured-img">
                     <figure class="image is-1by1">
                         <img src="https://bulma.io/images/placeholders/480x480.png">
                     </figure>
@@ -315,7 +315,7 @@
                                     <!-- fonts selection -->
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-1" checked>
+                                            <input type="radio" name="font" id="option-font-1" checked>
                                             <label for="option-font-1" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -327,7 +327,7 @@
                                     </div>
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-2">
+                                            <input type="radio" name="font" id="option-font-2">
                                             <label for="option-font-2" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -339,7 +339,7 @@
                                     </div>
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-3">
+                                            <input type="radio" name="font" id="option-font-3">
                                             <label for="option-font-3" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -351,7 +351,7 @@
                                     </div>
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-4">
+                                            <input type="radio" name="font" id="option-font-4">
                                             <label for="option-font-4" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -363,7 +363,7 @@
                                     </div>
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-5">
+                                            <input type="radio" name="font" id="option-font-5">
                                             <label for="option-font-5" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -375,7 +375,7 @@
                                     </div>
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-6">
+                                            <input type="radio" name="font" id="option-font-6">
                                             <label for="option-font-6" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -387,7 +387,7 @@
                                     </div>
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-7">
+                                            <input type="radio" name="font" id="option-font-7">
                                             <label for="option-font-7" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -399,7 +399,7 @@
                                     </div>
                                     <div class="column is-half">
                                         <div class="option">
-                                            <input type="radio" name="style" id="option-font-8">
+                                            <input type="radio" name="font" id="option-font-8">
                                             <label for="option-font-8" class="font-option">
                                                 <div class="font-title opt-title">
                                                     <div class="font-title-txt">
@@ -433,7 +433,21 @@
                             </div>
                         </div>
                         <div class="product-quantity">
-                            
+                            <div class="quantity-heading">
+                                <h4 class="g-heading-color">Quantity</h4>
+                            </div>
+                            <div class="quantity">
+                                {% render 'quantity-options' %}
+                            </div>
+                        </div>
+                        <div class="product-button">
+                            <a href="/" class="product-btn">
+                                <div class="btn-desc">
+                                    <span>{% render 'shopping-cart' %}</span>
+                                    <span>Add to cart</span>
+                                    <span>$24.95</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

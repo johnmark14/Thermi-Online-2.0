@@ -4,6 +4,13 @@
             margin-top: 20px;
             .columns {
                 .column {
+                    &.product-featured-img {
+                        position: sticky;
+                        top: 60px;
+                        align-self: flex-start;
+
+                    }
+
                     .product-headings {
                         margin-bottom: 30px;
                         .product-title {
@@ -196,6 +203,48 @@
                                 }
                             } /* end of option texts */
                         } /* end of wrapper */
+                    }
+
+                    .product-button {
+                        margin-top: 16px;
+                        // text-align: center;
+                        .product-btn {
+                            display: inline-block;
+                            background-color: $darkGray;
+                            border-radius: 10px;
+                            transition: color 0.5s ease-in-out, background 0.5s ease-in-out,
+                            border-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                            // width: 100%;
+
+                            &:hover {
+                                background-color: $darkGray1;
+                            }
+                            .btn-desc {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                color: $white;
+                                height: 66px;
+                                max-height: 65px;
+                                padding: 10px 30px;
+                                box-sizing: border-box;
+                                span {
+                                    &:not(:last-child) {
+                                        margin-right: 20px;
+                                    }
+                                    font-size: 20px;
+                                    line-height: 0;
+                                    &:last-child {
+                                        font-family: 'mt-thin', sans-serif;
+                                        font-weight: bold;
+                                    }
+                                    svg {
+                                        width: 30px;
+                                        fill: $white;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
