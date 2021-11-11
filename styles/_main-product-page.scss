@@ -51,7 +51,7 @@
                                                     border-color: $white;
                                                 }
                                                 .opt-title, span {
-                                                    color: $white !important;
+                                                    color: $white;
 
                                                     svg {
                                                         fill: $white;
@@ -70,6 +70,7 @@
                                             border: 1px solid $lightGray;
                                             user-select: none;
                                             font-weight: bold;
+                                            position: relative;
 
                                             &:hover {
                                                 border-color: $darkGray;
@@ -82,6 +83,9 @@
                                                 border-radius: 50%;
                                                 border: 1px solid $lightGray;
                                                 margin-bottom: 2px;
+                                                position: relative;
+
+                                                
                                             }
 
                                             // For color option
@@ -92,6 +96,33 @@
                                                 padding: 0 2px;
                                                 padding-top: 1px;
                                             }
+
+                                            // For out of stock indicator
+                                            &.out-of-stock {
+                                                border-color: $lightGray1;
+                                                background-color: $lightGray1;
+                                                cursor: no-drop;
+
+                                                .color {
+                                                    border-color: $white !important;
+                                                    &::after {
+                                                        content: '';
+                                                        width: 2px;
+                                                        height: 25px;
+                                                        left: 11px;
+                                                        position: absolute;
+                                                        background-color: $white;
+                                                        transform: rotate(50deg);
+                                                        display: inline-block;
+                                                    }
+                                                }
+
+                                                .color-title {
+                                                    color: $lightGray !important;
+                                                }
+                                            }
+
+
                                             // For lid option
                                             &.lid-option {
                                                 padding: 18px 0;

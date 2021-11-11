@@ -3616,6 +3616,7 @@ main {
   border-radius: 50%;
   border: 1px solid #989898;
   margin-bottom: 2px;
+  position: relative;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .color-title {
@@ -3624,6 +3625,32 @@ main {
   text-align: center;
   padding: 0 2px;
   padding-top: 1px;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.out-of-stock {
+  border-color: #d6d6d6;
+  background-color: #d6d6d6;
+  cursor: no-drop;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.out-of-stock .color {
+  border-color: #ffffff;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.out-of-stock .color::after {
+  content: '';
+  width: 2px;
+  height: 25px;
+  left: 11px;
+  position: absolute;
+  background-color: #ffffff;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  display: inline-block;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.out-of-stock .color-title {
+  color: #989898;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.lid-option {
