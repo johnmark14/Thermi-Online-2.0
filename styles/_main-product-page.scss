@@ -8,19 +8,40 @@
                         position: sticky;
                         top: 60px;
                         align-self: flex-start;
+                        
+                        @include breakpoint-down(small) {
+                            margin-bottom: 60px;
+                            position: relative;
+                        }
 
+                        figure {
+                            background-size: 127%;
+                            background-repeat: no-repeat;
+                            background-position: 50%;
+                            
+                            &[data-product-cups] {
+                                background-size: 127%;
+                            }
+                            &[data-product-bottles] {
+                                background-size: 120%;
+                            }
+                            
+                            img {
+                                opacity: 0;
+                            }
+                        }
                     }
 
                     .product-headings {
                         margin-bottom: 30px;
                         .product-title {
-                            font-size: 36px;
+                            font-size: 34px;
                             font-family: 'mt-medium', sans-serif;
                             margin-bottom: 8px;
                         }
 
                         .product-price {
-                            font-size: 26px;
+                            font-size: 22px;
                             font-family: 'mt-thin', sans-serif;
                             font-weight: bold;
                         }
@@ -51,6 +72,7 @@
                                                     border-color: $white;
                                                 }
                                                 .opt-title, span {
+                                                    font-weight: normal;
                                                     color: $white;
 
                                                     svg {

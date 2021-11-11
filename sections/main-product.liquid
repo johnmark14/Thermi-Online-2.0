@@ -5,20 +5,20 @@
     <div id="mainProduct" class="product-shell shell">
         <a href="/pages/choose" class="product-back">< Product Selection</a>
         <div class="product-body">
-            <div class="columns is-centered">
-                <div class="column is-6 product-featured-img">
-                    <figure class="image is-1by1">
-                        <img src="https://bulma.io/images/placeholders/480x480.png">
+            <div class="columns is-centered is-variable is-5">
+                <div class="column is-5 product-featured-img">
+                    <figure class="image is-1by1" :style="{backgroundImage: `url(${variantImage})`}" data-product-{{-product.metafields.products.custom_tags-}}>
+                        <img :src="variantImage" alt="{{ product.images[0].alt }}" loading="lazy">
                     </figure>
                 </div>
                 <div class="column is-3">
                     <div class="container">
                         <div class="product-headings">
                             <div class="product-title">
-                                <h1 class="g-heading-color">20oz TUMBLER</h1>
+                                <h1 class="g-heading-color">{{ product.title }}</h1>
                             </div>
                             <div class="product-price">
-                                <p>Starts at <span>$24.95</span></p>
+                                <p>Starts at <span>{{ product.price | money }}</span></p>
                             </div>
                         </div>
                         <div class="product-options">
@@ -28,83 +28,23 @@
                             </div>
                             <div class="options-wrapper">
                                 <div class="columns is-multiline is-variable is-2">
-                                    <div class="column is-one-third">
-                                        <div class="option option-color">
-                                            <input type="radio" name="color" id="option-color-1" checked>
-                                            <label for="option-color-1">
-                                                <div class="color" style="background-color: #1b1d29;"></div>
-                                                <div class="color-title opt-title">
-                                                    <span>Nero Black</span>
-                                                </div>
-                                            </label>
+                                    {% for variant in product.variants %}
+                                        {% assign index = forloop.index | minus: 1 %}
+                                        <div class="column is-one-third">
+                                            <div class="option option-color">
+                                                <input type="radio" name="color" id="option-color-{{forloop.index}}" data-variant-title="{{ variant.title }}" 
+                                                data-variant-price="{{ variant.price }}" data-inventory-count="{{ variant.inventory_quantity }}" 
+                                                data-image-src="{{ variant.image.src | img_url: 'master' }}" data-variant-id="{{ variant.id }}"
+                                                :value="getPersonalizationPrice" @change="onVariantChange($event)" {% if product.variants[index].id == product.selected_variant.id or product.variants[index].id == product.first_available_variant.id %} checked {% endif %}>
+                                                <label for="option-color-{{forloop.index}}" class="{% if variant.inventory_quantity == 0%} out-of-stock {% endif %}">
+                                                    <div class="color" style="background-color: {{ variant.metafields.color.value }}"></div>
+                                                    <div class="color-title opt-title">
+                                                        <span>{{ variant.title }}</span>
+                                                    </div>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="column is-one-third">
-                                        <div class="option option-color">
-                                            <input type="radio" name="color" id="option-color-2">
-                                            <label for="option-color-2">
-                                                <div class="color" style="background-color: #123158;"></div>
-                                                <div class="color-title opt-title">
-                                                    <span>Midnight Blue</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="column is-one-third">
-                                        <div class="option">
-                                            <input type="radio" name="color" id="option-color-3">
-                                            <label for="option-color-3">
-                                                <div class="color" style="background-color: #939393;"></div>
-                                                <div class="color-title opt-title">
-                                                    <span>Stainless Steel</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="column is-one-third">
-                                        <div class="option option-color">
-                                            <input type="radio" name="color" id="option-color-4">
-                                            <label for="option-color-4">
-                                                <div class="color" style="background-color: #e8e8e8;"></div>
-                                                <div class="color-title opt-title">
-                                                    <span>White</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="column is-one-third">
-                                        <div class="option option-color">
-                                            <input type="radio" name="color" id="option-color-5">
-                                            <label for="option-color-5">
-                                                <div class="color" style="background-color: #f2a8bc;"></div>
-                                                <div class="color-title opt-title">
-                                                    <span>Classic Pink</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="column is-one-third">
-                                        <div class="option option-color">
-                                            <input type="radio" name="color" id="option-color-6">
-                                            <label for="option-color-6">
-                                                <div class="color" style="background-color: #68dbd8;"></div>
-                                                <div class="color-title opt-title">
-                                                    <span>Mint</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="column is-one-third">
-                                        <div class="option option-color">
-                                            <input type="radio" name="color" id="option-color-7">
-                                            <label for="option-color-7">
-                                                <div class="color" style="background-color: #b1775f;"></div>
-                                                <div class="color-title opt-title">
-                                                    <span>Copper</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                             <!-- Option 2 -->
@@ -115,7 +55,8 @@
                                 <div class="columns is-variable is-2">
                                     <div class="column">
                                         <div class="option">
-                                            <input type="radio" name="lid" id="option-lid-1" checked>
+                                            <input type="radio" name="lid" id="option-lid-1" 
+                                            @change="getLidType" value="Sliding Lid" checked>
                                             <label for="option-lid-1" class="lid-option">
                                                 <div class="lid-title opt-title">
                                                     <span class="g-heading-color">Sliding Lid</span>
@@ -125,7 +66,8 @@
                                     </div>
                                     <div class="column">
                                         <div class="option">
-                                            <input type="radio" name="lid" id="option-lid-2">
+                                            <input type="radio" name="lid" id="option-lid-2" 
+                                            @change="getLidType" value="Non-Sliding Lid">
                                             <label for="option-lid-2" class="lid-option">
                                                 <div class="lid-title opt-title">
                                                     <span class="g-heading-color">Non-Sliding Lid</span>
@@ -143,7 +85,8 @@
                                 <div class="columns is-multiline">
                                     <div class="column is-full">
                                         <div class="option">
-                                            <input type="radio" name="personalize" id="option-personalize-1" checked>
+                                            <input type="radio" name="personalize" id="option-personalize-1" 
+                                            :value="getPersonalizationPrice" @change="addPersonalization" checked>
                                             <label for="option-personalize-1" class="personalize-option">
                                                 <div class="personalize-title opt-title">
                                                     <div class="personalize-title-txt">
@@ -154,7 +97,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="personalize-title-price">
-                                                        <span class="g-heading-color">Free</span>
+                                                        <span class="g-heading-color">${ money(getPersonalizationPrice)}</span>
                                                     </div>
                                                 </div>
                                             </label>
@@ -162,7 +105,8 @@
                                     </div>
                                     <div class="column is-full">
                                         <div class="option">
-                                            <input type="radio" name="personalize" id="option-personalize-2">
+                                            <input type="radio" name="personalize" id="option-personalize-2" 
+                                            :value="getPersonalizationPrice" @change="noPersonalization">
                                             <label for="option-personalize-2" class="personalize-option">
                                                 <div class="personalize-title opt-title">
                                                     <span class="g-heading-color">Skip engraving.</span>
@@ -437,15 +381,27 @@
                                 <h4 class="g-heading-color">Quantity</h4>
                             </div>
                             <div class="quantity">
-                                {% render 'quantity-options' %}
+                                <div class="item-quantity">
+                                    <div class="item-actions">
+                                        <div class="qt add">
+                                            <a href="/" @click.prevent="addQuantity">+</a>
+                                        </div>
+                                        <div class="qt items wide">
+                                            <span>${ variantQuantity }</span>
+                                        </div>
+                                        <div class="qt minus">
+                                            <a href="/" @click.prevent="minusQuantity">-</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="product-button">
-                            <a href="/" class="product-btn">
+                            <a href="/" class="product-btn" @click.prevent="addToCart($event)">
                                 <div class="btn-desc">
                                     <span>{% render 'shopping-cart' %}</span>
                                     <span>Add to cart</span>
-                                    <span>$24.95</span>
+                                    <span>${ getTotalPrice }</span>
                                 </div>
                             </a>
                         </div>
@@ -504,8 +460,8 @@
                 productDesc: `{{product.description}}`,
                 productHandle: "{{product.handle}}",
                 variantQuantity: 1,
-                variantLidType: '',
-                withPersonalization: false,
+                variantLidType: 'Sliding Lid',
+                withPersonalization: true,
                 personalize: {}
 
             }
@@ -530,9 +486,18 @@
                 this.selectedVariantId = event.target.getAttribute('data-variant-id')
                 this.variantImage = event.target.getAttribute('data-image-src')
                 this.variantInventoryCount = event.target.getAttribute('data-inventory-count')
-                this.totalPrice = event.target.getAttribute('data-variant-price')
                 this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
                 this.variantTitle = event.target.getAttribute('data-variant-title')
+
+                if(withPersonalization) {
+                    let totalPrice = parseFloat((this.totalPrice/100).toFixed(2))
+                    let personalizationPrice = parseFloat((event.target.value/100).toFixed(2))
+                    let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
+
+                    this.totalPrice = newPrice
+                } else {
+                    this.totalPrice = event.target.getAttribute('data-variant-price')
+                }
             },
             // This method is used after the revision
             addToCart(event) {
@@ -545,7 +510,7 @@
                                 final_price: this.totalPrice,
                                 properties: {
                                     'personalization': this.withPersonalization,
-                                    'lidType': this.lidType
+                                    'lidType': this.variantLidType
                                 }
                             }
                         ]
@@ -558,7 +523,7 @@
                                 final_price: this.totalPrice,
                                 properties: {
                                     'personalization': this.withPersonalization,
-                                    'lidType': this.lidType
+                                    'lidType': this.variantLidType
                                 }
                             }, 
                             this.personalize
@@ -622,7 +587,7 @@
                 this.withPersonalization = false
             },
             getLidType(e) {
-                this.lidType = e.target.value
+                this.variantLidType = e.target.value
             }
         },
         computed: {
@@ -633,6 +598,17 @@
                 return this.cartData.state.personalizationPrice
             }
         },
+        watch: {
+            // Sets up the initial price with personalization as default!
+            getPersonalizationPrice(newValue) {
+                let totalPrice = parseFloat((this.totalPrice/100).toFixed(2))
+                let personalizationPrice = parseFloat((newValue/100).toFixed(2))
+                // console.log(personalizationPrice)
+                let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
+
+                this.totalPrice = newPrice
+            }
+        },
         updated() {
             // this.personalize.quantity = this.variantQuantity
 
@@ -641,12 +617,6 @@
         mounted() {
             this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
 
-            if(this.$refs.lid) {
-                this.lidType = this.$refs.lid.value
-            } else {
-                this.lidType = false
-            }
-            
             // Disable the add to cart button if user try to add the add on personalization
             if(this.productType == 'hidden') this.isDisabled = true
         }

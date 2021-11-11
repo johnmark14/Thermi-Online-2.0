@@ -3516,18 +3516,43 @@ main {
       align-self: flex-start;
 }
 
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img {
+    margin-bottom: 60px;
+    position: relative;
+  }
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure {
+  background-size: 127%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-cups] {
+  background-size: 127%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-bottles] {
+  background-size: 120%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure img {
+  opacity: 0;
+}
+
 .section-product .product-shell .product-body .columns .column .product-headings {
   margin-bottom: 30px;
 }
 
 .section-product .product-shell .product-body .columns .column .product-headings .product-title {
-  font-size: 36px;
+  font-size: 34px;
   font-family: 'mt-medium', sans-serif;
   margin-bottom: 8px;
 }
 
 .section-product .product-shell .product-body .columns .column .product-headings .product-price {
-  font-size: 26px;
+  font-size: 22px;
   font-family: 'mt-thin', sans-serif;
   font-weight: bold;
 }
@@ -3577,7 +3602,8 @@ main {
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label .opt-title, .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label span {
-  color: #ffffff !important;
+  font-weight: normal;
+  color: #ffffff;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label .opt-title svg, .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label span svg {
@@ -3604,6 +3630,7 @@ main {
       -ms-user-select: none;
           user-select: none;
   font-weight: bold;
+  position: relative;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label:hover {
@@ -3634,7 +3661,7 @@ main {
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.out-of-stock .color {
-  border-color: #ffffff;
+  border-color: #ffffff !important;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.out-of-stock .color::after {
@@ -3650,7 +3677,7 @@ main {
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.out-of-stock .color-title {
-  color: #989898;
+  color: #989898 !important;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.lid-option {
