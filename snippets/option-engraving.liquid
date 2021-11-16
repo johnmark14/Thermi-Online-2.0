@@ -1,0 +1,36 @@
+<div class="option-title">
+    <h4 class="g-heading-color">Do you want to personalize your item?</h4>
+</div>
+<div class="options-wrapper">
+    <div class="columns is-multiline">
+        <div class="column is-full">
+            <div class="option">
+                <input type="radio" name="personalize" id="option-personalize-1" @change="withPersonalization = true" checked>
+                <label for="option-personalize-1" class="personalize-option">
+                    <div class="personalize-title opt-title">
+                        <div class="personalize-title-txt">
+                            <span class="g-heading-color">Yes, engrave my item!</span>
+                            <p>
+                                Engrave your item with your own choice of text,
+                                numbers, an icon* or even a custom logo*! *Additional fees apply
+                            </p>
+                        </div>
+                        <div class="personalize-title-price">
+                            <span class="g-heading-color">FREE</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="column is-full">
+            <div class="option">
+                <input type="radio" name="personalize" id="option-personalize-2" @change="withPersonalization = false">
+                <label for="option-personalize-2" class="personalize-option">
+                    <div class="personalize-title opt-title">
+                        <span class="g-heading-color">Skip engraving.</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

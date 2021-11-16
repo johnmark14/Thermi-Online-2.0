@@ -1,0 +1,73 @@
+<div class="option-title">
+    <h4 class="g-heading-color">Choose your design style.</h4>
+</div>
+<div class="options-wrapper">
+    <div class="columns is-multiline is-variable is-2">
+        <div class="column is-half">
+            <div class="option">
+                <input type="radio" name="style" id="option-style-1" value="0" data-part="Horizontal Text" @change="[addDesignStyles, addPrice]" checked>
+                <label for="option-style-1" class="style-option">
+                    <div class="style-title opt-title">
+                        <div class="style-title-txt">
+                            <span class="g-heading-color">Horizontal Text</span>
+                            <span>Up to 5 Lines of Text</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="column is-half">
+            <div class="option">
+                <input type="radio" name="style" id="option-style-2" value="0" data-part="Vertical Text" @change="[addDesignStyles, addPrice]">
+                <label for="option-style-2" class="style-option">
+                    <div class="style-title opt-title">
+                        <div class="style-title-txt">
+                            <span class="g-heading-color">Vertical Text</span>
+                            <span>Up to 3 Lines of Text</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="column is-half">
+            <div class="option">
+                <input type="radio" name="style" id="option-style-3" value="0" data-part="Initials" @change="[addDesignStyles, addPrice]">
+                <label for="option-style-3" class="style-option">
+                    <div class="style-title opt-title">
+                        <div class="style-title-txt">
+                            <span class="g-heading-color">Initials</span>
+                            <span>Up to 3 Letters</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="column is-half">
+            <div class="option">
+                <input :value="getPersonalizationPrice" data-part="Icons" @change="[addDesignStyles, addPrice]" type="radio" name="style" id="option-style-4">
+                <label for="option-style-4" class="style-option">
+                    <div class="style-title opt-title">
+                        <div class="style-title-txt">
+                            <span class="g-heading-color">Icon/Emoji</span>
+                            <span>Includes one line of text.</span>
+                            <span>+${money(getPersonalizationPrice)}</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="column is-full">
+            <div class="option">
+                <input type="radio" name="style" id="option-style-5" @change="addDesignStyles">
+                <label for="option-style-5" class="style-option">
+                    <div class="style-title opt-title">
+                        <div class="style-title-txt">
+                            <span class="g-heading-color">Custom Logo? Contact Us.*</span>
+                            <span>*Starts at +$15</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

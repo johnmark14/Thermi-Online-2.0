@@ -1,0 +1,29 @@
+<div class="option-title">
+    <h4 class="g-heading-color">Choose your lid.</h4>
+</div>
+<div class="options-wrapper">
+    <div class="columns is-variable is-2">
+        <div class="column">
+            <div class="option">
+                <input type="radio" name="lid" id="option-lid-1" 
+                @change="getLidType" value="Sliding Lid" checked>
+                <label for="option-lid-1" class="lid-option">
+                    <div class="lid-title opt-title">
+                        <span class="g-heading-color">Sliding Lid</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="column">
+            <div class="option">
+                <input type="radio" name="lid" id="option-lid-2" 
+                @change="getLidType" value="Non-Sliding Lid">
+                <label for="option-lid-2" class="lid-option">
+                    <div class="lid-title opt-title">
+                        <span class="g-heading-color">Non-Sliding Lid</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

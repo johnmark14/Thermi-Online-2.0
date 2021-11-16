@@ -1,0 +1,27 @@
+<div class="option-title">
+    <h4 class="g-heading-color">Enter your personalized text.</h4>
+</div>
+<div class="options-wrapper">
+    <div class="option-texts">
+        <div class="option-text text-option-1">
+            <input v-model="textLineItems.text1" type="text" name="text-option-1" id="text-1" :maxlength="maxOfChar">
+            <span class="g-heading-color">Line 1 (up to ${maxOfChar - textLineItems.text1.length} characters)</span>
+        </div>
+        <div class="option-text text-option-2" v-if="(textLineItems.text1 != '' || textLineItems.text2 != '') && (maxOfText == 3 || maxOfText == 5)">
+            <input v-model="textLineItems.text2" type="text" name="text-option-2" id="text-2" :maxlength="maxOfChar">
+            <span class="g-heading-color">Line 2 (up to ${maxOfChar - textLineItems.text2.length} characters)</span>
+        </div>
+        <div class="option-text text-option-3" v-if="(textLineItems.text2 != '' || textLineItems.text3 != '') && (maxOfText == 3 || maxOfText == 5)">
+            <input v-model="textLineItems.text3" type="text" name="text-option-3" id="text-3" :maxlength="maxOfChar">
+            <span class="g-heading-color">Line 3 (up to ${maxOfChar - textLineItems.text3.length} characters)</span>
+        </div>
+        <div class="option-text text-option-4" v-if="(textLineItems.text3 != '' || textLineItems.text4 != '') && maxOfText == 5">
+            <input v-model="textLineItems.text4" type="text" name="text-option-3" id="text-3" :maxlength="maxOfChar">
+            <span class="g-heading-color">Line 4 (up to ${maxOfChar - textLineItems.text4.length} characters)</span>
+        </div>
+        <div class="option-text text-option-5" v-if="(textLineItems.text4 != '' || textLineItems.text5 != '') && maxOfText == 5">
+            <input v-model="textLineItems.text5" type="text" name="text-option-3" id="text-3" :maxlength="maxOfChar">
+            <span class="g-heading-color">Line 5 (up to ${maxOfChar - textLineItems.text5.length} characters)</span>
+        </div>
+    </div>
+</div>
