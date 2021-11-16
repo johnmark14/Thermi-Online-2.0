@@ -15,19 +15,32 @@
                         }
 
                         figure {
+                            position: relative;
                             background-size: 127%;
                             background-repeat: no-repeat;
                             background-position: 50%;
                             
                             &[data-product-cups] {
-                                background-size: 127%;
+                                background-size: 135%;
                             }
                             &[data-product-bottles] {
-                                background-size: 120%;
+                                background-size: 128%;
                             }
                             
                             img {
                                 opacity: 0;
+                            }
+
+                            .my-icon {
+                                width: 80px;
+                                height: 80px;
+                                position: absolute;
+                                bottom: 30%;
+                                left: 43%;
+
+                                svg {
+                                    fill: $lightGray1;
+                                }
                             }
                         }
                     }

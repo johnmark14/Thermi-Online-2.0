@@ -7,8 +7,9 @@
         <div class="product-body">
             <div class="columns is-centered is-variable is-5">
                 <div class="column is-5 product-featured-img">
-                    <figure class="image is-1by1" :style="{backgroundImage: `url(${variantImage})`}" data-product-{{-product.metafields.products.custom_tags-}}>
+                    <figure class="image is-4by5" :style="{backgroundImage: `url(${variantImage})`}" data-product-{{-product.metafields.products.custom_tags-}}>
                         <img :src="variantImage" alt="{{ product.images[0].alt }}" loading="lazy">
+                        <div v-html="myIcon" class="my-icon"></div>
                     </figure>
                 </div>
                 <div class="column is-3">
@@ -132,6 +133,7 @@
                 variantLidType: 'Sliding Lid',
                 withPersonalization: true,
                 withIcons: false,
+                myIcon: "",
                 maxOfText: maxOfText,
                 maxOfChar: maxOfChar,
                 fontStyle: fontStyle,
@@ -200,6 +202,7 @@
                             text4: '',
                             text5: '',
                         }
+                        this.myIcon = ""
                         console.log(this.withStyle)
                         break;
                     case 'Vertical Text':
@@ -212,6 +215,7 @@
                             text2: '',
                             text3: ''
                         }
+                        this.myIcon = ""
                         console.log(this.withStyle)
                         break;
                     case 'Initials':
@@ -222,6 +226,7 @@
                             style: dataPart,
                             text1: ''
                         }
+                        this.myIcon = ""
                         console.log(this.withStyle)
                         break;
                     case 'Icons':
@@ -233,9 +238,11 @@
                             icon: 'Type A',
                             text1: ''
                         }
+                        this.myIcon = e.target.getAttribute('data-icon')
                         console.log(this.withStyle)
                         break;
                     default:
+                        this.myIcon = ""
                         window.location.href = "/pages/custom-order";
                 }
             },
@@ -245,6 +252,8 @@
             },
             addIcon(e) {
                 this.textLineItems.icon = e.target.value
+                this.myIcon = e.target.getAttribute('data-icon')
+                console.log(this.myIcon)
             },
             // This method is used after the revision
             addToCart(event) {

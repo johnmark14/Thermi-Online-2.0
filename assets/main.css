@@ -3524,21 +3524,34 @@ main {
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure {
+  position: relative;
   background-size: 127%;
   background-repeat: no-repeat;
   background-position: 50%;
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-cups] {
-  background-size: 127%;
+  background-size: 135%;
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-bottles] {
-  background-size: 120%;
+  background-size: 128%;
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure img {
   opacity: 0;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 30%;
+  left: 43%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon svg {
+  fill: #d6d6d6;
 }
 
 .section-product .product-shell .product-body .columns .column .product-headings {
