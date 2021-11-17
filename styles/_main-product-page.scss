@@ -35,11 +35,37 @@
                                 width: 80px;
                                 height: 80px;
                                 position: absolute;
-                                bottom: 30%;
+                                bottom: 35%;
                                 left: 43%;
 
                                 svg {
-                                    fill: $lightGray1;
+                                    fill: $lightGray;
+                                }
+                            }
+
+                            .my-txts {
+                                position: absolute;
+                                bottom: 29%;
+                                left: 40%;
+
+                                font {
+                                    text-align: center;
+                                    color: $lightGray;
+                                    display: block;
+                                    width: 110px;
+                                    font-size: 18px;
+                                }
+
+                                &.initials {
+                                    bottom: 34%;
+                                    font {
+                                        font-size: 30px;
+                                    }
+                                }
+
+                                &.vertical {
+                                    bottom: 32%;
+                                    transform: rotate(90deg);
                                 }
                             }
                         }

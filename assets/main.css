@@ -3546,12 +3546,40 @@ main {
   width: 80px;
   height: 80px;
   position: absolute;
-  bottom: 30%;
+  bottom: 35%;
   left: 43%;
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon svg {
-  fill: #d6d6d6;
+  fill: #989898;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts {
+  position: absolute;
+  bottom: 29%;
+  left: 40%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts font {
+  text-align: center;
+  color: #989898;
+  display: block;
+  width: 110px;
+  font-size: 18px;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.initials {
+  bottom: 34%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.initials font {
+  font-size: 30px;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.vertical {
+  bottom: 32%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .section-product .product-shell .product-body .columns .column .product-headings {
