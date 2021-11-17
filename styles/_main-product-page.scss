@@ -20,10 +20,11 @@
                             background-repeat: no-repeat;
                             background-position: 50%;
                             
-                            &[data-product-cups] {
+                            &[data-product-tumbler-4], 
+                            &[data-product-tumbler-5]{
                                 background-size: 135%;
                             }
-                            &[data-product-bottles] {
+                            &[data-product-bottles-1] {
                                 background-size: 128%;
                             }
                             
@@ -35,25 +36,52 @@
                                 width: 80px;
                                 height: 80px;
                                 position: absolute;
-                                bottom: 35%;
+                                bottom: 34%;
                                 left: 43%;
 
                                 svg {
                                     fill: $lightGray;
+                                }
+
+                                &.custom-cups-1 {
+                                    bottom: 41%;
+                                }
+
+                                &.custom-tumbler-1 {
+                                    bottom: 42%;
+                                    left: 42%;
+                                }
+
+                                &.custom-tumbler-2 {
+                                    bottom: 60%;
+                                    left: 42%;
+                                }
+
+                                &.custom-tumbler-3 {
+                                    left: 41%;
+                                }
+
+                                &.custom-tumbler-4 {
+                                    bottom: 41%;
+                                    left: 41%;
+                                }
+
+                                &.custom-tumbler-5 {
+                                    bottom: 43%;
                                 }
                             }
 
                             .my-txts {
                                 position: absolute;
                                 bottom: 29%;
-                                left: 40%;
+                                left: 37%;
 
                                 font {
                                     text-align: center;
                                     color: $lightGray;
                                     display: block;
-                                    width: 110px;
-                                    font-size: 18px;
+                                    width: 140px;
+                                    font-size: 19px;
                                 }
 
                                 &.initials {
@@ -66,6 +94,84 @@
                                 &.vertical {
                                     bottom: 32%;
                                     transform: rotate(90deg);
+                                }
+
+                                &.custom-bottles-1 {
+                                    left: 37%;
+
+                                    font {
+                                        font-size: 15px;
+                                    }
+                                }
+
+                                &.custom-cups-1 {
+                                    bottom: 36%;
+                                    left: 38%;
+
+                                    &.initials {
+                                        bottom: 38%;
+                                    }
+
+                                    &.vertical {
+                                        bottom: 40%;
+                                    }
+                                }
+
+                                &.custom-tumbler-1 {
+                                    bottom: 37%;
+                                    left: 37%;
+
+                                    &.initials {
+                                        bottom: 42%;
+                                    }
+
+                                    &.vertical {
+                                        bottom: 40%;
+                                        transform: rotate(90deg);
+                                    }
+                                }
+
+                                &.custom-tumbler-2 {
+                                    bottom: 55%;
+                                    left: 37%;
+                                    &.initials {
+                                        bottom: 60%;
+                                    }
+
+                                    &.vertical {
+                                        bottom: 57%;
+                                        transform: rotate(90deg);
+                                    }
+                                }
+
+                                &.custom-tumbler-3 {
+                                    left: 35%;
+
+                                    font {
+                                        font-size: 17px;
+                                    }
+                                }
+
+                                &.custom-tumbler-4 {
+                                    bottom: 36%;
+                                    left: 36%;
+
+                                    &.initials {
+                                        bottom: 40%;
+                                    }
+
+                                    &.vertical {
+                                        bottom: 40%;
+                                    }
+                                }
+
+                                &.custom-tumbler-5 {
+                                    bottom: 38%;
+                                    left: 38%;
+
+                                    &.vertical {
+                                        bottom: 40%;
+                                    }
                                 }
                             }
                         }

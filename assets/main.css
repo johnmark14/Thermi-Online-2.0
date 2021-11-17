@@ -3530,11 +3530,11 @@ main {
   background-position: 50%;
 }
 
-.section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-cups] {
+.section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-tumbler-4], .section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-tumbler-5] {
   background-size: 135%;
 }
 
-.section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-bottles] {
+.section-product .product-shell .product-body .columns .column.product-featured-img figure[data-product-bottles-1] {
   background-size: 128%;
 }
 
@@ -3546,7 +3546,7 @@ main {
   width: 80px;
   height: 80px;
   position: absolute;
-  bottom: 35%;
+  bottom: 34%;
   left: 43%;
 }
 
@@ -3554,18 +3554,45 @@ main {
   fill: #989898;
 }
 
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-cups-1 {
+  bottom: 41%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-1 {
+  bottom: 42%;
+  left: 42%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-2 {
+  bottom: 60%;
+  left: 42%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-3 {
+  left: 41%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-4 {
+  bottom: 41%;
+  left: 41%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-5 {
+  bottom: 43%;
+}
+
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts {
   position: absolute;
   bottom: 29%;
-  left: 40%;
+  left: 37%;
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts font {
   text-align: center;
   color: #989898;
   display: block;
-  width: 110px;
-  font-size: 18px;
+  width: 140px;
+  font-size: 19px;
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.initials {
@@ -3580,6 +3607,87 @@ main {
   bottom: 32%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-bottles-1 {
+  left: 37%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-bottles-1 font {
+  font-size: 15px;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1 {
+  bottom: 36%;
+  left: 38%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1.initials {
+  bottom: 38%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1.vertical {
+  bottom: 40%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-1 {
+  bottom: 37%;
+  left: 37%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-1.initials {
+  bottom: 42%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-1.vertical {
+  bottom: 40%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-2 {
+  bottom: 55%;
+  left: 37%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-2.initials {
+  bottom: 60%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-2.vertical {
+  bottom: 57%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-3 {
+  left: 35%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-3 font {
+  font-size: 17px;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-4 {
+  bottom: 36%;
+  left: 36%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-4.initials {
+  bottom: 40%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-4.vertical {
+  bottom: 40%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5 {
+  bottom: 38%;
+  left: 38%;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5.vertical {
+  bottom: 40%;
 }
 
 .section-product .product-shell .product-body .columns .column .product-headings {

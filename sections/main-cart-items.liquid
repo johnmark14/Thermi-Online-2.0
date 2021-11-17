@@ -24,16 +24,16 @@
                                             ${item.title}
                                             <!-- <span class="td-variant">- White</span> -->
                                         </a>
-                                        <p>${item.product_description}</p>
-                                        <p v-if="item.properties.personalization">with Personalization + ${money(getPersonalizationPrice)}</p>
                                         <p>${item.properties.lidType}</p>
+                                        <p v-if="item.properties.personalization">with FREE Personalization</p>
+                                        <p v-if="item.properties.withIcon == true">with Icon/Emoji + ${money(getPersonalizationPrice)}</p>
                                     </td>
                                     <td data-th-title="Price:" class="td-price">
                                         <span>${money(item.price)}</span>
                                     </td>
                                     <!-- Used for Mobile -->
                                     <td data-th-title="Total:" class="td-total mobile">
-                                        <span v-if="item.properties.personalization">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>
+                                        <span v-if="item.properties.withIcon == true">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>
                                         <span v-else>${money(totalPrice(item.price, 0, item.quantity))}</span>
                                     </td>
                                     <!-- <td data-th-title="Quantity:" class="td-quantity mobile">
@@ -46,7 +46,7 @@
                                     </td>
                                     <!-- Used for desktop -->
                                     <td class="td-total wide">
-                                        <span v-if="item.properties.personalization">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>
+                                        <span v-if="item.properties.withIcon == true">${money(totalPrice(item.price, getPersonalizationPrice, item.quantity))}</span>
                                         <span v-else>${money(totalPrice(item.price, 0, item.quantity))}</span>
                                     </td>
                                 </tr>

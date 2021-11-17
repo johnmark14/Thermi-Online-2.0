@@ -9,8 +9,8 @@
                 <div class="column is-5 product-featured-img">
                     <figure class="image is-4by5" :style="{backgroundImage: `url(${variantImage})`}" data-product-{{-product.metafields.products.custom_tags-}}>
                         <img :src="variantImage" alt="{{ product.images[0].alt }}" loading="lazy">
-                        <div v-html="myIcon" class="my-icon" v-if="withIcons" v-if="withPersonalization"></div>
-                        <div class="my-txts" :class="[{initials: thisInitials}, {vertical: thisVerticalText}]" v-if="withPersonalization">
+                        <div v-html="myIcon" class="my-icon custom-{{-product.metafields.products.custom_tags-}}" v-if="withIcons" v-if="withPersonalization"></div>
+                        <div class="my-txts custom-{{-product.metafields.products.custom_tags-}}" :class="[{initials: thisInitials}, {vertical: thisVerticalText}]" v-if="withPersonalization">
                             <font class="txt-1" v-text="textLineItems.text1" v-if="textLineItems.text1" :style="{fontFamily: fontStyle}"></font>
                             <font class="txt-2" v-text="textLineItems.text2" v-if="textLineItems.text2" :style="{fontFamily: fontStyle}"></font>
                             <font class="txt-3" v-text="textLineItems.text3" v-if="textLineItems.text3" :style="{fontFamily: fontStyle}"></font>
@@ -117,7 +117,7 @@
     const withPersonalization = true
     const maxOfText = 5
     const maxOfChar = 10
-    const fontStyle = 'Thermi Style Font'
+    const fontStyle = 'mt-regular'
 
     const MainProduct = {
         name: "product Page",
@@ -148,7 +148,7 @@
                 fontStyle: fontStyle,
                 textLineItems: {
                     style: 'Horizontal Text',
-                    fontStyle: 'Thermi Font Style',
+                    fontStyle: 'mt-regular',
                     text1: '',
                     text2: '',
                     text3: '',
@@ -302,11 +302,12 @@
                                 properties: {
                                     'lidType': this.variantLidType,
                                     'personalization': this.withPersonalization,
+                                    'withIcon': this.withIcons ? true : 'N/A',
                                     'textStyle': this.withStyle,
                                     'fontStyle': this.fontStyle,
                                     ...this.textLineItems,
                                 }
-                            }, 
+                            },
                             this.personalize
                         ]
                     }
@@ -384,7 +385,7 @@
          },
         updated() {
             // this.personalize.quantity = this.variantQuantity
-            this.personalize = this.withPersonalization ? {id: this.cartData.state.personalization, quantity: this.variantQuantity} : {}
+            this.personalize = this.withIcons ? {id: this.cartData.state.personalization, quantity: this.variantQuantity} : null
         },
         mounted() {
             // This disable the add to cart button when quantity is low
