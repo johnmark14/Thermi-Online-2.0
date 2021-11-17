@@ -11,11 +11,11 @@
                         <img :src="variantImage" alt="{{ product.images[0].alt }}" loading="lazy">
                         <div v-html="myIcon" class="my-icon" v-if="withIcons" v-if="withPersonalization"></div>
                         <div class="my-txts" :class="[{initials: thisInitials}, {vertical: thisVerticalText}]" v-if="withPersonalization">
-                            <font class="txt-1" v-text="textLineItems.text1" v-if="textLineItems.text1"></font>
-                            <font class="txt-2" v-text="textLineItems.text2" v-if="textLineItems.text2"></font>
-                            <font class="txt-3" v-text="textLineItems.text3" v-if="textLineItems.text3"></font>
-                            <font class="txt-4" v-text="textLineItems.text4" v-if="textLineItems.text4"></font>
-                            <font class="txt-5" v-text="textLineItems.text5" v-if="textLineItems.text5"></font>
+                            <font class="txt-1" v-text="textLineItems.text1" v-if="textLineItems.text1" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-2" v-text="textLineItems.text2" v-if="textLineItems.text2" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-3" v-text="textLineItems.text3" v-if="textLineItems.text3" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-4" v-text="textLineItems.text4" v-if="textLineItems.text4" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-5" v-text="textLineItems.text5" v-if="textLineItems.text5" :style="{fontFamily: fontStyle}"></font>
                         </div>
                     </figure>
                 </div>
