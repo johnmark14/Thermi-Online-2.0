@@ -43,6 +43,15 @@
                                     fill: $lightGray;
                                 }
 
+                                &.colorless-variant {
+
+                                    svg {
+                                        g {
+                                            fill: $black;
+                                        }
+                                    }
+                                }
+
                                 &.custom-cups-1 {
                                     bottom: 41%;
                                 }
@@ -78,10 +87,21 @@
 
                                 font {
                                     text-align: center;
-                                    color: $lightGray;
                                     display: block;
                                     width: 140px;
                                     font-size: 19px;
+                                    background-image: url('https://cdn.shopify.com/s/files/1/0598/6159/8417/files/steal-pattern.png?v=1637239228');
+                                    background-repeat: repeat;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color:transparent;
+                                    -webkit-font-smoothing: antialiased;
+
+                                    &.colorless-variant {
+                                        background-image: unset;
+                                        -webkit-background-clip: unset;
+                                        -webkit-text-fill-color: unset;
+                                        color: $black;
+                                    }
                                 }
 
                                 &.initials {
@@ -221,7 +241,9 @@
                                                     color: $white;
 
                                                     svg {
-                                                        fill: $white;
+                                                        path {
+                                                            fill: $white;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -346,8 +368,10 @@
                                                 justify-content: center;
                                                 span {
                                                     svg {
-                                                        fill: $darkGray;
                                                         height: 42px;
+                                                        path {
+                                                            fill: $darkGray;
+                                                        }
                                                     }
                                                 }
                                             }

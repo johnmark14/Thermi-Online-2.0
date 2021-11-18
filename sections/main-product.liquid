@@ -9,13 +9,13 @@
                 <div class="column is-5 product-featured-img">
                     <figure class="image is-4by5" :style="{backgroundImage: `url(${variantImage})`}" data-product-{{-product.metafields.products.custom_tags-}}>
                         <img :src="variantImage" alt="{{ product.images[0].alt }}" loading="lazy">
-                        <div v-html="myIcon" class="my-icon custom-{{-product.metafields.products.custom_tags-}}" v-if="withIcons" v-if="withPersonalization"></div>
+                        <div v-html="myIcon" class="my-icon custom-{{-product.metafields.products.custom_tags-}}" :class="variantCutomClass" v-if="withIcons" v-if="withPersonalization"></div>
                         <div class="my-txts custom-{{-product.metafields.products.custom_tags-}}" :class="[{initials: thisInitials}, {vertical: thisVerticalText}]" v-if="withPersonalization">
-                            <font class="txt-1" v-text="textLineItems.text1" v-if="textLineItems.text1" :style="{fontFamily: fontStyle}"></font>
-                            <font class="txt-2" v-text="textLineItems.text2" v-if="textLineItems.text2" :style="{fontFamily: fontStyle}"></font>
-                            <font class="txt-3" v-text="textLineItems.text3" v-if="textLineItems.text3" :style="{fontFamily: fontStyle}"></font>
-                            <font class="txt-4" v-text="textLineItems.text4" v-if="textLineItems.text4" :style="{fontFamily: fontStyle}"></font>
-                            <font class="txt-5" v-text="textLineItems.text5" v-if="textLineItems.text5" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-1" :class="variantCutomClass" v-text="textLineItems.text1" v-if="textLineItems.text1" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-2" :class="variantCutomClass" v-text="textLineItems.text2" v-if="textLineItems.text2" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-3" :class="variantCutomClass" v-text="textLineItems.text3" v-if="textLineItems.text3" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-4" :class="variantCutomClass" v-text="textLineItems.text4" v-if="textLineItems.text4" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-5" :class="variantCutomClass" v-text="textLineItems.text5" v-if="textLineItems.text5" :style="{fontFamily: fontStyle}"></font>
                         </div>
                     </figure>
                 </div>
@@ -128,6 +128,7 @@
                 selectedVariantId: "{{ product.selected_or_first_available_variant.id}}",
                 variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
                 variantInventoryCount: "{{product.selected_or_first_available_variant.inventory_quantity}}",
+                variantCutomClass: "{{ product.selected_or_first_available_variant.metafields.variant.custom_variant_class }}",
                 isDisabled: false,
                 productType: "{{product.type}}",
                 startPrice: "{{ product.selected_or_first_available_variant.price }}",
@@ -182,6 +183,7 @@
                 this.variantInventoryCount = event.target.getAttribute('data-inventory-count')
                 this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
                 this.variantTitle = event.target.getAttribute('data-variant-title')
+                this.variantCutomClass = event.target.getAttribute('data-variant-custom-class')
 
                 // This adds Icon price to the product
                 if(this.withIcons) {

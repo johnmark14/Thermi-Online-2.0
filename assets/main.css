@@ -3554,6 +3554,10 @@ main {
   fill: #989898;
 }
 
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.colorless-variant svg g {
+  fill: #000;
+}
+
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-cups-1 {
   bottom: 41%;
 }
@@ -3589,10 +3593,21 @@ main {
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts font {
   text-align: center;
-  color: #989898;
   display: block;
   width: 140px;
   font-size: 19px;
+  background-image: url("https://cdn.shopify.com/s/files/1/0598/6159/8417/files/steal-pattern.png?v=1637239228");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts font.colorless-variant {
+  background-image: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: #000;
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.initials {
@@ -3755,7 +3770,7 @@ main {
   color: #ffffff;
 }
 
-.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label .opt-title svg, .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label span svg {
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label .opt-title svg path, .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option input:checked + label span svg path {
   fill: #ffffff;
 }
 
@@ -3908,8 +3923,11 @@ main {
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .icon-icon span svg {
-  fill: #5e5e5e;
   height: 42px;
+}
+
+.section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label .icon-icon span svg path {
+  fill: #5e5e5e;
 }
 
 .section-product .product-shell .product-body .columns .column .product-options .options-wrapper .columns .column .option label.font-option .font-title-txt {
