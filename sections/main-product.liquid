@@ -187,7 +187,7 @@
 
                 // This adds Icon price to the product
                 if(this.withIcons) {
-                    let totalPrice = parseFloat((this.totalPrice/100).toFixed(2))
+                    let totalPrice = parseFloat((this.startPrice/100).toFixed(2))
                     let personalizationPrice = parseFloat((event.target.value/100).toFixed(2))
                     let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
 
