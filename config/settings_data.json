@@ -37,10 +37,11 @@
       "header": {
         "type": "header",
         "settings": {
-          "textLogo": "thermi",
+          "textLogo": "thermi.",
           "textColor": "#757171",
+          "logo": "shopify:\/\/shop_images\/thermi_logo_Converted.png",
           "logo_max_width": 100,
-          "top": "main-menu",
+          "top": "top",
           "showAnnouncement": false,
           "message_text": "🖐 Announce something here 🦊!!!",
           "message_link": "",
