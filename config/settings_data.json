@@ -40,12 +40,12 @@
           "textLogo": "thermi.",
           "textColor": "#757171",
           "logo": "shopify:\/\/shop_images\/thermi_logo_Converted.png",
-          "logo_max_width": 100,
-          "top": "top",
+          "logo_max_width": 94,
+          "top": "main-menu",
           "showAnnouncement": false,
           "message_text": "🖐 Announce something here 🦊!!!",
           "message_link": "",
-          "color_bg": "#3a3a3a",
+          "color_bg": "#d2d2d2",
           "color_text": "#ffffff"
         }
       },
@@ -54,6 +54,7 @@
         "settings": {
           "textLogo": "Thermi",
           "textColor": "#989898",
+          "idFLogo": "shopify:\/\/shop_images\/thermi_logo_big_Converted.png",
           "textBottom": "© 2021 THERMI"
         }
       }
