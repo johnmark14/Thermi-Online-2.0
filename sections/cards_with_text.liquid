@@ -1,38 +1,26 @@
 <section id="{{ section.settings.anchorID }}" class="section-cardwtext section-padding {% if section.settings.sectionPadding %} remove-extra  {% endif %}" style="background-color: {{ section.settings.sectionColor }};">
     <div class="cardwtext-shell shell">
         <h2 class="cardwtext-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
-        <div class="container">
-            <div class="columns is-variable is-1-mobile is-1-tablet">
-                <div class="column">
-                   <div class="card">
-                       <div class="card-image">
-                           <figure class="image is-1by1">
-                                <img src="{{ section.settings.cardImg1 | img_url: 'master' }}" alt="Card Image" loading="lazy">
-                           </figure>
-                       </div>
-                        <footer class="card-footer">
-                            <div class="card-footer-item">
-                               <p class="g-card-heading-small">{{ section.settings.cardText1 }}</p>
+        {% if section.blocks != blank %}
+            <div class="columns is-multiline is-variable is-2">
+                {% for block in section.blocks %}
+                    <div class="column is-half">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="{{ block.settings.cardImg | img_url: 'master' }}" alt="Card Image" loading="lazy">
+                                </figure>
                             </div>
-                        </footer>
-                   </div>
-                </div>
-                <div class="column">
-                   <div class="card">
-                       <div class="card-image">
-                           <figure class="image is-1by1">
-                                <img src="{{ section.settings.cardImg2 | img_url: 'master' }}" alt="Card Image" loading="lazy">
-                           </figure>
-                       </div>
-                        <footer class="card-footer">
-                            <div class="card-footer-item">
-                                <p class="g-card-heading-small">{{ section.settings.cardText2 }}</p>
-                            </div>
-                        </footer>
-                   </div>
-                </div>
+                            <footer class="card-footer">
+                                <div class="card-footer-item">
+                                <p class="g-card-heading-small">{{ block.settings.cardText }}</p>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-        </div>
+        {% endif %}
     </div>
 </section>
 
@@ -53,32 +41,29 @@
             "default": "Services"
         },
         {
-            "type": "textarea",
-            "id": "cardText1",
-            "label": "Card Text Left",
-            "default": "Write something here to describe your services"
-        },
-        {
-            "type": "image_picker",
-            "id": "cardImg1",
-            "label": "Card Image Left"
-        },
-        {
-            "type": "textarea",
-            "id": "cardText2",
-            "label": "Card Text Right",
-            "default": "Write something here to describe your services"
-        },
-        {
-            "type": "image_picker",
-            "id": "cardImg2",
-            "label": "Card Image Right"
-        },
-        {
           "type": "color",
           "id": "sectionColor",
           "label": "Section BG",
           "default": "#f7f7f7"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Card",
+            "type": "card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "cardImg",
+                    "label": "Card Image"
+                },
+                {
+                    "type": "textarea",
+                    "id": "cardText",
+                    "label": "Card Text Left",
+                    "default": "Write something here to describe your services"
+                }
+            ]
         }
     ],
     "presets": [

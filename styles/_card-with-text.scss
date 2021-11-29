@@ -1,19 +1,21 @@
 .section-cardwtext {
     .cardwtext-shell {
-        .container {
-            .columns {
-                @include breakpoint-up(medium) {
-                    display: flex;
+        .columns {
+            @include breakpoint-up(medium) {
+                display: flex;
+            }
+            .column {
+                box-sizing: border-box;
+                &:nth-child(n+3) {
+                    padding-top: 20px;
                 }
-                .column {
-                    .card {
-                        border-radius: 0;
-                        .card-image {
-                            .image {
-                                img {
-                                    border-radius: 0;
-                                    object-fit: cover;
-                                }
+                .card {
+                    border-radius: 0;
+                    .card-image {
+                        .image {
+                            img {
+                                border-radius: 0;
+                                object-fit: cover;
                             }
                         }
                     }
