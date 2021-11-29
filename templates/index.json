@@ -206,10 +206,9 @@
         },
         "14070d63-0c7d-4fe6-a903-9dd7683a98ed": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "imageDesktop": "shopify:\/\/shop_images\/image3-desktop.jpg",
-            "imageMobile": "shopify:\/\/shop_images\/image3-mobile.jpg"
+            "imageDesktop": "shopify:\/\/shop_images\/2.2_copy.jpg",
+            "imageMobile": "shopify:\/\/shop_images\/2.2_copy.jpg"
           }
         },
         "63f9f160-08ce-4c9e-9f2d-cd2c161d8c87": {
