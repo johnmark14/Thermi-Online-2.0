@@ -1,6 +1,18 @@
 .section-gallery-cards {
 
     .gallery-cards-shell {
+        .show-mobile {
+            display: none;
+            @include breakpoint-down(small) {
+                display: block;
+            }
+        }
+
+        @include breakpoint-down(small) {
+            .show-desktop {
+                display: none;
+            }
+        }
         .column {
             .card {
                 position: relative;
@@ -52,6 +64,31 @@
                     text-transform: uppercase;
                     font-family: 'mt-bold', sans-serif;
                 }
+            }
+        }
+
+        .products-carousel {
+            .products-image {
+                position: relative;
+                
+                .products-title {
+                    position: absolute;
+                    top: 40%;
+                    left: 14%;
+                    color: $white;
+                    font-size: 46px;
+                    text-transform: uppercase;
+                    font-family: 'mt-bold', sans-serif;
+                }
+            }
+
+            .card-content {
+                text-align: left;
+                padding: 20px 0;
+                line-height: 1.5;
+            }
+            .swiper-btn {
+                top: 40%;
             }
         }
     }
