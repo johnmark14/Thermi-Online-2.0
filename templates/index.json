@@ -332,10 +332,10 @@
       "settings": {
         "sectionPadding": true,
         "sectionTitle": "Services",
-        "cardText1": "Write something here to describe your services",
-        "cardImg1": "shopify:\/\/shop_images\/image17.jpg",
-        "cardText2": "Write something here to describe your services",
-        "cardImg2": "shopify:\/\/shop_images\/image14.jpg",
+        "cardText1": "Custom drinkware.",
+        "cardImg1": "shopify:\/\/shop_images\/3_copy.jpg",
+        "cardText2": "Custom plastic manufacturing.",
+        "cardImg2": "shopify:\/\/shop_images\/2.2_copy_cd1a6af0-2bb9-42eb-b82e-2ab70318cb19.jpg",
         "sectionColor": "#ffffff"
       }
     },
@@ -344,10 +344,10 @@
       "settings": {
         "sectionPadding": false,
         "sectionTitle": "",
-        "cardText1": "Write something here to describe your services",
-        "cardImg1": "shopify:\/\/shop_images\/image12.jpg",
-        "cardText2": "Write something here to describe your services",
-        "cardImg2": "shopify:\/\/shop_images\/prod1.jpg",
+        "cardText1": "Wood engraving.",
+        "cardImg1": "shopify:\/\/shop_images\/1_copy_1.jpg",
+        "cardText2": "Metal engraving.",
+        "cardImg2": "shopify:\/\/shop_images\/5.5_copy.jpg",
         "sectionColor": "#ffffff"
       }
     },
