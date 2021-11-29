@@ -1497,6 +1497,11 @@ main {
   }
 }
 
+.intro-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .intro-slider {
   position: relative;
   height: 664px;
@@ -1570,8 +1575,8 @@ main {
 
 @media (max-width: 39.9375em) {
   .intro-actions {
-    right: 74px;
-    bottom: 26px;
+    right: -35px;
+    bottom: 40px;
   }
 }
 
@@ -1603,8 +1608,11 @@ main {
 @media (max-width: 39.9375em) {
   .intro-actions .btn-oval {
     width: 220px;
-    padding: 16px 16px;
-    font-size: 1.25rem;
+    padding-left: 18px;
+    font-size: 1.125rem;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
 }
 

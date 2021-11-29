@@ -4,6 +4,11 @@
     padding-bottom: 0;
   }
 
+  &-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
   &-slider {
     position: relative;
     height: 664px;
@@ -69,8 +74,8 @@
     }
 
     @include breakpoint-down(small) {
-      right: 74px;
-      bottom: 26px;
+      right: -35px;
+      bottom: 40px;
     }
 
     .btn {
@@ -93,8 +98,9 @@
 
         @include breakpoint-down(small) {
           width: 220px;
-          padding: 16px 16px;
-          font-size: toRem(20);
+          padding-left: 18px;
+          font-size: toRem(18);
+          justify-content: unset;
         }
 
         &:hover {

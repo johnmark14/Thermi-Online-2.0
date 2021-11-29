@@ -8,50 +8,51 @@
   <div class="intro">
     <!--Handles the left right padding-->
     <div class="intro-shell shell">
-      {% if section.blocks.size != 0 %}
-      <div class="intro-slider">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            {% for block in section.blocks %}
-            <!-- bg-img -->
-            <div class="swiper-slide bg-img">
-              <img
-                src="{{ block.settings.imageDesktop | img_url: 'master' }}"
-                alt=" Picture-{{ forloop.index }}"
-                loading="lazy"
-              />
-            </div>
-            <!-- small-img -->
-            <div class="swiper-slide small-img">
-              <img
-                src="{{ block.settings.imageMobile | img_url: 'master' }}"
-                alt=" Picture-{{ forloop.index }}"
-                loading="lazy"
-              />
-            </div>
-            {% endfor %}
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      {% else %}
-      <div class="intro-slider">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <!-- bg-img -->
-            <div class="swiper-slide bg-img">
-              {% render "image-placeholder" %}
-            </div>
-            <!-- small-img -->
-            <div class="swiper-slide small-img">
-              {% render "image-placeholder" %}
+      <div class="intro-wrapper">
+        {% if section.blocks.size != 0 %}
+          <div class="intro-slider">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                <!-- bg-img -->
+                <div class="swiper-slide bg-img">
+                  <img
+                    src="{{ block.settings.imageDesktop | img_url: 'master' }}"
+                    alt=" Picture-{{ forloop.index }}"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- small-img -->
+                <div class="swiper-slide small-img">
+                  <img
+                    src="{{ block.settings.imageMobile | img_url: 'master' }}"
+                    alt=" Picture-{{ forloop.index }}"
+                    loading="lazy"
+                  />
+                </div>
+                {% endfor %}
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      {% endif %}
-      <div class="intro-actions">
+          {% else %}
+          <div class="intro-slider">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- bg-img -->
+                <div class="swiper-slide bg-img">
+                  {% render "image-placeholder" %}
+                </div>
+                <!-- small-img -->
+                <div class="swiper-slide small-img">
+                  {% render "image-placeholder" %}
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        {% endif %}
+        <div class="intro-actions">
           <a href="{{ section.settings.ctaUrl }}" class="btn-oval">
               <span>
                   {{ section.settings.ctaText }}
@@ -65,6 +66,7 @@
                 </span>
               </div>
           </a>
+        </div>
       </div>
     </div>
   </div>
