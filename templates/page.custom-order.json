@@ -6,10 +6,10 @@
         "c657a1a5-d313-4a9d-848f-a9c456712ef2": {
           "type": "contact-info",
           "settings": {
-            "infoHeading": "Sales & Product Inquiries",
-            "text1": "General Inquiries: 123456789",
-            "text2": "Email: email@support.com",
-            "text3": "",
+            "infoHeading": "Custom Orders",
+            "text1": "Office: 310-627-9459",
+            "text2": "Email: hello@uzulabs.com",
+            "text3": "<br>\nPlease allow 1-2 business days for a reply. Rush orders, please call.",
             "text4": ""
           }
         },
