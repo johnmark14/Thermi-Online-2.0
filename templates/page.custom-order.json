@@ -26,9 +26,9 @@
         "66095208-b95b-4403-908e-4aa96f92ad15": {
           "type": "contact-info",
           "settings": {
-            "infoHeading": "Corporate Sales & Product Inquiries",
-            "text1": "Lorem Ipsum Dolor Sit Amet",
-            "text2": "",
+            "infoHeading": "Corporate Sales",
+            "text1": "Office: 310-627-9459<br>Email: hello@uzulabs.com",
+            "text2": "<br>Please reference CORPORATE in subject line.",
             "text3": "",
             "text4": ""
           }
