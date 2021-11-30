@@ -27,8 +27,8 @@
           "type": "contact-info",
           "settings": {
             "infoHeading": "Corporate Sales",
-            "text1": "Office: 310-627-9459<br>Email: hello@uzulabs.com",
-            "text2": "<br>Please reference CORPORATE in subject line.",
+            "text1": "Office: 310-627-9459<br>Email: hello@uzulabs.com<br>Please reference CORPORATE in subject line.",
+            "text2": "",
             "text3": "",
             "text4": ""
           }
