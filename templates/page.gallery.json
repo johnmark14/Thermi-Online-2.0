@@ -9,136 +9,72 @@
     "1631886502c1b0154c": {
       "type": "products-gallery",
       "blocks": {
-        "1631886502c1b0154c-0": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image5.jpg",
-            "altText": ""
-          }
-        },
-        "1631886502c1b0154c-1": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image6.jpg",
-            "altText": ""
-          }
-        },
         "1631886502c1b0154c-2": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image7.jpg",
+            "img": "shopify:\/\/shop_images\/step3.png",
             "altText": ""
           }
         },
-        "1631886502c1b0154c-3": {
+        "196d9939-f4ef-43be-bbf2-f835b5571dd5": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image8.jpg",
+            "img": "shopify:\/\/shop_images\/Upsetting.jpg",
             "altText": ""
           }
         },
-        "0e155ca5-66f9-496b-a134-4b7cc06372a8": {
+        "51c94bc9-c877-4fff-ab34-d380c3f6c7a4": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image9.jpg",
+            "img": "shopify:\/\/shop_images\/CNN_Christmas_Ornament___UZULABS.jpg",
             "altText": ""
           }
         },
-        "b3d65d31-dc88-43cb-ba7a-b0887be6d621": {
+        "8fbc1f86-9316-41f5-bfe6-a0c070e2455f": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image10.jpg",
+            "img": "shopify:\/\/shop_images\/Own_Show.jpg",
             "altText": ""
           }
         },
-        "195f9425-6e51-4aa4-b639-f460af286864": {
+        "24536a27-2bbf-4a26-a459-10fae6b5a521": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image11.jpg",
+            "img": "shopify:\/\/shop_images\/Brother.jpg",
             "altText": ""
           }
         },
-        "4b5c59a0-54d4-4604-bddf-c92d2a750031": {
+        "f03f83f6-4296-4bf6-9f83-dad056881358": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image12.jpg",
+            "img": "shopify:\/\/shop_images\/Leggings.jpg",
             "altText": ""
           }
         },
-        "703c9af3-5714-4abd-ba48-48c39252da08": {
+        "0a80385e-b4ca-442e-8f76-9c9af35d1d6e": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image13.jpg",
+            "img": "shopify:\/\/shop_images\/CNN.jpg",
             "altText": ""
           }
         },
-        "f431dae1-e660-49bf-95f4-6dd062251c6e": {
+        "1a4910ee-7658-4cd8-86af-8174c5d937b7": {
           "type": "image",
           "settings": {
-            "img": "shopify:\/\/shop_images\/image14.jpg",
-            "altText": ""
-          }
-        },
-        "bf159a7d-b735-4cdd-96d0-46963c9da2a1": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image15.jpg",
-            "altText": ""
-          }
-        },
-        "8811feaa-8364-4288-aea0-33d168ff1ab2": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image16.jpg",
-            "altText": ""
-          }
-        },
-        "12c995ed-9ae5-40b5-8b0b-2d6a1fe35713": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image17.jpg",
-            "altText": ""
-          }
-        },
-        "d7d63ff7-a02c-460f-94ea-e6ca7d1279df": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image18.jpg",
-            "altText": ""
-          }
-        },
-        "d00d84f1-f879-474e-80ed-191ef6e2cea7": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image19.jpg",
-            "altText": ""
-          }
-        },
-        "0e708709-bd76-4dd9-9ea6-16cd0d13c2d6": {
-          "type": "image",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/image20.jpg",
+            "img": "shopify:\/\/shop_images\/Alexa.jpg",
             "altText": ""
           }
         }
       },
       "block_order": [
-        "1631886502c1b0154c-0",
-        "1631886502c1b0154c-1",
         "1631886502c1b0154c-2",
-        "1631886502c1b0154c-3",
-        "0e155ca5-66f9-496b-a134-4b7cc06372a8",
-        "b3d65d31-dc88-43cb-ba7a-b0887be6d621",
-        "195f9425-6e51-4aa4-b639-f460af286864",
-        "4b5c59a0-54d4-4604-bddf-c92d2a750031",
-        "703c9af3-5714-4abd-ba48-48c39252da08",
-        "f431dae1-e660-49bf-95f4-6dd062251c6e",
-        "bf159a7d-b735-4cdd-96d0-46963c9da2a1",
-        "8811feaa-8364-4288-aea0-33d168ff1ab2",
-        "12c995ed-9ae5-40b5-8b0b-2d6a1fe35713",
-        "d7d63ff7-a02c-460f-94ea-e6ca7d1279df",
-        "d00d84f1-f879-474e-80ed-191ef6e2cea7",
-        "0e708709-bd76-4dd9-9ea6-16cd0d13c2d6"
+        "196d9939-f4ef-43be-bbf2-f835b5571dd5",
+        "51c94bc9-c877-4fff-ab34-d380c3f6c7a4",
+        "8fbc1f86-9316-41f5-bfe6-a0c070e2455f",
+        "24536a27-2bbf-4a26-a459-10fae6b5a521",
+        "f03f83f6-4296-4bf6-9f83-dad056881358",
+        "0a80385e-b4ca-442e-8f76-9c9af35d1d6e",
+        "1a4910ee-7658-4cd8-86af-8174c5d937b7"
       ],
       "settings": {
         "sectionPadding": false,
