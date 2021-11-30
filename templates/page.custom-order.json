@@ -6,7 +6,7 @@
         "c657a1a5-d313-4a9d-848f-a9c456712ef2": {
           "type": "contact-info",
           "settings": {
-            "infoHeading": "Custom Order Requests",
+            "infoHeading": "Custom Order Requests & Corporate Sales",
             "text1": "Office: 310-627-9459<br>Email: hello@uzulabs.com",
             "text2": "",
             "text3": "<br>\nPlease allow 1-2 business days for a reply. Rush orders, please call.",
@@ -26,8 +26,8 @@
         "66095208-b95b-4403-908e-4aa96f92ad15": {
           "type": "contact-info",
           "settings": {
-            "infoHeading": "Corporate Sales",
-            "text1": "Office: 310-627-9459<br>Email: hello@uzulabs.com<br>Please reference CORPORATE in subject line.",
+            "infoHeading": "",
+            "text1": "",
             "text2": "",
             "text3": "",
             "text4": ""
