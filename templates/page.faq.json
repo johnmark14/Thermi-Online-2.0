@@ -65,7 +65,7 @@
         "e96953c9-7d85-4d03-a08c-16edf8bee682": {
           "type": "accord-item",
           "settings": {
-            "textHeadingItem": "Can I return a custmized order?",
+            "textHeadingItem": "Can I return a customized order?",
             "textLeftHeadingItem": "Customized Orders",
             "textContent": "Due to the customized nature of a custom order, we will not be able to accept returns on custom orders."
           }
