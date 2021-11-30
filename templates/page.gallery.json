@@ -64,6 +64,13 @@
             "img": "shopify:\/\/shop_images\/Alexa.jpg",
             "altText": ""
           }
+        },
+        "7dc731d9-b8c7-4037-83d2-69907c5fea19": {
+          "type": "image",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/King.jpg",
+            "altText": ""
+          }
         }
       },
       "block_order": [
@@ -74,7 +81,8 @@
         "24536a27-2bbf-4a26-a459-10fae6b5a521",
         "f03f83f6-4296-4bf6-9f83-dad056881358",
         "0a80385e-b4ca-442e-8f76-9c9af35d1d6e",
-        "1a4910ee-7658-4cd8-86af-8174c5d937b7"
+        "1a4910ee-7658-4cd8-86af-8174c5d937b7",
+        "7dc731d9-b8c7-4037-83d2-69907c5fea19"
       ],
       "settings": {
         "sectionPadding": false,
