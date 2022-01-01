@@ -302,25 +302,45 @@
     },
     "16358581613b249960": {
       "type": "cards_with_text",
+      "blocks": {
+        "94218434-e8c6-487b-af15-7ba5100a15b6": {
+          "type": "card",
+          "settings": {
+            "cardImg": "shopify:\/\/shop_images\/5.5_copy.jpg",
+            "cardText": "Write something here to describe your services"
+          }
+        },
+        "9e1c1375-2d7c-47e4-bda0-ed40aca95e3b": {
+          "type": "card",
+          "settings": {
+            "cardImg": "shopify:\/\/shop_images\/1_copy_1.jpg",
+            "cardText": "Write something here to describe your services"
+          }
+        },
+        "7405558c-383b-4698-8d21-a9d9369b8e97": {
+          "type": "card",
+          "settings": {
+            "cardImg": "shopify:\/\/shop_images\/3_copy_2c527639-58d3-492d-adb0-a7eedeb12116.jpg",
+            "cardText": "Write something here to describe your services"
+          }
+        },
+        "cf03a410-0e85-4b33-ad8a-8c01f05a51a7": {
+          "type": "card",
+          "settings": {
+            "cardImg": "shopify:\/\/shop_images\/1_copy_da716b66-6844-4712-ad70-9cbbb8aee02f.jpg",
+            "cardText": "Write something here to describe your services"
+          }
+        }
+      },
+      "block_order": [
+        "94218434-e8c6-487b-af15-7ba5100a15b6",
+        "9e1c1375-2d7c-47e4-bda0-ed40aca95e3b",
+        "7405558c-383b-4698-8d21-a9d9369b8e97",
+        "cf03a410-0e85-4b33-ad8a-8c01f05a51a7"
+      ],
       "settings": {
         "sectionPadding": true,
         "sectionTitle": "Services",
-        "cardText1": "Custom drinkware.",
-        "cardImg1": "shopify:\/\/shop_images\/3_copy.jpg",
-        "cardText2": "Custom plastic manufacturing.",
-        "cardImg2": "shopify:\/\/shop_images\/2.2_copy_cd1a6af0-2bb9-42eb-b82e-2ab70318cb19.jpg",
-        "sectionColor": "#ffffff"
-      }
-    },
-    "16358581853c27d3f1": {
-      "type": "cards_with_text",
-      "settings": {
-        "sectionPadding": false,
-        "sectionTitle": "",
-        "cardText1": "Wood engraving.",
-        "cardImg1": "shopify:\/\/shop_images\/1_copy_1.jpg",
-        "cardText2": "Metal engraving.",
-        "cardImg2": "shopify:\/\/shop_images\/5.5_copy.jpg",
         "sectionColor": "#ffffff"
       }
     },
@@ -458,7 +478,6 @@
     "1635780845096844df",
     "1633346573ec5ebe89",
     "16358581613b249960",
-    "16358581853c27d3f1",
     "1635858226384ff358",
     "1631082294d036fef7",
     "1631083388fef06008"
