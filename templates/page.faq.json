@@ -14,7 +14,7 @@
           "settings": {
             "textHeadingItem": "How is my Thermi drinkware meant to be used?",
             "textLeftHeadingItem": "Product Usage",
-            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+            "textContent": "All Thermi drinkware is double wall, vacuum insulated - with the exception of our 15oz pint cup. Our double wall drinkware will insulate both hot and cold beverages - with the exception of our 15oz pint cup, which is best suited for cold beverages. Our 18oz and 40oz bottles are not meant for carbonated beverages as pressure will build up when the lid is closed due to the carbonation."
           }
         },
         "4d2eaabf-f9c9-49ef-b824-ca2988b816ad": {
@@ -22,7 +22,7 @@
           "settings": {
             "textHeadingItem": "How should I care for my Thermi?",
             "textLeftHeadingItem": "Product Care",
-            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+            "textContent": "HAND WASH with mild detergent. Please DO NOT use abrasive cleaners. Please clean your bottle, lid, AND o-ring regularly!"
           }
         },
         "f66be599-1ad4-40a9-abec-9ff8d0751f85": {
@@ -36,7 +36,16 @@
           "settings": {
             "textHeadingItem": "When will my order ship? How long to receive it?",
             "textLeftHeadingItem": "When will my order ship?",
-            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+            "textContent": "We typically ship all orders same day. Please allow up to 1-2 business days for your order to ship."
+          }
+        },
+        "7b64329d-b77f-47a2-b1e5-7e787cdc975a": {
+          "type": "accord-item",
+          "disabled": true,
+          "settings": {
+            "textHeadingItem": "",
+            "textLeftHeadingItem": "",
+            "textContent": ""
           }
         },
         "77854cb5-47fe-4df2-b52e-828cabb1709c": {
@@ -44,7 +53,7 @@
           "settings": {
             "textHeadingItem": "Which shipping carriers do you ship with?",
             "textLeftHeadingItem": "Shipping Options",
-            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+            "textContent": "Orders typically ship via UPS Ground (United Parcel Service). Depending on your order weight and delivery location, we may ship via USPS (United States Postal Service) in some instances."
           }
         },
         "4605b017-a149-4fe5-aa73-bc14809d708c": {
@@ -56,9 +65,9 @@
         "e96953c9-7d85-4d03-a08c-16edf8bee682": {
           "type": "accord-item",
           "settings": {
-            "textHeadingItem": "Can I return a custmized order?",
+            "textHeadingItem": "Can I return a customized order?",
             "textLeftHeadingItem": "Customized Orders",
-            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+            "textContent": "Due to the customized nature of a custom order, we will not be able to accept returns on custom orders."
           }
         },
         "7053b127-080b-4495-9a83-1ecbb3f82507": {
@@ -66,7 +75,7 @@
           "settings": {
             "textHeadingItem": "Can I return a non-customized order?",
             "textLeftHeadingItem": "Non-Customized Orders",
-            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+            "textContent": "Non-customized orders can be returned within 2 weeks of the DELIVERY date. Please contact us to start a return."
           }
         },
         "b84b1256-dee3-4c17-ba6b-ca68733995ac": {
@@ -80,7 +89,7 @@
           "settings": {
             "textHeadingItem": "Does my Thermi product come with a warranty?",
             "textLeftHeadingItem": "Warranty Info",
-            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem auctor, semper mi vel, dapibus magna. Duis et turpis id urna semper pharetra. Cras ac nibh facilisis, porttitor orci accumsan, pharetra leo. Morbi non tortor tincidunt, malesuada ipsum et, pharetra augue. Duis laoreet felis at lacus posuere, pulvinar fringilla nisi vestibulum. Quisque at efficitur nunc. Sed vel rutrum ligula. Morbi in neque et lorem viverra dictum. Nulla facilisi."
+            "textContent": "We guarantee all products we sell against manufacturers defects for up to 1 year. Misuse and abuse causing an item to become defective will NOT be covered."
           }
         }
       },
@@ -90,6 +99,7 @@
         "4d2eaabf-f9c9-49ef-b824-ca2988b816ad",
         "f66be599-1ad4-40a9-abec-9ff8d0751f85",
         "e264b860-cc5a-471f-b03a-41dea3770071",
+        "7b64329d-b77f-47a2-b1e5-7e787cdc975a",
         "77854cb5-47fe-4df2-b52e-828cabb1709c",
         "4605b017-a149-4fe5-aa73-bc14809d708c",
         "e96953c9-7d85-4d03-a08c-16edf8bee682",
@@ -98,7 +108,7 @@
         "76796726-9466-4361-8013-d5eed1d31e00"
       ],
       "settings": {
-        "pageMessage": "Please checkout out some of the answer to our most commonly asked questions below. Can'f find the answer you are looking for? Please contact us and we will be glad to help!"
+        "pageMessage": "Please check out some of the answers to our most commonly asked questions below. Can't find the answer you're looking for? Please contact us and we will be glad to help!"
       }
     }
   },

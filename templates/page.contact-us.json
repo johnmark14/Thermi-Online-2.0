@@ -6,9 +6,9 @@
         "c657a1a5-d313-4a9d-848f-a9c456712ef2": {
           "type": "contact-info",
           "settings": {
-            "infoHeading": "Sales & Product Inquiries",
-            "text1": "General Inquiries: 123456789",
-            "text2": "Email: email@support.com",
+            "infoHeading": "General Inquiries & Customer Service",
+            "text1": "Office: 310-627-9459<br>Email: hello@uzulabs.com",
+            "text2": "",
             "text3": "",
             "text4": ""
           }
@@ -16,9 +16,9 @@
         "4caf8757-1b6f-4bc6-aa14-f9a794d30ec9": {
           "type": "contact-info",
           "settings": {
-            "infoHeading": "Thermi Flagship Store",
-            "text1": "Lorem Ipsum Dolor",
-            "text2": "Sit, Amet 12345",
+            "infoHeading": "UZULABS Storefront",
+            "text1": "15152 Downey Ave<br>Paramount, CA 90723",
+            "text2": "",
             "text3": "",
             "text4": ""
           }
@@ -26,8 +26,8 @@
         "66095208-b95b-4403-908e-4aa96f92ad15": {
           "type": "contact-info",
           "settings": {
-            "infoHeading": "Corporate Sales & Product Inquiries",
-            "text1": "Lorem Ipsum Dolor Sit Amet",
+            "infoHeading": "",
+            "text1": "",
             "text2": "",
             "text3": "",
             "text4": ""
