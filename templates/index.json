@@ -199,6 +199,7 @@
         },
         "cb542f42-89e1-4aac-9bf8-160b23ebc220": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "imageDesktop": "shopify:\/\/shop_images\/1_copy.jpg",
             "imageMobile": "shopify:\/\/shop_images\/1_copy.jpg"
@@ -307,28 +308,28 @@
           "type": "card",
           "settings": {
             "cardImg": "shopify:\/\/shop_images\/5.5_copy.jpg",
-            "cardText": "Write something here to describe your services"
+            "cardText": ""
           }
         },
         "9e1c1375-2d7c-47e4-bda0-ed40aca95e3b": {
           "type": "card",
           "settings": {
             "cardImg": "shopify:\/\/shop_images\/1_copy_1.jpg",
-            "cardText": "Write something here to describe your services"
+            "cardText": ""
           }
         },
         "7405558c-383b-4698-8d21-a9d9369b8e97": {
           "type": "card",
           "settings": {
             "cardImg": "shopify:\/\/shop_images\/3_copy_2c527639-58d3-492d-adb0-a7eedeb12116.jpg",
-            "cardText": "Write something here to describe your services"
+            "cardText": ""
           }
         },
         "cf03a410-0e85-4b33-ad8a-8c01f05a51a7": {
           "type": "card",
           "settings": {
             "cardImg": "shopify:\/\/shop_images\/1_copy_da716b66-6844-4712-ad70-9cbbb8aee02f.jpg",
-            "cardText": "Write something here to describe your services"
+            "cardText": ""
           }
         }
       },
