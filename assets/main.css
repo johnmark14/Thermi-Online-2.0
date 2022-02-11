@@ -2058,32 +2058,17 @@ main {
   margin-top: -90px;
 }
 
-@media (max-width: 39.9375em) {
-  .ideas-shell.shell {
-    padding: 0;
-  }
+.ideas-shell .columns .column {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.ideas-imgs {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-gap: 16px;
+.ideas-shell .columns .column .card {
+  border-radius: 0;
 }
 
-@media (max-width: 39.9375em) {
-  .ideas-imgs {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
-.ideas-imgs .img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.ideas-shell .columns .column .card .card-image .image img {
+  border-radius: 0;
 }
 
 .ideas-btn {

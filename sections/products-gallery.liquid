@@ -5,9 +5,22 @@
     <div class="ideas-shell shell">
         <h2 class="ideas-title {% if section.settings.sectionTitle != blank %} section-title {% endif %}">{{ section.settings.sectionTitle }}</h2>
         {% if section.blocks.size != 0%}
-        <div class="ideas-imgs">
+        <!-- <div class="ideas-imgs">
             {% for block in section.blocks %}
                 <div class="img"><img src="{{ block.settings.img | img_url: 'master'}}" alt="{% if block.settings.altText != blank%} {{ block.settings.altText }} {% else %} image-{{ forloop.index }} {% endif %}" loading="lazy"></div>
+                {% endfor %}
+        </div> -->
+        <div class="columns is-multiline is-variable is-2">
+            {% for block in section.blocks %}
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="image is-1by1">
+                                <img src="{{ block.settings.img | img_url: 'master'}}" alt="{% if block.settings.altText != blank%} {{ block.settings.altText }} {% else %} image-{{ forloop.index }} {% endif %}" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
         </div>
         {% endif %}

@@ -4,27 +4,22 @@
 
 .ideas {
 
-    &-shell.shell {
-        @include breakpoint-down(small) {
-            padding: 0;
-        }
-    }
+   &-shell {
+       .columns {
+           .column {
+               box-sizing: border-box;
+               .card {
+                   border-radius: 0;
 
-    &-imgs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 16px;
-
-        @include breakpoint-down(small) {
-            grid-template-columns: 1fr;
-        }
-
-        .img img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+                   .card-image {
+                       .image img {
+                           border-radius: 0;
+                       }
+                   }
+               }
+           }
+       }
+   }
 
     &-btn {
         margin-top: 80px;
