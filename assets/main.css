@@ -2069,6 +2069,8 @@ main {
 
 .ideas-shell .columns .column .card .card-image .image img {
   border-radius: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .ideas-btn {
