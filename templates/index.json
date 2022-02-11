@@ -315,21 +315,21 @@
           "type": "card",
           "settings": {
             "cardImg": "shopify:\/\/shop_images\/1_copy_1.jpg",
-            "cardText": ""
+            "cardText": "Nunc suscipit vestibulum est nec maximus. Quisque et magna dui. Class"
           }
         },
         "7405558c-383b-4698-8d21-a9d9369b8e97": {
           "type": "card",
           "settings": {
             "cardImg": "shopify:\/\/shop_images\/3_copy_2c527639-58d3-492d-adb0-a7eedeb12116.jpg",
-            "cardText": ""
+            "cardText": "Sed libero lacus, molestie vitae bibendum nec, sagittis id magna."
           }
         },
         "cf03a410-0e85-4b33-ad8a-8c01f05a51a7": {
           "type": "card",
           "settings": {
             "cardImg": "shopify:\/\/shop_images\/1_copy_da716b66-6844-4712-ad70-9cbbb8aee02f.jpg",
-            "cardText": ""
+            "cardText": "Duis consectetur magna ac placerat commodo. Etiam volutpat quam"
           }
         }
       },
