@@ -74,10 +74,24 @@
                                 &.custom-tumbler-2 {
                                     bottom: 60%;
                                     left: 42%;
+
+                                    @include breakpoint-down(small) {
+                                        left: 41%;
+                                        bottom: 58%;
+                                        width: 58px;
+                                        height: 58px;
+                                    }
                                 }
 
                                 &.custom-tumbler-3 {
                                     left: 41%;
+
+                                    @include breakpoint-down(small) {
+                                        width: 60px;
+                                        height: 60px;
+                                        left: 40%;
+                                        bottom: 36%;
+                                    }
                                 }
 
                                 &.custom-tumbler-4 {
@@ -250,6 +264,20 @@
                                         bottom: 57%;
                                         transform: rotate(90deg);
                                     }
+
+                                    @include breakpoint-down(small) {
+                                        left: 30%;
+                                        bottom: 53%;
+                                        font {
+                                            font-size: 16px;
+                                        }
+
+                                        &.initials {
+                                            font {
+                                                font-size: 24px;
+                                            }
+                                        }
+                                    }
                                 }
 
                                 &.custom-tumbler-3 {
@@ -257,6 +285,18 @@
 
                                     font {
                                         font-size: 17px;
+                                    }
+                                    @include breakpoint-down(small) {
+                                        left: 29%;
+                                        font {
+                                            font-size: 16px;
+                                        }
+
+                                        &.initials {
+                                            font {
+                                                font-size: 24px;
+                                            }
+                                        }
                                     }
                                 }
 
