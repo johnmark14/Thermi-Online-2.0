@@ -69,6 +69,10 @@
                                 &.custom-tumbler-1 {
                                     bottom: 42%;
                                     left: 42%;
+
+                                    @include breakpoint-down(small) {
+                                        left: 41%;
+                                    }
                                 }
 
                                 &.custom-tumbler-2 {
@@ -250,6 +254,19 @@
                                     &.vertical {
                                         bottom: 40%;
                                         transform: rotate(90deg);
+                                    }
+
+                                    @include breakpoint-down(small) {
+                                        left: 30%;
+                                        font {
+                                            font-size: 16px;
+                                        }
+
+                                        &.initials {
+                                            font {
+                                                font-size: 24px;
+                                            }
+                                        }
                                     }
                                 }
 
