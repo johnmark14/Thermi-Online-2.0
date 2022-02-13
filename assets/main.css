@@ -3639,6 +3639,12 @@ main {
   left: 41%;
 }
 
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-4 {
+    left: 39%;
+  }
+}
+
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-5 {
   bottom: 43%;
 }
@@ -3821,6 +3827,18 @@ main {
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-4.vertical {
   bottom: 40%;
+}
+
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-4 {
+    left: 29%;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-4 font {
+    font-size: 16px;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-4.initials font {
+    font-size: 24px;
+  }
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5 {
