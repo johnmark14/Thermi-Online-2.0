@@ -3614,6 +3614,12 @@ main {
   bottom: 41%;
 }
 
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-cups-1 {
+    bottom: 45%;
+  }
+}
+
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-1 {
   bottom: 42%;
   left: 42%;
@@ -3701,6 +3707,25 @@ main {
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1.vertical {
   bottom: 40%;
+}
+
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1 {
+    left: 31%;
+    bottom: 39%;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1 font {
+    font-size: 16px;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1.vertical {
+    bottom: 42%;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1.initials {
+    bottom: 42%;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1.initials font {
+    font-size: 24px;
+  }
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-1 {
