@@ -3721,6 +3721,25 @@ main {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-bottles-3 {
+    left: 31%;
+    bottom: 28%;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-bottles-3 font {
+    font-size: 16px;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-bottles-3.initials {
+    bottom: 30%;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-bottles-3.initials font {
+    font-size: 24px;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-bottles-3.vertical {
+    bottom: 32%;
+  }
+}
+
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-cups-1 {
   bottom: 36%;
   left: 38%;

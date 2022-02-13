@@ -167,6 +167,28 @@
                                     }
                                 }
 
+                                &.custom-bottles-3 {
+                                    @include breakpoint-down(small) {
+                                        left: 31%;
+                                        bottom: 28%;
+
+                                        font {
+                                            font-size: 16px;
+                                        }
+
+                                        &.initials {
+                                            bottom: 30%;
+                                            font {
+                                                font-size: 24px;
+                                            }
+                                        }
+
+                                        &.vertical {
+                                            bottom: 32%;
+                                        }
+                                    }
+                                }
+
                                 &.custom-cups-1 {
                                     bottom: 36%;
                                     left: 38%;
