@@ -3594,6 +3594,14 @@ main {
   left: 43%;
 }
 
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon {
+    left: 41%;
+    width: 65px;
+    height: 65px;
+  }
+}
+
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon svg {
   fill: #989898;
 }
@@ -3627,6 +3635,12 @@ main {
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-5 {
   bottom: 43%;
+}
+
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-icon.custom-tumbler-5 {
+    bottom: 45%;
+  }
 }
 
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts {
@@ -3745,8 +3759,28 @@ main {
   left: 38%;
 }
 
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5 {
+    left: 31%;
+    bottom: 39%;
+  }
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5 font {
+    font-size: 16px;
+  }
+}
+
 .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5.vertical {
   bottom: 40%;
+}
+
+@media (max-width: 39.9375em) {
+  .section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5.vertical {
+    bottom: 42%;
+  }
+}
+
+.section-product .product-shell .product-body .columns .column.product-featured-img figure .my-txts.custom-tumbler-5.initials font {
+  font-size: 24px;
 }
 
 .section-product .product-shell .product-body .columns .column .product-headings {

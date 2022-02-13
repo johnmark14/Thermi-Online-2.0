@@ -39,6 +39,12 @@
                                 bottom: 34%;
                                 left: 43%;
 
+                                @include breakpoint-down(small) {
+                                    left: 41%;
+                                    width: 65px;
+                                    height: 65px;
+                                }
+
                                 svg {
                                     fill: $lightGray;
                                 }
@@ -77,6 +83,10 @@
 
                                 &.custom-tumbler-5 {
                                     bottom: 43%;
+
+                                    @include breakpoint-down(small) {
+                                        bottom: 45%;
+                                    }
                                 }
                             }
 
@@ -189,9 +199,27 @@
                                     bottom: 38%;
                                     left: 38%;
 
+                                    @include breakpoint-down(small) {
+                                        left: 31%;
+                                        bottom: 39%;
+                                        font {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                    
                                     &.vertical {
                                         bottom: 40%;
+                                        @include breakpoint-down(small) {
+                                            bottom: 42%;
+                                        }
                                     }
+
+                                    &.initials {
+                                        font {
+                                            font-size: 24px;
+                                        }
+                                    }
+
                                 }
                             }
                         }
