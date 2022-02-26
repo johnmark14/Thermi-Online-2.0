@@ -1,7 +1,5 @@
 .section-faq {
     // Heading and Texts
-
-    
     .faq {
         &-col-left {
             @include breakpoint-down(small) {
