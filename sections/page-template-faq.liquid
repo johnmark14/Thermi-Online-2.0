@@ -8,6 +8,7 @@
     <h2 class="faq-title section-title">{{ page.title | escape }}</h2>
     <div class="faq-body">
       <div class="columns is-variable is-4 is-2-tablet">
+        <!-- First Column -->
         <div class="column is-one-fifth faq-col-left">
           <div class="faq-nav">
             {% for block in section.blocks %}
@@ -31,6 +32,7 @@
             {% endfor %}
           </div>
         </div>
+        <!-- Second Column -->
         <div class="column">
           <div class="faq-message">
             <p class="g-sub-heading-color">{{ section.settings.pageMessage }}</p>
