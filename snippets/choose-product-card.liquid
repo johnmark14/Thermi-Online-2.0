@@ -2,7 +2,8 @@
  <div class="product-item">
     <div class="product__inner">
         <a href="{{ product.url | within: collection }}" class="product__image">
-            <img src="{{ product.images[0].src | img_url: 'master' }}" alt="Product Image" loading="lazy" width="{{product.images[0].width}}" height="{{product.images[0].height}}">
+            <img src="{{ product.images[0].src | img_url: 'master' }}" alt="Product Image" loading="lazy" 
+            width="{{product.images[0].width}}" height="{{product.images[0].height}}">
         </a>
         <div class="product__wrapper">
             <a href="{{ product.url | within: collection }}" class="page-link"></a>
@@ -14,9 +15,16 @@
             </h5>
             <div class="product__variants">
                 <ul class="list-variants">
+                    {% assign variant_color = "" %}
+                    {% assign current_color = "" %}
                     {% for variant in product.variants %}
-                        {%if variant.metafields.color.value != blank%}
-                            <li><span class="variant-1" data-variant-color="{{ variant.metafields.color.value}}" style="background-color: {{ variant.metafields.color.value }}"></span></li>
+                        {% assign current_color = variant.metafields.color.value | strip %}
+                        {% if variant_color != current_color %}
+                            {%if current_color != blank%}
+                                <li><span class="variant-1" data-variant-color="{{current_color}}" 
+                                    style="background-color: {{current_color}}"></span></li>
+                            {% endif %}
+                            {% assign variant_color = current_color %}
                         {% endif %}
                     {% endfor %}
                 </ul>
