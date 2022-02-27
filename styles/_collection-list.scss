@@ -1,10 +1,12 @@
 .section-collection {
+    max-width: 1500px;
+    margin: 0 auto;
     position: relative;
-
+    
     .product-collection {
         &__categories {
             position: sticky;
-            float: left;
+            align-self: flex-start;
             left: 3%;
             top: 15%;
             z-index: 5;
@@ -38,7 +40,6 @@
         }
     }
     .page {
-
         &-products {
             display: flex;
             flex-flow: row wrap;

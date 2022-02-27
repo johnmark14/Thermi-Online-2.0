@@ -2,32 +2,36 @@
 
 <!-- Start Section collection list -->
 <section class="section-collection {% if section.settings.sectionPadding != true %} section-padding {% endif %}">
-    <!-- Page Filter -->
-    <div class="product-collection__categories">
-        <div class="categories-nav">
-            <div class="categories-nav__items">
-                <ul class="items">
-                    <li class="g-heading-color">Product Categories</li>
-                    <li class="g-text-color"><a href="/">Drinkware</a></li>
-                    <li class="g-text-color"><a href="/">Promotional Products</a></li>
-                    <li class="g-text-color"><a href="/">Wood Maps</a></li>
-                    <li class="g-text-color"><a href="/">Golf Gear</a></li>
-                    <li class="g-text-color"><a href="/">Corporate Gifts</a></li>
-                </ul>
+    <div class="columns is-variable is-4 is-2-tablet">
+        <!-- first column -->
+        <!-- Page Filter -->
+        <div class="column is-one-fifth product-collection__categories">
+            <div class="categories-nav">
+                <div class="categories-nav__items">
+                    <ul class="items">
+                        <li class="g-heading-color">Product Categories</li>
+                        <li class="g-text-color"><a href="/">Drinkware</a></li>
+                        <li class="g-text-color"><a href="/">Promotional Products</a></li>
+                        <li class="g-text-color"><a href="/">Wood Maps</a></li>
+                        <li class="g-text-color"><a href="/">Golf Gear</a></li>
+                        <li class="g-text-color"><a href="/">Corporate Gifts</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="page-shell shell">
-        {% if section.settings.navBack != true %}
-            <a href="/" class="page-back"><span>< Back</span></a>
-        {% endif %}
-        <div class="product-collection ">
-            <div class="product-collection__title page-title">
-                <p>{{section.settings.colTitle}}</p>
-            </div>
-            {% assign collections = section.settings.colList %}
-            <div class="page-products">
-                {% render "choose-product-card" for collections.products as product %}
+        <!-- Second Column -->
+        <div class="page-shell">
+            {% if section.settings.navBack != true %}
+                <a href="/" class="page-back"><span>< Back</span></a>
+            {% endif %}
+            <div class="product-collection ">
+                <div class="product-collection__title page-title">
+                    <p>{{section.settings.colTitle}}</p>
+                </div>
+                {% assign collections = section.settings.colList %}
+                <div class="page-products">
+                    {% render "choose-product-card" for collections.products as product %}
+                </div>
             </div>
         </div>
     </div>

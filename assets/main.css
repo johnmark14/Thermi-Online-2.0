@@ -2994,13 +2994,16 @@ main {
 }
 
 .section-collection {
+  max-width: 1500px;
+  margin: 0 auto;
   position: relative;
 }
 
 .section-collection .product-collection__categories {
   position: -webkit-sticky;
   position: sticky;
-  float: left;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   left: 3%;
   top: 15%;
   z-index: 5;
