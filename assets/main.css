@@ -3057,7 +3057,7 @@ main {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
-  padding: 0 12.5px 25px 12.5px;
+  padding: 0 15px 25px 15px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
