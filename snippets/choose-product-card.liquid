@@ -15,17 +15,9 @@
             </h5>
             <div class="product__variants">
                 <ul class="list-variants">
-                    {% assign variant_color = "" %}
-                    {% assign current_color = "" %}
-                    {% for variant in product.variants %}
-                        {% assign current_color = variant.metafields.color.value | strip %}
-                        {% if variant_color != current_color %}
-                            {%if current_color != blank%}
-                                <li><span class="variant-1" data-variant-color="{{current_color}}" 
-                                    style="background-color: {{current_color}}"></span></li>
-                            {% endif %}
-                            {% assign variant_color = current_color %}
-                        {% endif %}
+                    {% for color_option in product.options_by_name['Color'].values %}
+                        {% assign color_value = color_option | downcase %}
+                        <li><span class="variant-1 g-p-{{-color_value | replace: " ","-"-}}"></span></li>
                     {% endfor %}
                 </ul>
             </div>
