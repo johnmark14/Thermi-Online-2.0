@@ -2998,9 +2998,11 @@ main {
 }
 
 .section-collection .product-collection__categories {
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  float: left;
   left: 3%;
-  top: 3%;
+  top: 15%;
   z-index: 5;
   width: 14%;
 }
