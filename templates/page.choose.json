@@ -23,10 +23,19 @@
             "colList": "drinkwares",
             "categoryLink": "drinkwares"
           }
+        },
+        "e5e82252-b683-4cc0-8ce8-ee699ffae612": {
+          "type": "text",
+          "settings": {
+            "colTitle": "Thermi Silicon Protective Sleeves",
+            "colList": "thermi-silicone-protective-sleeves",
+            "categoryLink": ""
+          }
         }
       },
       "block_order": [
-        "ce93ae43-e0b8-4ba8-8fcd-6830f7dc05bc"
+        "ce93ae43-e0b8-4ba8-8fcd-6830f7dc05bc",
+        "e5e82252-b683-4cc0-8ce8-ee699ffae612"
       ],
       "settings": {
         "sectionPadding": false,
