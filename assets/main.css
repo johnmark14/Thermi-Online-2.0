@@ -3131,7 +3131,7 @@ main {
 
 .section-collection .product-collection__categories-mobile .categories-accord__body {
   padding: 5px 20px;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: all .35s;
