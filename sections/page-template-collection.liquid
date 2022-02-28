@@ -11,6 +11,7 @@
         <!-- first column -->
         <!-- Page Filter -->
         {% if section.settings.productCategories != true%}
+            <!-- Desktop -->
             <div class="column is-one-fifth product-collection__categories">
                 <div class="categories-nav">
                     <div class="categories-nav__items">
@@ -18,6 +19,25 @@
                             <li class="g-heading-color">Product Categories</li>
                             {%for block in section.blocks %}
                                 <li class="g-text-color"><a href="#{{block.settings.categoryLink}}">{{block.settings.colTitle}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile -->
+            <div class="column is-one-fifth product-collection__categories-mobile">
+                <div class="categories-accord__wrapper">
+                    <input type="checkbox" name="accord-header" id="accord-product-categories">
+                    <label for="accord-product-categories">
+                        <span></span>
+                        <p class="g-sub-heading-color"> Product Categories</p>
+                    </label>
+                    <div class="categories-accord__body">
+                        <ul class="items">
+                            {% for block in section.blocks %}
+                                <li class="g-text-color">
+                                    <a href="#{{block.settings.categoryLink}}">{{block.settings.colTitle}}</a>
+                                </li>
                             {% endfor %}
                         </ul>
                     </div>
