@@ -18,7 +18,7 @@
                     {% for color_option in product.options_by_name['Color'].values %}
                         {% assign color_value = color_option | downcase %}
                         <li><span class="variant-1 g-p-{{-color_value | replace: " ","-"-}}"></span></li>
-                    {% endfor %}
+                    {% endfor %} 
                 </ul>
             </div>
         </div>
