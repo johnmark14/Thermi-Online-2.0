@@ -3082,7 +3082,7 @@ main {
 }
 
 .section-collection .product-collection__categories-mobile .categories-accord__wrapper input:checked ~ .categories-accord__body {
-  max-height: 100px;
+  max-height: 200px;
 }
 
 .section-collection .product-collection__categories-mobile .categories-accord__wrapper input:checked ~ .categories-accord__body .items li:first-child {
