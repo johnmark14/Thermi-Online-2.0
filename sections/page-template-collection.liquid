@@ -1,38 +1,42 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
 
 <!-- Start Section collection list -->
-<section class="section-collection {% if section.settings.sectionPadding != true %} section-padding {% endif %}">
+<section  class="section-collection {% if section.settings.sectionPadding != true %} section-padding {% endif %}">
+    {% if section.settings.navBack != true %}
+        <div class="page-shell shell">
+            <a href="/" class="page-back"><span>< Back</span></a>
+        </div>
+    {% endif %}
     <div class="columns is-variable is-4 is-2-tablet">
         <!-- first column -->
         <!-- Page Filter -->
-        <div class="column is-one-fifth product-collection__categories">
-            <div class="categories-nav">
-                <div class="categories-nav__items">
-                    <ul class="items">
-                        <li class="g-heading-color">Product Categories</li>
-                        <li class="g-text-color"><a href="/">Drinkware</a></li>
-                        <li class="g-text-color"><a href="/">Promotional Products</a></li>
-                        <li class="g-text-color"><a href="/">Wood Maps</a></li>
-                        <li class="g-text-color"><a href="/">Golf Gear</a></li>
-                        <li class="g-text-color"><a href="/">Corporate Gifts</a></li>
-                    </ul>
+        {% if section.settings.productCategories != true%}
+            <div class="column is-one-fifth product-collection__categories">
+                <div class="categories-nav">
+                    <div class="categories-nav__items">
+                        <ul class="items">
+                            <li class="g-heading-color">Product Categories</li>
+                            {%for block in section.blocks %}
+                                <li class="g-text-color"><a href="#{{block.settings.categoryLink}}">{{block.settings.colTitle}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endif %}
         <!-- Second Column -->
-        <div class="page-shell">
-            {% if section.settings.navBack != true %}
-                <a href="/" class="page-back"><span>< Back</span></a>
-            {% endif %}
-            <div class="product-collection ">
-                <div class="product-collection__title page-title">
-                    <p>{{section.settings.colTitle}}</p>
+        <div class="page-shell" {% if section.settings.productCategories == true %} style="margin: 0 auto;" {% endif %}>
+            {% for block in section.blocks %}
+                <div {% if block.settings.categoryLink != blank %} id="{{block.settings.categoryLink}}" {% endif %} class="product-collection">
+                    <div class="product-collection__title page-title">
+                        <p>{{block.settings.colTitle}}</p>
+                    </div>
+                    {% assign collections = block.settings.colList %}
+                    <div class="page-products">
+                        {% render "choose-product-card" for collections.products as product %}
+                    </div>
                 </div>
-                {% assign collections = section.settings.colList %}
-                <div class="page-products">
-                    {% render "choose-product-card" for collections.products as product %}
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -41,17 +45,6 @@
   {
     "name": "Collection Cards",
     "settings": [
-        {
-            "type": "text",
-            "id": "colTitle",
-            "label": "Collection Title",
-            "default": "Featured Collection"
-        },
-        {
-            "type": "collection",
-            "id": "colList",
-            "label": "Collection List"
-        },
         {
             "type": "header",
             "content": "Section Settings"
@@ -67,6 +60,41 @@
             "id": "navBack",
             "label": "Remove The Mobile Nav Back?",
             "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "productCategories",
+            "label": "Remove Product Categories?"
+        },
+        {
+            "type": "text",
+            "id": "sectionID",
+            "label": "Section ID",
+            "info": "This is used for navigation"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "Product Categories",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "colTitle",
+                    "label": "Collection Title",
+                    "default": "Featured Collection"
+                },
+                {
+                    "type": "collection",
+                    "id": "colList",
+                    "label": "Collection List"
+                },
+                {
+                    "type": "text",
+                    "id": "categoryLink",
+                    "label": "Category Link"
+                }
+            ]
         }
     ],
     "presets": [
