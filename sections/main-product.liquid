@@ -26,54 +26,36 @@
                                 <h1 class="g-heading-color">{{ product.title }}</h1>
                             </div>
                             <div class="product-price">
-                                <p>Starts at <span>{{ product.price | money }}</span></p>
+                                <p>Starts at 
+                                    <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                                </p>
                             </div>
                         </div>
                         <div class="product-options">
-                            <!-- Option 1 -->
-                            {% render 'option-product-variant' %}
-                            <!-- Option 2 -->
-                            {% render 'option-lid-type' %}
-                            <!-- Option 3 -->
-                            {% render 'option-engraving' %}
-                            
-                            <div v-if="withPersonalization">
-                                <!-- Option 4 -->
-                                {% render 'option-styles' %}
-                                <!-- Option 5 -->
-                                {% render 'option-icon-fonts' %}
-                                <!-- Option 6 -->
-                                {% render 'option-personalized-text' %}
+                            <!-- {% if product.options.size == 1 %}
+                            1 variant
+                            {% else %}
+                            2 or more variant
+                            {% endif %} -->
+                            <div class="option-title">
+                                <h4 class="g-heading-color">Choose your color</h4>
                             </div>
-                        </div>
-                        <div class="product-quantity">
-                            <div class="quantity-heading">
-                                <h4 class="g-heading-color">Quantity</h4>
-                            </div>
-                            <div class="quantity">
-                                <div class="item-quantity">
-                                    <div class="item-actions">
-                                        <div class="qt add">
-                                            <a href="/" @click.prevent="addQuantity">+</a>
+                            <div class="options-wrapper">
+                                <div class="columns is-multiline is-variable is-2">
+                                    {% for color_option in product.options_by_name['Color'].values %}
+                                        <div class="column is-one-third">
+                                            <div class="option option-color">
+                                                <input type="radio" name="color" id="option-color-{{forloop.index}}" {%if forloop.index == 1%} checked {% endif %}>
+                                                <label for="option-color-{{forloop.index}}" class="">
+                                                    {% assign color_value = color_option | downcase %}
+                                                    <div class="color g-p-{{-color_value | replace: " ","-"-}}"></div>
+                                                    <div class="color-title opt-title"><span>{{color_option}}</span></div>
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class="qt items wide">
-                                            <span>${ variantQuantity }</span>
-                                        </div>
-                                        <div class="qt minus">
-                                            <a href="/" @click.prevent="minusQuantity">-</a>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-button">
-                            <a href="/" class="product-btn" @click.prevent="addToCart($event)">
-                                <div class="btn-desc">
-                                    <span>{% render 'shopping-cart' %}</span>
-                                    <span>Add to cart</span>
-                                    <span>${ getTotalPrice }</span>
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -82,321 +64,16 @@
     </div>
 </section>
 
-{% schema %}
-{
-    "name": "Product Page",
-    "settings": [
-        {
-            "type": "textarea",
-            "id": "textBelowImg",
-            "label": "Text Below Product Image",
-            "default": "Write something about the image or a disclaimer."
-        },
-        {
-            "type": "header",
-            "content": "Button Text"
-        },
-        {
-            "type": "text",
-            "id": "btnText1",
-            "label": "Text 1",
-            "default": "Check"
-        },
-        {
-            "type": "text",
-            "id": "btnText2",
-            "label": "Text 2",
-            "default": "Check the content"
-        }
-    ]
-}
-{% endschema %}
-
 <script>
-    // Defaults
-    const withPersonalization = true
-    const maxOfText = 5
-    const maxOfChar = 10
-    const fontStyle = 'mt-regular'
-
-    const MainProduct = {
-        name: "product Page",
-        delimiters: ['${', '}'],
-        data() {
-            return {
-                cartData: store,
-                selectedVariantId: "{{ product.selected_or_first_available_variant.id}}",
-                variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
-                variantInventoryCount: "{{product.selected_or_first_available_variant.inventory_quantity}}",
-                variantCutomClass: "{{ product.selected_or_first_available_variant.metafields.variant.custom_variant_class }}",
-                isDisabled: false,
-                productType: "{{product.type}}",
-                startPrice: "{{ product.selected_or_first_available_variant.price }}",
-                totalPrice: "{{ product.selected_or_first_available_variant.price }}",
-                variantTitle: "{{product.selected_or_first_available_variant.title}}",
-                productTitle: "{{product.title}}",
-                productDesc: `{{product.description}}`,
-                productHandle: "{{product.handle}}",
-                variantQuantity: 1,
-                variantLidType: 'Sliding Lid',
-                withPersonalization: true,
-                withIcons: false,
-                myIcon: "",
-                thisInitials: false,
-                thisVerticalText: false,
-                maxOfText: maxOfText,
-                maxOfChar: maxOfChar,
-                fontStyle: fontStyle,
-                textLineItems: {
-                    style: 'Horizontal Text',
-                    fontStyle: 'mt-regular',
-                    text1: '',
-                    text2: '',
-                    text3: '',
-                    text4: '',
-                    text5: '',
-                },
-                personalize: {}
-
+    if(document.querySelector('#mainProduct')) {
+        const MainProduct = Vue.createApp({
+            name: "product Page",
+            delimiters: ['${', '}'],
+            data() {
+                return {
+                    variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}"
+                }
             }
-        },
-        methods: {
-            // This method is used before revision, I keep it still for future references
-            openPage() {
-                if(this.variantInventoryCount != 0) {
-                    localStorage.productTitle = this.productTitle
-                    localStorage.productDesc = this.productDesc
-                    localStorage.productHandle = this.productHandle
-                    localStorage.selectedVariantId = this.selectedVariantId
-                    localStorage.variantImage = this.variantImage
-                    localStorage.variantTitle = this.variantTitle
-                    localStorage.variantImage = this.variantImage
-                    localStorage.totalPrice = this.totalPrice
-
-                    window.location.href = "/pages/check"
-                }
-            },
-            // This method is used when product variant is change
-            onVariantChange(event) {
-                this.selectedVariantId = event.target.getAttribute('data-variant-id')
-                this.variantImage = event.target.getAttribute('data-image-src')
-                this.variantInventoryCount = event.target.getAttribute('data-inventory-count')
-                this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
-                this.variantTitle = event.target.getAttribute('data-variant-title')
-                this.variantCutomClass = event.target.getAttribute('data-variant-custom-class')
-
-                // This adds Icon price to the product
-                if(this.withIcons) {
-                    let totalPrice = parseFloat((this.startPrice/100).toFixed(2))
-                    let personalizationPrice = parseFloat((event.target.value/100).toFixed(2))
-                    let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
-
-                    this.totalPrice = newPrice
-                } else {
-                    this.totalPrice = event.target.getAttribute('data-variant-price')
-                }
-            },
-            getLidType(e) {
-                this.variantLidType = e.target.value
-            },
-            addDesignStyles(e) {
-                const dataPart = e.target.getAttribute('data-part')
-                switch(dataPart) {
-                    case 'Horizontal Text':
-                        this.maxOfText = 5
-                        this.maxOfChar = 10
-                        this.textLineItems = {
-                            style: dataPart,
-                            text1: '',
-                            text2: '',
-                            text3: '',
-                            text4: '',
-                            text5: '',
-                        }
-                        this.myIcon = ""
-                        this.thisInitials = false
-                        this.thisVerticalText = false
-                        console.log(this.withStyle)
-                        break;
-                    case 'Vertical Text':
-                        this.withStyle = 'Vertical Text'
-                        this.maxOfText = 3
-                        this.maxOfChar = 10
-                        this.textLineItems = {
-                            style: dataPart,
-                            text1: '',
-                            text2: '',
-                            text3: ''
-                        }
-                        this.thisVerticalText = true
-                        this.myIcon = ""
-                        this.thisInitials = false
-                        console.log(this.withStyle)
-                        break;
-                    case 'Initials':
-                        this.withStyle = 'Initials Text'
-                        this.maxOfText = 1
-                        this.maxOfChar = 3
-                        this.textLineItems = {
-                            style: dataPart,
-                            text1: ''
-                        }
-                        this.thisVerticalText = false
-                        this.thisInitials = true
-                        this.myIcon = ""
-                        console.log(this.withStyle)
-                        break;
-                    case 'Icons':
-                        this.withStyle = 'Icons'
-                        this.maxOfText = 1
-                        this.maxOfChar = 10
-                        this.textLineItems = {
-                            style: dataPart,
-                            icon: 'Type A',
-                            text1: ''
-                        }
-                        this.thisVerticalText = false
-                        this.myIcon = e.target.getAttribute('data-icon')
-                        this.thisInitials = false
-                        console.log(this.withStyle)
-                        break;
-                    default:
-                        this.thisVerticalText = false
-                        this.thisInitials = false
-                        this.myIcon = ""
-                        window.location.href = "/pages/custom-order";
-                }
-            },
-            setFontStyle(e) {
-                this.fontStyle = e.target.value
-                console.log(this.fontStyle)
-            },
-            addIcon(e) {
-                this.textLineItems.icon = e.target.value
-                this.myIcon = e.target.getAttribute('data-icon')
-                console.log(this.myIcon)
-            },
-            // This method is used after the revision
-            addToCart(event) {
-                // Check first if button is enable
-                if(!this.isDisabled) {
-                    // For no personalization 
-                    let withoutPersonalization = {
-                        items: [
-                            {
-                                id: this.selectedVariantId,
-                                quantity: this.variantQuantity,
-                                final_price: this.totalPrice,
-                                properties: {
-                                    'personalization': this.withPersonalization,
-                                    'lidType': this.variantLidType
-                                }
-                            }
-                        ]
-                    }
-                    // For with personalization
-                    let withPersonalization = {
-                        items: [
-                            {
-                                id: this.selectedVariantId,
-                                quantity: this.variantQuantity,
-                                final_price: this.totalPrice,
-                                properties: {
-                                    'lidType': this.variantLidType,
-                                    'personalization': this.withPersonalization,
-                                    'withIcon': this.withIcons ? true : 'N/A',
-                                    'textStyle': this.withStyle,
-                                    'fontStyle': this.fontStyle,
-                                    ...this.textLineItems,
-                                }
-                            },
-                            this.personalize
-                        ]
-                    }
-                    let data = this.withPersonalization ? withPersonalization : withoutPersonalization
-
-                    console.log(data)
-                    document.body.style.cursor = "wait"
-                    event.target.style.cursor = "wait"
-                    event.target.disabled = true
-                    this.isDisabled = true
-                    axios.post('/cart/add.js', data).then((response) => {
-                        store.getCart()
-                        setTimeout(()=> {
-                            event.target.disabled = false
-                            event.target.style.cursor = "pointer"
-                            document.body.style.cursor = "default"
-                            document.body.style.overflow = "hidden"
-                            this.cartData.state.isCartOpen = true
-                            this.cartData.state.isOverlay = true
-                            this.isDisabled = false
-
-                            // Add bubble notification to header cart icon
-                            this.cartData.state.isItem = true
-
-                        }, 1000)
-                    }).catch(error => {
-                        console.log(`Error: ${error}`)
-                    })
-                }
-            },
-            money(value) {
-                if(!value) return 0
-                return "$"+(value/100).toFixed(2)
-            },
-            addQuantity() {
-                this.variantQuantity++
-            },
-            minusQuantity() {
-                if(this.variantQuantity > 1) {
-                    this.variantQuantity--
-                }
-            },
-            addPrice(e) {
-                let totalPrice = parseFloat((this.startPrice/100).toFixed(2))
-                let personalizationPrice = parseFloat((e.target.value/100).toFixed(2))
-                let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
-
-                this.totalPrice = newPrice
-
-                if(e.target.value != 0) {
-                    this.withIcons = true
-                } else {
-                    this.withIcons = false
-                }
-            },
-        },
-        computed: {
-            getTotalPrice() {
-                return this.money(this.totalPrice)
-            },
-            getPersonalizationPrice() {
-                return this.cartData.state.personalizationPrice
-            }
-        },
-        watch: {
-            // Sets up the initial price with personalization as default!
-            // getPersonalizationPrice(newValue) {
-            //     let totalPrice = parseFloat((this.totalPrice/100).toFixed(2))
-            //     let personalizationPrice = parseFloat((newValue/100).toFixed(2))
-            //     // console.log(personalizationPrice)
-            //     let newPrice = parseFloat((totalPrice + personalizationPrice).toFixed(2)) * 100
-
-            //     this.totalPrice = newPrice
-            // }
-         },
-        updated() {
-            // this.personalize.quantity = this.variantQuantity
-            this.personalize = this.withIcons ? {id: this.cartData.state.personalization, quantity: this.variantQuantity} : null
-        },
-        mounted() {
-            // This disable the add to cart button when quantity is low
-            this.isDisabled = this.variantInventoryCount == 0 ? this.isDisabled = true : this.isDisabled = false
-
-            // Disable the add to cart button if user try to add the add on personalization
-            if(this.productType == 'hidden') this.isDisabled = true
-        }
+        }).mount('#mainProduct')
     }
-
-    Vue.createApp(MainProduct).mount('#mainProduct')
 </script>
