@@ -1,5 +1,4 @@
 <!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
-
 <!-- Start Section Main Product Page -->
 <section class="section-product section-padding remove-extra">
     <div id="mainProduct" class="product-shell shell">
@@ -37,6 +36,7 @@
                             {% else %}
                             2 or more variant
                             {% endif %} -->
+                            {% if product.options_by_name['Color'].values.size > 0%}
                             <div class="option-title">
                                 <h4 class="g-heading-color">Choose your color</h4>
                             </div>
@@ -55,6 +55,177 @@
                                         </div>
                                     {% endfor %}
                                 </div>
+                            </div>
+                            {% endif %}
+                            {% if product.options_by_name['Style'].values.size > 0%}
+                                <div class="option-title">
+                                    <h4 class="g-heading-color">Choose your lid</h4>
+                                </div>
+                                <div class="options-wrapper">
+                                    <div class="columns is-2">
+                                        {% for style_option in product.options_by_name['Style'].values %}
+                                            <div class="column">
+                                                <div class="option">
+                                                    <input type="radio" name="lid-type" id="option-lid-{{forloop.index}}" value="{{style_option}}" {% if forloop.index == 1%} checked {% endif %}>
+                                                    <label class="lid-option" for="option-lid-{{forloop.index}}">
+                                                        <div class="lid-title opt-title">
+                                                            <span class="g-heading-color">{{style_option}}</span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% for tag in product.tags %}
+                                {% if tag == "Personalize" %}
+                                    {{tag}}
+                                    <div class="option-title">
+                                        <h4 class="g-heading-color">Do you want to personalize your item?</h4>
+                                    </div>
+                                    <div class="options-wrapper">
+                                        <div class="columns is-multiline">
+                                            <div class="column is-full">
+                                                <div class="option">
+                                                    <input type="radio" name="personalize" id="option-personalize-1" checked>
+                                                    <label for="option-personalize-1" class="personalize-option">
+                                                        <div class="personalize-title opt-title">
+                                                            <div class="personalize-title-txt">
+                                                                <span class="g-heading-color">Yes, engrave my item!</span>
+                                                                <p>
+                                                                    Engrave your item with your own choice of text,
+                                                                    numbers, an icon* or even a custom logo*! *Additional fees apply
+                                                                </p>
+                                                            </div>
+                                                            <div class="personalize-title-price">
+                                                                <span class="g-heading-color">FREE</span>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="column is-full">
+                                                <div class="option">
+                                                    <input type="radio" name="personalize" id="option-personalize-2">
+                                                    <label for="option-personalize-2" class="personalize-option">
+                                                        <div class="personalize-title opt-title">
+                                                            <span class="g-heading-color">
+                                                                Skip engraving.
+                                                            </span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Personalization Options -->
+                                    <div>
+                                        <div class="option-title">
+                                            <h4 class="g-heading-color">Choose your design style.</h4>
+                                        </div>
+                                        <div class="options-wrapper">
+                                            <div class="columns is-multiline is-variable is-2">
+                                                <div class="column is-half"> 
+                                                    <div class="option">
+                                                        <input type="radio" name="style" id="option-style-1" value="0" data-part="Horizontal Text" checked>
+                                                        <label for="option-style-1" class="style-option">
+                                                            <div class="style-title opt-title">
+                                                                <div class="style-title-txt">
+                                                                    <span class="g-heading-color">Horizontal Text</span>
+                                                                    <span>Up to 5 Lines of Text</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="column is-half">
+                                                    <div class="option">
+                                                        <input type="radio" name="style" id="option-style-2" value="0" data-part="Vertical Text">
+                                                        <label for="option-style-2" class="style-option">
+                                                            <div class="style-title opt-title">
+                                                                <div class="style-title-txt">
+                                                                    <span class="g-heading-color">Vertical Text</span>
+                                                                    <span>Up to 3 Lines of Text</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="column is-half">
+                                                    <div class="option">
+                                                        <input type="radio" name="style" id="option-style-3" value="0" data-part="Initials">
+                                                        <label for="option-style-3" class="style-option">
+                                                            <div class="style-title opt-title">
+                                                                <div class="style-title-txt">
+                                                                    <span class="g-heading-color">Initials</span>
+                                                                    <span>Up to 3 Letters</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="column is-half">
+                                                    <div class="option">
+                                                        <input data-icon="{% render 'product-icon-type-1' %}" :value="getPersonalizationPrice" data-part="Icons"  type="radio" name="style" id="option-style-4">
+                                                        <label for="option-style-4" class="style-option">
+                                                            <div class="style-title opt-title">
+                                                                <div class="style-title-txt">
+                                                                    <span class="g-heading-color">Icon/Emoji</span>
+                                                                    <span>Includes one line of text.</span>
+                                                                    <span>+ $15</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="column is-full">
+                                                    <div class="option">
+                                                        <input type="radio" name="style" id="option-style-5" >
+                                                        <label for="option-style-5" class="style-option">
+                                                            <div class="style-title opt-title">
+                                                                <div class="style-title-txt">
+                                                                    <span class="g-heading-color">Custom Logo? Contact Us.*</span>
+                                                                    <span>*Starts at +$15</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="product-quantity">
+                            <div class="quantity-heading">
+                                <h4 class="g-heading-color">Quantity</h4>
+                            </div>
+                            <div class="quantity">
+                                <div class="item-quantity">
+                                    <div class="item-actions">
+                                        <div class="qt add">
+                                            <a href="/" >+</a>
+                                        </div>
+                                        <div class="qt items wide">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="qt minus">
+                                            <a href="/" >-</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-button">
+                                <a href="/" class="product-btn">
+                                    <div class="btn-desc">
+                                        <span>{% render 'shopping-cart' %}</span>
+                                        <span>Add to cart</span>
+                                        <span>$29.90</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
