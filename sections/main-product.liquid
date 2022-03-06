@@ -31,173 +31,42 @@
                             </div>
                         </div>
                         <div class="product-options">
-                            <!-- {% if product.options.size == 1 %}
-                            1 variant
-                            {% else %}
-                            2 or more variant
-                            {% endif %} -->
-                            {% if product.options_by_name['Color'].values.size > 0%}
-                            <div class="option-title">
-                                <h4 class="g-heading-color">Choose your color</h4>
-                            </div>
-                            <div class="options-wrapper">
-                                <div class="columns is-multiline is-variable is-2">
-                                    {% for color_option in product.options_by_name['Color'].values %}
-                                        <div class="column is-one-third">
+                            <template v-for="(option, i) in products.options" :key="i">
+                                <div class="option-title">
+                                    <h4 v-if="option.name == 'Color'" class="g-heading-color">Choose your color</h4>
+                                    <h4 v-else-if="option.name == 'Material'" class="g-heading-color">Choose your lid</h4>
+                                </div>
+                                <div v-if="option.name == 'Color'" class="options-wrapper">
+                                    <div class="columns is-multiline is-variable is-2">
+                                        <div v-for="(value, a) in option.values" :key="a" class="column is-one-third">
                                             <div class="option option-color">
-                                                <input type="radio" name="color" id="option-color-{{forloop.index}}" {%if forloop.index == 1%} checked {% endif %}>
-                                                <label for="option-color-{{forloop.index}}" class="">
-                                                    {% assign color_value = color_option | downcase %}
-                                                    <div class="color g-p-{{-color_value | replace: " ","-"-}}"></div>
-                                                    <div class="color-title opt-title"><span>{{color_option}}</span></div>
+                                                <input type="radio" :name=option.name :id=a
+                                                @change="variantChange($event)" :data-position=option.position
+                                                :value=value :checked="optionSelector(a)">
+                                                <label :for=a class=""> 
+                                                    <div class="color" :class="colorClass(value)"></div>
+                                                    <div class="color-title opt-title"><span>${value}</span></div>
+                                                </label>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div v-if="option.name == 'Material'" class="options-wrapper">
+                                    <div class="columns is-variable is-2">
+                                        <div v-for="(value, a) in option.values" :key="a" class="column">
+                                            <div class="option"> 
+                                                <input type="radio" :name=option.name :id="optionIdentifier(option.name,a)"
+                                                @change="variantChange($event)" :data-position=option.position :value=value :checked="optionSelector(a)">
+                                                <label :for="optionIdentifier(option.name,a)" class="lid-option">
+                                                    <div class="lid-title opt-title">
+                                                        <span class="g-heading-color">${value}</span>
+                                                    </div>
                                                 </label>
                                             </div>
                                         </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            {% endif %}
-                            {% if product.options_by_name['Style'].values.size > 0%}
-                                <div class="option-title">
-                                    <h4 class="g-heading-color">Choose your lid</h4>
-                                </div>
-                                <div class="options-wrapper">
-                                    <div class="columns is-2">
-                                        {% for style_option in product.options_by_name['Style'].values %}
-                                            <div class="column">
-                                                <div class="option">
-                                                    <input type="radio" name="lid-type" id="option-lid-{{forloop.index}}" value="{{style_option}}" {% if forloop.index == 1%} checked {% endif %}>
-                                                    <label class="lid-option" for="option-lid-{{forloop.index}}">
-                                                        <div class="lid-title opt-title">
-                                                            <span class="g-heading-color">{{style_option}}</span>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        {% endfor %}
                                     </div>
                                 </div>
-                            {% endif %}
-                            {% for tag in product.tags %}
-                                {% if tag == "Personalize" %}
-                                    {{tag}}
-                                    <div class="option-title">
-                                        <h4 class="g-heading-color">Do you want to personalize your item?</h4>
-                                    </div>
-                                    <div class="options-wrapper">
-                                        <div class="columns is-multiline">
-                                            <div class="column is-full">
-                                                <div class="option">
-                                                    <input type="radio" name="personalize" id="option-personalize-1" checked>
-                                                    <label for="option-personalize-1" class="personalize-option">
-                                                        <div class="personalize-title opt-title">
-                                                            <div class="personalize-title-txt">
-                                                                <span class="g-heading-color">Yes, engrave my item!</span>
-                                                                <p>
-                                                                    Engrave your item with your own choice of text,
-                                                                    numbers, an icon* or even a custom logo*! *Additional fees apply
-                                                                </p>
-                                                            </div>
-                                                            <div class="personalize-title-price">
-                                                                <span class="g-heading-color">FREE</span>
-                                                            </div>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="column is-full">
-                                                <div class="option">
-                                                    <input type="radio" name="personalize" id="option-personalize-2">
-                                                    <label for="option-personalize-2" class="personalize-option">
-                                                        <div class="personalize-title opt-title">
-                                                            <span class="g-heading-color">
-                                                                Skip engraving.
-                                                            </span>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Personalization Options -->
-                                    <div>
-                                        <div class="option-title">
-                                            <h4 class="g-heading-color">Choose your design style.</h4>
-                                        </div>
-                                        <div class="options-wrapper">
-                                            <div class="columns is-multiline is-variable is-2">
-                                                <div class="column is-half"> 
-                                                    <div class="option">
-                                                        <input type="radio" name="style" id="option-style-1" value="0" data-part="Horizontal Text" checked>
-                                                        <label for="option-style-1" class="style-option">
-                                                            <div class="style-title opt-title">
-                                                                <div class="style-title-txt">
-                                                                    <span class="g-heading-color">Horizontal Text</span>
-                                                                    <span>Up to 5 Lines of Text</span>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="column is-half">
-                                                    <div class="option">
-                                                        <input type="radio" name="style" id="option-style-2" value="0" data-part="Vertical Text">
-                                                        <label for="option-style-2" class="style-option">
-                                                            <div class="style-title opt-title">
-                                                                <div class="style-title-txt">
-                                                                    <span class="g-heading-color">Vertical Text</span>
-                                                                    <span>Up to 3 Lines of Text</span>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="column is-half">
-                                                    <div class="option">
-                                                        <input type="radio" name="style" id="option-style-3" value="0" data-part="Initials">
-                                                        <label for="option-style-3" class="style-option">
-                                                            <div class="style-title opt-title">
-                                                                <div class="style-title-txt">
-                                                                    <span class="g-heading-color">Initials</span>
-                                                                    <span>Up to 3 Letters</span>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="column is-half">
-                                                    <div class="option">
-                                                        <input data-icon="{% render 'product-icon-type-1' %}" :value="getPersonalizationPrice" data-part="Icons"  type="radio" name="style" id="option-style-4">
-                                                        <label for="option-style-4" class="style-option">
-                                                            <div class="style-title opt-title">
-                                                                <div class="style-title-txt">
-                                                                    <span class="g-heading-color">Icon/Emoji</span>
-                                                                    <span>Includes one line of text.</span>
-                                                                    <span>+ $15</span>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="column is-full">
-                                                    <div class="option">
-                                                        <input type="radio" name="style" id="option-style-5" >
-                                                        <label for="option-style-5" class="style-option">
-                                                            <div class="style-title opt-title">
-                                                                <div class="style-title-txt">
-                                                                    <span class="g-heading-color">Custom Logo? Contact Us.*</span>
-                                                                    <span>*Starts at +$15</span>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% break %}
-                                {% endif %}
-                            {% endfor %}
+                            </template>
                         </div>
                         <div class="product-quantity">
                             <div class="quantity-heading">
@@ -242,8 +111,62 @@
             delimiters: ['${', '}'],
             data() {
                 return {
-                    variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}"
+                    products: {},
+                    variantImage: "{{product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
+                    selectedVariants: [],
+                    variants: "",
+                    activeVariant: "{{product.selected_or_first_available_variant}}",
                 }
+            },
+            methods: {
+                changeVariantImage() {
+                    this.variantImage = this.activeVariant.featured_image.src
+                },
+                changeVariant() {
+                    console.log(this.activeVariant)
+                    this.variants.forEach((variant, i) => {
+                        if(variant.option1 === this.selectedVariants[0] && variant.option2 === this.selectedVariants[1] && variant.option3 === this.selectedVariants[2]) {
+                            this.activeVariant = variant
+                            this.changeVariantImage()
+                            console.log(this.activeVariant)
+                        }
+                    })
+                },
+                variantChange(event) {
+                    let option = event.target
+                    this.selectedVariants[option.getAttribute('data-position') - 1] = option.value
+                    console.log(this.selectedVariants)
+                    console.log('Variant Change%%%%##########%%%%%%%%%%')
+                    this.changeVariant()
+                },
+                // Classes for frontend
+                colorClass(str) {
+                    return "g-p-"+str.toLowerCase().replaceAll(" ","-")
+                },
+                optionSelector(val) {
+                    if(val == 0) {
+                        return true
+                    } else {
+                        return false
+                    }
+                },
+                optionIdentifier(name, number) {
+                    return `${name}-${number}`
+                }
+            },
+            created() {
+                axios.get("/products/{{product.handle}}.js").then(results => {
+                    this.products = results.data
+                    this.variants = results.data.variants
+                    this.activeVariant = results.data.variants[0]
+                    results.data.options.map(item => this.selectedVariants.push(item.values[0]))
+                    this.selectedVariants = [
+                        this.selectedVariants[0] ? this.selectedVariants[0] : null,
+                        this.selectedVariants[1] ? this.selectedVariants[1] : null,
+                        this.selectedVariants[2] ? this.selectedVariants[2] : null
+                    ]
+                    console.log(this.selectedVariants)
+                })
             }
         }).mount('#mainProduct')
     }
