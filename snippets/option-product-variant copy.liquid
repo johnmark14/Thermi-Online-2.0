@@ -1,0 +1,25 @@
+<div class="option-title">
+    <h4 class="g-heading-color">Choose your color.</h4>
+</div>
+<div class="options-wrapper">
+    <div class="columns is-multiline is-variable is-2">
+        {% for variant in product.variants %}
+            {% assign index = forloop.index | minus: 1 %}
+            <div class="column is-one-third">
+                <div class="option option-color">
+                    <input type="radio" name="color" id="option-color-{{forloop.index}}" data-variant-title="{{ variant.title }}" 
+                    data-variant-price="{{ variant.price }}" data-inventory-count="{{ variant.inventory_quantity }}" 
+                    data-image-src="{{ variant.image.src | img_url: 'master' }}" data-variant-id="{{ variant.id }}"
+                    data-variant-custom-class="{{ variant.metafields.variant.custom_variant_class }}"
+                    :value="getPersonalizationPrice" @change="onVariantChange($event)" {% if product.variants[index].id == product.selected_variant.id or product.variants[index].id == product.first_available_variant.id %} checked {% endif %}>
+                    <label for="option-color-{{forloop.index}}" class="{% if variant.inventory_quantity == 0%} out-of-stock {% endif %}">
+                        <div class="color" style="background-color: {{ variant.metafields.color.value }}"></div>
+                        <div class="color-title opt-title">
+                            <span>{{ variant.title }}</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

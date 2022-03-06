@@ -1,0 +1,221 @@
+<!-- Author: John Mark Connect with me @ GitHub: johnmark14 -->
+<!-- Start Section Main Product Page -->
+<section class="section-product section-padding remove-extra">
+    <div id="mainProduct" class="product-shell shell">
+        <a href="/pages/choose" class="product-back">< Product Selection</a>
+        <div class="product-body">
+            <div class="columns is-centered is-variable is-5">
+                <div class="column is-5 product-featured-img">
+                    <figure class="image is-4by5" :style="{backgroundImage: `url(${activeVariant.featured_image.src})`}">
+                        <img :src="activeVariant.featured_image.src" alt="{{ product.images[0].alt }}" loading="lazy">
+                        <!-- Metafield is use to add a unique styling for icons and text for diff products -->
+                        <div v-html="myIcon" class="my-icon custom-{{-product.metafields.products.custom_tags-}}" 
+                        :class="variantCutomClass" v-if="withIcons" v-if="withPersonalization"></div>
+                        <div class="my-txts custom-{{-product.metafields.products.custom_tags-}}" 
+                        :class="[{initials: thisInitials}, {vertical: thisVerticalText}]" v-if="withPersonalization">
+                            <font class="txt-1" :class="variantCutomClass" v-text="textLineItems.text1" v-if="textLineItems.text1" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-2" :class="variantCutomClass" v-text="textLineItems.text2" v-if="textLineItems.text2" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-3" :class="variantCutomClass" v-text="textLineItems.text3" v-if="textLineItems.text3" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-4" :class="variantCutomClass" v-text="textLineItems.text4" v-if="textLineItems.text4" :style="{fontFamily: fontStyle}"></font>
+                            <font class="txt-5" :class="variantCutomClass" v-text="textLineItems.text5" v-if="textLineItems.text5" :style="{fontFamily: fontStyle}"></font>
+                        </div>
+                    </figure>
+                </div>
+                <div class="column is-3">
+                    <div class="container">
+                        <div class="product-headings">
+                            <div class="product-title">
+                                <h1 class="g-heading-color">{{ product.title }}</h1>
+                            </div>
+                            <div class="product-price">
+                                <p>Starts at 
+                                    <span>${money(activeVariant.price)}</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product-options">
+                            <template v-for="(option, i) in products.options" :key="i">
+                                <div class="option-title">
+                                    <h4 v-if="option.name == 'Color'" class="g-heading-color">Choose your color</h4>
+                                    <h4 v-else-if="option.name == 'Material'" class="g-heading-color">Choose your lid</h4>
+                                </div>
+                                <div v-if="option.name == 'Color'" class="options-wrapper">
+                                    <div class="columns is-multiline is-variable is-2">
+                                        <div v-for="(value, a) in option.values" :key="a" class="column is-one-third">
+                                            <div class="option option-color">
+                                                <input type="radio" :name=option.name :id=a
+                                                @change="variantChange($event)" :data-position=option.position
+                                                :value=value :checked="optionSelector(a)">
+                                                <label :for=a class=""> 
+                                                    <div class="color" :class="colorClass(value)"></div>
+                                                    <div class="color-title opt-title"><span>${value}</span></div>
+                                                </label>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div v-if="option.name == 'Material'" class="options-wrapper">
+                                    <div class="columns is-variable is-2">
+                                        <div v-for="(value, a) in option.values" :key="a" class="column">
+                                            <div class="option"> 
+                                                <input type="radio" :name=option.name :id="optionIdentifier(option.name,a)"
+                                                @change="variantChange($event)" :data-position=option.position :value=value :checked="optionSelector(a)">
+                                                <label :for="optionIdentifier(option.name,a)" class="lid-option">
+                                                    <div class="lid-title opt-title">
+                                                        <span class="g-heading-color">${value}</span>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                            <div class="option-title">
+                                <h4 class="g-heading-color">Do you want to personalize your item?</h4>
+                            </div>
+                            <div class="options-wrapper">
+                                <div class="columns is-multiline">
+                                    <div class="column is-full">
+                                        <div class="option">
+                                            <input type="radio" name="personalize" id="option-personalize-1" @change="withPersonalization = true" checked>
+                                            <label for="option-personalize-1" class="personalize-option">
+                                                <div class="personalize-title opt-title">
+                                                    <div class="personalize-title-txt">
+                                                        <span class="g-heading-color">Yes, engrave my item!</span>
+                                                        <p>
+                                                            Engrave your item with your own choice of text,
+                                                            numbers, an icon* or even a custom logo*! *Additional fees apply
+                                                        </p>
+                                                    </div>
+                                                    <div class="personalize-title-price">
+                                                        <span class="g-heading-color">FREE</span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="column is-full">
+                                        <div class="option">
+                                            <input type="radio" name="personalize" id="option-personalize-2" @change="withPersonalization = false">
+                                            <label for="option-personalize-2" class="personalize-option">
+                                                <div class="personalize-title opt-title">
+                                                    <span class="g-heading-color">Skip engraving.</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-quantity">
+                            <div class="quantity-heading">
+                                <h4 class="g-heading-color">Quantity</h4>
+                            </div>
+                            <div class="quantity">
+                                <div class="item-quantity">
+                                    <div class="item-actions">
+                                        <div class="qt add">
+                                            <a href="/" >+</a>
+                                        </div>
+                                        <div class="qt items wide">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="qt minus">
+                                            <a href="/" >-</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-button">
+                                <a href="/" class="product-btn">
+                                    <div class="btn-desc">
+                                        <span>{% render 'shopping-cart' %}</span>
+                                        <span>Add to cart</span>
+                                        <span>$29.90</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    if(document.querySelector('#mainProduct')) {
+        const MainProduct = Vue.createApp({
+            name: "product Page",
+            delimiters: ['${', '}'],
+            data() {
+                return {
+                    products: {},
+                    selectedVariants: [],
+                    variants: "",
+                    activeVariant: "",
+                    withPersonalization: true,
+                    textLineItems: {
+                        style: 'Horizontal Text',
+                        fontStyle: 'mt-regular',
+                        text1: '',
+                        text2: '',
+                        text3: '',
+                        text4: '',
+                        text5: '',
+                    },
+                }
+            },
+            methods: {
+                changeVariant() {
+                    console.log(this.activeVariant)
+                    this.variants.forEach((variant, i) => {
+                        if(variant.option1 === this.selectedVariants[0] && variant.option2 === this.selectedVariants[1] && variant.option3 === this.selectedVariants[2]) {
+                            this.activeVariant = variant
+                            console.log(this.activeVariant)
+                        }
+                    })
+                },
+                variantChange(event) {
+                    let option = event.target
+                    this.selectedVariants[option.getAttribute('data-position') - 1] = option.value
+                    console.log(this.selectedVariants)
+                    console.log('Variant Change%%%%##########%%%%%%%%%%')
+                    this.changeVariant()
+                },
+                // Classes for frontend
+                colorClass(str) {
+                    return "g-p-"+str.toLowerCase().replaceAll(" ","-")
+                },
+                optionSelector(val) {
+                    if(val == 0) {
+                        return true
+                    } else {
+                        return false
+                    }
+                },
+                optionIdentifier(name, number) {
+                    return `${name}-${number}`
+                },
+                money(value) {
+                    if(!value) return 0
+                    return "$"+(value/100).toFixed(2)
+                },
+            },
+            created() {
+                axios.get("/products/{{product.handle}}.js").then(results => {
+                    this.products = results.data
+                    this.variants = results.data.variants
+                    this.activeVariant = results.data.variants[0]
+                    results.data.options.map(item => this.selectedVariants.push(item.values[0]))
+                    this.selectedVariants = [
+                        this.selectedVariants[0] ? this.selectedVariants[0] : null,
+                        this.selectedVariants[1] ? this.selectedVariants[1] : null,
+                        this.selectedVariants[2] ? this.selectedVariants[2] : null
+                    ]
+                    console.log(this.selectedVariants)
+                })
+            }
+        }).mount('#mainProduct')
+    }
+</script>
