@@ -27,7 +27,7 @@
                             </div>
                             <div class="product-price">
                                 <p>Starts at 
-                                    <span>{{ product.selected_or_first_available_variant.price | money }}</span>
+                                    <span>${money(activeVariant.price)}</span>
                                 </p>
                             </div>
                         </div>
@@ -194,7 +194,11 @@
                 },
                 optionIdentifier(name, number) {
                     return `${name}-${number}`
-                }
+                },
+                money(value) {
+                    if(!value) return 0
+                    return "$"+(value/100).toFixed(2)
+                },
             },
             created() {
                 axios.get("/products/{{product.handle}}.js").then(results => {
