@@ -125,9 +125,8 @@
             data() {
                 return {
                     cartData: store,
-                    selectedVariantId: "{{ product.selected_or_first_available_variant.id}}",
                     variantImage: "{{ product.selected_or_first_available_variant.image.src | img_url: 'master'}}",
-                    variantCutomClass: "{{ product.selected_or_first_available_variant.metafields.variant.custom_variant_class }}",
+                    currentVariantID: "{{product.selected_or_first_available_variant.id}}",
                     isDisabled: false,
                     productType: "{{product.type}}",
                     totalPrice: "{{ product.selected_or_first_available_variant.price }}",
@@ -136,7 +135,6 @@
                     productDesc: `{{product.description}}`,
                     productHandle: "{{product.handle}}",
                     variantQuantity: 1,
-                    variantLidType: 'Sliding Lid',
                     withPersonalization: true,
                     withIcons: false,
                     myIcon: "",
@@ -167,10 +165,6 @@
                
                 // This method is used when product variant is change
                 onLineItemChange(event) {
-                    this.selectedVariantId = event.target.getAttribute('data-variant-id')
-                    this.variantImage = event.target.getAttribute('data-image-src')
-                    this.variantTitle = event.target.getAttribute('data-variant-title')
-                    this.variantCutomClass = event.target.getAttribute('data-variant-custom-class')
 
                     // This adds Icon price to the product
                     if(this.withIcons) {
@@ -182,9 +176,6 @@
                     } else {
                         this.totalPrice = this.activeVariant.price
                     }
-                },
-                getLidType(e) {
-                    this.variantLidType = e.target.value
                 },
                 addDesignStyles(e) {
                     const dataPart = e.target.getAttribute('data-part')
@@ -271,25 +262,24 @@
                         let withoutPersonalization = {
                             items: [
                                 {
-                                    id: this.selectedVariantId,
+                                    id: this.activeVariant.id,
                                     quantity: this.variantQuantity,
                                     final_price: this.totalPrice,
                                     properties: {
                                         'personalization': this.withPersonalization,
-                                        'lidType': this.variantLidType
                                     }
                                 }
                             ]
                         }
                         // For with personalization
+                        console.log(this.activeVariant.id)
                         let withPersonalization = {
                             items: [
                                 {
-                                    id: this.selectedVariantId,
+                                    id: this.activeVariant.id,
                                     quantity: this.variantQuantity,
                                     final_price: this.totalPrice,
                                     properties: {
-                                        'lidType': this.variantLidType,
                                         'personalization': this.withPersonalization,
                                         'withIcon': this.withIcons ? true : 'N/A',
                                         'textStyle': this.withStyle,
@@ -302,7 +292,6 @@
                         }
                         let data = this.withPersonalization ? withPersonalization : withoutPersonalization
 
-                        console.log(data)
                         document.body.style.cursor = "wait"
                         event.target.style.cursor = "wait"
                         event.target.disabled = true
@@ -376,12 +365,25 @@
                 colorClass(str,c) {
                     return str.toLowerCase().replaceAll(" ","-")
                 },
-                optionSelector(val) {
-                    if(val == 0) {
-                        return true
+                optionSelector(position, value) {
+                    console.log(position)
+                    console.log(value)
+                    if(position == 1) {
+                        if(value == this.activeVariant.option1) {
+                            return true
+                        }
+                    } else if (position == 2) {
+                        if(value == this.activeVariant.option2) {
+                            return true
+                        }
+                    } else if(position == 3) {
+                        if(value == this.activeVariant.option3) {
+                            return true
+                        }
                     } else {
                         return false
                     }
+
                 },
                 optionIdentifier(name, number) {
                     return `${name}-${number}`
@@ -399,13 +401,19 @@
                 axios.get("/products/{{product.handle}}.js").then(results => {
                     this.products = results.data
                     this.variants = results.data.variants
-                    this.activeVariant = results.data.variants[0]
                     results.data.options.map(item => this.selectedVariants.push(item.values[0]))
                     this.selectedVariants = [
                         this.selectedVariants[0] ? this.selectedVariants[0] : null,
                         this.selectedVariants[1] ? this.selectedVariants[1] : null,
                         this.selectedVariants[2] ? this.selectedVariants[2] : null
                     ]
+
+                    this.variants.forEach((variant, i) => {
+                        if(variant.id == this.currentVariantID) {
+                            this.activeVariant = variant
+                        }
+                    })
+
                 })
             },
             updated() {

@@ -9,7 +9,7 @@
                 <div class="option option-color">
                     <input type="radio" :name=option.name :id=a
                     @change="variantChange($event)" :data-position=option.position
-                    :value=value :checked="optionSelector(a)">
+                    :value=value :checked="optionSelector(option.position, value)">
                     <label :for=a class=""> 
                         <div class="color" :class="`g-p-${colorClass(value)}`"></div>
                         <div class="color-title opt-title"><span>${value}</span></div>
@@ -23,7 +23,8 @@
             <div v-for="(value, a) in option.values" :key="a" class="column">
                 <div class="option"> 
                     <input type="radio" :name=option.name :id="optionIdentifier(option.name,a)"
-                    @change="variantChange($event)" :data-position=option.position :value=value :checked="optionSelector(a)">
+                    @change="variantChange($event)" :data-position=option.position :value=value
+                    :checked="optionSelector(option.position, value)">
                     <label :for="optionIdentifier(option.name,a)" class="lid-option">
                         <div class="lid-title opt-title">
                             <span class="g-heading-color">${value}</span>
